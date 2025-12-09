@@ -42,6 +42,7 @@ exports.IMS_SERVICES = {
   ESG_ENVIRONMENTAL: "ESG Toolkit - Environmental",
   DSPTNHS: "DSPT",
   BS9997: "BS 9997",
+  BUILDING_SAFETY_ACT: "Building Safety Act",
 };
 
 exports.CUSTOMIZABLE_SERVICES = {

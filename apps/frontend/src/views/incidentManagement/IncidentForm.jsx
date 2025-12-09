@@ -67,11 +67,6 @@ const IncidentForm = ({
           },
           attachments: [],
           tagsAndCategories: "",
-          supplierIncident: false,
-          supplier: {
-            value: null,
-            label: "Select supplier",
-          },
         },
         errors: {},
       };

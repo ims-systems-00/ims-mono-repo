@@ -9,7 +9,7 @@ import { deleteFileFromS3 } from "@/services/fileHandlerService";
 import { imsLogger } from "@/services/loggerService";
 import { nudgePeople } from "@/services/notificationService";
 import USER_ACTIONS from "../actions";
-import filters from "../filters";
+
 export default function useStore(config) {
   let id = config.match && config.match.params.id;
   let notify = React.useContext(NotificationContext);
@@ -345,9 +345,9 @@ export default function useStore(config) {
           id: cipId,
         },
       });
-      let { data } = await ContinualImprovementApi.deleteCIP(cip._id);
+      await ContinualImprovementApi.deleteCIP(cip._id);
       notify("OFI deleted successfully", "success");
-      setCips((prevCip) => prevCip.filter((cip) => cip._id !== data._id));
+      setCips((prevCip) => prevCip.filter((cip) => cip._id !== cipId));
       successAlert("OFI deleted successfully");
       _dispatch({
         [USER_ACTIONS.DELETE_CIP]: {

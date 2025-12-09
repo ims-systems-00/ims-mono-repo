@@ -116,6 +116,15 @@ let summaries = [
     toolKit: IMS_SERVICES.ISO15686_5,
     summary: `ISO 15686-5:2017 provides requirements and guidelines for performing life-cycle cost (LCC) analyses of buildings and constructed assets and their parts, whether new or existing.`,
   },
+  {
+    toolKit: IMS_SERVICES.BUILDING_SAFETY_ACT,
+    summary: `BS 8500:2018 is the international standard which is used for building safety. It sets
+    out the specification for a building safety management system (BSMS). The
+    BSMS standard’s best-practice approach helps organisations secure the
+    confidentiality, integrity and availability (CIA) of corporate information assets. BS
+    8500 is a framework that helps organisations “establish, implement, operate,
+    monitor, review, maintain and continually improve an BSMS”.`,
+  },
 ];
 
 export default summaries;

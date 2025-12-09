@@ -66,6 +66,7 @@ export const IMS_SERVICES = {
   ESG_GOVERNANCE: "ESG Toolkit - Governance",
   ESG_SOCIAL: "ESG Toolkit - Social",
   ESG_ENVIRONMENTAL: "ESG Toolkit - Environmental",
+  BUILDING_SAFETY_ACT: "Building Safety Act",
   SYSTEM_DEFAULTS: "System configuration",
 };
 export const CUSTOMIZABLE_SERVICES = {
@@ -191,4 +192,5 @@ export const COMPLIANCE_TOOLS = {
   ESG_GOVERNANCE: "ESG Toolkit - Governance",
   ESG_SOCIAL: "ESG Toolkit - Social",
   ESG_ENVIRONMENTAL: "ESG Toolkit - Environmental",
+  BUILDING_SAFETY_ACT: "Building Safety Act",
 };

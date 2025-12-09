@@ -175,7 +175,10 @@ const esgToolkitSocialinitialize = () =>
 const esgToolkitGovernanceinitialize = () =>
   _createToolRefrence("./scripts/data/compliance/esg-toolkit-governance.json");
 const buildingSafetyActInitialize = () =>
-  _createToolRefrence("./scripts/data/compliance/building-safety-act.json");
+  _createToolRefrence(
+    "./scripts/data/compliance/building-safety-act.json",
+    "r_2"
+  );
 
 module.exports = {
   initialize: {

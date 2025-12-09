@@ -12,6 +12,7 @@ import Iso_27001_Annex_AManagement from "./iso27001_Annex_A/Iso_27001_Annex_AMan
 import Iso27002Management from "./iso27002/Iso27002Management";
 import Iso45001Management from "./iso45001/Iso45001Management";
 import Iso9001Management from "./iso9001/Iso9001Management";
+import buildingSafetyActManagement from "./building_safety_act/buildingSafetyActManagement";
 
 const routes = [
   {
@@ -215,6 +216,23 @@ const routes = [
           action: ACTIONS.READ,
         },
         screenIdentifier: "compliance-tool-bs9997",
+      },
+      // Building Safety Act
+      {
+        path: "/building-safety-act",
+        name: "Building Safety Act",
+        mini: "B",
+        icon: "ims-icons icon-icon-stack-24",
+        component: buildingSafetyActManagement,
+        layout: "/admin",
+        licenseRequirements: {
+          complianceTool: IMS_SERVICES.BUILDING_SAFETY_ACT,
+        },
+        accessPolicy: {
+          service: IMS_SERVICES.COMPLIANCE_TOOL,
+          action: ACTIONS.READ,
+        },
+        screenIdentifier: "compliance-tool-building-safety",
       },
     ],
   },
