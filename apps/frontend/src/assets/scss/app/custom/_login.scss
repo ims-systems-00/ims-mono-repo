@@ -1,0 +1,169 @@
+.auth-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+}
+.auth-product-logos {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  // background-color: $secondary-extra-light;
+  // border-radius: $border-radius-lg;
+  img {
+    height: 30px;
+  }
+}
+.auth-box-content {
+  width: 100%;
+  min-width: 100%;
+}
+.auth-box {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 100vw;
+}
+.auth-card {
+  width: 334px !important;
+  background-color: transparent !important;
+}
+.auth-bg-box {
+  height: 100vh;
+  background-color: #1e66d2;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 1250px;
+    min-width: 1250px;
+    transform: translateY(-50%) translateX(-58px);
+  }
+}
+.login-human-bg {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-60%) translateX(50%);
+  min-width: 300px;
+  z-index: 10;
+}
+.auth-dots-bg {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  width: 100%;
+  z-index: 10;
+}
+.auth-ims-logo-img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+.login-footer {
+  position: absolute;
+  bottom: 0;
+  overflow-x: hidden;
+}
+.auth-page-parent-logo-img-btn {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+.auth-page-parent-logo-img-btn:hover {
+  opacity: 1;
+}
+.org-selection-container {
+  height: 135px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  .org-name {
+    transition: 0.3s ease;
+    cursor: pointer;
+    color: $primary;
+    &:hover {
+      background-color: $primary-extra-light;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-login {
+    background-image: none;
+  }
+  .auth-box {
+    width: 100vw;
+  }
+  .auth-bg-box {
+    width: 100vw;
+  }
+  .auth-box-container {
+    height: 100vh;
+  }
+  .auth-box-content {
+    height: auto;
+    margin-top: 0;
+  }
+  .auth-ims-logo-img {
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .login-human-bg {
+    min-width: 400px;
+    transform: translateY(-60%) translateX(55%);
+  }
+}
+@media screen and (min-width: 2160px) {
+  .auth-bg-box {
+    img {
+      min-width: 2000px;
+      transform: translateY(-50%) translateX(-97px);
+    }
+  }
+  .login-human-bg {
+    min-width: 500px;
+    transform: translateY(-60%) translateX(60%);
+  }
+}
+@media screen and (min-width: 4320px) {
+  .auth-bg-box {
+    img {
+      min-width: 2500px;
+      transform: translateY(-50%) translateX(-120px);
+    }
+  }
+  .login-human-bg {
+    min-width: 1000px;
+    transform: translateY(-60%) translateX(60%);
+  }
+}
+
+@media screen and (min-width: 4320px) {
+  .auth-bg-box {
+    img {
+      min-width: 2500px;
+      transform: translateY(-50%) translateX(-120px);
+    }
+  }
+  .login-human-bg {
+    min-width: 1000px;
+    transform: translateY(-60%) translateX(60%);
+  }
+}
+
+@media screen and (min-width: 5760px) {
+  .auth-bg-box {
+    img {
+      min-width: 3000px;
+      transform: translateY(-50%) translateX(-140px);
+    }
+  }
+  .login-human-bg {
+    min-width: 1200px;
+    transform: translateY(-60%) translateX(60%);
+  }
+}

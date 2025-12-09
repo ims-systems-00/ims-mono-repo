@@ -1,0 +1,12 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Notice: License Request Cancellation"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`We regret to inform you that your recent
+          license request has been cancelled by an iMS Administrator. If you have any concerns or would like more
+          information regarding the cancellation, please contact our customer support team at
+          support@imssystems.tech`})%>
+          <%- include('../shared/useremails/message_section/index',{message:`Thank you for considering iMS Systems.`})%>
+            <%- include('../shared/useremails/closing_section/index'); %>
+              <%- include('../shared/useremails/container/main_container_end'); %>
+                <%- include('../shared/useremails/end'); %>

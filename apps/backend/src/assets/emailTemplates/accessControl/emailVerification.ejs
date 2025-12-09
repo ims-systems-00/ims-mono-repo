@@ -1,0 +1,35 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Account activation"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:name}); %>
+        <%- include('../shared/useremails/message_section/start')%>
+          <p>
+            Welcome to
+            <span
+              style="margin: 0;font-family: 'Poppins', sans-serif;font-size: 16px;font-weight: 600;letter-spacing: 0.34px;color: #16a4fa;">
+              iMS Systems.</span>
+          </p>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: normal;color: #808396;margin: 5px 0 0 0;font-style:italic">
+            "future of business operations" </p>
+          <%- include('../shared/useremails/message_section/end')%>
+            <%- include('../shared/useremails/message_section/start')%>
+              <p
+                style="font-family: 'Poppins', sans-serif; font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: normal;color: #808396;margin: 5px 0 0 0;">
+                Before we can get you started, we need to verify your email address.
+              </p>
+              <p
+                style="font-family: 'Poppins', sans-serif; font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: normal;color: #808396;margin: 5px 0 0 0;">
+                Please click the link below to verify and activate your account.
+              </p>
+              <%- include('../shared/useremails/message_section/end')%>
+                <%- include('../shared/useremails/button/index',{linkText:"Activate",link:verificationLink})%>
+                  <%- include('../shared/useremails/message_section/start')%>
+                    <p
+                      style="font-family: 'Poppins', sans-serif; font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: normal;color: #de2c55;margin: 5px 0 0 0;">
+                      This link will expire in 1 week (7 days).*
+                    </p>
+                    <%- include('../shared/useremails/message_section/end')%>
+                      <%- include('../shared/useremails/closing_section/index'); %>
+                        <%- include('../shared/useremails/container/main_container_end'); %>
+                          <%- include('../shared/useremails/end'); %>

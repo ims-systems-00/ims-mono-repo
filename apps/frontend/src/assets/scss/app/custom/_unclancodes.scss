@@ -1,0 +1,83 @@
+.dashboard-scroll {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+}
+
+.task-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.members-list {
+  //not first child
+  .member:not(:first-child) {
+    margin-left: -10px;
+  }
+}
+.account-dropdown-menu {
+  max-height: "calc(100vh - 100px)";
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .account-dropdown-menu {
+    max-height: "calc(100vh - 50vh)";
+  }
+}
+
+// .admin-navbar {
+//   .container-fluid {
+//     padding-left: 0;
+//   }
+// }
+
+// @media screen and (min-width: 991px) {
+//   .admin-navbar {
+//     max-height: 66px !important;
+//   }
+// }
+
+.nav.nav-tabs.nav-tabs-outline {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .row {
+    padding-bottom: 10px;
+    // .col {
+    //   display: inline-block;
+    // }
+    .col:not(:last-child) {
+      padding-right: 5px;
+    }
+    .col:not(:first-child) {
+      padding-left: 5px;
+    }
+  }
+}
+.nav.nav-tabs.nav-tabs-outline .nav-item .nav-link {
+  display: inline-block;
+}
+
+.notifications-panel {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.notifications-panel::-webkit-scrollbar {
+  width: 0px !important;
+}
+.custom-tooltip {
+  background-color: white !important;
+  padding: 8px;
+  border: 1px solid gray;
+}

@@ -1,0 +1,10 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Membership removed"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Your have been removed from
+          ${locals.group.name} by ${locals.by.name}, if you have any query regarding this, please contact your
+          administrator.`})%>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

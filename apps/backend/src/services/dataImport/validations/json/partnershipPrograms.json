@@ -1,0 +1,1 @@
+{"partnershipPrograms::organization":"Joi.any().label(\"Organization\")"}

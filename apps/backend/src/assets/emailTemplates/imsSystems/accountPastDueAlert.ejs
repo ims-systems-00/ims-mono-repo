@@ -1,0 +1,35 @@
+<%- include('../shared/useremails/start'); %>
+    <%- include('../shared/useremails/container/main_container_start'); %>
+        <%- include('../shared/useremails/heading_section/index',{heading:"Action Required"}); %>
+            <%- include('../shared/useremails/greeting_section/index',{name:locals.organizationName}); %>
+
+                <%- include('../shared/useremails/message_section/index',{message:`We hope this email finds you well. We
+                    appreciate your continued use of our services.`})%>
+
+
+                    <%- include('../shared/useremails/message_section/index',{message:`However, we regret to inform you
+                        that your account is currently past due. In order to ensure uninterrupted service, we kindly
+                        request that you settle the outstanding balance as soon as possible.`})%>
+
+
+                        <%- include('../shared/useremails/message_section/index',{message:`To avoid any disruption to
+                            your service, please log in to your account and complete the payment at your earliest
+                            convenience. Here's the link to your account: ${locals.orgProfileLink}`})%>
+
+
+                            <%- include('../shared/useremails/message_section/index',{message:`If the payment is not
+                                received by [New Due Date, e.g., 7 days from now], your account may be subject to
+                                temporary suspension or termination. We value your business and want to avoid any
+                                inconvenience, so please act promptly to prevent any service disruption.`})%>
+
+                                <%- include('../shared/useremails/message_section/index',{message:`If you have any
+                                    questions or concerns regarding your account, feel free to contact our support team
+                                    at support@imssystems.tech.`})%>
+
+                                    <%- include('../shared/useremails/message_section/index',{message:`Thank you for
+                                        your prompt attention to this matter. We appreciate your continued trust in our
+                                        services.`})%>
+
+                                        <%- include('../shared/useremails/closing_section/index'); %>
+                                            <%- include('../shared/useremails/container/main_container_end'); %>
+                                                <%- include('../shared/useremails/end'); %>

@@ -1,0 +1,9 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Complaint investigation"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`You have been apointed to investigate
+          ${locals.complaint} by ${locals.by}. Please log in to iMS Systems to conduct the investigation.`})%>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

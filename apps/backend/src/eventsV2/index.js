@@ -1,0 +1,19 @@
+exports.registerServereventListenersV2 = (app) => {
+  require("./handlers/risks/index").register(app);
+  require("./handlers/incidents/index").register(app);
+  require("./handlers/audit/index").register(app);
+  require("./handlers/managementReview/index").register(app);
+  require("./handlers/kpiObjectives/index").register(app);
+  require("./handlers/supplier/index").register(app);
+  require("./handlers/task/index").register(app);
+  require("./handlers/cip/index").register(app);
+  require("./handlers/document/index").register(app);
+  require("./handlers/crm/index").register(app);
+  require("./handlers/wallet/index").register(app);
+  require("./handlers/dataImport/index").register(app);
+  require("./handlers/controlComplienceupdates/index").register(app);
+  require("./handlers/user/index").register(app);
+  require("./handlers/misc/index").register(app);
+  require("./handlers/aiResponse/index").register(app);
+  require("./handlers/imsProject/index").register(app);
+};

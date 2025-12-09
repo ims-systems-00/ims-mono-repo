@@ -1,0 +1,26 @@
+<%- include('../shared/useremails/start'); %>
+    <%- include('../shared/useremails/container/main_container_start'); %>
+        <%- include('../shared/useremails/heading_section/index',{heading:"Account Reactivated"}); %>
+            <%- include('../shared/useremails/greeting_section/index',{name:locals.organizationName}); %>
+
+                <%- include('../shared/useremails/message_section/index',{message:`We hope this email finds you well. We
+                    are pleased to inform you that your iMS has been successfully reactivated.`})%>
+
+
+                    <%- include('../shared/useremails/message_section/index',{message:`You now have full access to our
+                        services, and your account is up-to-date. We appreciate your prompt response in settling the
+                        outstanding balance, and we're here to support you in any way needed.`})%>
+
+
+                        <%- include('../shared/useremails/message_section/index',{message:`If you have any questions or
+                            require further assistance, please do not hesitate to reach out to our customer support team
+                            at support@imssystems.tech. We are committed to providing excellent service, and your
+                            satisfaction is our priority.`})%>
+
+                            <%- include('../shared/useremails/message_section/index',{message:`Once again, thank you for
+                                your immediate attention to this matter. We value your continued partnership, and we
+                                look forward to serving you without any interruptions.`})%>
+
+                                <%- include('../shared/useremails/closing_section/index'); %>
+                                    <%- include('../shared/useremails/container/main_container_end'); %>
+                                        <%- include('../shared/useremails/end'); %>

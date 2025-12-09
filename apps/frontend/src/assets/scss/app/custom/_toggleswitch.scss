@@ -1,0 +1,69 @@
+.ims-toggle-switch-wrapper {
+  position: relative;
+  bottom: 24px;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+}
+
+.ims-toggle-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ims-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background-color: #ccc;
+  background-color: $primary;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.ims-toggle-slider.toggle-checked {
+  //background-color: $primary;
+  background-color: #ccc;
+}
+
+// .ims-toggle-slider:before {
+//   position: absolute;
+//   content: "";
+//   height: 14px;
+//   width: 14px;
+//   top: 2px;
+//   bottom: 2px;
+//   left: 2px;
+//   background-color: $white;
+//   transition: 0.4s;
+//   border-radius: 50%;
+// }
+
+.ims-toggle-slider::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  background-color: $white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+// .ims-toggle-switch:checked + .ims-toggle-slider:before {
+//   transform: translateX(14px);
+// }
+
+.ims-toggle-switch:checked + .ims-toggle-slider::after {
+  transform: translateX(14px);
+}
+
+.ims-toggle-switch:focus + .ims-toggle-slider {
+  box-shadow: 0 0 1px $primary;
+}

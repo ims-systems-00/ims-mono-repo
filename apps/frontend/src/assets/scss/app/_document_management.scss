@@ -1,0 +1,19 @@
+.image-document-type-icon {
+  padding: 3px;
+  border-radius: 0 !important;
+}
+.searchable-document {
+  .document-stripe {
+    padding: $padding-base-vertical;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+    cursor: pointer;
+    .document-information {
+      .repository-information {
+      }
+    }
+    &:hover {
+      background-color: $secondary-extra-light;
+    }
+  }
+}

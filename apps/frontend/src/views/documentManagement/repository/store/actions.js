@@ -1,0 +1,20 @@
+const USER_ACTIONS = {
+  LOAD_REPOSITORY: "load-repository",
+  AMEND_REPOSITORY: "amend-repository",
+  SOFT_DELETE_REPOSITORY: "soft-delete-repository",
+  HARD_DELETE_REPOSITORY: "hard-delete-repository",
+  UPLOAD_DOCUMENT: "upload-document",
+  LOAD_CHILD_NODES: "load-nodes",
+  LOAD_TRASHED_NODES: "load-trashed-nodes",
+  LOAD_NODE_PATH: "load-node-path",
+  LOAD_NODE: "load-node",
+  ADD_FOLDER: "add-folder",
+  ADD_FILE: "add-file",
+  SHARE_DOCUMENT: "share-document",
+  SOFT_DELETE_NODE: "soft-delete-node",
+  HARD_DELETE_NODE: "hard-delete-node",
+  RESTORE_NODE: "restore-node",
+  RENAME_NODE: "rename-node",
+  MOVE_NODE: "move-node",
+};
+export default USER_ACTIONS;

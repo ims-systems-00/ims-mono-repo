@@ -1,0 +1,1 @@
+{"suppliers::organization":"Joi.any().label(\"Organization\")"}

@@ -1,0 +1,349 @@
+openapi: 3.0.0
+info:
+  title: IMS Project Budget API
+  version: 1.0.0
+  description: API documentation for IMS Project Budget
+
+tags:
+  - name: IMS Project Budget
+    description: APIs for managing IMS Project Budget
+
+paths:
+  /ims-projects/{projectId}/budgets/:
+    post:
+      summary: Create IMS Project Budget
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectBudgetInput"
+      responses:
+        '200':
+          description: IMS Project Budget created successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project budget created successfully.
+                imsProjectBudget:
+                  imsProjectId: "6610de2b873fc4fc4efc224a"
+                  category: Hardware
+                  unitPrice: 100
+                  quantity: 5
+                  total: 500
+                  currency: USD
+                  _id: "6643650ab5a9a88b3162d742"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:20:10.025Z"
+                  updatedAt: "2024-05-14T13:20:10.025Z"
+                  __v: 0
+                statusCode: 200
+
+
+    get:
+      summary: List IMS Project Budgets
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of IMS Project Budgets
+          content:
+            application/json:
+              example:
+                message: ims Project budgets retrived.
+                pagination:
+                  totalPages: 1
+                  totalResults: 10
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                imsProjectBudgets:
+                  - _id: "66436702b5a9a88b3162d820"
+                    imsProjectId: "6610de2b873fc4fc4efc224a"
+                    category: Hardware
+                    unitPrice: 100
+                    quantity: 5
+                    total: 500
+                    currency: USD
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T13:28:34.292Z"
+                    updatedAt: "2024-05-14T13:28:34.292Z"
+                    __v: 0
+                  - _id: "6620565520ff018773d0acf1"
+                    imsProjectId: "6610de2b873fc4fc4efc224a"
+                    category: Hardware
+                    unitPrice: 111
+                    quantity: 11
+                    total: 11111
+                    currency: USD
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-04-17T23:08:05.762Z"
+                    updatedAt: "2024-04-17T23:08:14.004Z"
+                    __v: 0
+
+  /ims-projects/{projectId}/budgets/{budgetId}:
+    get:
+      summary: Get IMS Project Budget by ID
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: budgetId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Budget retrieved successfully
+          content:
+            application/json:
+              example:
+                message: imsProject budget retrived.
+                imsProjectBudget:
+                  imsProjectId: "6610de2b873fc4fc4efc224a"
+                  category: Hardware
+                  unitPrice: 100
+                  quantity: 5
+                  total: 500
+                  currency: USD
+                  _id: "6643650ab5a9a88b3162d742"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:20:10.025Z"
+                  updatedAt: "2024-05-14T13:20:10.025Z"
+                  __v: 0
+                statusCode: 200
+
+    put:
+      summary: Update IMS Project Budget
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectBudgetInput"
+      responses:
+        '200':
+          description: IMS Project Budget updated successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project budget info updated.
+                imsProjectBudget:
+                  imsProjectId: "6610de2b873fc4fc4efc224a"
+                  category: Hardware
+                  unitPrice: 100
+                  quantity: 5
+                  total: 500
+                  currency: USD
+                  _id: "6643650ab5a9a88b3162d742"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:20:10.025Z"
+                  updatedAt: "2024-05-14T13:20:10.025Z"
+                  __v: 0
+                statusCode: 200
+
+  /ims-projects/{projectId}/budgets/{budgetId}/hard:
+    delete:
+      summary: Remove IMS Project Budget
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: budgetId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Budget removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project budget removed.
+                imsProjectBudget:
+                  imsProjectId: "6610de2b873fc4fc4efc224a"
+                  category: Hardware
+                  unitPrice: 100
+                  quantity: 5
+                  total: 500
+                  currency: USD
+                  _id: "6643650ab5a9a88b3162d742"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:20:10.025Z"
+                  updatedAt: "2024-05-14T13:20:10.025Z"
+                  __v: 0
+                statusCode: 200
+  /ims-projects/{projectId}/budgets/{budgetId}/soft:
+      delete:
+        summary: soft delete IMS Project Budget
+        tags: [IMS Project Budget]
+        security:
+          - apiKey: []
+        parameters:
+          - in: path
+            name: projectId
+            required: true
+            schema:
+              type: string
+          - in: path
+            name: budgetId
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: IMS Project Budget removed successfully
+            content:
+              application/json:
+                example:
+                  message: iMS Project budget moved to trash.
+                  imsProjectBudget:
+                    imsProjectId: "6610de2b873fc4fc4efc224a"
+                    category: Hardware
+                    unitPrice: 100
+                    quantity: 5
+                    total: 500
+                    currency: USD
+                    _id: "6643650ab5a9a88b3162d742"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T13:20:10.025Z"
+                    updatedAt: "2024-05-14T13:20:10.025Z"
+                    __v: 0
+                  statusCode: 200
+
+  /ims-projects/{projectId}/budgets/{budgetId}/restore:
+    put:
+      summary: Restore IMS Project Budget
+      tags: [IMS Project Budget]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: budgetId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Budget restored successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project budget restored.
+                imsProjectBudget:
+                  imsProjectId: "6610de2b873fc4fc4efc224a"
+                  category: Hardware
+                  unitPrice: 100
+                  quantity: 5
+                  total: 500
+                  currency: USD
+                  _id: "6643650ab5a9a88b3162d742"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:20:10.025Z"
+                  updatedAt: "2024-05-14T13:20:10.025Z"
+                  __v: 0
+                statusCode: 200
+
+components:
+  schemas:
+    ImsProjectBudgetInput:
+      type: object
+      properties:
+        category:
+          type: string
+        unitPrice:
+          type: number
+        quantity:
+          type: integer
+        total:
+          type: number
+        currency:
+          type: string
+      required:
+        - category
+        - unitPrice
+        - quantity
+        - total
+        - currency

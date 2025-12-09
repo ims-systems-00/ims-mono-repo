@@ -1,0 +1,37 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Licence request"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:"iMS Systems"}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${locals.request.created.by &&
+          locals.request.created.by.name} from ${locals.organisation.name} asked to grant ${locals.request.users} Users,
+          ${locals.request.superUser} SA, ${locals.request.groups} BU.`})%>
+          <%- include('../shared/useremails/message_section/index',{message:`Compliance tools requested: ↓`})%>
+            <%- include('../shared/useremails/message_section/start')%>
+              <% for(let tool of locals.request.complianceTools){ %>
+                <span>
+                  <%= tool %>
+                </span>
+                <br>
+                <% } %>
+                  <%- include('../shared/useremails/message_section/index',{message:`Additional modules requested:
+                    ↓`})%>
+                    <% for(let tool of locals.request.additionalModules){ %>
+                      <span>
+                        <%= tool %>
+                      </span>
+                      <br>
+                      <% } %>
+                        <%- include('../shared/useremails/message_section/end')%>
+                          <%- include('../shared/useremails/message_section/index',{message:`frontendClient:
+                            ${locals.frontendClient} ,org: ${locals.organisation.name}, user:
+                            ${locals.organisation.user.name}, email: ${locals.organisation.user.email}`})%>
+                            <%- include('../shared/useremails/message_section/index',{message:locals.request.message})%>
+                              <%- include('../shared/useremails/message_section/index',{message:`Current license
+                                allocation details: SA ${locals.organisation.licenses.superUser.allocated}, BU
+                                ${locals.organisation.licenses.groups.allocated}, Users
+                                ${locals.organisation.licenses.users.allocated}, Compliance tools:
+                                ${locals.organisation.licenses.complianceTools.join(",")}, Additional modules:
+                                ${locals.organisation.licenses.additionalModules.join(",")}`})%>
+                                <%- include('../shared/useremails/closing_section/index'); %>
+                                  <%- include('../shared/useremails/container/main_container_end'); %>
+                                    <%- include('../shared/useremails/end'); %>

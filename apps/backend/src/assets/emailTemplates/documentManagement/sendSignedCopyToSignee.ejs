@@ -1,0 +1,9 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Document signed"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Here is a copy of "${locals.documentName}"
+          that you signed via iMS Systems. You can now download the file.`}); %>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

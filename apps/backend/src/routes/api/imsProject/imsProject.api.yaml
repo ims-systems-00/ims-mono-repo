@@ -1,0 +1,565 @@
+openapi: 3.0.0
+info:
+  title: iMS Project API
+  version: 1.0.0
+  description: API documentation for iMS Project
+
+tags:
+  - name: iMS Project
+    description: APIs for managing iMS Projects
+
+paths:
+  /ims-projects/:
+    post:
+      summary: Create iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectInput"
+      responses:
+        "200":
+          description: iMS Project created successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project created successfully
+                imsProject:
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  ID: 1
+                  reference: "PROJ-1"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  _id: "66435d12ff237cc9d82400dc"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:46:10.551Z"
+                  updatedAt: "2024-05-14T12:46:10.551Z"
+                  __v: 0
+                statusCode: 200
+
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                message: "Data is required."
+
+    get:
+      summary: List iMS Projects
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      responses:
+        "200":
+          description: List of iMS Projects
+          content:
+            application/json:
+              example:
+                message: ims Project retrived
+                pagination:
+                  totalPages: 1
+                  totalResults: 2
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: true
+                  prevPage: null
+                  nextPage: 2
+                imsProjects:
+                  - _id: "66435ed6332a5de9dd1c889e"
+                    title: string
+                    description: ""
+                    startDate: "2024-05-14T12:52:57.977Z"
+                    endDate: "2024-05-14T12:52:57.977Z"
+                    attachments: []
+                    createdBy: "65c4a6c6d1fee6d4b00a5c88"
+                    status: Todo
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    members:
+                      - _id: "65c4ed51662347f76a3b1fa7"
+                        firstName: "reyad"
+                        profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                      - _id: "65c4ed51662347f76a3b234"
+                        firstName: "malo"
+                        profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    createdAt: "2024-05-14T12:53:42.426Z"
+                    updatedAt: "2024-05-14T12:53:42.426Z"
+                    __v: 0
+                  - _id: "66435ed5332a5de9dd1c8871"
+                    title: string
+                    description: ""
+                    startDate: "2024-05-14T12:52:57.977Z"
+                    endDate: "2024-05-14T12:52:57.977Z"
+                    attachments: []
+                    createdBy: "65c4a6c6d1fee6d4b00a5c88"
+                    status: Todo
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    members:
+                      - _id: "65c4ed51662347f76a3b1fa7"
+                        firstName: "reyad"
+                        profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    createdAt: "2024-05-14T12:53:41.614Z"
+                    updatedAt: "2024-05-14T12:53:41.614Z"
+                    __v: 0
+
+  /ims-projects/{projectId}:
+    get:
+      summary: Get iMS Project by ID
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project retrieved successfully
+          content:
+            application/json:
+              example:
+                message: imsProject retrived.
+                imsProject:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66435e691504a6cfe8442101"
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:51:53.185Z"
+                  updatedAt: "2024-05-14T12:51:53.185Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+
+    put:
+      summary: Update iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectInput"
+      responses:
+        "200":
+          description: iMS Project updated successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project updated successfully."
+                imsProject:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66435e691504a6cfe8442101"
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:51:53.185Z"
+                  updatedAt: "2024-05-14T12:51:53.185Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/overview:
+    get:
+      summary: Load analytics of specific iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project analytics retrieved.
+          content:
+            application/json:
+              example:
+                message: iMS Project analytics retrieved.
+                imsProjectAnalytics:
+                  imsProjectStatus:
+                    total: 1
+                    statuses:
+                      - status: Todo
+                        count: 1
+                        color: "#000000"
+                      - status: In Progress
+                        count: 0
+                        color: "#FF5733"
+                      - status: Completed
+                        count: 0
+                        color: "#FF5745"
+                  totalMembersCount: 0
+                  budget:
+                    totalBudget: 15000
+                    totalSpentBudget: 1000
+                    totalRemainingBudget: 14000
+                  latestDocuments:
+                    - _id: "667ad4bf3f6a45698ef7fc78"
+                      repository: "667a8ab5206961225ee4555a"
+                      name: "Test101.pdf"
+                      type: document
+                      status: Pending
+                      parentNode: null
+                      documentData:
+                        storageInfo:
+                          Name: "Test101.pdf"
+                          key: "general/0ca3a668-9f11-4434-9950-f6059bdbd4c1.pdf"
+                          Key: "general/0ca3a668-9f11-4434-9950-f6059bdbd4c1.pdf"
+                          Bucket: "localhost-ims-static-resources-bucket"
+                          modified:
+                            by: "65c4a6c6d1fee6d4b00a5c88"
+                            on: "2024-06-25T14:31:27.261Z"
+                        applicableModules:
+                          - risks
+                          - compliancecontrols
+                        complianceTools:
+                          - ISO 27001
+                          - ISO 9001
+                        purpose: Process
+                        authorisation:
+                          - user: "65c4a6c6d1fee6d4b00a5c88"
+                            status: Pending
+                            handledOn: "2024-06-25T14:30:21.702Z"
+                            _id: "667ad4bf3f6a45698ef7fc7a"
+                        classification: ""
+                        dvID: 0
+                        conformance: -1
+                        threadId: "46b1dba7-1aac-493b-b36b-cccc47df60e0"
+                        _id: "667ad4bf3f6a45698ef7fc79"
+                      folderData: null
+                      reference: "DOC-11"
+                      created:
+                        by: "65c4a6c6d1fee6d4b00a5c88"
+                        on: "2024-06-25T14:31:27.280Z"
+                      deleteMarker:
+                        status: false
+                        deletedAt: null
+                        dateScheduled: null
+                      isoControls:
+                        toolkits: []
+                        clauses: []
+                      organization: "65c4a6ffd1fee6d4b00a5f2e"
+                      ID: 11
+                      createdAt: "2024-06-25T14:31:27.290Z"
+                      updatedAt: "2024-06-25T14:31:27.290Z"
+                      __v: 0
+                    - _id: "667ad4bf3f6a45698ef7db52"
+                      repository: "667a8ab5206961225ee4555a"
+                      name: "Test201.pdf"
+                      type: document
+                      status: Pending
+                      parentNode: null
+                      documentData:
+                        storageInfo:
+                          Name: "Test201.pdf"
+                          key: "general/0ca3a668-9f11-4434-9950-f6059bdbd4c1.pdf"
+                          Key: "general/0ca3a668-9f11-4434-9950-f6059bdbd4c1.pdf"
+                          Bucket: "localhost-ims-static-resources-bucket"
+                          modified:
+                            by: "65c4a6c6d1fee6d4b00a5c88"
+                            on: "2024-06-25T14:31:27.261Z"
+                        applicableModules:
+                          - risks
+                          - compliancecontrols
+                        complianceTools:
+                          - ISO 27001
+                          - ISO 9001
+                        purpose: Process
+                        authorisation:
+                          - user: "65c4a6c6d1fee6d4b00a5c88"
+                            status: Pending
+                            handledOn: "2024-06-25T14:30:21.702Z"
+                            _id: "667ad4bf3f6a45698ef7fc7a"
+                        classification: ""
+                        dvID: 0
+                        conformance: -1
+                        threadId: "46b1dba7-1aac-493b-b36b-cccc47df60e0"
+                        _id: "667ad4bf3f6a45698ef7fc79"
+                      folderData: null
+                      reference: "DOC-11"
+                      created:
+                        by: "65c4a6c6d1fee6d4b00a5c88"
+                        on: "2024-06-25T14:31:27.280Z"
+                      deleteMarker:
+                        status: false
+                        deletedAt: null
+                        dateScheduled: null
+                      isoControls:
+                        toolkits: []
+                        clauses: []
+                      organization: "65c4a6ffd1fee6d4b00a5f2e"
+                      ID: 11
+                      createdAt: "2024-06-25T14:31:27.290Z"
+                      updatedAt: "2024-06-25T14:31:27.290Z"
+                      __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/hard:
+    delete:
+      summary: Remove iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project removed.
+                imsProject:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66435e691504a6cfe8442101"
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:51:53.185Z"
+                  updatedAt: "2024-05-14T12:51:53.185Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/soft:
+    delete:
+      summary: Soft Remove iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project moved to trash
+          content:
+            application/json:
+              example:
+                message: iMS Project moved to trash.
+                imsProject:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66435e691504a6cfe8442101"
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:51:53.185Z"
+                  updatedAt: "2024-05-14T12:51:53.185Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/restore:
+    put:
+      summary: Restore iMS Project
+      tags: [iMS Project]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project restored successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project restored successfully."
+                imsProject:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66435e691504a6cfe8442101"
+                  title: Example Project
+                  description: ""
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-22T08:00:00.000Z"
+                  attachments: []
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  status: Todo
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T12:51:53.185Z"
+                  updatedAt: "2024-05-14T12:51:53.185Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project not found with given query.
+                statusCode: 404
+
+components:
+  schemas:
+    ImsProjectInput:
+      type: object
+      properties:
+        title:
+          type: string
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+      required:
+        - title
+        - startDate
+        - endDate

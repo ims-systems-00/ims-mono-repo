@@ -1,0 +1,10 @@
+- ~~ keep the cursor to last line when clicked to bootm of the editor ~~
+- keep the selected text highlighted.
+- text gets vanished when selected and not put any link.
+- ~~ default selection pan shold only contain images ~~
+- if other files selcted through error not an image.
+- loading anaimation invthe image.
+- block level selection state muting inline styles.
+- copy paste crashes the system.
+- undo redo button introduction.
+- can't write on the same line with link.

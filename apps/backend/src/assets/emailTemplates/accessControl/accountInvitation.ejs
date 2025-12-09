@@ -1,0 +1,10 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"iMS invitation"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:""}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${locals.senderName} has invited you to join
+          ${locals.senderOrganizationName}. Please follow the link below to join their iMS.`})%>
+          <%- include('../shared/useremails/button/index',{linkText:"Join organisation",link:locals.invitationLink})%>
+            <%- include('../shared/useremails/closing_section/index'); %>
+              <%- include('../shared/useremails/container/main_container_end'); %>
+                <%- include('../shared/useremails/end'); %>

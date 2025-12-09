@@ -1,0 +1,15 @@
+.analyser-response {
+  li {
+    position: relative;
+    transition: 0.1s ease-in-out;
+    padding: 5px;
+    &:hover {
+      background-color: $secondary-extra-light;
+      border: 1px solid $primary;
+      border-radius: 5px;
+    }
+    .btn {
+      transition: 0.1s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,902 @@
+[
+  {
+    "Assertion": "There is senior ownership of data security and protection within the organisation.",
+    "Input Type": "Yes/No",
+    "clause": "1.1.1",
+    "title": "Has SIRO responsibility for data security been assigned?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.1.2",
+    "title": "List the names and job titles of your key staff with responsibility for data protection and/or security."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.1.3",
+    "title": "Are there clear lines of responsibility and accountability to named individuals for data security?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.1.4",
+    "title": "Is data security direction set at board level and translated into effective organisational practices?"
+  },
+  {
+    "Assertion": "There are clear data security and protection policies in place and these are understood by staff and available to the public.\n",
+    "Input Type": "Yes/No",
+    "clause": "1.2.1",
+    "title": "Are there board-approved data security and protection policies in place that follow relevant guidance?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.2.3",
+    "title": "How are data security and protection policies made available to the public?"
+  },
+  {
+    "Assertion": "Individuals’ rights are respected and supported (GDPR Article 12-22) \n",
+    "Input Type": "Text",
+    "clause": "1.3.1",
+    "title": "What is your ICO registration number?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.3.2",
+    "title": "How is transparency information (e.g. your privacy notice) published and available to the public?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.3.3",
+    "title": "How have individuals been informed about their rights and how to exercise them?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.3.5",
+    "title": "Have there been any ICO actions taken against the organisation in the last 12 months, such as fines, enforcement notices or decision notices?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.4.1",
+    "title": "Provide details of the record or register that details each use or sharing of personal information."
+  },
+  {
+    "Assertion": "Records of processing activities are documented for all uses and flows of personal information (GDPR Article 30 and DPA 18 Schedule 1 Part 4)\n",
+    "Input Type": "Date",
+    "clause": "1.4.2",
+    "title": "When did your organisation last review both the list of all systems/information assets holding or sharing personal information and data flows?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.4.4",
+    "title": "Is your organisation compliant with the national data opt-out policy?"
+  },
+  {
+    "Assertion": "Personal information  is used and shared lawfully.",
+    "Input Type": "Document",
+    "clause": "1.5.2",
+    "title": "What actions have been taken following confidentiality and data protection monitoring/spot checks during the last year?"
+  },
+  {
+    "Assertion": "The use of personal information is subject to data protection by design and by default\n",
+    "Input Type": "Yes/No",
+    "clause": "1.6.1",
+    "title": "There is an approved procedure that sets out the organisation’s approach to data protection by design and by default, which includes pseudonymisation requirements."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.6.2",
+    "title": "There are technical controls that prevent information from being inappropriately copied or downloaded."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.6.3",
+    "title": "There are physical controls that prevent unauthorised access  to buildings and locations where personal data are stored or processed."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.6.4",
+    "title": "Provide the overall findings of the last data protection by design audit."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.6.5",
+    "title": "There is a staff procedure, agreed by the SIRO, on carrying out a Data Protection Impact Assessment that follows relevant ICO guidance."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.6.6",
+    "title": "Is a Data Protection Impact Assessment carried out before high risk processing commences?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.6.7",
+    "title": "Have any unmitigated risks identified through the Data Protection Impact Assessment process been notified to the ICO?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "1.6.8",
+    "title": "Data Protection Impact Assessments are published and available as part of the organisation’s transparency materials."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.7.2",
+    "title": "Data quality metrics and reports are used to assess and improve data quality."
+  },
+  {
+    "Assertion": "Effective data quality controls are in place\nand records are maintained appropriately",
+    "Input Type": "Text",
+    "clause": "1.7.3",
+    "title": "A data quality forum monitors the effectiveness of data quality assurance processes."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "1.7.4",
+    "title": "Has a records retention schedule been produced?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.7.5",
+    "title": "Provide details of when personal data disposal contract/s were last reviewed/updated."
+  },
+  {
+    "Assertion": "There is a clear understanding and management of the identified and significant risks to sensitive information and services",
+    "Input Type": "Text",
+    "clause": "1.8.1",
+    "title": "Does your organisation operate and maintain a data security risk register (including risks from supply chain) which links to the corporate risk framework providing senior visibility?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "1.8.3",
+    "title": "What are your top three data security and protection risks?"
+  },
+  {
+    "Assertion": "Staff are supported in understanding their obligations under the National Data Guardian’s Data Security Standards.",
+    "Input Type": "Yes/No",
+    "clause": "2.2.1",
+    "title": "Is there a data protection and security induction in place for all new entrants to the organisation?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "2.2.2",
+    "title": "Do all employment contracts contain data security requirements?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "2.2.3",
+    "title": "The results of staff awareness surveys on staff understanding of data security are reviewed to improve data security. "
+  },
+  {
+    "Assertion": "There has been an assessment of data security and protection training needs across the organisation.\n",
+    "Input Type": "Yes/No",
+    "clause": "3.1.1",
+    "title": "Has an approved organisation-wide data security and protection training needs analysis been completed in the last twelve months?"
+  },
+  {
+    "Assertion": "Staff pass the data security and protection mandatory test.\n",
+    "Input Type": "Yes/No",
+    "clause": "3.2.1",
+    "title": "Have at least 95% of all staff, completed their annual Data Security Awareness Training?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "3.2.2",
+    "title": "What is the average mark of staff completing the Data Security Awareness training?"
+  },
+  {
+    "Assertion": "Staff with specialist roles receive data security and protection training suitable to their role.",
+    "Input Type": "Text",
+    "clause": "3.3.1",
+    "title": "Provide details of any specialist data security and protection training undertaken."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "3.3.2",
+    "title": "The organisation has appropriately-qualified technical cyber security specialist staff and/or service."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "3.3.3",
+    "title": "The organisation has a nominated member of the Cyber Associates Network."
+  },
+  {
+    "Assertion": "Leaders and board members receive suitable data protection and security training.",
+    "Input Type": "Yes/No",
+    "clause": "3.4.1",
+    "title": "Have your SIRO and Caldicott Guardian received appropriate data security and protection training?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "3.4.2",
+    "title": "What percentage of board members have completed appropriate data security and protection training?"
+  },
+  {
+    "Assertion": "The organisation maintains a current record of staff and their roles.",
+    "Input Type": "Yes/No",
+    "clause": "4.1.1",
+    "title": "Your organisation maintains a record of staff and their roles."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.1.2",
+    "title": "Does the organisation understand who has access to personal and confidential data through your systems, including any systems which do not support individual logins?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.1.3",
+    "title": "Are users in your organisation only given the minimum access to sensitive information or systems necessary for their role?"
+  },
+  {
+    "Assertion": "Organisation assures good management and maintenance of identity and access control for it's networks and information systems.",
+    "Input Type": "Date",
+    "clause": "4.2.1",
+    "title": "When was the last audit of user accounts held?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "4.2.2",
+    "title": "Provide a summary of data security incidents in the last 12 months caused by a mismatch between user role and system accesses granted."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.2.3",
+    "title": "Logs are retained for a sufficient period, reviewed regularly and can be searched to identify malicious activity."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.2.5",
+    "title": "Are unnecessary user accounts removed or disabled?"
+  },
+  {
+    "Assertion": "All staff understand that their activities on IT systems will be monitored and recorded for security purposes.",
+    "Input Type": "Yes/No",
+    "clause": "4.3.1",
+    "title": "All system administrators have signed an agreement which holds them accountable to the highest standards of use. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "4.3.2",
+    "title": "Are users, systems and (where appropriate) devices always identified and authenticated prior to being permitted access to information or systems?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.3.5",
+    "title": "Have all staff been notified that their system use could be monitored?"
+  },
+  {
+    "Assertion": "You closely manage privileged user access to networks and information systems supporting the essential service.",
+    "Input Type": "Yes/No",
+    "clause": "4.4.1",
+    "title": "Has the Head of IT, or equivalent, confirmed that IT administrator activities are logged and those logs are only accessible to appropriate personnel?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.4.3",
+    "title": "The organisation does not allow users with wide ranging or extensive system privilege to use their highly privileged accounts for high-risk functions, in particular reading email and web browsing."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.4.4",
+    "title": "The organisation only allows privileged access to be initiated from devices owned and managed by your organisation"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.4.5",
+    "title": "You record and store all privileged user sessions for offline analysis and investigation."
+  },
+  {
+    "Assertion": "You  ensure your passwords are  suitable for the information you are protecting",
+    "Input Type": "Yes/No",
+    "clause": "4.5.1",
+    "title": "Do you have a password policy giving staff advice on managing their passwords?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.5.2",
+    "title": "Technical controls enforce password policy and mitigate against password-guessing attacks. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.5.3",
+    "title": "Multifactor authentication is used [wherever technically feasible]."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "4.5.4",
+    "title": "Passwords for highly privileged system accounts, social media accounts and infrastructure components shall be changed from default values and should have high strength. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.5.5",
+    "title": "Does your organisation grant limited privileged access and third party access only for a limited time period, or is it planning to do so?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "4.5.6",
+    "title": "Do you have high-strength passwords defined in policy and enforced technically for all users of internet-facing authentication services?"
+  },
+  {
+    "Assertion": "Process reviews are held at least once per year where data security is put at risk and following data security incidents.\n",
+    "Input Type": "Yes/No",
+    "clause": "5.1.1",
+    "title": "Root cause analysis is conducted routinely as a key part of your lessons learned activities following a data security incident, with findings acted upon. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "5.1.2",
+    "title": "Provide summary details of process reviews held to identify and manage problem processes that cause security breaches."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "5.1.3",
+    "title": "List of actions arising from each process review, with names of actionees."
+  },
+  {
+    "Assertion": "Participation in reviews is comprehensive, and clinicians are actively involved.\n",
+    "Input Type": "Document",
+    "clause": "5.2.1",
+    "title": "Provide a scanned copy of the process review meeting registration sheet with attendee signatures and roles held."
+  },
+  {
+    "Assertion": "Action is taken to address problem processes as a result of feedback at meetings or in year.",
+    "Input Type": "Yes/No",
+    "clause": "5.3.1",
+    "title": "Are the actions to address problem processes, being monitored and assurance given to the board or equivalent senior team?"
+  },
+  {
+    "Assertion": "A confidential system for reporting data security and protection  breaches and near misses is in place and actively used.\n",
+    "Input Type": "Yes/No",
+    "clause": "6.1.1",
+    "title": "A data security and protection breach reporting system is in place."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "6.1.2",
+    "title": "How can staff report data security and protection breaches and near misses?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "6.1.4",
+    "title": "How is the board or equivalent notified of the action plan for all data security and protection breaches?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.1.5",
+    "title": "Individuals affected by a breach are appropriately informed. "
+  },
+  {
+    "Assertion": "All user devices are subject to anti-virus protections while email services benefit from spam filtering and protection deployed at the corporate gateway.",
+    "Input Type": "Text",
+    "clause": "6.2.2",
+    "title": "Number of alerts recorded by the antivirus/anti-malware tool in the last three months."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.3",
+    "title": "Has antivirus/anti-malware software been installed on all computers that are connected to or capable of connecting to the Internet?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.4",
+    "title": "Antivirus/anti-malware is kept continually up to date."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.5",
+    "title": "Antivirus/anti-malware software scans files automatically upon access."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.6",
+    "title": "Connections to malicious websites on the Internet are prevented.  "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "6.2.9",
+    "title": "Number of phishing emails reported by staff per month."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.10",
+    "title": "Does the organisation maintain a list of approved applications, and are users prevented from installing any application that is unsigned or has an invalid signature?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.11",
+    "title": "You have implemented on your email, Domain-based Message Authentication Reporting and Conformance (DMARC), Domain Keys Identified Mail (DKIM) and Sender Policy Framework (SPF) for your organisation's domains to make email spoofing difficult."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.2.12",
+    "title": "You have implemented spam and malware filtering, and enforce DMARC on inbound email."
+  },
+  {
+    "Assertion": "Known vulnerabilities are acted on based on advice from CareCERT, and lessons are learned from previous incidents and near misses.",
+    "Input Type": "Text",
+    "clause": "6.3.1",
+    "title": "If you have had a data security incident, was it caused by a known vulnerability?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.3.2",
+    "title": "The organisation has responded to high severity CareCERT alerts within 48 hours over the last twelve months."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "6.3.3",
+    "title": "The organisation has a proportionate monitoring solution to detect cyber events on systems and services. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "6.3.5",
+    "title": "Are all new digital services that are attractive to cyber criminals (such as for fraud) implementing transactional monitoring techniques from the outset?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "6.3.6",
+    "title": "Have you had any repeat data security incidents within the organisation during the past twelve months?"
+  },
+  {
+    "Assertion": "Organisations have a defined, planned and communicated response to Data security incidents that impact sensitive information or key operational services.",
+    "Input Type": "Document",
+    "clause": "7.1.1",
+    "title": "Your organisation understands the health and care services it provides.\n"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.1.2",
+    "title": "Do you have well defined processes in place to ensure the continuity of services in the event of a data security incident, failure or compromise?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.1.3",
+    "title": "You understand the resources and information that will likely be needed to carry out any required response activities, and arrangements are in place to make these resources available."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "7.1.4",
+    "title": "You use your security awareness, e.g. threat intelligence sources, to make temporary security changes in response to new threats, e.g. a widespread outbreak of very damaging malware."
+  },
+  {
+    "Assertion": "There is an effective test of the continuity plan and disaster recovery plan for data security incidents.",
+    "Input Type": "Text",
+    "clause": "7.2.1",
+    "title": "Explain how your data security incident response and management plan has been tested to ensure all parties understand their roles and responsibilities as part of the plan."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "7.2.4",
+    "title": "From the business continuity exercise, explain what issues and actions were documented, with names of actionees listed against each item."
+  },
+  {
+    "Assertion": "You have the capability to enact your incident response plan, including effective limitation of impact on your essential service. During an incident, you have access to timely information on which to base your response decisions.",
+    "Input Type": "Text",
+    "clause": "7.3.1",
+    "title": "On discovery of an incident, mitigating measures shall be assessed and applied at the earliest opportunity, drawing on expert advice where necessary. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.3.2",
+    "title": "All emergency contacts are kept securely, in hardcopy and are up-to-date."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.3.3",
+    "title": "Are draft press materials for data security incidents ready?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.3.4",
+    "title": "Suitable backups of all important data and information needed to recover the essential service are made, tested, documented and routinely reviewed."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "7.3.5",
+    "title": "When did you last successfully restore from backup?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "7.3.6",
+    "title": "Are your backups kept separate from your network ('offline'), or in a cloud service designed for this purpose "
+  },
+  {
+    "Assertion": "All software and hardware has been surveyed to understand if it is supported and up to date.",
+    "Input Type": "Document",
+    "clause": "8.1.1",
+    "title": "Provide evidence of how the organisation tracks and records all software assets and their configuration."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.1.2",
+    "title": "Does the organisation track and record all end user devices and removable media assets?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.1.3",
+    "title": "Devices that are running out-of-date unsupported software and no longer receive security updates (patches) are removed from the network, or the software in question is uninstalled. Where this is not possible, the device should be isolated and have limited connectivity to the network, and the risk assessed, documented, accepted and signed off by the SIRO."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.1.4",
+    "title": "The organisation ensures that software that is no longer within support or receiving security updates is uninstalled.  Where this is impractical, the endpoint should be isolated and have limited connectivity to the network. "
+  },
+  {
+    "Assertion": "Unsupported software and hardware is categorised and documented, and data security risks are identified and managed.",
+    "Input Type": "Document",
+    "clause": "8.2.1",
+    "title": "List any unsupported software prioritised according to business risk, with remediation plan against each item."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.2.2",
+    "title": "The SIRO confirms that the risks of using unsupported systems are being managed."
+  },
+  {
+    "Assertion": "Supported systems are kept up-to-date with the latest security patches.\n",
+    "Input Type": "Document",
+    "clause": "8.3.1",
+    "title": "How do your systems receive updates and how often?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "8.3.2",
+    "title": "How often, in days, is automatic patching typically being pushed out to remote endpoints?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.3.3",
+    "title": "There is a documented approach to applying security updates (patches) agreed by the SIRO."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.3.4",
+    "title": "Where a security patch has been classed as critical or high-risk vulnerability it is applied within 14 days, or the risk has been assessed, documented, accepted and signed off by the SIRO with an auditor agreeing a robust risk management process has been applied."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "8.3.5",
+    "title": "Is your organisation actively using and managing Advanced Threat Protection (ATP)?"
+  },
+  {
+    "Assertion": "You manage known vulnerabilities in your network and information systems to prevent disruption of the essential service.",
+    "Input Type": "Text",
+    "clause": "8.4.1",
+    "title": "Is all your infrastructure protected from common cyber-attacks through secure configuration and patching? "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.4.2",
+    "title": "All infrastructure is running operating systems and software packages that are patched regularly, and as a minimum in vendor support."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "8.4.3",
+    "title": "You maintain a current understanding of the exposure of your hardware and software to publicly-known vulnerabilities.\n"
+  },
+  {
+    "Assertion": "All networking components have had their default passwords changed.",
+    "Input Type": "Yes/No",
+    "clause": "9.1.1",
+    "title": "The Head of IT, or equivalent role, confirms all networking components have had their default passwords changed to a high strength password."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.1.2",
+    "title": "The Head of IT, or equivalent role, confirms all organisational devices have had their default passwords changed."
+  },
+  {
+    "Assertion": "A penetration test has been scoped and undertaken",
+    "Input Type": "Yes/No",
+    "clause": "9.2.1",
+    "title": "The annual IT penetration testing is scoped in negotiation between the SIRO, business and testing team including a vulnerability scan and checking that all networking components have had their default passwords changed to a high strength password."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Date",
+    "clause": "9.2.2",
+    "title": "The date the penetration test and vulnerability scan was undertaken."
+  },
+  {
+    "Assertion": "Systems which handle sensitive information or key operational services shall be protected from exploitation of known vulnerabilities.",
+    "Input Type": "Yes/No",
+    "clause": "9.3.1",
+    "title": "All web applications are protected and not susceptible to common security vulnerabilities, such as described in the top ten Open Web Application Security Project (OWASP) vulnerabilities."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "9.3.2",
+    "title": "The SIRO or equivalent senior role has reviewed the results of latest penetration testing, with an action plan for its findings."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.3.3",
+    "title": "The organisation uses the UK Public Sector DNS service, or equivalent protective DNS service, to resolve Internet DNS queries."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.3.4",
+    "title": "The organisation ensures that changes to its authoritative DNS entries can only be made by strongly authenticated and authorised administrators."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.3.5",
+    "title": "The organisation understands and records all IP ranges in use across the organisation."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.3.6",
+    "title": "The organisation is protecting it's data in transit (including email) using well-configured TLS v1.2 or better."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.3.7",
+    "title": "The organisation has registered and uses the National Cyber Security Centre (NCSC) Web Check service, or equivalent web check service, for its publicly-visible applications."
+  },
+  {
+    "Assertion": "You have demonstrable confidence in the effectiveness of the security of your technology, people, and processes relevant to essential services.",
+    "Input Type": "Text",
+    "clause": "9.4.1",
+    "title": "You validate that the security measures in place to protect the networks and information systems are effective, and remain effective for the lifetime over which they are needed."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.4.2",
+    "title": "You understand the assurance methods available to you and choose appropriate methods to gain confidence in the security of essential services."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "9.4.3",
+    "title": "Your confidence in your security as it relates to your technology, people, and processes has been demonstrated to, and verified by, a third party onsite assessment. "
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "9.4.4",
+    "title": "Security deficiencies uncovered by assurance activities are assessed, prioritised and remedied when necessary in a timely and effective way."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Document",
+    "clause": "9.4.6",
+    "title": "What level of assurance did the independent audit of your Data Security and Protection Toolkit provide to your organisation?"
+  },
+  {
+    "Assertion": "You securely configure the network and information systems that support the delivery of essential services.",
+    "Input Type": "Yes/No",
+    "clause": "9.6.1",
+    "title": "All devices in your organisation have technical controls that manage the installation of software on the device."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.2",
+    "title": "Confirm all data are encrypted at rest on all mobile devices and removable media and you have the ability to remotely wipe and/or revoke access from an end user device."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Text",
+    "clause": "9.6.3",
+    "title": "You closely and effectively manage changes in your environment, ensuring that network and system configurations are secure and documented."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.4",
+    "title": "Only approved software can be installed and run and unnecessary software is removed."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.5",
+    "title": "End user devices are built from a consistent and approved base image."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.6",
+    "title": "End user device security settings are managed and deployed centrally."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.7",
+    "title": "AutoRun is disabled."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.9",
+    "title": "All remote access is authenticated."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.10",
+    "title": "You have a plan for protecting devices that are natively unable to connect to the Internet, and the risk has been assessed, documented, accepted and signed off by the SIRO."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.6.11",
+    "title": "Does your organisation meet the secure email standard?"
+  },
+  {
+    "Assertion": "The organisation is protected by a well managed firewall.",
+    "Input Type": "Yes/No",
+    "clause": "9.7.1",
+    "title": "Have one or more firewalls (or similar network device) been installed on all the boundaries of the organisation's internal network(s)?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.7.2",
+    "title": "Has the administrative interface used to manage the boundary firewall been configured such that; it is not accessible from the Internet, it requires second factor authentication or is access limited to a specific address?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.7.3",
+    "title": "The organisation has checked and verified that firewall rules ensure that all unauthenticated inbound connections are blocked by default."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.7.4",
+    "title": "All inbound firewall rules (other than default deny) are documented with business justification and approval by an authorised individual."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.7.5",
+    "title": "Have firewall rules that are no longer required been removed or disabled?"
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "9.7.6",
+    "title": "Do all of your desktop and laptop computers have personal firewalls (or equivalent) enabled and configured to block unapproved connections by default?"
+  },
+  {
+    "Assertion": "The organisation can name its suppliers, the products and services they deliver and the contract durations.",
+    "Input Type": "Document",
+    "clause": "10.1.1",
+    "title": "The organisation has a list of its suppliers that handle personal information, the products and services they deliver, their contact details and the contract duration."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "10.1.2",
+    "title": "Contracts with all third parties that handle personal information are compliant with ICO guidance."
+  },
+  {
+    "Assertion": "Basic due diligence has been undertaken against each supplier that handles personal information in accordance with ICO and NHS Digital guidance.",
+    "Input Type": "Yes/No",
+    "clause": "10.2.1",
+    "title": "Your organisation ensures that any supplier of  IT systems that could impact on the delivery of care, or process personal identifiable data, has the appropriate certification."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "10.2.2",
+    "title": "Your organisation determines, as part of its risk assessment, whether the supplier certification is sufficient assurance."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "text",
+    "clause": "10.2.3",
+    "title": "Percentage of suppliers with data security contract clauses in place."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "10.2.4",
+    "title": "Where services are outsourced (for example by use of cloud infrastructure or services), the organisation understands and accurately records which security related responsibilities remain with the organisation and which are the supplier’s responsibility."
+  },
+  {
+    "Assertion": "",
+    "Input Type": "Yes/No",
+    "clause": "10.2.5",
+    "title": "All suppliers that process or have access to health or care personal confidential information have completed a Data Security and Protection Toolkit, or equivalent."
+  },
+  {
+    "Assertion": "All disputes between the organisation and its suppliers have been recorded and any risks posed to data security have been documented.\n",
+    "Input Type": "Document",
+    "clause": "10.3.1",
+    "title": "List of data security incidents – past or present – with current suppliers who handle personal information."
+  },
+  {
+    "Assertion": "All instances where organisations cannot comply with the NDG Standards because of supplier-related issues are recorded and discussed at board",
+    "Input Type": "Text",
+    "clause": "10.4.1",
+    "title": "List of instances of suppliers who handle health and care data not complying with National Data Guardian standards, with date discussed at board or equivalent level."
+  },
+  {
+    "Assertion": "The organisation understands and manages security risks to networks and information systems from your supply chain.",
+    "Input Type": "Text",
+    "clause": "10.5.2",
+    "title": "Where appropriate, you offer support to suppliers to resolve incidents. "
+  }
+]

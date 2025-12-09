@@ -1,0 +1,29 @@
+vf/src/routes/sites/userguide
+/node_modules/
+/scripts/.*
+*.http
+*.log
+*.swp
+.env
+.env.local
+.env.dev
+.env.stage
+.vscode
+yarn-error.log
+yarn-error.log
+yarn.lock
+package-lock.json
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebextensions.examples
+
+# Dev environment configs and logs
+*~undo-tree~
+.#*
+.dir-locals.el
+
+# mackintosh
+.DS_Store
+/src/migrations/v3connection

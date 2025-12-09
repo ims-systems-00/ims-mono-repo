@@ -1,0 +1,20 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index', { heading: "New Project Created" }); %>
+      <%- include('../shared/useremails/greeting_section/index', { name: locals.subscriberName }); %>
+        <%- include('../shared/useremails/message_section/index', {
+          message: `A new project has been created in ${locals.organizationName}.`
+        }) %>
+        <%- include('../shared/useremails/message_section/index', { message: "Project Details:" }) %>
+        <%- include('../shared/useremails/message_section/index', { message: `Project: ${locals.projectTitle}` }) %>
+        <%- include('../shared/useremails/message_section/index', { message: `Reference: ${locals.projectReference}` }) %>
+        <%- include('../shared/useremails/message_section/index', { message: `Start Date: ${new Date(locals.projectStartDate).toLocaleDateString()}` }) %>
+        <%- include('../shared/useremails/message_section/index', { message: `End Date: ${new Date(locals.projectEndDate).toLocaleDateString()}` }) %>
+        <%- include('../shared/useremails/message_section/index', { message: `Created By: ${locals.createdBy}` }) %>
+            <%- include('../shared/useremails/button/index', {
+              linkText: "View Project",
+              link: locals.projectLink
+            }) %>
+              <%- include('../shared/useremails/closing_section/index'); %>
+                <%- include('../shared/useremails/container/main_container_end'); %>
+                  <%- include('../shared/useremails/end'); %>

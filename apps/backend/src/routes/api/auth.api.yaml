@@ -1,0 +1,469 @@
+openapi: 3.0.0
+info:
+  title: Authentication API
+  version: 1.0.0
+  description: >
+
+tags:
+  - name: Authentication
+    description: >
+      # Getting Started with iMS Systems
+
+      To get started with iMS Systems is a very simple process. Following are the steps to get started with iMS Systems and get ready to access all iMS Systems services:
+
+      1. **Create an Account**: Users need to create an account with an email and a password.
+
+      2. **Verify Account**: Verify your account with the verification token sent over the email.
+
+      3. **Login**: After verification, login with the email and the password.And if you are using the auth flow, (singin with ims account), then it will not gives the response of login success, it will send to the redirect uri with authCode. Here redirect_uri, in request body is optional
+
+
+      **Note**: iMS always returns a pair of accessToken and a refreshToken when a user is authenticated. iMS continuously expects you to rotate your token pair with a refresh token mechanism. Further resources are provided later in this documentation.
+paths:
+  /auth/registration:
+    post:
+      summary: Register a new user
+      tags: [Authentication]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Registration"
+      responses:
+        "200":
+          description: User registration successful
+          content:
+            application/json:
+              example:
+                message: "Registration Process Started."
+                details:
+                  user:
+                    _id: "65689bdc8acd12002ff71fd4"
+                    name: "firstName lastName"
+                statusCode: 200
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                message: "Bad Request"
+                details:
+                  description: "An account is already registered with this email."
+                statusCode: 400
+  /auth/verification:
+    post:
+      summary: Verify user registration
+      tags: [Authentication]
+      parameters:
+        - in: header
+          name: x-verification-token
+          schema:
+            type: string
+          required: true
+          description: The registration token in the header
+      responses:
+        "200":
+          description: User account validation complete
+          content:
+            application/json:
+              example:
+                message: "Account verified successfully"
+                user:
+                  emailVerified:
+                    status: "pending"
+                    on: "2024-05-13T12:51:22.333Z"
+                  phoneVerified:
+                    status: "varified"
+                    on: null
+                  phoneOTP:
+                    value: null
+                    expiredAt: null
+                  systemAccess:
+                    status: "Active"
+                    period: "Full time"
+                    expires: null
+                    updatedOn: null
+                  systemPassword:
+                    status: "blocked"
+                  profileImageInfo:
+                    modified:
+                      on: "2024-05-13T12:50:44.519Z"
+                  preferences:
+                    darkMode: false
+                    activeTheme: "blue"
+                  country:
+                    name: "United Kingdom"
+                    code: "GB"
+                  _id: "66420ca4954a9b314bd60e46"
+                  type: "Internal"
+                  firstName: "bishwojit"
+                  lastName: "malo"
+                  name: "bishwojit malo"
+                  email: "mukosh.manob123@gmail.com"
+                  verificationEmailAfter: "2024-05-13T12:52:44.517Z"
+                  badAttempts: 0
+                  lockedUntil: null
+                  phone: ""
+                  profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                  refreshTokens: []
+                  reference: "USR-6"
+                  accessPolicies: []
+                  ID: 6
+                  createdAt: "2024-05-13T12:50:44.536Z"
+                  updatedAt: "2024-05-13T12:51:22.334Z"
+                  __v: 0
+                statusCode: 200
+        "401":
+          description: Forbidden
+          content:
+            application/json:
+              example:
+                message: "This verification has been expired."
+                statusCode: 401
+  /auth/verification/{id}:
+    post:
+      summary: Resend email verification
+      tags: [Authentication]
+      parameters:
+        - in: path
+          name: id
+          description: ID of the user to resend verification email
+          required: true
+          schema:
+            type: string
+            example: 65c4a766d1fee6d4b00a6825
+      responses:
+        "200":
+          description: Email verification resent
+          content:
+            application/json:
+              example:
+                message: "Email verification resent successfully"
+                statusCode: 200
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                message: "User already verified."
+                statusCode: 400
+  /auth/:
+    post:
+      summary: Login to the application
+      tags: [Authentication]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Login"
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: "Login successful."
+                user:
+                  _id: "65c4a6c6d1fee6d4b00a5c88"
+                  name: "Bishwojit Malo"
+                  email: "hello@imssystems.tech"
+                accessToken: "your_access_token"
+                refreshToken: "your_new_refresh_token"
+                omniplexToken: "your_omniplex_token"
+                redirectUri: "https://your-domain.com/?code=bdkjasbkjfjkfbas,fdzkfkjsfkswfwkkj4557934753475kjghiufg7yejg"
+                statusCode: 200
+        "400":
+          description: Bad Request, invalid credentials
+          content:
+            application/json:
+              example:
+                message: "Bad Request"
+                details:
+                  description: "Invalid Credentials. Account will be locked after 4 invalid attempts."
+                statusCode: 400
+  /auth/forgotpassword:
+    post:
+      summary: Start account recovery
+      tags: [Authentication]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  description: The email address of the user requesting the password reset.
+                  example: user@example.com
+      responses:
+        "200":
+          description: Password reset email sent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email sent successfully.
+                    statusCode: 200
+        "400":
+          description: Bad request, user does not exist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User does not exist.
+                    statusCode: 400
+  /auth/resetpassword:
+    post:
+      summary: Reset user password
+      tags: [Authentication]
+      parameters:
+        - in: header
+          name: x-resetpassword-token
+          schema:
+            type: string
+          required: true
+          description: The reset password token in the header
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/verifyRecovery"
+      responses:
+        "200":
+          description: Password reset successful
+          content:
+            application/json:
+              example:
+                message: "Password reset successfully."
+                user:
+                  emailVerified:
+                    status: "pending"
+                    on: "2024-05-13T12:51:22.333Z"
+                  phoneVerified:
+                    status: "varified"
+                    on: null
+                  phoneOTP:
+                    value: null
+                    expiredAt: null
+                  systemAccess:
+                    status: "Active"
+                    period: "Full time"
+                    expires: null
+                    updatedOn: null
+                  systemPassword:
+                    status: "blocked"
+                  profileImageInfo:
+                    modified:
+                      on: "2024-05-13T12:50:44.519Z"
+                  preferences:
+                    darkMode: false
+                    activeTheme: "blue"
+                  country:
+                    name: "United Kingdom"
+                    code: "GB"
+                  _id: "66420ca4954a9b314bd60e46"
+                  type: "Internal"
+                  firstName: "bishwojit"
+                  lastName: "malo"
+                  name: "bishwojit malo"
+                  email: "mukosh.manob123@gmail.com"
+                  verificationEmailAfter: "2024-05-13T12:52:44.517Z"
+                  badAttempts: 0
+                  lockedUntil: null
+                  phone: ""
+                  profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                  refreshTokens: []
+                  reference: "USR-6"
+                  accessPolicies: []
+                  ID: 6
+                  createdAt: "2024-05-13T12:50:44.536Z"
+                  updatedAt: "2024-05-13T12:51:22.334Z"
+                  __v: 0
+                statusCode: 200
+  /auth/refresh-token:
+    post:
+      summary: Refresh access token
+      tags: [Authentication]
+      parameters:
+        - in: header
+          name: x-auth-refreshtoken
+          schema:
+            type: string
+          required: true
+          description: The registration token in the header
+        - in: header
+          name: x-org-id
+          schema:
+            type: string
+          required: false
+          description: Allow users to login to specific organization
+        - in: header
+          name: x-group-id
+          schema:
+            type: string
+          required: false
+          description: Allow users to login to specific business units
+      responses:
+        "200":
+          description: Successful token refresh
+          content:
+            application/json:
+              example:
+                message: "New pair of newTokens granted."
+                tokenRefresh: true
+                user:
+                  _id: "65c4a6c6d1fee6d4b00a5c88"
+                  name: "Bishwojit Malo"
+                  email: "hello@imssystems.tech"
+                accessToken: "your-access-token"
+                refreshToken: "your-refresh-token"
+                omniplexToken: "your-omniplex-token"
+                statusCode: 200
+  /auth/token:
+    post:
+      summary: Authenticate user and provide tokens
+      tags: [Authentication]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                authCode:
+                  type: string
+                  description: Authorization code provided to the user
+              required:
+                - authCode
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: "Login successful."
+                user:
+                  _id: "65c4a6c6d1fee6d4b00a5c88"
+                  name: "Bishwojit Malo"
+                  email: "hello@imssystems.tech"
+                accessToken: "your_access_token"
+                refreshToken: "your_new_refresh_token"
+                omniplexToken: "your_omniplex_token"
+                statusCode: 200
+        "401":
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: "Unauthorized."
+                details:
+                  description: "Invalid auth code."
+                statusCode: 200
+  /authorize:
+    get:
+      summary: Authorize user and redirect
+      tags: [Authentication]
+      parameters:
+        - in: query
+          name: response_type
+          schema:
+            type: string
+          description: The type of response expected (e.g., code, token)
+        - in: query
+          name: client_id
+          schema:
+            type: string
+          description: The client identifier for the application
+        - in: query
+          name: redirect_uri
+          schema:
+            type: string
+            format: uri
+          required: true
+          description: The URI to redirect the user to after authorization
+        - in: query
+          name: state
+          schema:
+            type: string
+          description: An opaque value used by the client to maintain state between the request and callback
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              example:
+                message: "Auth url retrived."
+                authUrl: "http://localhost:4000/login?redirect_uri=http%3A%2F%2Flocalhost%3A4000"
+                statusCode: 200
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: An error occurred while processing the request
+                  error:
+                    type: string
+                    example: Error details
+components:
+  schemas:
+    Registration:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+          format: email
+      required:
+        - firstName
+        - lastName
+        - email
+        - password
+    Login:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+        redirect_uri:
+          type: string
+      required:
+        - email
+        - password
+    resendVerification:
+      type: object
+      properties:
+        userId:
+          type: string
+          required: true
+          label: Admin Id
+    verifyRecovery:
+      type: object
+      properties:
+        password:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-auth-accesstoken

@@ -1,0 +1,46 @@
+<tr>
+  <td valign="top" style="padding: 0px 24px 30px 24px">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="
+        border: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+      ">
+      <tr>
+        <td style="
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: 0.3px;
+            color: #808396;
+          ">
+          <p style="
+              font-family: 'Poppins', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #808396;
+              margin: 5px 0 0 0;
+            ">
+            <%= locals.closing ||  "Warm regards" %>
+          </p>
+          <p style="
+              font-family: 'Poppins', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #808396;
+              margin: 5px 0 0 0;
+            ">
+            <%= locals.signature || "iMS Systems team" %>
+          </p>
+          <br />
+        </td>
+      </tr>
+      <%- include('../footer/index'); %>
+    </table>
+  </td>
+</tr>

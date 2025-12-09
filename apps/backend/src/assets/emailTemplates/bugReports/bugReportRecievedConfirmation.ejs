@@ -1,0 +1,38 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Confirmation - Your Bug Report has Been Recorded"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+
+        <%- include('../shared/useremails/message_section/index',{message:`We hope this message finds you well.`})%>
+
+
+          <%- include('../shared/useremails/message_section/index',{message:`Thank you for taking the time to submit a
+            bug report. Your feedback is invaluable to us, and we want to assure you that your concerns have been
+            received and recorded.`})%>
+
+
+            <%- include('../shared/useremails/message_section/index',{message:`Our team is dedicated to conducting a
+              thorough review of your bug report to better understand and address the issues you've encountered. We
+              understand the impact that software issues can have, and we appreciate your patience as we work to resolve
+              them.`})%>
+
+
+              <%- include('../shared/useremails/message_section/index',{message:`Rest assured, we are committed to
+                providing a prompt and effective resolution to the matter you've raised. We will keep you updated on the
+                progress and notify you once the issue has been resolved.`})%>
+
+
+                <%- include('../shared/useremails/message_section/index',{message:`In the meantime, we kindly ask for
+                  your continued patience and understanding. If you have any additional information or details to share,
+                  please feel free to respond to support@imssystems.tech.`})%>
+
+                  <%- include('../shared/useremails/message_section/index',{message:`We appreciate your contribution to
+                    improving our product, and we look forward to delivering a solution that meets your expectations.
+                    `})%>
+
+                    <%- include('../shared/useremails/message_section/index',{message:`Thank you for your
+                      understanding.`})%>
+
+                      <%- include('../shared/useremails/closing_section/index'); %>
+                        <%- include('../shared/useremails/container/main_container_end'); %>
+                          <%- include('../shared/useremails/end'); %>

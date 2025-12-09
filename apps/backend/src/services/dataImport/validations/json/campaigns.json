@@ -1,0 +1,1 @@
+{"campaigns::organization":"Joi.any().label(\"Organization\")"}

@@ -1,0 +1,37 @@
+<%- include('../shared/useremails/start'); %>
+    <%- include('../shared/useremails/container/main_container_start'); %>
+        <%- include('../shared/useremails/heading_section/index',{heading:"Urgent: Temporary Suspension of Your iMS"});
+            %>
+            <%- include('../shared/useremails/greeting_section/index',{name:locals.organizationName}); %>
+
+                <%- include('../shared/useremails/message_section/index',{message:`We hope this email finds you well.
+                    Your business is important to us, and we appreciate your use of iMS Systems.`})%>
+
+
+                    <%- include('../shared/useremails/message_section/index',{message:`We regret to inform you that your
+                        account has been temporarily suspended due to an outstanding balance. Despite our previous
+                        notifications regarding the overdue payment, we have not yet received the necessary payment to
+                        reactivate your account.`})%>
+
+
+                        <%- include('../shared/useremails/message_section/index',{message:`To reinstate your account and
+                            regain access to our services, we urgently request you to settle the outstanding balance.
+                            Please log into your account and complete the payment. Here's the link to your account:
+                            ${locals.orgProfileLink}`})%>
+
+
+                            <%- include('../shared/useremails/message_section/index',{message:`If the payment is not
+                                received within 48 hours, your account may face permanent termination, resulting in a
+                                loss of data and access to our services. We understand the importance of our services to
+                                you and want to assist in resolving this matter promptly.`})%>
+
+                                <%- include('../shared/useremails/message_section/index',{message:`If you have any
+                                    questions or need assistance with the payment process, please contact our customer
+                                    support team at support@imssystems.tech.`})%>
+
+                                    <%- include('../shared/useremails/message_section/index',{message:`Thank you for
+                                        your understanding and cooperation.`})%>
+
+                                        <%- include('../shared/useremails/closing_section/index'); %>
+                                            <%- include('../shared/useremails/container/main_container_end'); %>
+                                                <%- include('../shared/useremails/end'); %>

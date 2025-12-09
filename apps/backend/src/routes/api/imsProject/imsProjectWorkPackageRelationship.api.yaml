@@ -1,0 +1,188 @@
+openapi: 3.0.0
+info:
+  title: IMS Project Work Package Relationship API
+  version: 1.0.0
+  description: API documentation for IMS Project Work Package Relationship
+
+tags:
+  - name: IMS Project Work Package Relationship
+    description: APIs for managing IMS Project Work Package Relationship
+
+paths:
+  /ims-projects/{projectId}/workPackages/{workPackageId}/relationships/:
+    post:
+      summary: for creating work package relationship childWorkPackage would be object id
+      tags: [IMS Project Work Package Relationship]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectWorkPackageRelationshipInput"
+      responses:
+        '200':
+          description: IMS Project Work Package Relationship created successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package relationship created successfully.
+                imsProjectWorkPackageRelationship:
+                  relation:
+                    childWorkPackage: "6610e2876546f9de6bb61ba8"
+                    parentWorkPackage: "66205c54eaa5382e92398590"
+                  _id: "66436d21ca203d1566311ff8"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:54:41.473Z"
+                  updatedAt: "2024-05-14T13:54:41.473Z"
+                  __v: 0
+                statusCode: 200
+
+    get:
+      summary: List IMS Project Work Package Relationships
+      tags: [IMS Project Work Package Relationship]
+      security:
+        - apiKey: []
+      responses:
+        '200':
+          description: List of IMS Project Work Package Relationships
+          content:
+            application/json:
+              example:
+                message: iMS Project work package relationships retrieved.
+                pagination:
+                  totalPages: 1
+                  totalResults: 3
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                imsProjectWorkPackageRelationships:
+                  - _id: "66436d21ca203d1566311ff8"
+                    relation:
+                      childWorkPackage: "6610e2876546f9de6bb61ba8"
+                      parentWorkPackage: "66205c54eaa5382e92398590"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T13:54:41.473Z"
+                    updatedAt: "2024-05-14T13:54:41.473Z"
+                    __v: 0
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/relationships/{relationshipId}:
+    get:
+      summary: Get IMS Project Work Package Relationship by ID
+      tags: [IMS Project Work Package Relationship]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: relationshipId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package Relationship retrieved successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package relationship retrieved.
+                imsProjectWorkPackageRelationship:
+                  relation:
+                    childWorkPackage: "6610e2876546f9de6bb61ba8"
+                    parentWorkPackage: "66205c54eaa5382e92398590"
+                  _id: "66436d21ca203d1566311ff8"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:54:41.473Z"
+                  updatedAt: "2024-05-14T13:54:41.473Z"
+                  __v: 0
+                statusCode: 200
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/relationships/{relationshipId}/hard:
+    delete:
+      summary: Remove IMS Project Work Package Relationship
+      tags: [IMS Project Work Package Relationship]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: relationshipId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package Relationship removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package relationship removed.
+                imsProjectWorkPackageRelationship:
+                  relation:
+                    childWorkPackage: "6610e2876546f9de6bb61ba8"
+                    parentWorkPackage: "66205c54eaa5382e92398590"
+                  _id: "66436d21ca203d1566311ff8"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:54:41.473Z"
+                  updatedAt: "2024-05-14T13:54:41.473Z"
+                  __v: 0
+                statusCode: 200
+
+components:
+  schemas:
+    ImsProjectWorkPackageRelationshipInput:
+      type: object
+      properties:
+        childWorkPackage:
+          type: string
+      required:
+        - childWorkPackage

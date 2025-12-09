@@ -1,0 +1,10 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Incorrect login attempts"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`There has been too many failed login attempts on your
+          account. Your account has been locked. If this was not you, or in order to unlock your account, please contact
+          your administrator immediately.`})%>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

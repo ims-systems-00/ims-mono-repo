@@ -1,0 +1,36 @@
+.input-product-options {
+  transition: 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .selectetion-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2px 10px;
+    border-radius: 30px;
+    background-color: $primary;
+    color: $white;
+    display: none;
+    transition: 0.3s ease-in-out;
+  }
+  .selectetion-dot {
+    display: none;
+  }
+  &:hover {
+    background-color: $primary-extra-light;
+  }
+  &.active {
+    background-color: $primary-extra-light;
+    .selectetion-box {
+      display: inline;
+    }
+    .selectetion-dot {
+      display: inline;
+    }
+  }
+}

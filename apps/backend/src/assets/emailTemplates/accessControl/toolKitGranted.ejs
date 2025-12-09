@@ -1,0 +1,9 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Toolkit granted"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Your administrator has granted you access to the
+          ${locals.toolKit}. You are now able to access the content associated with this standard`})%>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

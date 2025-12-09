@@ -1,0 +1,400 @@
+openapi: 3.0.0
+info:
+  title: iMS Project API
+  version: 1.0.0
+  description: API documentation for iMS Project
+
+tags:
+  - name: iMS Project Membership
+    description: APIs for managing iMS Project Memberships
+
+paths:
+  /ims-projects/{projectId}/memberships:
+    post:
+      summary: Create iMS Project Membership
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectMembershipInput"
+      responses:
+        "200":
+          description: iMS Project Membership created successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project membership created successfully."
+                imsProjectMemberShip:
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              example:
+                message: "Data is required."
+
+    get:
+      summary: List iMS Project Memberships
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      responses:
+        "200":
+          description: List of iMS Projects Memberships
+          content:
+            application/json:
+              example:
+                message: "iMS Project memberships retrieved."
+                pagination:
+                  totalPages: 1
+                  totalResults: 1
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                imsProjectMemberShips:
+                  - _id: "6685330fb95c0a92d36ab806"
+                    userId: "65c4ed51662347f76a3b1fa7"
+                    role: "Manager"
+                    imsProjectId: "668531522a926a4e1366cfa5"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-07-03T11:16:31.324Z"
+                    updatedAt: "2024-07-03T11:16:31.324Z"
+                    __v: 0
+                  - _id: "6685330fb95c0a92d36ab874"
+                    userId: "65c4ed51662347f76a3b1fa7"
+                    role: "Manager"
+                    imsProjectId: "668531522a926a4e1366cfa5"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-07-03T11:16:31.324Z"
+                    updatedAt: "2024-07-03T11:16:31.324Z"
+                    __v: 0
+                statusCode: 200
+
+
+  /ims-projects/{projectId}/memberships/{membershipId}:
+    get:
+      summary: Get iMS Project Membership by ID
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: membershipId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project Membership retrieved successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project membership retrieved."
+                imsProjectMemberShip:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+
+        "404":
+          description: iMS Project Membership not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project Membership not found with given query.
+                statusCode: 404
+
+
+    put:
+      summary: Update iMS Project Membership
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectInput"
+      responses:
+        "200":
+          description: iMS Project Membership updated successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project Membership updated successfully."
+                imsProjectMemberShip:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+
+        "404":
+          description: iMS Project Membership not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project Membership not found with given query.
+                statusCode: 404
+
+
+  /ims-projects/{projectId}/memberships/{membershipId}/hard:
+    delete:
+      summary: Remove iMS Project Membership
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: membershipId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project Membership removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project membership removed.
+                imsProjectMemberShip:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+
+        "404":
+          description: iMS Project membership not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project membership not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/memberships/{membershipId}/soft:
+    delete:
+      summary: Soft Remove iMS Project
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: membershipId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project Membership moved to trash
+          content:
+            application/json:
+              example:
+                message: iMS Project Membership moved to trash.
+                imsProjectMemberShip:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project Membership not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project Membership not found with given query.
+                statusCode: 404
+
+  /ims-projects/{projectId}/memberships/{membershipId}/restore:
+    put:
+      summary: Restore iMS Project
+      tags: [iMS Project Membership]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: membershipId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: iMS Project Membership restored successfully
+          content:
+            application/json:
+              example:
+                message: "iMS Project Membership restored successfully."
+                imsProjectMemberShip:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "6685371bf139aa0d5e25fa4d"
+                  userId:
+                    _id: "65c4ed51662347f76a3b1fa7"
+                    name: "reyad hossain"
+                    email: "reyad@imssystems.tech"
+                    profileImageSrc: "https://public-media.imssystems.tech/ec9e7033-f61c-4924-9e61-7f60bd248782.jpeg"
+                    accessPolicies: []
+                  role: "Manager"
+                  imsProjectId: "66853705f139aa0d5e25f99e"
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-07-03T11:33:47.101Z"
+                  updatedAt: "2024-07-03T11:33:47.101Z"
+                  __v: 0
+                statusCode: 200
+
+        "404":
+          description: iMS Project Membership not found
+          content:
+            application/json:
+              example:
+                message: Not Found
+                details:
+                  description: iMS Project Membership not found with given query.
+                statusCode: 404
+
+components:
+  schemas:
+    ImsProjectMembershipInput:
+      type: object
+      properties:
+        userId:
+          type: string
+        role:
+          type: string
+          format: date-time
+      required:
+        - userId
+        - role

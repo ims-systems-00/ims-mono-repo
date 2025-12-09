@@ -1,0 +1,18 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"License Request Processed"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+
+
+        <%- include('../shared/useremails/message_section/index',{message:`We are delighted to inform you that your
+          recent license request has been successfully processed. Updated license details are applied to your
+          organisation's profile.`})%>
+
+          <%- include('../shared/useremails/message_section/index',{message:`Feel free to dive in and start enjoying all
+            the features and benefits our product has to offer. If you have any questions or need assistance, our
+            support team is here to help at support@imssystems.tech.`})%>
+
+            <%- include('../shared/useremails/message_section/index',{message:`Thank you for choosing iMS Systems.`})%>
+              <%- include('../shared/useremails/closing_section/index'); %>
+                <%- include('../shared/useremails/container/main_container_end'); %>
+                  <%- include('../shared/useremails/end'); %>

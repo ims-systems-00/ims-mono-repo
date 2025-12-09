@@ -1,0 +1,19 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"iMS Bug report"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:"Support team"}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Following is the detailed bug report.`}); %>
+
+          <%- include('../shared/useremails/message_section/index',{message:"sumary: "+locals.summary}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" description: "+locals.description}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" type: "+locals.type}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" email: "+locals.email}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" name: "+locals.name}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" organizationName: "+locals.organizationName}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" contact: "+locals.contact}); %>
+          <%- include('../shared/useremails/message_section/index',{message:" businessunit: "+locals.businessunit}); %>
+
+      
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

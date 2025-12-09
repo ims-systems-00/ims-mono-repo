@@ -1,0 +1,1580 @@
+[
+  {
+    "clause": "S",
+    "title": "By safe, we mean people are protected from abuse* and avoidable harm. \n*Abuse can be physical, sexual, mental or psychological, financial, neglect, institutional or discriminatory abuse.",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "S.1",
+    "title": "How do systems, processes and practices keep people safe and safeguarded from abuse?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.a ",
+    "title": "What protocols are there to identify and verify the patient at the start of the first and subsequent consultations?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.1.b ",
+    "title": "How does the provider protect against patients using multiple identities?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.1.c ",
+    "title": "How does the provider determine the patient's location at the start of consultations? How are caller withheld numbers dealt with? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.1.d ",
+    "title": "How does the provider manage any risks around safeguarding vulnerable children and adults at risk of abuse and neglect? (See S1.1below)",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.1.1  ",
+    "title": "How are safety and safeguarding systems, processes and practices developed, implemented and communicated to staff?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.2",
+    "title": "How do systems, processes and practices protect people from abuse, neglect, harassment and breaches of their dignity and respect? How are these monitored and improved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.3",
+    "title": "How are people protected from discrimination, which might amount to abuse or cause psychological harm? This includes harassment and discrimination in relation to protected characteristics under the Equality Act.",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.4",
+    "title": "How is safety promoted in recruitment practice, arrangements to support staff, disciplinary procedures, and ongoing checks? (For example, Disclosure and Barring Service checks.)",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.5",
+    "title": "Do staff receive effective training in safety systems, processes and practices?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.6",
+    "title": "Are there arrangements to safeguard adults and children from abuse and neglect that reflect relevant legislation and local requirements? Do staff understand their responsibilities and adhere to safeguarding policies and procedures, including working in partnership with other agencies?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.7",
+    "title": "Do staff identify adults and children at risk of, or suffering, significant harm? How do they work in partnership with other agencies to ensure they are helped, supported and protected?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.8",
+    "title": "How are standards of cleanliness and hygiene maintained? Are there reliable systems in place to prevent and protect people from a healthcare-associated infection?",
+    "applies_to ": "NOT NHS 111",
+    "": ""
+  },
+  {
+    "clause": "S.1.9",
+    "title": "Do the design, maintenance and use of facilities and premises keep people safe?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.10",
+    "title": "Do the maintenance and use of equipment keep people safe?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.1.11",
+    "title": "Do the arrangements for managing waste and clinical specimens keep people safe? (This includes classification, segregation, storage, labelling, handling and, where appropriate, treatment and disposal of waste.)",
+    "applies_to ": "NOT NHS 111",
+    "": ""
+  },
+  {
+    "clause": "S.2",
+    "title": "How are risks to people assessed, and their safety monitored and managed so they are supported to stay safe?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.1",
+    "title": "How are staffing levels and skill mix planned and reviewed so that people receive safe care and treatment at all times and staff do not work excessive hours?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.2",
+    "title": "How do actual staffing levels and skill mix compare with the planned levels? Is cover provided for staff absence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.3",
+    "title": "Do arrangements for using bank, agency and locum staff keep people safe at all times?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.4",
+    "title": "How do arrangements for handovers and shift changes ensure that people are safe?",
+    "applies_to ": "NOT: ambulance services, GP practices, GP out-of-hours, NHS 111",
+    "": ""
+  },
+  {
+    "clause": "S.2.5",
+    "title": "Are comprehensive risk assessments carried out for people who use services and risk management plans developed in line with national guidance? Are risks managed positively?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.6",
+    "title": "How do staff identify and respond appropriately to changing risks to people, including deteriorating health and wellbeing, medical emergencies or behaviour that challenges? Are staff able to seek support from senior staff in these situations?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.2.7",
+    "title": "What protocols are there for what to do when it becomes clear that a patient is severely unwell and needs urgent treatment? How does the provider ensure that the patient gets access to that treatment and what are the arrangements for follow - up? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.2.8",
+    "title": "What are the connections to emergency or urgent care services (beyond 999)?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.2.9",
+    "title": "How is the impact on safety assessed and monitored when carrying out changes to the service or the staff ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.3",
+    "title": "Do staff have all the information they need to deliver safe care and treatment to people?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.3.1",
+    "title": "Are people’s individual care records, including clinical data, written and managed in a way that keeps people safe?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.3.2",
+    "title": "Is all the information needed to deliver safe care and treatment available to relevant staff in a timely and accessible way? (This may include test and imaging results, care and risk assessments, care plans and case notes.)",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.3.3",
+    "title": "When people move between teams, services and organisations (which may include at referral, discharge, transfer and transition), is all the information needed for their ongoing care shared appropriately, in a timely way and in line with relevant protocols?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.3.4",
+    "title": "How well do the systems that manage information about people who use services support staff, carers and partner agencies to deliver safe care and treatment? (This includes coordination between different electronic and paper-based systems and appropriate access for staff to records.)",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.3.5",
+    "title": "What medical records and personal data are held? How and where? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.3.6",
+    "title": "Do clinicians have access to the patient history with the service? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.3.7",
+    "title": "What systems are in place to safely manage and review test results and letters? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.3.8",
+    "title": "Does the provider allow proxy access to patient accounts and records? How is this agreed and monitored? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4",
+    "title": "How does the provider ensure the proper and safe use of medicines, where the service is responsible?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.1",
+    "title": "How are medicines and medicines-related stationery managed (that is, ordered, transported, stored and disposed of safely and securely)? (This includes medical gases and emergency medicines and equipment.)",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.2",
+    "title": "Are medicines appropriately prescribed, administered and/or supplied to people in line with the relevant legislation, current national guidance or best available evidence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.3",
+    "title": "Do people receive specific advice about their medicines in line with current national guidance or evidence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.4",
+    "title": "How does the service make sure that people receive their medicines as intended, and is this recorded appropriately?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.5",
+    "title": "Are people's medicines reconciled in line with current national guidance when transferring between locations or changing levels of care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.6",
+    "title": "Are people receiving appropriate therapeutic drug and physical health monitoring with appropriate follow-up in accordance with current national guidance or evidence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.7",
+    "title": "Are people’s medicines regularly reviewed including the use of ‘when required’ medicines?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.8",
+    "title": "How does the service make sure that people’s behaviour is not controlled by excessive or inappropriate use of medicines?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.4.9",
+    "title": "How does the provider ensure compliance with appropriate guidance on remote prescribing?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.10",
+    "title": "How does the prescriber ensure the prescribing of medicines is evidence based? Are the clinical reasons for any deviation from evidence - based medicine clearly documented? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.11",
+    "title": "How does the provider ensure that prescribers have the relevant knowledge, skills and experience for the conditions they are treating and for the medicines they prescribe? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.12",
+    "title": "How does the provider audit prescribing?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.13",
+    "title": "What protocols are in place for prescribing high - risk medicines and for antibiotics?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.14",
+    "title": "Is the provider following relevant national guidance on antibiotic prescribing? Does the prescriber require evidence of infection? Is the appropriate first line agent being used and is it clear that critically unwell patients would be identified from the providers means of consulting with patients? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.15",
+    "title": "Are signatures for e-prescriptions controlled in line with The Medicines for Human Use (Prescribing) Order 2005 Statutory Instrument 2005 No 765?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.16",
+    "title": "How are emergency prescriptions managed? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.4.17",
+    "title": "Are patients given clear information about medicines, which includes when to take the medicine, the purpose of the medicine, what side effects may occur and the action to take if they do? How is this recorded and where? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "S.5",
+    "title": "What is the track record on safety?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.5.1",
+    "title": "What is the safety performance over time?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.5.2",
+    "title": "How does safety performance compare with other similar services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.5.3",
+    "title": "How well is safety monitored using information from a range of sources (including performance against safety goals where appropriate)?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6",
+    "title": "Are lessons learned and improvements made when things go wrong?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.1",
+    "title": "Do staff understand their responsibilities to raise concerns, to record safety incidents, concerns and near misses, and to report them internally and externally, where appropriate?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.2",
+    "title": "What are the arrangements for reviewing and investigating safety and safeguarding incidents and events when things go wrong? Are all relevant staff, services, partner organisations and people who use services involved in reviews and investigations?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.3",
+    "title": "How are lessons learned and themes identified, and is action taken as a result of investigations when things go wrong?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.4",
+    "title": "How well is the learning from lessons shared to make sure that action is taken to improve safety? Do staff participate in and learn from reviews and investigations by other services and organisations?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.5",
+    "title": "How effective are the arrangements to respond to relevant external safety alerts, recalls, inquiries, investigations or reviews?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "S.6.6",
+    "title": "How does the provider ensure prescribers are informed of relevant patient and medicine safety alert and how are protocols or questionnaires updated in light of these alerts?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E",
+    "title": "By effective, we mean that people’s care, treatment and support achieves good outcomes, promotes a good quality of life and is based on the best available evidence.",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "E.1",
+    "title": "Are people’s needs assessed and care and treatment delivered in line with current legislation, standards and evidence-based guidance to achieve effective outcomes?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.1.a",
+    "title": "Is there evidence that patients' individual needs and preferences have been established? This includes:\n- an up-to-date medical history\n- explanation of the presenting complaint or purpose of the appointment\n- a clinical assessment including diagnosis, referral and on-going management\n- treatment already received\n- medication that is being taken (prescribed or over the counter)\n",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.1.b",
+    "title": "What tool is used to gather information for the above assessment?\nIt is an externally provided tool or one developed by the service?\nWhat procedures and policies are in place to ensure currency and accuracy of clinical content (e.g., editorial policy, editorial board, evidence base, clinical review, how often updated, how are changes in evidence identified and reflected)?\n",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.1.c",
+    "title": "Do clinicians use a clinical decision support tool? Which tool (in-house or external)?\nWhat procedures are in place to ensure currency and accuracy of clinical content?\n",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.1.1",
+    "title": "Are people's physical, mental health and social needs holistically assessed, and is their care, treatment and support delivered in line with legislation, standards and evidence-based guidance, including NICE and other expert professional bodies, to achieve effective outcomes?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.1.2",
+    "title": "What processes are in place to ensure there is no discrimination, including on the grounds of protected characteristics under the Equality Act, when making care and treatment decisions?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.1.3",
+    "title": "How is technology and equipment used to enhance the delivery of effective care and treatment and to support people’s independence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.1.4",
+    "title": "Are the rights of people subject to the Mental Health Act 1983 (MHA) protected and do staff have regard to the MHA Code of Practice?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.1.5",
+    "title": "How are people's nutrition and hydration needs (including those related to culture and religion) identified, monitored and met? Where relevant, what access is there to dietary and nutritional specialists to assist in this?",
+    "applies_to ": "NOT: GP practices, GP out-of-hours, NHS 111",
+    "": ""
+  },
+  {
+    "clause": "E.1.6",
+    "title": "How is a person’s pain assessed and managed, particularly for people who have difficulty communicating?",
+    "applies_to ": "NOT: specialist mental health services, specialist substance misuse services",
+    "": ""
+  },
+  {
+    "clause": "E.1.7",
+    "title": "Are people told when they need to seek further help and advised what to do if their condition deteriorates?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.2",
+    "title": "How are people's care and treatment outcomes monitored and how do they compare with other similar services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.2.1",
+    "title": "Is information about the outcomes of people's care and treatment (both physical and mental where appropriate) routinely collected and monitored?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.2.2",
+    "title": "Does this information show that the intended outcomes for people are being achieved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.2.3",
+    "title": "How do outcomes for people in this service compare with other similar services and how have they changed over time?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.2.4",
+    "title": "Is there participation in relevant quality improvement initiatives, such as local and national clinical audits, benchmarking, (approved) accreditation schemes, peer review, research, trials and other quality improvement initiatives? Are all relevant staff involved in activities to monitor and use information to improve outcomes?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3",
+    "title": "How does the service make sure that staff have the skills, knowledge and experience to deliver effective care, support and treatment?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.1",
+    "title": "Do people have their assessed needs, preferences and choices met by staff with the right skills and knowledge?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.2",
+    "title": "How are the learning needs of all staff identified? Do staff have appropriate training to meet their learning needs that covers the scope of their work, and is there protected time for this training?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.3",
+    "title": "Are staff encouraged and given opportunities to develop?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.4",
+    "title": "What are the arrangements for supporting and managing staff to deliver effective care and treatment? (This includes one-to-one meetings, appraisals, coaching and mentoring, clinical supervision and revalidation.)",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.5",
+    "title": "How is poor or variable staff performance identified and managed? How are staff supported to improve?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.6",
+    "title": "Are volunteers recruited where required, and are they trained and supported for the role they undertake?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.3.7",
+    "title": "What is the nature of the employment contract for clinicians?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.3.8",
+    "title": "Does the provider check when appropriate that GPs are on the GMC register and have a licence to practice? Does the provider check that other clinicians are appropriately registered?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.3.9",
+    "title": "How does the provider ensure that clinicians work within their scope of practice?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.3.10",
+    "title": "How does the provider ensure that clinicians have adequate indemnity arrangements? Are there appropriate indemnity arrangements to cover potential liabilities that may arise including liabilities of any staff who do not carry their own indemnity?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.4",
+    "title": "How well do staff, teams and services work together within and across organisations to deliver effective care and treatment?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.4.1",
+    "title": "Are there clear and effective processes to make referrals to other services and, when necessary, for following up people referred to other services? What are the referral rates? How are patients informed of the referrals made?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.4.2",
+    "title": "If a patient needs a face-to-face consultation, are they referred to their own GP/another professional without delay? How does this work?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.4.3",
+    "title": "When people are referred to another professional/service is all information that is needed to deliver their ongoing care appropriately shared in a timely way? Are patients given a copy of that information?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.4.4",
+    "title": "Does the provider share information with a patients registered GP (where there is one)? Are they technically able to do so?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.4.7",
+    "title": "Are all necessary staff, including those in different teams, services and organisations, involved in assessing, planning and delivering care and treatment?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.4.8",
+    "title": "How is care delivered and reviewed in a coordinated way when different teams, services or organisations are involved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.4.9",
+    "title": "How are people assured that they will receive consistent, coordinated, person-centred care and support when they use, or move between different services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.4.10",
+    "title": "Are all relevant teams, services and organisations informed when people are discharged from a service? Where relevant, is discharge undertaken at an appropriate time of day and only done when any necessary ongoing care is in place?",
+    "applies_to ": "NOT: GP practices, GP out-of-hours, NHS 111",
+    "": ""
+  },
+  {
+    "clause": "E.4.11",
+    "title": "How are high-quality services made available that support care to be delivered seven days a week and how is their effect on improving patient outcomes monitored?",
+    "applies_to ": "NHS acute & independent hospitals only",
+    "": ""
+  },
+  {
+    "clause": "E.5",
+    "title": "How are people supported to live healthier lives and, where the service is responsible, how does it improve the health of its population?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.5.1",
+    "title": "Are people identified who may need extra support? This includes:\n• people in the last 12 months of their lives\n• people at risk of developing a long-term condition\n• carers",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.5.2",
+    "title": "How are people involved in regularly monitoring their health, including health assessments and checks, where appropriate and necessary?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.5.3",
+    "title": "Are people who use services empowered and supported to manage their own health, care and wellbeing and to maximise their independence?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.5.4",
+    "title": "Where abnormalities or risk factors are identified that may require additional support or intervention, are changes to people’s care or treatment discussed and followed up between staff, people and their carers where necessary?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.5.5",
+    "title": "How are national priorities to improve the population’s health supported? (For example, smoking cessation, obesity, drug and alcohol dependency, dementia and cancer.)",
+    "applies_to ": "NOT: ambulances",
+    "": ""
+  },
+  {
+    "clause": "E.6",
+    "title": "Is consent to care and treatment always sought in line with legislation and guidance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.1",
+    "title": "Do staff understand the relevant consent and decision making requirements of legislation and guidance, including the Mental Capacity Act 2005 and the Children’s Acts 1989 and 2004 and other relevant national standards and guidance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.2",
+    "title": "How are people supported to make decisions in line with relevant legislation and guidance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.3",
+    "title": "How and when is possible lack of mental capacity to make a particular decision assessed and recorded?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.4",
+    "title": "How is the process for seeking consent monitored and reviewed to ensure it meets legal requirements and follows relevant national guidance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.5",
+    "title": "When people lack the mental capacity to make a decision, do staff ensure that best interests decisions are made in accordance with legislation?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "E.6.6",
+    "title": "How does the service promote supportive practice that avoids the need for physical restraint? Where physical restraint may be necessary, how does the service ensure that it is used in a safe, proportionate and monitored way as part of a wider person-centred support plan?",
+    "applies_to ": "NOT: NHS 111",
+    "": ""
+  },
+  {
+    "clause": "E.6.7",
+    "title": "Do staff recognise when people aged 16 and over and who lack mental capacity are being deprived of their liberty, and do they seek authorisation to do so when they consider it necessary and proportionate?",
+    "applies_to ": "NOT: NHS 111",
+    "": ""
+  },
+  {
+    "clause": "E.6.8",
+    "title": "How does the provider obtain/assess informed consent?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.6.9",
+    "title": "Can a child consult a doctor without parental knowledge? If so, what are the criteria?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.6.10",
+    "title": "How does the provider determine the age of a patent (to ensure that a child is not posing as an adult)?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.6.11",
+    "title": "If children are treated what protocols are in place for verifying \"\"accompanying adults\"\", specifically who they are, and what is their relationship to the child?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "E.6.12",
+    "title": "Is full clear detailed information provided abuot costs of initial / further consultations, all treatment and responding to queries, or concerns? ",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C",
+    "title": "By caring, we mean that the service involves and treats people with compassion, kindness, dignity and respect.",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "C.1",
+    "title": "How does the service ensure that people are treated with kindness, respect and compassion, and that they are given emotional support when needed?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.1",
+    "title": "Do staff understand and respect the personal, cultural, social and religious needs of people and how these may relate to care needs, and do they take these into account in the way they deliver services? Is this information recorded and shared with other services or providers?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.2",
+    "title": "Do staff take the time to interact with people who use the service and those close to them in a respectful and considerate way?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.3",
+    "title": "Do staff show an encouraging, sensitive and supportive attitude to people who use services and those close to them?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.4",
+    "title": "Do staff raise concerns about disrespectful, discriminatory or abusive behaviour or attitudes?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.5",
+    "title": "Do staff understand the impact that a person’s care, treatment or condition will have on their wellbeing and on those close to them, both emotionally and socially?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.1.6",
+    "title": "Are people given appropriate and timely support and information to cope emotionally with their care, treatment or condition? Are they advised how to find other support services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2",
+    "title": "How does the service support people to express their views and be actively involved in making decisions about their care, treatment and support as far as possible?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.a",
+    "title": "Is the patient able to see referral letters and receive test results? Are they able to have test results interpreted? What happens if the clinician with whom a patient had the interaction is not available to review the results?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.2.b",
+    "title": "What information is given to patients about the clinicians they consult with? How can a patient find out about the staff work for the provider?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.2.1",
+    "title": "Do staff communicate with people so that they understand their care, treatment and condition and any advice given?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.2",
+    "title": "Do staff seek accessible ways to communicate with people when their protected equality or other characteristics make this necessary?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.3",
+    "title": "How do staff make sure that people who use services and those close to them are able to find further information, including community and advocacy services, or ask questions about their care and treatment? How are they supported to access these?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.4",
+    "title": "Are people empowered and supported, where necessary, to use and link with support networks and advocacy, so that it will have a positive impact on their health, care and wellbeing?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.5",
+    "title": "Do staff routinely involve people who use services and those close to them (including carers and dependants) in planning and making shared decisions about their care and treatment? Do people feel listened to, respected and have their views considered?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.6",
+    "title": "Are people’s carers, advocates and representatives, including family members and friends, identified, welcomed and treated as important partners in the delivery of their care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.2.7",
+    "title": "What emotional support and information is provided to those close to people who use services, including carers, family and dependants?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.3",
+    "title": "How are people's privacy and dignity respected and promoted?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.3.a",
+    "title": "Are patients informed and is consent obtained if interactions are recorded?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.b",
+    "title": "How does the provider ensure patients are fully aware of how their records are stored and managed, who has access to them and whether any of their personal information is shared? Is it made clear what personal data is captured about a patient?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.c",
+    "title": "Has a privacy impact assessment been carried out?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.d",
+    "title": "Does the provider ask the patient if they want any sections of the medical record removed when sharing with other health professionals? Are there some sections that will always be shared?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.e",
+    "title": "How are patients made aware of the sharing protocol before the service is delivered?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.f",
+    "title": "How is confidentiality assured for a remote consultation?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.g",
+    "title": "Are patients and staff aware of preferences and settings to maximise privacy? (e.g., privacy settings on video and voice call services)",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.h",
+    "title": "How does the provider ensure that consultations take place in appropriate environments to ensure confidentiality?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.i",
+    "title": "Does the provider advise patients on how to protect their online information?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "C.3.1",
+    "title": "How does the service and staff make sure that people’s privacy and dignity needs are understood and always respected, including during physical or intimate care and examinations?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.3.2",
+    "title": "Do staff respond in a compassionate, timely and appropriate way when people experience physical pain, discomfort or emotional distress?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "C.3.3",
+    "title": "How are people assured that information about them is treated confidentially in a way that complies with the Data Protection Act and that staff support people to make and review choices about sharing their information?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R",
+    "title": "By responsive, we mean that services meet people’s needs. \nThe definition of responsive has changed from: “By responsive, we mean that services are organised so that they meet people’s needs”. Service planning for population needs (previously the first two prompts of R1) will now sit in well-led (W2.5 and W7.4)",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "R.1",
+    "title": "How do people receive personalised care that is responsive to their needs?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.1.a",
+    "title": "How does the provider make clear to patients what the limitations of the service are?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.1.b",
+    "title": "How is 'not treated' condition managed if it emerges during a consultation?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.1.c",
+    "title": "What systems are in place to manager termination or interruption of connection during a consultation?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.1.d",
+    "title": "Are consultations time-limited? What is the average time-slot for a consultation? Is the length of time appropriate to the type of interaction?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.1.1",
+    "title": "Do the services provided reflect the needs of the population served and do they ensure flexibility, choice and continuity of care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.1.2",
+    "title": "Where people’s needs and choices are not being met, is this identified and used to inform how services are improved and developed?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.1.3",
+    "title": "Are the facilities and premises appropriate for the services that are delivered?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.1.4",
+    "title": "How does the service identify and meet the information and communication needs of people with a disability or sensory loss? How does it record, highlight and share this information with others when required, and gain people’s consent to do so?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2",
+    "title": "Do services take account of the particular needs and choices of different people?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.a",
+    "title": "Does the provider use an appropriate translation service or are patients able to select a clinician who speaks a particular language?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.2.b",
+    "title": "How accessible is the service to patients with disabilities? is web content accessible to people with disabilities?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.2.c",
+    "title": "How accessible is the service to people who are less able to use IT services and are alternatives available?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "R.2.1",
+    "title": "How are services delivered, made accessible and coordinated to take account of the needs of different people, including those with protected characteristics under the Equality Act and those in vulnerable circumstances?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.2",
+    "title": "How are services delivered and coordinated to be accessible and responsive to people with complex needs?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.3",
+    "title": "How are people supported during referral, transfer between services and discharge?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.4",
+    "title": "Are reasonable adjustments made so that people with a disability can access and use services on an equal basis to others?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.5",
+    "title": "Do key staff work across services to coordinate people's involvement with families and carers, particularly for those with multiple long-term conditions?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.2.6",
+    "title": "Where the service is responsible, how are people encouraged to develop and maintain relationships with people that matter to them, both within the service and the wider community?",
+    "applies_to ": "Community health services, specialist mental health services, specialist substance misuse services",
+    "": ""
+  },
+  {
+    "clause": "R.2.7",
+    "title": "Where the service is responsible, how are people supported to follow their interests and take part in activities that are socially and culturally relevant and appropriate to them, including in the wider community and, where appropriate, to have access to education and work opportunities?",
+    "applies_to ": "Community health services, specialist mental health services, specialist substance misuse services",
+    "": ""
+  },
+  {
+    "clause": "R.2.8",
+    "title": "How are services delivered and coordinated to ensure that people who may be approaching the end of their life are identified, including those with a protected equality characteristic and people whose circumstances may make them vulnerable, and that this information is shared?",
+    "applies_to ": "All health \nAcute and community health services only where the health service includes end of life care",
+    "": ""
+  },
+  {
+    "clause": "R.2.9",
+    "title": "How are people who may be approaching the end of their life supported to make informed choices about their care? Are people’s decisions documented and delivered through a personalised care plan and shared with others who may need to be informed?",
+    "applies_to ": "NOT: ambulance services, NHS 111, specialist mental health services\nAcute and community health services only where the health service includes end of life care",
+    "": ""
+  },
+  {
+    "clause": "R.2.10",
+    "title": "If any treatment is changed or withdrawn, what are the processes to ensure that this is managed openly and sensitively so that people have a comfortable and dignified death?",
+    "applies_to ": "NOT: NHS 111, specialist mental health services \nAcute and community health services only where the health service includes end of life care",
+    "": ""
+  },
+  {
+    "clause": "R.3",
+    "title": "Can people access care and treatment in a timely way?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.1",
+    "title": "Do people have timely access to initial assessment, test results, diagnosis or treatment?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.2",
+    "title": "Can people access care and treatment at a time to suit them?",
+    "applies_to ": "NOT: ambulance services, NHS 111",
+    "": ""
+  },
+  {
+    "clause": "R.3.3",
+    "title": "What action is taken to minimise the length of time people have to wait for care, treatment or advice?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.4",
+    "title": "Do people with the most urgent needs have their care and treatment prioritised?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.5",
+    "title": "Are appointment systems easy to use and do they support people to access appointments?",
+    "applies_to ": "NOT: NHS 111",
+    "": ""
+  },
+  {
+    "clause": "R.3.6",
+    "title": "Are appointments, care and treatment only cancelled or delayed when absolutely necessary? Are delays or cancellations explained to people, and are people supported to access care and treatment again as soon as possible?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.7",
+    "title": "Do services run on time, and are people kept informed about any disruption?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.3.8",
+    "title": "How is technology used to support timely access to care and treatment? Is the technology (including telephone systems and online/digital services) easy to use?",
+    "applies_to ": "NOT: ambulance services",
+    "": ""
+  },
+  {
+    "clause": "R.4",
+    "title": "How are people’s concerns and complaints listened and responded to and used to improve the quality of care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.4.1",
+    "title": "How well do people who use the service know how to make a complaint or raise concerns and how comfortable do they feel doing so in their own way? How are people encouraged to make a complaint, and how confident are they to speak up?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.4.2",
+    "title": "How easy is it for people to use the complaints process or raise a concern? Are people treated compassionately and given help and support, by using accessible information or protection measures, if they need to make a complaint?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.4.3",
+    "title": "How effectively are complaints handled, including ensuring openness and transparency, confidentiality, regular updates for the complainant, a timely response and explanation of the outcome, and a formal record?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.4.4",
+    "title": "How are people who raise concerns or complaints protected from discrimination, harassment or disadvantage?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "R.4.5",
+    "title": "To what extent are concerns and complaints used as an opportunity to learn and drive continuous improvement?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W",
+    "title": "By well-led, we mean that the leadership, management and governance of the organisation assures the delivery of high-quality and person-centred care, supports learning and innovation, and promotes an open and fair culture.",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "W.1",
+    "title": "Is there the leadership capacity and capability to deliver high-quality, sustainable care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.1.1",
+    "title": "Does the provider's leadership include people with expertise in digital technology?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.1.2",
+    "title": "Are there any other companies and websites providing medical advice that the provider is affiliated with?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.1.3",
+    "title": "Do leaders have the skills, knowledge, experience and integrity that they need – both when they are appointed and on an ongoing basis?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.1.4",
+    "title": "Do leaders understand the challenges to quality and sustainability, and can they identify the actions needed to address them?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.1.5",
+    "title": "Are leaders visible and approachable?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.1.6",
+    "title": "Are there clear priorities for ensuring sustainable, compassionate, inclusive and effective leadership, and is there a leadership strategy or development programme, which includes succession planning?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2",
+    "title": "Is there a clear vision and credible strategy to deliver high-quality sustainable care to people, and robust plans to deliver?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.1",
+    "title": "Is there a clear vision and a set of values, with quality and sustainability as the top priorities?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.2",
+    "title": "Is there a robust, realistic strategy for achieving the priorities and delivering good quality sustainable care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.3",
+    "title": "Have the vision, values and strategy been developed using a structured planning process in collaboration with staff, people who use services, and external partners?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.4",
+    "title": "Do staff know and understand what the vision, values and strategy are, and their role in achieving them?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.5",
+    "title": "Is the strategy aligned to local plans in the wider health and social care economy, and how have services been planned to meet the needs of the relevant population?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.2.6",
+    "title": "Is progress against delivery of the strategy and local plans monitored and reviewed, and is there evidence to show this?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3",
+    "title": "Is there a culture of high-quality, sustainable care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.1",
+    "title": "How does the provider ensure the clinical oversight of remote staff?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.3.2",
+    "title": "Do staff feel supported, respected and valued?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.3",
+    "title": "Is the culture centred on the needs and experience of people who use services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.4",
+    "title": "Do staff feel positive and proud to work in the organisation?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.5",
+    "title": "Is action taken to address behaviour and performance that is inconsistent with the vision and values, regardless of seniority?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.6",
+    "title": "Does the culture encourage openness and honesty at all levels within the organisation, including with people who use services, in response to incidents? Do leaders and staff understand the importance of staff being able to raise concerns without fear of retribution, and is appropriate learning and action taken as a result of concerns raised?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.7",
+    "title": "Are there mechanisms for providing all staff at every level with the development they need, including high-quality appraisal and career development conversations?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.8",
+    "title": "Is there a strong emphasis on the safety and wellbeing of staff?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.9",
+    "title": "Are equality and diversity promoted within and beyond the organisation? Do all staff, including those with particular protected characteristics under the Equality Act, feel they are treated equitably?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.3.10",
+    "title": "Are there cooperative, supportive and appreciative relationships among staff? Do staff and teams work collaboratively, share responsibility and resolve conflict quickly and constructively?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4",
+    "title": "Are there clear responsibilities, roles and systems of accountability to support good governance and management?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4.1",
+    "title": "Are there effective structures, processes and systems of accountability to support the delivery of the strategy and good quality, sustainable services? Are these regularly reviewed and improved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4.2",
+    "title": "Do all levels of governance and management function effectively and interact with each other appropriately?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4.3",
+    "title": "Are staff at all levels clear about their roles and do they understand what they are accountable for, and to whom?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4.4",
+    "title": "Are arrangements with partners and third-party providers governed and managed effectively to encourage appropriate interaction and promote coordinated, person-centred care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.4.5",
+    "title": "Are there robust arrangements to make sure that hospital managers discharge their specific powers and duties according to the provisions of the Mental Health Act 1983?",
+    "applies_to ": "Specialist mental health services",
+    "": ""
+  },
+  {
+    "clause": "W.5",
+    "title": "Are there clear and effective processes for managing risks, issues and performance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.1",
+    "title": "How is the health and safety of remote employees maintained? Has the provider given employees advice about the correct use of display screen equipment? Have work areas been assessed?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.5.2",
+    "title": "Are there comprehensive assurance systems, and are performance issues escalated appropriately through clear structures and processes? Are these regularly reviewed and improved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.3",
+    "title": "Are there processes to manage current and future performance? Are these regularly reviewed and improved?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.4",
+    "title": "Is there a systematic programme of clinical and internal audit to monitor quality, operational and financial processes, and systems to identify where action should be taken?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.5",
+    "title": "Are there robust arrangements for identifying, recording and managing risks, issues and mitigating actions? Is there alignment between the recorded risks and what staff say is ‘on their worry list’?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.6",
+    "title": "Are potential risks taken into account when planning services, for example seasonal or other expected or unexpected fluctuations in demand, or disruption to staffing or facilities?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.5.7",
+    "title": "When considering developments to services or efficiency changes, how is the impact on quality and sustainability assessed and monitored? Are there examples of where financial pressures have compromised care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6",
+    "title": "Is appropriate and accurate information being effectively processed, challenged and acted on?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.1",
+    "title": "Will be given by zain",
+    "applies_to ": "",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.a",
+    "title": "Are medical records held in line with guidance and requirements? Is the level of security in line with the principles of the N3 spine or similar?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.b",
+    "title": "If patient records are held on a portable or mobile device, are they appropriately backed up in real time?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.c",
+    "title": "Is all data encrypted, in transit and at rest? Are portable or mobile devices encrypted when they hold patient information?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.d",
+    "title": "Is the provider registered as a data controller with the Information Commissioners Office and is this in the same name as the CQC registration? Is the registration current with all provider details up to date?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.e",
+    "title": "Who has access to the patient record? Do any third parties have access? What measures are in place to monitor and control access? Can a patient see who has accessed their record?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.f",
+    "title": "How is unusual access identified and followed up?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.1.g",
+    "title": "What will happen to data and records if the provider ceases trade? Are there contracts in place?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.6.2",
+    "title": "Is there a holistic understanding of performance, which sufficiently covers and integrates people’s views with information on quality, operations and finances? Is information used to measure for improvement, not just assurance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.3",
+    "title": "Do quality and sustainability both receive sufficient coverage in relevant meetings at all levels? Do all staff have sufficient access to information, and do they challenge it appropriately?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.4",
+    "title": "Are there clear and robust service performance measures, which are reported and monitored?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.5",
+    "title": "Are there effective arrangements to ensure that the information used to monitor, manage and report on quality and performance is accurate, valid, reliable, timely and relevant? What action is taken when issues are identified?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.6",
+    "title": "Are information technology systems used effectively to monitor and improve the quality of care?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.7",
+    "title": "Are there effective arrangements to ensure that data or notifications are submitted to external bodies as required?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.6.8",
+    "title": "Are there robust arrangements (including appropriate internal and external validation) to ensure the availability, integrity and confidentiality of identifiable data, records and data management systems, in line with data security standards? Are lessons learned when there are data security breaches?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7",
+    "title": "Are the people who use services, the public, staff and external partners engaged and involved to support high-quality sustainable services?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7.1",
+    "title": "Is there a clear, well publicised mechanism for patient feedback? Does the provider always respond to feedback?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.7.2",
+    "title": "Is patient feedback published in an open and transparent way? Is patient feedback edited or censored before publication?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.7.3",
+    "title": "How does the provider ensure that their service is person-centred?",
+    "applies_to ": "Additional for digital HC providers",
+    "": ""
+  },
+  {
+    "clause": "W.7.4",
+    "title": "Are people’s views and experiences gathered and acted on to shape and improve the services and culture? Does this include people in a range of equality groups?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7.5",
+    "title": "Are people who use services, those close to them and their representatives actively engaged and involved in decision-making to shape services and culture? Does this include people in a range of equality groups?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7.6",
+    "title": "Are staff actively engaged so that their views are reflected in the planning and delivery of services and in shaping the culture? Does this include those with a protected equality characteristic?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7.7",
+    "title": "Are there positive and collaborative relationships with external partners to build a shared understanding of challenges within the system and the needs of the relevant population, and to deliver services to meet those needs?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.7.8",
+    "title": "Is there transparency and openness with all stakeholders about performance?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8",
+    "title": "Are there robust systems and processes for learning, continuous improvement and innovation?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8.1",
+    "title": "In what ways do leaders and staff strive for continuous learning, improvement and innovation? Does this include participating in appropriate research projects and recognised accreditation schemes?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8.2",
+    "title": "Are there standardised improvement tools and methods, and do staff have the skills to use them?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8.3",
+    "title": "How effective is participation in and learning from internal and external reviews, including those related to mortality or the death of a person using the service? Is learning shared effectively and used to make improvements?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8.4",
+    "title": "Do all staff regularly take time out to work together to resolve problems and to review individual and team objectives, processes and performance? Does this lead to improvements and innovation?",
+    "applies_to ": "All health",
+    "": ""
+  },
+  {
+    "clause": "W.8.5",
+    "title": "Are there systems to support improvement and innovation work, including objectives and rewards for staff, data systems, and processes for evaluating and sharing the results of improvement work?",
+    "applies_to ": "All health",
+    "": ""
+  }
+]

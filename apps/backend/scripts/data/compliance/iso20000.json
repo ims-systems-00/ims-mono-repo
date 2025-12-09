@@ -1,0 +1,1262 @@
+[
+  {
+    "clause": "4",
+    "title": "Context of the organization"
+  },
+  {
+    "clause": "4.1",
+    "title": "Understanding the organization and its context"
+  },
+  {
+    "clause": "4.2",
+    "title": "Understanding the needs and expectations of interested parties"
+  },
+  {
+    "clause": "4.2.a",
+    "title": "the interested parties that are relevant to the SMS and the services;"
+  },
+  {
+    "clause": "4.2.b",
+    "title": "the relevant requirements of these interested parties."
+  },
+  {
+    "clause": "4.3",
+    "title": "Determining the scope of the service management system"
+  },
+  {
+    "clause": "4.3.a",
+    "title": "the external and internal issues referred to in 4.1;"
+  },
+  {
+    "clause": "4.3.b",
+    "title": "the requirements referred to in 4.2;"
+  },
+  {
+    "clause": "4.3.c",
+    "title": "the services delivered by the organization."
+  },
+  {
+    "clause": "4.4",
+    "title": "Service management system"
+  },
+  {
+    "clause": "5",
+    "title": "Leadership"
+  },
+  {
+    "clause": "5.1",
+    "title": "Leadership and commitment"
+  },
+  {
+    "clause": "5.1.a",
+    "title": "ensuring that the service management policy and service management objectives are established and are compatible with the strategic direction of the organization;"
+  },
+  {
+    "clause": "5.1.b",
+    "title": "ensuring that the service management plan is created, implemented and maintained in order to support the service management policy, and the achievement of the service management objectives and service requirements;"
+  },
+  {
+    "clause": "5.1.c",
+    "title": "ensuring that appropriate levels of authority are assigned for making decisions related to the SMS and the services;"
+  },
+  {
+    "clause": "5.1.d",
+    "title": "ensuring that what constitutes value for the organization and its customers is determined;"
+  },
+  {
+    "clause": "5.1.e",
+    "title": "ensuring there is control of other parties involved in the service lifecycle;"
+  },
+  {
+    "clause": "5.1.f",
+    "title": "ensuring the integration of the SMS requirements into the organization’s business processes;"
+  },
+  {
+    "clause": "5.1.g",
+    "title": "ensuring that the resources needed for the SMS and the services are available;"
+  },
+  {
+    "clause": "5.1.h",
+    "title": "communicating the importance of effective service management, achieving the service management objectives, delivering value and conforming to the SMS requirements;"
+  },
+  {
+    "clause": "5.1.i",
+    "title": "ensuring that the SMS achieves its intended outcome(s);"
+  },
+  {
+    "clause": "5.1.j",
+    "title": "directing and supporting persons to contribute to the effectiveness of the SMS and the services;"
+  },
+  {
+    "clause": "5.1.k",
+    "title": "promoting continual improvement of the SMS and the services;"
+  },
+  {
+    "clause": "5.1.l",
+    "title": "supporting other relevant management roles to demonstrate their leadership as it applied to their areas of responsibility."
+  },
+  {
+    "clause": "5.2",
+    "title": "Policy"
+  },
+  {
+    "clause": "5.2.1",
+    "title": "Establishing the service management policy"
+  },
+  {
+    "clause": "5.2.1.a",
+    "title": "is appropriate to the purpose of the organization;"
+  },
+  {
+    "clause": "5.2.1.b",
+    "title": "provides a framework for setting service management objectives;"
+  },
+  {
+    "clause": "5.2.1.c",
+    "title": "includes a commitment to satisfy applicable requirements;"
+  },
+  {
+    "clause": "5.2.1.d",
+    "title": "includes a commitment to continual improvement of the SMS and the services."
+  },
+  {
+    "clause": "5.2.2",
+    "title": "Communicating the service management policy"
+  },
+  {
+    "clause": "5.2.2.a",
+    "title": "be available as documented information;"
+  },
+  {
+    "clause": "5.2.2.b",
+    "title": "be communicated within the organization;"
+  },
+  {
+    "clause": "5.2.2.c",
+    "title": "be available to interested parties, as appropriate."
+  },
+  {
+    "clause": "5.3",
+    "title": "Organizational roles, responsibilities and authorities"
+  },
+  {
+    "clause": "5.3.a",
+    "title": "ensuring that the SMS conforms to the requirements of this document;"
+  },
+  {
+    "clause": "5.3.b",
+    "title": "reporting on the performance of the SMS and the services to top management."
+  },
+  {
+    "clause": "6",
+    "title": "Planning"
+  },
+  {
+    "clause": "6.1",
+    "title": "Actions to address risks and opportunities"
+  },
+  {
+    "clause": "6.1.1",
+    "title": "When planning for the SMS, the organization shall consider the issues referred to in 4.1 and the requirements referred to in 4.2 and determine the risks and opportunities that need to be addressed to:"
+  },
+  {
+    "clause": "6.1.1.a",
+    "title": "give assurance that the SMS can achieve its intended outcome(s);"
+  },
+  {
+    "clause": "6.1.1.b",
+    "title": "prevent, or reduce, undesired effects;"
+  },
+  {
+    "clause": "6.1.1.c",
+    "title": "achieve continual improvement of the SMS and the services."
+  },
+  {
+    "clause": "6.1.2",
+    "title": "The organization shall determine and document:"
+  },
+  {
+    "clause": "6.1.2.a",
+    "title": "risks related to:"
+  },
+  {
+    "clause": "6.1.2.a.1",
+    "title": "the organization;"
+  },
+  {
+    "clause": "6.1.2.a.2",
+    "title": "not meeting the service requirements;"
+  },
+  {
+    "clause": "6.1.2.a.3",
+    "title": "the involvement of other parties in the service lifecycle;"
+  },
+  {
+    "clause": "6.1.2.b",
+    "title": "the impact on customers of risks and opportunities for the SMS and the services;"
+  },
+  {
+    "clause": "6.1.2.c",
+    "title": "risk acceptance criteria;"
+  },
+  {
+    "clause": "6.1.2.d",
+    "title": "approach to be taken for the management of risks."
+  },
+  {
+    "clause": "6.1.3",
+    "title": "The organization shall plan:"
+  },
+  {
+    "clause": "6.1.3.a",
+    "title": "actions to address these risks and opportunities and their priorities;"
+  },
+  {
+    "clause": "6.1.3.b",
+    "title": "how to:"
+  },
+  {
+    "clause": "6.1.3.b.1",
+    "title": "integrate and implement the actions into its SMS processes;"
+  },
+  {
+    "clause": "6.1.3.b.2",
+    "title": "evaluate the effectiveness of these actions."
+  },
+  {
+    "clause": "6.2",
+    "title": "Service management objectives and planning to achieve them"
+  },
+  {
+    "clause": "6.2.1",
+    "title": "Establish objectives"
+  },
+  {
+    "clause": "6.2.1.a",
+    "title": "be consistent with the service management policy;"
+  },
+  {
+    "clause": "6.2.1.b",
+    "title": "be measurable;"
+  },
+  {
+    "clause": "6.2.1.c",
+    "title": "take into account applicable requirement;"
+  },
+  {
+    "clause": "6.2.1.d",
+    "title": "be monitored;"
+  },
+  {
+    "clause": "6.2.1.e",
+    "title": "be communicated;"
+  },
+  {
+    "clause": "6.2.1.f",
+    "title": "be updated as appropriate."
+  },
+  {
+    "clause": "6.2.2",
+    "title": "Plan to achieve objectives"
+  },
+  {
+    "clause": "6.2.2.a",
+    "title": "what will be done;"
+  },
+  {
+    "clause": "6.2.2.b",
+    "title": "what resources will be required;"
+  },
+  {
+    "clause": "6.2.2.c",
+    "title": "who will be responsible;"
+  },
+  {
+    "clause": "6.2.2.d",
+    "title": "when it will be completed;"
+  },
+  {
+    "clause": "6.2.2.e",
+    "title": "how the results will be evaluated."
+  },
+  {
+    "clause": "6.3",
+    "title": "Plan the service management system"
+  },
+  {
+    "clause": "6.3.a",
+    "title": "list of services;"
+  },
+  {
+    "clause": "6.3.b",
+    "title": "known limitations that can impact the SMS and the services;"
+  },
+  {
+    "clause": "6.3.c",
+    "title": "obligations such as relevant policies, standards, legal, regulatory and contractual requirements, and how these obligations apply to the SMS and the services;"
+  },
+  {
+    "clause": "6.3.d",
+    "title": "authorities and responsibilities for the SMS and the services;"
+  },
+  {
+    "clause": "6.3.e",
+    "title": "human, technical, information and financial resources necessary to operate the SMS and the services;"
+  },
+  {
+    "clause": "6.3.f",
+    "title": "approach to be taken for working with other parties involved in the service lifecycle;"
+  },
+  {
+    "clause": "6.3.g",
+    "title": "technology used to support the SMS;"
+  },
+  {
+    "clause": "6.3.h",
+    "title": "how the effectiveness of the SMS and the services will be measured, audited, reported and improved."
+  },
+  {
+    "clause": "7",
+    "title": "Support of the service management system"
+  },
+  {
+    "clause": "7.1",
+    "title": "Resources"
+  },
+  {
+    "clause": "7.2",
+    "title": "Competence"
+  },
+  {
+    "clause": "7.2.a",
+    "title": "determine the necessary competence of persons doing work under its control that affects the performance and effectiveness of the SMS and the services;"
+  },
+  {
+    "clause": "7.2.b",
+    "title": "ensure that these persons are competent on the basis of appropriate education, training or experience;"
+  },
+  {
+    "clause": "7.2.c",
+    "title": "where applicable, take actions to acquire the necessary competence and evaluate the effectiveness of the actions taken;"
+  },
+  {
+    "clause": "7.2.d",
+    "title": "retain appropriate documented information as evidence of competence."
+  },
+  {
+    "clause": "7.3",
+    "title": "Awareness"
+  },
+  {
+    "clause": "7.3.a",
+    "title": "the service management policy;"
+  },
+  {
+    "clause": "7.3.b",
+    "title": "the service management objectives;"
+  },
+  {
+    "clause": "7.3.c",
+    "title": "the services relevant to their work;"
+  },
+  {
+    "clause": "7.3.d",
+    "title": "their contribution to the effectiveness of the SMS, including the benefits of improved performance;"
+  },
+  {
+    "clause": "7.3.e",
+    "title": "the implications of not conforming with the SMS requirements."
+  },
+  {
+    "clause": "7.4",
+    "title": "Communication"
+  },
+  {
+    "clause": "7.4.a",
+    "title": "on what it will communicate;"
+  },
+  {
+    "clause": "7.4.b",
+    "title": "when to communicate;"
+  },
+  {
+    "clause": "7.4.c",
+    "title": "with whom to communicate;"
+  },
+  {
+    "clause": "7.4.d",
+    "title": "how to communicate;"
+  },
+  {
+    "clause": "7.4.e",
+    "title": "who will be responsible for the communication."
+  },
+  {
+    "clause": "7.5",
+    "title": "Documented information"
+  },
+  {
+    "clause": "7.5.1",
+    "title": "General"
+  },
+  {
+    "clause": "7.5.1.a",
+    "title": "documented information required by this document;"
+  },
+  {
+    "clause": "7.5.1.b",
+    "title": "documented information determined by the organization as being necessary for the effectiveness of the SMS."
+  },
+  {
+    "clause": "7.5.2",
+    "title": "Creating and updating documented information"
+  },
+  {
+    "clause": "7.5.2.a",
+    "title": "identification and description (e.g. a title, date, author or reference number);"
+  },
+  {
+    "clause": "7.5.2.b",
+    "title": "format (e.g. language, software version, graphics) and media (e.g. paper, electronic);"
+  },
+  {
+    "clause": "7.5.2.c",
+    "title": "review and approval for suitability and adequacy."
+  },
+  {
+    "clause": "7.5.3",
+    "title": "Control of documented information"
+  },
+  {
+    "clause": "7.5.3.1",
+    "title": "Documented information required by the SMS and by this document shall be controlled to ensure:"
+  },
+  {
+    "clause": "7.5.3.1.a",
+    "title": "it is available and suitable for use, where and when it is needed;"
+  },
+  {
+    "clause": "7.5.3.1.b",
+    "title": "it is adequately protected (e.g. from loss of confidentiality, improper use or loss of integrity)."
+  },
+  {
+    "clause": "7.5.3.2",
+    "title": "For the control of documented information, the organization shall address the following activities, as applicable:"
+  },
+  {
+    "clause": "7.5.3.2.a",
+    "title": "distribution, access, retrieval and use;"
+  },
+  {
+    "clause": "7.5.3.2.b",
+    "title": "storage and preservation, including preservation of legibility;"
+  },
+  {
+    "clause": "7.5.3.2.c",
+    "title": "control of changes (e.g. version control);"
+  },
+  {
+    "clause": "7.5.3.2.d",
+    "title": "retention and disposition."
+  },
+  {
+    "clause": "7.5.4",
+    "title": "Service management system documented information "
+  },
+  {
+    "clause": "7.5.4.a",
+    "title": "scope of the SMS;"
+  },
+  {
+    "clause": "7.5.4.b",
+    "title": "policy and objectives for service management;"
+  },
+  {
+    "clause": "7.5.4.c",
+    "title": "service management plan;"
+  },
+  {
+    "clause": "7.5.4.d",
+    "title": "change management policy, information security policy and service continuity plan(s);"
+  },
+  {
+    "clause": "7.5.4.e",
+    "title": "processes of the organization’s SMS;"
+  },
+  {
+    "clause": "7.5.4.f",
+    "title": "service requirements;"
+  },
+  {
+    "clause": "7.5.4.g",
+    "title": "service catalogue(s);"
+  },
+  {
+    "clause": "7.5.4.h",
+    "title": "service level agreement(s) (SLA);"
+  },
+  {
+    "clause": "7.5.4.i",
+    "title": "contracts with external suppliers;"
+  },
+  {
+    "clause": "7.5.4.j",
+    "title": "agreements with internal suppliers or customers acting as a supplier;"
+  },
+  {
+    "clause": "7.5.4.k",
+    "title": "procedures that are require by this document;"
+  },
+  {
+    "clause": "7.5.4.l",
+    "title": "record required to demonstrate evidence of conformity to the requirements of this document and the organization’s SMS."
+  },
+  {
+    "clause": "7.6",
+    "title": "Knowledge"
+  },
+  {
+    "clause": "8",
+    "title": "Operation of the service management system"
+  },
+  {
+    "clause": "8.1",
+    "title": "Operational planning and control"
+  },
+  {
+    "clause": "8.1.a",
+    "title": "establishing performance criteria for the processes based on requirements;"
+  },
+  {
+    "clause": "8.1.b",
+    "title": "implementing control of the processes in accordance with the established performance criteria;"
+  },
+  {
+    "clause": "8.1.c",
+    "title": "keeping documented information to the extent necessary to have confidence that the processes have been carried out as planned."
+  },
+  {
+    "clause": "8.2",
+    "title": "Service portfolio"
+  },
+  {
+    "clause": "8.2.1",
+    "title": "Service delivery"
+  },
+  {
+    "clause": "8.2.2",
+    "title": "Plan the services"
+  },
+  {
+    "clause": "8.2.3",
+    "title": "Control of parties involved in the service lifecycle"
+  },
+  {
+    "clause": "8.2.3.1",
+    "title": "The organization shall retain accountability for the requirements specified in this document and the delivery of the services regardless of which party is involved in performing activities to support the service lifecycle."
+  },
+  {
+    "clause": "8.2.3.1.a",
+    "title": "services that are provided or operated by other parties;"
+  },
+  {
+    "clause": "8.2.3.1.b",
+    "title": "service components that are provided or operated by other parties;"
+  },
+  {
+    "clause": "8.2.3.1.c",
+    "title": "processes, or parts of processes, in the organization’s SMS that are operated by other parties."
+  },
+  {
+    "clause": "8.2.3.2",
+    "title": "The organization shall define and apply relevant controls for other parties from the following:"
+  },
+  {
+    "clause": "8.2.3.2.a",
+    "title": "measurement and evaluation of process performance;"
+  },
+  {
+    "clause": "8.2.3.2.b",
+    "title": "measurement and evaluation of the effectiveness of services and service components in meeting the service requirements."
+  },
+  {
+    "clause": "8.2.4",
+    "title": "Service catalogue management"
+  },
+  {
+    "clause": "8.2.5",
+    "title": "Asset management"
+  },
+  {
+    "clause": "8.2.6",
+    "title": "Configuration management"
+  },
+  {
+    "clause": "8.2.6.a",
+    "title": "unique identification;"
+  },
+  {
+    "clause": "8.2.6.b",
+    "title": "type of CI;"
+  },
+  {
+    "clause": "8.2.6.c",
+    "title": "description of the CI;"
+  },
+  {
+    "clause": "8.2.6.d",
+    "title": "relationship with other CIs;"
+  },
+  {
+    "clause": "8.2.6.e",
+    "title": "status."
+  },
+  {
+    "clause": "8.3",
+    "title": "Relationship and agreement"
+  },
+  {
+    "clause": "8.3.1",
+    "title": "General"
+  },
+  {
+    "clause": "8.3.1.a",
+    "title": "provide or operate services;"
+  },
+  {
+    "clause": "8.3.1.b",
+    "title": "provide or operate service components;"
+  },
+  {
+    "clause": "8.3.1.c",
+    "title": "operate processes, or parts of processes, that are in the organization’s SMS."
+  },
+  {
+    "clause": "8.3.2",
+    "title": "Business relationship management"
+  },
+  {
+    "clause": "8.3.3",
+    "title": "Service level management"
+  },
+  {
+    "clause": "8.3.3.a",
+    "title": "performance against service level targets;"
+  },
+  {
+    "clause": "8.3.3.b",
+    "title": "actual and periodic changes in workload compared to workload limits in the SLA(s)."
+  },
+  {
+    "clause": "8.3.4",
+    "title": "Supplier management"
+  },
+  {
+    "clause": "8.3.4.1",
+    "title": "Management of external suppliers"
+  },
+  {
+    "clause": "8.3.4.1.a",
+    "title": "scope of the services, service components, processes or parts of processes to be provided or operated by the external supplier;"
+  },
+  {
+    "clause": "8.3.4.1.b",
+    "title": "requirements to be met by the external supplier;"
+  },
+  {
+    "clause": "8.3.4.1.c",
+    "title": "service level targets or other contractual obligations;"
+  },
+  {
+    "clause": "8.3.4.1.d",
+    "title": "authorities and responsibilities of the organization and the external supplier."
+  },
+  {
+    "clause": "8.3.4.2",
+    "title": "Management of internal suppliers and customers acting as a supplier"
+  },
+  {
+    "clause": "8.4",
+    "title": "Supply and demand"
+  },
+  {
+    "clause": "8.4.1",
+    "title": "Budgeting and accounting for services"
+  },
+  {
+    "clause": "8.4.2",
+    "title": "Demand management"
+  },
+  {
+    "clause": "8.4.2.a",
+    "title": "determine current demand and forecast future demand for services;"
+  },
+  {
+    "clause": "8.4.2.b",
+    "title": "monitor and report on demand and consumption of services."
+  },
+  {
+    "clause": "8.4.3",
+    "title": "Capacity management"
+  },
+  {
+    "clause": "8.4.3.a",
+    "title": "current and forecast capacity based on demand for services;"
+  },
+  {
+    "clause": "8.4.3.b",
+    "title": "expected impact on capacity of agreed service level targets, requirements for service availability and service continuity;"
+  },
+  {
+    "clause": "8.4.3.c",
+    "title": "timescales and thresholds for changes to service capacity."
+  },
+  {
+    "clause": "8.5",
+    "title": "Service design, build and transition"
+  },
+  {
+    "clause": "8.5.1",
+    "title": "Change management"
+  },
+  {
+    "clause": "8.5.1.1",
+    "title": "Change management policy"
+  },
+  {
+    "clause": "8.5.1.1.a",
+    "title": "service components and other items that are under the control of change management;"
+  },
+  {
+    "clause": "8.5.1.1.b",
+    "title": "categories of change, including emergency change, and how they are to be managed;"
+  },
+  {
+    "clause": "8.5.1.1.c",
+    "title": "criteria to determine changes with the potential to have a major impact on customers or services."
+  },
+  {
+    "clause": "8.5.1.2",
+    "title": "Change management initiation "
+  },
+  {
+    "clause": "8.5.1.2.a",
+    "title": "new services with the potential to have a major impact on customers or other services as determined by the change management policy;"
+  },
+  {
+    "clause": "8.5.1.2.b",
+    "title": "changes to services with the potential to have a major impact on customers or other services as determined by the change management policy;"
+  },
+  {
+    "clause": "8.5.1.2.c",
+    "title": "categories of change that are to be managed by the service design and transition according to the change management policy;"
+  },
+  {
+    "clause": "8.5.1.2.d",
+    "title": "removal of a service;"
+  },
+  {
+    "clause": "8.5.1.2.e",
+    "title": "transfer of an existing service from the organization to a customer or other party;"
+  },
+  {
+    "clause": "8.5.1.2.f",
+    "title": "transfer of an existing service from a customer or other party to the organization."
+  },
+  {
+    "clause": "8.5.1.3",
+    "title": "Change management activities"
+  },
+  {
+    "clause": "8.5.1.3.a",
+    "title": "existing services;"
+  },
+  {
+    "clause": "8.5.1.3.b",
+    "title": "customers, users and other interested parties;"
+  },
+  {
+    "clause": "8.5.1.3.c",
+    "title": "policies and plans required by this document;"
+  },
+  {
+    "clause": "8.5.1.3.d",
+    "title": "capacity, service availability, service continuity and information security;"
+  },
+  {
+    "clause": "8.5.1.3.e",
+    "title": "other requests for change, releases and plans for deployment."
+  },
+  {
+    "clause": "8.5.2",
+    "title": "Service design and transition"
+  },
+  {
+    "clause": "8.5.2.1",
+    "title": "Plan new or changed services"
+  },
+  {
+    "clause": "8.5.2.1.a",
+    "title": "authorities and responsibilities for design, build and transition activities;"
+  },
+  {
+    "clause": "8.5.2.1.b",
+    "title": "activities to be performed by the organization or other parties with their timescales,"
+  },
+  {
+    "clause": "8.5.2.1.c",
+    "title": "human, technical, information and financial resources;"
+  },
+  {
+    "clause": "8.5.2.1.d",
+    "title": "dependencies on other services;"
+  },
+  {
+    "clause": "8.5.2.1.e",
+    "title": "testing needed for the new or changed services;"
+  },
+  {
+    "clause": "8.5.2.1.f",
+    "title": "service acceptance criteria;"
+  },
+  {
+    "clause": "8.5.2.1.g",
+    "title": "intended outcomes from delivering the new or changed services, expressed in measurable terms;"
+  },
+  {
+    "clause": "8.5.2.1.h",
+    "title": "impact on the SMS, other services, planned changes, customers, users and other interested parties."
+  },
+  {
+    "clause": "8.5.2.2",
+    "title": "Design"
+  },
+  {
+    "clause": "8.5.2.2.a",
+    "title": "authorities and responsibilities of the parties involved in the deliver of the new or changed services;"
+  },
+  {
+    "clause": "8.5.2.2.b",
+    "title": "requirements for changes to human, technical, information and financial resources;"
+  },
+  {
+    "clause": "8.5.2.2.c",
+    "title": "requirements for appropriate education, training and experience;"
+  },
+  {
+    "clause": "8.5.2.2.d",
+    "title": "new or changed SLAs, contracts and other documented agreements that support the services;"
+  },
+  {
+    "clause": "8.5.2.2.e",
+    "title": "changes to the SMS including new or changed policies, plans, processes, procedures, measures and knowledge;"
+  },
+  {
+    "clause": "8.5.2.2.f",
+    "title": "impact on other services;"
+  },
+  {
+    "clause": "8.5.2.2.g",
+    "title": "updates to the service catalogue(s)."
+  },
+  {
+    "clause": "8.5.2.3",
+    "title": "Build and transition"
+  },
+  {
+    "clause": "8.5.3",
+    "title": "Release and deployment management"
+  },
+  {
+    "clause": "8.6",
+    "title": "Resolution and fulfilment"
+  },
+  {
+    "clause": "8.6.1",
+    "title": "Incident management"
+  },
+  {
+    "clause": "8.6.1.a",
+    "title": "recorded and classified;"
+  },
+  {
+    "clause": "8.6.1.b",
+    "title": "prioritized taking into consideration impact and urgency;"
+  },
+  {
+    "clause": "8.6.1.c",
+    "title": "escalated if needed;"
+  },
+  {
+    "clause": "8.6.1.d",
+    "title": "resolved;"
+  },
+  {
+    "clause": "8.6.1.e",
+    "title": "closed."
+  },
+  {
+    "clause": "8.6.2",
+    "title": "Service request management"
+  },
+  {
+    "clause": "8.6.2.a",
+    "title": "recorded and classified;"
+  },
+  {
+    "clause": "8.6.2.b",
+    "title": "prioritized;"
+  },
+  {
+    "clause": "8.6.2.c",
+    "title": "fulfilled;"
+  },
+  {
+    "clause": "8.6.2.d",
+    "title": "closed."
+  },
+  {
+    "clause": "8.6.3",
+    "title": "Problem management"
+  },
+  {
+    "clause": "8.6.3.a",
+    "title": "recorded and classified;"
+  },
+  {
+    "clause": "8.6.3.b",
+    "title": "prioritized;"
+  },
+  {
+    "clause": "8.6.3.c",
+    "title": "escalated if needed;"
+  },
+  {
+    "clause": "8.6.3.d",
+    "title": "resolved if possible;"
+  },
+  {
+    "clause": "8.6.3.e",
+    "title": "closed."
+  },
+  {
+    "clause": "8.7",
+    "title": "Service assurance"
+  },
+  {
+    "clause": "8.7.1",
+    "title": "Service availability management"
+  },
+  {
+    "clause": "8.7.2",
+    "title": "Service continuity management"
+  },
+  {
+    "clause": "8.7.2.a",
+    "title": "criteria and responsibilities for invoking service continuity;"
+  },
+  {
+    "clause": "8.7.2.b",
+    "title": "procedures to be implemented in the event of a major loss of service;"
+  },
+  {
+    "clause": "8.7.2.c",
+    "title": "targets for service availability when the service continuity plan is invoked;"
+  },
+  {
+    "clause": "8.7.2.d",
+    "title": "service recovery requirements;"
+  },
+  {
+    "clause": "8.7.2.e",
+    "title": "procedures for returning to normal working conditions."
+  },
+  {
+    "clause": "8.7.3",
+    "title": "Information security management"
+  },
+  {
+    "clause": "8.7.3.1",
+    "title": "Information security policy"
+  },
+  {
+    "clause": "8.7.3.1.a",
+    "title": "the organization;"
+  },
+  {
+    "clause": "8.7.3.1.b",
+    "title": "customers and users;"
+  },
+  {
+    "clause": "8.7.3.1.c",
+    "title": "external suppliers, internal suppliers and other interested parties."
+  },
+  {
+    "clause": "8.7.3.2",
+    "title": "Information security controls"
+  },
+  {
+    "clause": "8.7.3.3",
+    "title": "Information security incidents"
+  },
+  {
+    "clause": "8.7.3.3.a",
+    "title": "recorded and classified;"
+  },
+  {
+    "clause": "8.7.3.3.b",
+    "title": "prioritized taking into consideration the information security risk;"
+  },
+  {
+    "clause": "8.7.3.3.c",
+    "title": "escalated if needed;"
+  },
+  {
+    "clause": "8.7.3.3.d",
+    "title": "resolved;"
+  },
+  {
+    "clause": "8.7.3.3.e",
+    "title": "closed."
+  },
+  {
+    "clause": "9",
+    "title": "Performance evaluation"
+  },
+  {
+    "clause": "9.1",
+    "title": "Monitoring, measurement, analysis and evaluation"
+  },
+  {
+    "clause": "9.1.a",
+    "title": "what needs to be monitored and measured for the SMS and the services;"
+  },
+  {
+    "clause": "9.1.b",
+    "title": "the methods for monitoring, measurement, analysis and evaluation, as applicable, to ensure valid results;"
+  },
+  {
+    "clause": "9.1.c",
+    "title": "when the monitoring and measuring shall be performed;"
+  },
+  {
+    "clause": "9.1.d",
+    "title": "when the results from monitoring and measurement shall be analysed and evaluated."
+  },
+  {
+    "clause": "9.2",
+    "title": "Internal audit"
+  },
+  {
+    "clause": "9.2.1",
+    "title": "The organisation shall conduct internal audits at planned intervals to provide information on whether the SMS:"
+  },
+  {
+    "clause": "9.2.1.a",
+    "title": "conforms to:"
+  },
+  {
+    "clause": "9.2.1.a.1",
+    "title": "the organization’s own requirements for its SMS;"
+  },
+  {
+    "clause": "9.2.1.a.2",
+    "title": "the requirements of this document;"
+  },
+  {
+    "clause": "9.2.1.b",
+    "title": "is effectively implemented and maintained."
+  },
+  {
+    "clause": "9.2.2",
+    "title": "The organization shall"
+  },
+  {
+    "clause": "9.2.2.a",
+    "title": "plan, establish, implement and maintain an audit programme(s), including the frequency, methods, responsibilities, planning requirements and reporting, which shall take into consideration:"
+  },
+  {
+    "clause": "9.2.2.a.1",
+    "title": "the importance of the processes concerned;"
+  },
+  {
+    "clause": "9.2.2.a.2",
+    "title": "changes affecting the organization;"
+  },
+  {
+    "clause": "9.2.2.a.3",
+    "title": "the results of previous audits;"
+  },
+  {
+    "clause": "9.2.2.b",
+    "title": "define the audit criteria and scope for each audit;"
+  },
+  {
+    "clause": "9.2.2.c",
+    "title": "select auditors and conduct audits to ensure objectivity and the impartiality of the audit process;"
+  },
+  {
+    "clause": "9.2.2.d",
+    "title": "ensure that the results of the audits are reported to relevant management;"
+  },
+  {
+    "clause": "9.2.2.e",
+    "title": "retain documented information as evidence of the implementation of the audit programme(s) and the audit results."
+  },
+  {
+    "clause": "9.3",
+    "title": "Management review"
+  },
+  {
+    "clause": "9.3.a",
+    "title": "the statis of actions from previous management reviews;"
+  },
+  {
+    "clause": "9.3.b",
+    "title": "changes in external and internal issues that are relevant to the SMS;"
+  },
+  {
+    "clause": "9.3.c",
+    "title": "information on the performance and effectiveness of the SMS, including trends in:"
+  },
+  {
+    "clause": "9.3.c.1",
+    "title": "nonconformities and corrective actions;"
+  },
+  {
+    "clause": "9.3.c.2",
+    "title": "monitoring and measurement results;"
+  },
+  {
+    "clause": "9.3.c.3",
+    "title": "audit results;"
+  },
+  {
+    "clause": "9.3.d",
+    "title": "opportunities for continual improvement;"
+  },
+  {
+    "clause": "9.3.e",
+    "title": "feedback from customers and other interested parties;"
+  },
+  {
+    "clause": "9.3.f",
+    "title": "adherence to and suitability of the service management policy and other policies required by this document;"
+  },
+  {
+    "clause": "9.3.g",
+    "title": "achievement of service management objectives;"
+  },
+  {
+    "clause": "9.3.h",
+    "title": "performance of the services;"
+  },
+  {
+    "clause": "9.3.i",
+    "title": "performance of other parties involved in the delivery of the services;"
+  },
+  {
+    "clause": "9.3.j",
+    "title": "current and forecast human, technical, information and financial resource levels, and human and technical resource capabilities;"
+  },
+  {
+    "clause": "9.3.k",
+    "title": "results of risk assessment and the effectiveness of actions taken to address risks and opportunities;"
+  },
+  {
+    "clause": "9.3.l",
+    "title": "changes that can affect the SMS and the services."
+  },
+  {
+    "clause": "9.4",
+    "title": "Service reporting"
+  },
+  {
+    "clause": "10",
+    "title": "Improvement"
+  },
+  {
+    "clause": "10.1",
+    "title": "Nonconformity and corrective action"
+  },
+  {
+    "clause": "10.1.1",
+    "title": "When a nonconformity occurs, the organization shall:"
+  },
+  {
+    "clause": "10.1.1.a",
+    "title": "react to the nonconformity, and as applicable:"
+  },
+  {
+    "clause": "10.1.1.a.1",
+    "title": "take action to control and correct it;"
+  },
+  {
+    "clause": "10.1.1.a.2",
+    "title": "deal with the consequences;"
+  },
+  {
+    "clause": "10.1.1.b",
+    "title": "evaluate the need for action to eliminate the causes of the nonconformity in order that it does not recur or occur elsewhere by:"
+  },
+  {
+    "clause": "10.1.1.b.1",
+    "title": "reviewing the nonconformity;"
+  },
+  {
+    "clause": "10.1.1.b.2",
+    "title": "determining the causes of the nonconformity;"
+  },
+  {
+    "clause": "10.1.1.b.3",
+    "title": "determining if similar nonconformities exist, or could potentially occur;"
+  },
+  {
+    "clause": "10.1.1.c",
+    "title": "implement any action needed;"
+  },
+  {
+    "clause": "10.1.1.d",
+    "title": "review the effectiveness of any corrective action taken;"
+  },
+  {
+    "clause": "10.1.1.e",
+    "title": "make changes to the SMS, if necessary."
+  },
+  {
+    "clause": "10.1.2",
+    "title": "The organization shall retain documented information as evidence of:"
+  },
+  {
+    "clause": "10.1.2.a",
+    "title": "the nature of the nonconformities and any subsequent actions taken;"
+  },
+  {
+    "clause": "10.1.2.b",
+    "title": "the results of any corrective action."
+  },
+  {
+    "clause": "10.2",
+    "title": "Continual improvement"
+  },
+  {
+    "clause": "10.2.a",
+    "title": "setting one or more targets for improvement in areas such as quality, value, capability, cost, productivity, resource utilization and risk reduction;"
+  },
+  {
+    "clause": "10.2.b",
+    "title": "ensuring that improvements are prioritized, planned and implemented;"
+  },
+  {
+    "clause": "10.2.c",
+    "title": "making changes to the SMS, if necessary;"
+  },
+  {
+    "clause": "10.2.d",
+    "title": "measuring implemented improvements against the target(s) set and where target(s) are not achieved, taking necessary actions;"
+  },
+  {
+    "clause": "10.2.e",
+    "title": "reporting on implemented improvements."
+  }
+]

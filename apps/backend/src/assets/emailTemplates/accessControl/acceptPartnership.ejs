@@ -1,0 +1,28 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"iMS Partnership Program"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Welcome to iMS Systems partnership programme.
+          Feel free to utilize either your partner code or the provided link to invite businesses to join the iMS
+          community. As you share the advantages of iMS Systems, you're not just introducing a product – you're paving
+          the way for enhanced efficiency, productivity, and innovation.`})%>
+          <%- include('../shared/useremails/message_section/start')%>
+            <p>
+              Partner code: <span
+                style="margin: 0;font-family: 'Poppins', sans-serif;font-size: 16px;font-weight: 600;letter-spacing: 0.34px;color: #16a4fa;">
+                <%= locals.referralCode %>
+              </span>
+            </p>
+            <p>
+              Link with partner code: <a href="<%= locals.referralLink %>">
+                <%= locals.referralLink %>
+                  </span>
+            </p>
+            <%- include('../shared/useremails/message_section/end')%>
+              <%- include('../shared/useremails/message_section/index',{message:` Your success is our success, and we're
+                committed to supporting you every step of the way. Thank you for joining the iMS Systems Partnership
+                Program. Let's embark on this exciting journey together, creating a future where businesses thrive with
+                the power of intelligent management solutions. `})%>
+                <%- include('../shared/useremails/closing_section/index'); %>
+                  <%- include('../shared/useremails/container/main_container_end'); %>
+                    <%- include('../shared/useremails/end'); %>

@@ -1,0 +1,25 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Document share"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${locals.sender.name} has shared
+          ${locals.documentName} via iMS Systems with you. To view the document please click on the download link
+          below..`}); %>
+          <%- include('../shared/useremails/button/index',{linkText:"Download",link:locals.viewLink}); %>
+            <%- include('../shared/useremails/message_section/start')%>
+              <p style=" font-family: 'Poppins' , sans-serif; font-size: 14px;font-weight: 500;line-height:
+                  normal;letter-spacing: normal;color: #de2c55;margin: 5px 0 0 0;">
+                This is a secure link which will expire after 7 days.
+              </p>
+              <%- include('../shared/useremails/message_section/end')%>
+                <%- include('../shared/useremails/message_section/index',{message:`If the link is not working or access
+                  has expired, please contact the originator on the following email.`}); %>
+                  <%- include('../shared/useremails/message_section/index',{message:"Email: "+locals.sender.email }); %>
+                  <% if(locals.customMessage){ %>
+                    <%- include('../shared/useremails/message_section/index',{message:`Message from
+                      ${locals.sender?.name}`}); %>
+                      <%- include('../shared/useremails/message_section/index',{message:locals.customMessage}); %>
+                        <% } %>
+                <%- include('../shared/useremails/closing_section/index'); %>
+                  <%- include('../shared/useremails/container/main_container_end'); %>
+                    <%- include('../shared/useremails/end'); %>

@@ -1,0 +1,252 @@
+openapi: 3.0.0
+info:
+  title: IMS Project Work Package Assignment API
+  version: 1.0.0
+  description: API documentation for IMS Project Work Package Assignment
+
+tags:
+  - name: IMS Project Work Package Assignment
+    description: APIs for managing IMS Project Work Package Assignment
+
+paths:
+  /ims-projects/{projectId}/workPackages/{workPackageId}/assignments/:
+    post:
+      summary: Create IMS Project Work Package Assignment
+      tags: [IMS Project Work Package Assignment]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectWorkPackageAssignmentInput"
+      responses:
+        "200":
+          description: if it takes two element of array then it will create two object
+          content:
+            application/json:
+              example:
+                message: iMS Project work package assignment created successfully.
+                imsProjectWorkPackageAssignment:
+                  - imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    assignedTo:
+                      _id: "65c4a766d1fee6d4b00a6825"
+                      name: "mukosh manob"
+                      email: "mukosh.manob@gmail.com"
+                      profileImageSrc: "https://public-media.imssystems.tech/cae49408-4cc9-4cd3-9492-ea3e7f3b8da5.jpg"
+                      accessPolicies: []
+                    _id: "66436e6c32c2694b917053a3"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T14:00:12.033Z"
+                    updatedAt: "2024-05-14T14:00:12.033Z"
+                    __v: 0
+                  - imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    assignedTo: null
+                    _id: "66436e6c32c2694b917053a4"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T14:00:12.033Z"
+                    updatedAt: "2024-05-14T14:00:12.033Z"
+                    __v: 0
+                statusCode: 200
+
+    get:
+      summary: List IMS Project Work Package Assignments
+      tags: [IMS Project Work Package Assignment]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of IMS Project Work Package Assignments
+          content:
+            application/json:
+              example:
+                message: iMS Project work package assignments retrived.
+                pagination:
+                  totalPages: 2
+                  totalResults: 3
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: true
+                  prevPage: null
+                  nextPage: 2
+                imsProjectWorkPackageAssignments:
+                  - _id: "66436e6c32c2694b917053a3"
+                    imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    assignedTo: "65c4a766d1fee6d4b00a6825"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T14:00:12.033Z"
+                    updatedAt: "2024-05-14T14:00:12.033Z"
+                    __v: 0
+                  - _id: "66436e6c32c2694b917053a4"
+                    imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    assignedTo: "6610e2876546f9de6bb61ba8"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T14:00:12.033Z"
+                    updatedAt: "2024-05-14T14:00:12.033Z"
+                    __v: 0
+                  - _id: "662059b47512ac5d098bb94f"
+                    imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    assignedTo: "6610e2876546f9de6bb61ba8"
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-04-17T23:22:28.990Z"
+                    updatedAt: "2024-04-17T23:22:28.990Z"
+                    __v: 0
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/assignments/{assignmentId}:
+    get:
+      summary: Get IMS Project Work Package Assignment by ID
+      tags: [IMS Project Work Package Assignment]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: assignmentId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: IMS Project Work Package Assignment retrieved successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package assignment retrieved.
+                imsProjectWorkPackageAssignment:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66436e6c32c2694b917053a3"
+                  imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  assignedTo:
+                    _id: "65c4a766d1fee6d4b00a6825"
+                    name: "mukosh manob"
+                    email: "mukosh.manob@gmail.com"
+                    profileImageSrc: "https://public-media.imssystems.tech/cae49408-4cc9-4cd3-9492-ea3e7f3b8da5.jpg"
+                    accessPolicies: []
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T14:00:12.033Z"
+                  updatedAt: "2024-05-14T14:00:12.033Z"
+                  __v: 0
+                statusCode: 200
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/assignments/{assignmentId}/hard:
+    delete:
+      summary: Remove IMS Project Work Package Assignment
+      tags: [IMS Project Work Package Assignment]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: assignmentId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: IMS Project Work Package Assignment removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package assignment removed.
+                imsProjectWorkPackageAssignment:
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  _id: "66436e6c32c2694b917053a3"
+                  imsProjectWorkPackage: "661d72e2b09b033a325ca1af"
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  assignedTo:
+                    _id: "65c4a766d1fee6d4b00a6825"
+                    name: "mukosh manob"
+                    email: "mukosh.manob@gmail.com"
+                    profileImageSrc: "https://public-media.imssystems.tech/cae49408-4cc9-4cd3-9492-ea3e7f3b8da5.jpg"
+                    accessPolicies: []
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T14:00:12.033Z"
+                  updatedAt: "2024-05-14T14:00:12.033Z"
+                  __v: 0
+                statusCode: 200
+
+components:
+  schemas:
+    ImsProjectWorkPackageAssignmentInput:
+      type: object
+      properties:
+        assignedTo:
+          type: array
+          items:
+            type: string
+      required:
+        - assignedTo

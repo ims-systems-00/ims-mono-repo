@@ -1,0 +1,30 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Confirmation: Receipt of License Request"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.organizationName}); %>
+
+        <%- include('../shared/useremails/message_section/index',{message:`Thank you for reaching out to us and
+          submitting your license request.`})%>
+
+
+          <%- include('../shared/useremails/message_section/index',{message:`This email is to confirm that we have
+            received your license request, and our team is diligently working to process it. We understand the
+            importance of obtaining your license promptly, and we assure you that we are working hard to expedite the
+            review.`})%>
+
+
+            <%- include('../shared/useremails/message_section/index',{message:`Your request ID: ${locals.requestId}`})%>
+
+
+              <%- include('../shared/useremails/message_section/index',{message:`We understand that your time is
+                valuable, and we appreciate your patience during this process. If you have any urgent inquiries or if
+                there's anything specific you'd like to discuss regarding your license request, please feel free to
+                contact our customer support at support@imssysttems.tech.`})%>
+
+                <%- include('../shared/useremails/message_section/index',{message:`Once again, thank you for choosing
+                  iMS Systems. We look forward to providing you with the requested license, and we appreciate the
+                  opportunity to serve you.`})%>
+
+                  <%- include('../shared/useremails/closing_section/index'); %>
+                    <%- include('../shared/useremails/container/main_container_end'); %>
+                      <%- include('../shared/useremails/end'); %>

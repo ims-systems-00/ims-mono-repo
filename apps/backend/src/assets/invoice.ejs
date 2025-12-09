@@ -1,0 +1,188 @@
+</head>
+<%- include('./includes/header') %>
+
+    <body class="white-content">
+        <div class="card-invoice card">
+            <div class="card-header">
+                <h3>Invoice#00<%= invoice.ID %>
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="p-0 card-body">
+                                <div class="d-flex mb-2">
+                                    <% if(organization.logo && organization.logo.src) { %>
+                                        <div class="invoice-logo d-flex justify-content-center align-items-center mr-3">
+                                            <img src="<%= organization.logo && organization.logo.src  %>" alt="...">
+                                        </div>
+                                        <% } %>
+
+                                            <div>
+                                                <h4 class="text-primary">Billed from</h4>
+                                                <h5 class="text-bold">
+                                                    <%= organization.name %>
+                                                </h5>
+                                            </div>
+                                </div>
+                                <div>
+                                    <p>Company information <br>Address <span class="text-muted">
+                                            <%= organization.address %>
+                                        </span> <br>Email <span class="text-muted">
+                                            <%= organization.officeEmail %>
+                                        </span>
+                                        </span><br>Registration number <span class="text-muted">
+                                            <%= organization.companyNumber %>
+                                        </span> <br>VAT number <span class="text-muted">
+                                            <%= organization.vatNumber %>
+                                        </span>
+                                    </p>
+                                    <p>Point of contact <br><span>Name <span class="text-muted">
+                                                <%= invoice.customer.accountManager &&
+                                                    invoice.customer.accountManager.name %>
+                                            </span>
+                                        </span> <br> Email <span class="text-muted">
+                                            <%= invoice.customer.accountManager && invoice.customer.accountManager.email
+                                                %>
+                                        </span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="card">
+                            <div class=" p-0 card-body">
+                                <div class="d-flex mb-2">
+                                    <% if(invoice.customer.logo && invoice.customer.logo.src) { %>
+                                        <div class="invoice-logo d-flex justify-content-center align-items-center mr-3">
+                                            <img src="<%= invoice.customer.logo && invoice.customer.logo.src  %>"
+                                                alt="...">
+                                        </div>
+                                        <% } %>
+                                            <div>
+                                                <h4 class="text-primary">Billed to</h4>
+                                                <h5 class="text-bold">
+                                                    <%= invoice.customer.name %>
+                                                </h5>
+                                            </div>
+                                </div>
+                                <div>
+                                    <p>Address <span class="text-muted">
+                                            <%= invoice.customer.buildingName %>
+                                                <%= invoice.customer.streetName %>
+                                                    <%= invoice.customer.postCode %>
+                                        </span> </p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p>Primary contact <br>Name <span class="text-muted">
+                                                    <%= invoice.customer.primaryContact %>
+                                                </span> <br>
+                                                Email <span class="text-muted">
+                                                    <%= invoice.customer.primaryEmail %>
+                                                </span></p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p>Secondary contact <br>Name <span class="text-muted">
+                                                    <%= invoice.customer.secondaryContact %>
+                                                </span> <br> Email <span class="text-muted">
+                                                    <%= invoice.customer.secondaryEmail %>
+                                                </span></p>
+                                        </div>
+                                    </div>
+                                    <p>Payment due date <span class="text-muted">
+                                            <%= moment(invoice.due).format("DD/MM/YYYY") %>
+                                        </span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead class="text-primary">
+                        <tr>
+                            <th class="header">Items</th>
+                            <th class="header">Price</th>
+                            <th class="header">Quantity</th>
+                            <th class="header">VAT(%)</th>
+                            <th class="header">VAT(£)</th>
+                            <th class="header">Amount (£)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let entry of invoice.entries) {%>
+                            <tr class="">
+                                <td class="">
+                                    <%= entry.item %>
+                                </td>
+                                <td class="">
+                                    <%= entry.unitPrice %>
+                                </td>
+                                <td class="">
+                                    <%= entry.units %>
+                                </td>
+                                <td class="">
+                                    <%= entry.vatRate %>
+                                </td>
+                                <td class="">
+                                    <%= entry.vatFigure %>
+                                </td>
+                                <td class="">
+                                    <%= entry.subTotal %>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td class="text-info text-right">Discount %</td>
+                                    <td class="">
+                                        <%= invoice.calculations.discount %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td class="text-info text-right">Vat</td>
+                                    <td class="">
+                                        <%= invoice.calculations.vatFigure %>
+                                    </td>
+                                </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td class="text-success text-right">Total amount (£)</td>
+                            <td class="text-light">
+                                <%= invoice.calculations.total %>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Bank details</p>
+                        <p>
+                            <%= organization.bankDetails.name %>
+                        </p>
+                        <p>Sort code <span class="text-muted">
+                                <%= organization.bankDetails.sortCode %>
+                            </span></p>
+                        <p>Account No <span class="text-muted">
+                                <%= organization.bankDetails.accountNo %>
+                            </span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <ul class="nav">
+                    <li class="nav-item">Thank you for your business with <%= organization.name %>
+                    </li>
+                    <li class="nav-item ml-auto">Powered by <a target="_blank" href="https://imssystems.tech">
+                            <img style="max-height: 20px;"
+                                src="https://imssystems.tech/static/assets/images/ims-technologies-official.png"
+                                alt="iMS Technologies"></a></li>
+                </ul>
+            </div>
+            <h4 class="text-center"> Sent to you via iMS Systems.</h4>
+        </div>
+    </body>
+    <%- include('./includes/end.ejs'); %>

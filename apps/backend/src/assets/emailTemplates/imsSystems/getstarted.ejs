@@ -1,0 +1,27 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Config request"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:"iMS Team"}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Congratulations, a potential customer wants to get
+          started with our business.`})%>
+          <%- include('../shared/useremails/message_section/start')%>
+            <p>
+              <%= locals.organisationName %> wants to get started.
+                <br>Contact details: <br><br>
+                Name: <%= locals.name %><br>
+                  Email: <%= locals.email %><br>
+                    Phone: <%= locals.phone %><br>
+                      Jobtitle:&nbsp; <%= locals.jobTitle %><br>
+                        Requested service: <%= locals.service %>
+                          <% let standards=locals.standareds || []; for(let standared of standards){ %>
+                            <span
+                              style="font-family: 'Poppins', sans-serif; font-size: 14px;font-weight: 500;line-height: normal;letter-spacing: normal;color: #808396;margin: 5px 0 0 0;">
+                              <%= standared %>
+                            </span>
+                            <br>
+                            <% } %>
+            </p>
+            <%- include('../shared/useremails/message_section/end')%>
+              <%- include('../shared/useremails/closing_section/index',{signature:"iMS Automation"}); %>
+                <%- include('../shared/useremails/container/main_container_end'); %>
+                  <%- include('../shared/useremails/end'); %>

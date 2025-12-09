@@ -1,0 +1,27 @@
+.skeleton-base {
+  background-color: #e6eef7; /* lightened #002D72 */
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-base::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 45, 114, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(0, 45, 114, 0) 100%
+  );
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

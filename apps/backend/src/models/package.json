@@ -1,0 +1,27 @@
+{
+  "name": "@ims-systems-00/data-models",
+  "version": "1.0.4",
+  "description": "ims systems data models",
+  "main": "index.js",
+  "scripts": {},
+  "author": "ims-systems-00",
+  "license": "ISC",
+  "dependencies": {
+    "@riadhossain43/mongoose-autoincrement": "^2.0.0",
+    "ims-core": "^1.0.2",
+    "migrate-mongoose": "^4.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^8.1.0",
+    "mongoose-aggregate-paginate-v2": "^1.0.7",
+    "mongoose-paginate-v2": "^1.4.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "url": "https://github.com/ims-systems-00/data-models.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ims-systems-00/data-models/issues"
+  },
+  "homepage": "https://github.com/ims-systems-00/data-models#readme"
+}

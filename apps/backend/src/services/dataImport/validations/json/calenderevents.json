@@ -1,0 +1,1 @@
+{"calenderevents::organization":"Joi.any().label(\"Organization\")"}

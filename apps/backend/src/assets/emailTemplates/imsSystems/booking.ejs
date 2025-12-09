@@ -1,0 +1,20 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Demo Request"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:"iMS Team"}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`Congratulations, a potential customer wants to book a
+          demo in.`})%>
+          <%- include('../shared/useremails/message_section/start')%>
+            <p>
+              <%= locals.organisationName %> booked a demo on <%= locals.bookedDate %>.
+                  <br>Contact details: <br><br>
+                  Name: <%= locals.name %><br>
+                    Email: <%= locals.email %><br>
+                      Phone: <%= locals.phone %><br>
+                        Jobtitle: <%= locals.jobTitle %><br>
+                          Additional information: <%= locals.additionalInformation %>
+            </p>
+            <%- include('../shared/useremails/message_section/end')%>
+              <%- include('../shared/useremails/closing_section/index',{signature:"iMS Automation"}); %>
+                <%- include('../shared/useremails/container/main_container_end'); %>
+                  <%- include('../shared/useremails/end'); %>

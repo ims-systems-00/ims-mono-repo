@@ -1,0 +1,40 @@
+<%- include('../shared/useremails/start'); %>
+    <%- include('../shared/useremails/container/main_container_start'); %>
+        <%- include('../shared/useremails/heading_section/index',{heading:"New customer sign up."}); %>
+            <%- include('../shared/useremails/greeting_section/index',{name:"iMS Systems"}); %>
+                <%- include('../shared/useremails/message_section/index',{message:`${locals.user.name} singned up a new
+                    organisation ${locals.organization.name}. Licenses: ${locals.licenses.users} users,
+                    ${locals.licenses.superUser} super users, ${locals.licenses.groups} groups. following are compliance
+                    tools and additional licenses.`})%>
+
+                    <%- include('../shared/useremails/message_section/index',{message:`Address=> City:
+                        ${locals.organization.addressCity}, Building: ${locals.organization.addressBuilding},
+                        Street: ${locals.organization.addressStreet}, Postcode: ${locals.organization.addressPostCode},
+                        State/Province: ${locals.organization.addressStateProvince},
+                        Country: ${locals.organization.countryName}.`})%>
+
+                        <%- include('../shared/useremails/message_section/index',{message:`Contact=> Email:
+                            ${locals.organization.officeEmail}, Number: ${locals.organization.contactNumber} .`})%>
+
+                            <%- include('../shared/useremails/message_section/index',{message:`Logo :
+                                ${locals.organization.logo.src}`})%>
+
+                                <%- include('../shared/useremails/message_section/start')%>
+                                    <% for(let tool of locals.licenses.complianceTools){ %>
+                                        <span>
+                                            <%= tool %>
+                                        </span>
+                                        <br>
+                                        <% } %>
+                                            <% for(let tool of locals.licenses.additionalModules){ %>
+                                                <span>
+                                                    <%= tool %>
+                                                </span>
+                                                <br>
+                                                <% } %>
+                                                    <%- include('../shared/useremails/message_section/end')%>
+
+                                                        <%- include('../shared/useremails/closing_section/index'); %>
+                                                            <%- include('../shared/useremails/container/main_container_end');
+                                                                %>
+                                                                <%- include('../shared/useremails/end'); %>

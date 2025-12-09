@@ -1,0 +1,866 @@
+[
+  {
+    "clause": "4",
+    "title": "Principles of life-cycle costing",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.1",
+    "title": "Purpose and scope of life-cycle costing",
+    "description": "The purpose of life-cycle costing should be to quantify the life-cycle cost (LCC) for input into a decision-making or evaluation process, and should usually also include inputs from other evaluations (e.g. environmental assessment, design assessment, safety assessment, functionality assessment and regulatory compliance assessment). The quantification should be to the level of detail that is required for key project stages. The scope of costs included/excluded from an LCC analysis should be defined and agreed with the client at the outset.",
+    "": ""
+  },
+  {
+    "clause": "4.2",
+    "title": "Costs to include in LCC analysis",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.2.1",
+    "title": "Defining scope of costs included in the analysis",
+    "description": "<p>LCC analysis covers a defined list of costs over the physical, technical, economic or functional life of a constructed asset, over a defined period of analysis. Life-cycle costing is influenced by non-construction costs and wider occupancy costs, as well as local, national or international policies, allowances, taxes, etc. LCC analysis may include allowances for foreseeable changes, such as future occupancy levels or changing legislative or regulatory parameters. LCC analysis may also form part of a strategic review of procurement routes or objectives (such as enhancing sustainability or improving functionality).</p>\n<p>Practice can vary between users as to whether only costs borne by the customer for the analysis (typically the construction client) are taken into account, or whether customer/societal, etc. costs are also included.</p>\n<p>The definitions of the terms &quot;intangible&quot; (3.4.3) and &quot;externality&quot; (3.4.2) have been formulated to describe the wider costs. The former are monetized aspects which have some (often indirect) economic impact on the client organization. The latter are external to the client organization. It is necessary that both be clearly identified as such in any analysis. This issue is dealt with in more detail in Clause 7. Figure 2 indicates graphically the costs that should be included in life-cycle costing and those wider costs and incomes that should be referred to as whole-life costs.</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_2.png\"\"/>\n<p>The LCC analysis should consider all basic elements, such as the structure, envelope, services and finishes, fixtures and fittings, and the same cost issues for all alternatives appraised.</p>\n<p>Environmental cash flows forming part of life cycle costing may be negative (costs, for example, taxes) or positive (incomes, for example, income from renewable energy generation). Since life cycle costing deals generally with costs as positives it is important to ensure that these are shown correctly. Project costs before commencement of design for construction (e.g. feasibility studies) form part of WLCs, not LCCs.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.2.2",
+    "title": " Classification of costs",
+    "description": "<p>Figure 3 describes a generic cost classification that may be used to help define the specific scope of the analysis, providing a structured basis for comparative analysis that is intended to accommodate local practices.</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_3.png\"\"/>\n<p>Costs should generally be placed by category; minor deviations due to restrictions of national coding should be stated. In some countries, it can be difficult to subdivide costs into cost groups. In these cases, groups may be combined for analysis purposes.</p>\n<p>Cleaning may be categorized under &ldquo;maintenance&rdquo; (as defined in this document) or under &ldquo;operation,&rdquo; in which case it should be noted as such.</p>\n<p>Land costs within non-construction costs may include initial costs, such as soil improvement techniques or provision of infrastructure to allow development of the site.</p>\n<p>The LCC analysis shall clearly include a scoping section that indicates which costs are within the boundary conditions (system and/or constructed asset) and any parts of the life-cycle costing that have been excluded.</p>\n<p>The end of the service life of the constructed asset might or might not be included in the &ldquo;end-of-life costs&rdquo; of the building-life cycle.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.3",
+    "title": "Typical analysis at different stages of the life cycle",
+    "description": "<p>Figure 4 indicates the typical use of LCC analysis at distinct stages during the whole-life cycle and the cost elements that should be included at each stage.</p>\n<p>Typically, LCC analysis may be used during the following four key stages of the life cycle of any constructed asset:</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_4.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.3.a",
+    "title": "project investment and planning, whole-life costing/life-cycle costing strategic analyses, ",
+    "description": "Figure 4 indicates the typical use of LCC analysis at distinct stages during the whole-life cycle and the cost elements that should be included at each stage.\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_4.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.3.b",
+    "title": "design and construction, life-cycle costing during construction, at scheme, functional, ",
+    "description": "Figure 4 indicates the typical use of LCC analysis at distinct stages during the whole-life cycle and the cost elements that should be included at each stage.\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_4.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.3.c",
+    "title": "during occupation, life-cycle costing during occupation (cost-in-use), post-construction;",
+    "description": "Figure 4 indicates the typical use of LCC analysis at distinct stages during the whole-life cycle and the cost elements that should be included at each stage.\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_4.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.3.d",
+    "title": "disposal, life-cycle costing at end-of-life/status change. ",
+    "description": "Figure 4 indicates the typical use of LCC analysis at distinct stages during the whole-life cycle and the cost elements that should be included at each stage.\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_4.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4",
+    "title": "Analysis based on client requirements and the intended use of the results",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.1",
+    "title": "Scope based on client requirements",
+    "description": "<p>The scope of the LCC analysis and the intended use of the results shall be defined prior to undertaking the analysis. This should be included in the objectives set out in the client brief.</p>\n<p>When the life-cycle costing involves an economic comparison of different alternatives, all client requirements shall be met (including aesthetic), as well as taking account of all known regulatory requirements over the period of analysis. These items should be included in the client&rsquo;s requirements brief.</p>\n<p>Earlier, LCC analysis combined with other decision-support techniques can substantially influence design solutions, component specifications and/or contractual procurement routes adopted for new projects and strategic asset management.</p>\n<p>The client requirements may be revised and clarified through the project life cycle. Various briefing documents may be produced at different stages, and the requirements identified can be relevant to any stage of the life cycle, as indicated in Figure 5.</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_5.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2",
+    "title": "Decisions informed by LCC analysis",
+    "description": "<p>Figure 6 indicates the different levels of LCC analysis (strategic, system level and detailed level) that can occur at different stages of the life cycle. LCC analysis may be used for new assets or major refurbishments and planning the future use of existing assets. LCC analysis may be applied to a complete asset or to a specific assembly, component or system such as plant, road surface or a roofing assembly.</p>\n<p>The LCC for a complete building or structure should be built up from the sum of the independent parts plus the interaction between them and the consequential costs, if any.</p>\n<p>Typical decisions informed by LCC analysis can include:</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2.a",
+    "title": "evaluation of different investment scenarios (e.g. to adapt and redevelop an existing facility or to provide a totally new facility) at the investment planning stage;",
+    "description": "Typical decisions informed by LCC analysis can include:\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2.b",
+    "title": "choices between alternative designs for the whole or part of a constructed asset (asset, system or detailed element level LCC analysis) during the design and construction stage;",
+    "description": "Typical decisions informed by LCC analysis can include:\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2.c",
+    "title": "choices among alternative components, all of which have acceptable performance (component-level LCC analysis) during the construction or in-use stages;",
+    "description": "Typical decisions informed by LCC analysis can include:\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2.d",
+    "title": "comparison and/or benchmarking analysis of previous decisions, which may be at the level of individual cost headings (e.g. energy costs, cleaning costs) or at a strategic level (e.g. open plan versus cellular office accommodation);",
+    "description": "Typical decisions informed by LCC analysis can include:\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.2.e",
+    "title": "estimation of future costs for budgetary purposes or for the evaluation of the acceptability of an investment on the basis of cost of ownership.",
+    "description": "Typical decisions informed by LCC analysis can include:\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_6.png\"\"/>",
+    "": ""
+  },
+  {
+    "clause": "4.4.3",
+    "title": "Strategic level project planning — Evaluation of strategic alternatives",
+    "description": "<p>Each strategic alternative needs to have a separate life-cycle cost forecast. Broad assumptions may be made at this stage for key variables and may include assumptions about future requirements (such as future accommodation needs), and about variables in the cost calculation (such as costs of energy and choice of applied discount rates). Technical assumptions may also be made about the data included in calculations (such as timing of cost flows and service life of components). All assumptions shall be noted in the report of the analysis.</p>\n<p>This phase can include many individual activities relating to carrying out strategic-level appraisals for the specific acquisition of a capital asset (acquire or construct), including the following:</p>",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.a",
+    "title": "definition of the requirements for a constructed asset, in terms of functional and performance requirements;",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.b",
+    "title": "set design life and the level and period of analysis covered by the LCC analysis;",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.c",
+    "title": "client priorities (e.g. required rate of return on capital investment and hand-back obligations);",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.d",
+    "title": "preliminary design concepts and related life-cycle costing assumptions on specifications or service life plans; ",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.e",
+    "title": "acquisition route (including construction/fit-out and commissioning and/or by purchase/lease);",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.f",
+    "title": "purchase (including essential commissioning and taking into account income from the sale of the existing asset);",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.g",
+    "title": "cost-of-ownership considerations (may or may not include the costs for the end-of-life/disposal of the asset);",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.3.h",
+    "title": "other non-construction costs (as applicable for investment-decision-making purposes).",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.4.4",
+    "title": "System and detailed decision level — Integrating life-cycle costing into design appraisals",
+    "description": "<p>Figure 7 provides an indication of the scope for LCC savings that can be made during the project life-cycle phases.</p>\n<img width=\"\"35%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/figures/figure_7.png\"\"/>\n<p>Decisions, data feedback and continual monitoring and optimization of LCC should continue through the service life of the facility.</p>\n<p>In order to achieve the benefits possible from the planning and design stages, the original life-cycle costing assumptions shall be reviewed and progressively refined or replaced by better analysis of quantities, costs and predicted performance. Assumptions about the basis of calculation (such as the period of analysis and the discount rate to be applied) shall also be confirmed during this phase of the analysis.</p>\n<p>The LCC analyses should be developed concurrently with the design and should be continuously related back to the initial plan, with any conflicts highlighted and resolved as applicable. Progressively, reliance on historic costs should be replaced by confidence in predicted costs for the project under review.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.4.5",
+    "title": "Service life planning — LCC plans",
+    "description": "<p>For new construction or major refurbishment, the LCC plan is developed from the construction information and updated during the construction phase to establish the life cycle cost plan for the operation period. For existing facilities, the plan is developed from current information plus survey information gathered to fill in gaps in information.</p>\n<p>The performance and costs of the completed construction should be monitored and can highlight deviations from the cost predictions, consequences of changes to the operating and maintenance regimes, increases in running costs that can be as a result of client adaptations, and over-cautious or optimistic predictions or time estimates.</p>\n<p>The LCC plan should include documentation of the reliability and durability information, maintenance plans, the estimated life cycle for major repairs, and the replacement of the components and building services. The plan should also include sufficient detail to allow monitoring of costs and timing of work. The completed construction project should be supported by manuals setting out the information on operational, maintenance and life-cycle repairs, and replacement/end-of-life disposal procedures. The timing of activities during the operation and maintenance phase activities should be forecast and agreed in the form of a schedule.</p>\n<p>The level of operation and maintenance activities, as well as their times of occurrence, shall be included in the LCC analysis, as these activities directly impact service life.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.4.6",
+    "title": "Major repairs, replacements and adaptations",
+    "description": "<p>The cost of planned major repairs, replacements and adaptations shall be included in the LCC plan, even though the plan can require revision when the activities actually occur.</p>\n<p>A new LCC analysis shall be prepared if a major refurbishment or replacement is needed during the operation phase. The decision to undertake refurbishment should include assessment of the revised residual life of the constructed asset and whether the original design life estimates remain valid when set against achieved service lives and any changed requirements by the occupier/client.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.4.7",
+    "title": "End of life",
+    "description": "The LCC analysis shall indicate the costs that are included for the end-of-life phase of the life cycle. Demolition can occur before or after disposal and it should be clear whether the costs are included in the analysis.",
+    "": ""
+  },
+  {
+    "clause": "4.5",
+    "title": "Data for analysis at different stages of the project life cycle",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "4.5.1",
+    "title": "General",
+    "description": "Life-cycle costing can be carried out at a coarse level using industry-average or benchmark figures for that type of construction (these are sometimes termed “parametric estimates”) or at a detailed level on the basis of specific estimates or predictions of component performance and maintenance activities. Calculations of LCC can be made at various levels depending on which phase of the project process is involved. The degree of detail and information available should play a decisive role. The general principle that determines the level of detail at which calculations of LCC are made should be the corresponding level of detail employed to calculate the acquisition costs.",
+    "": ""
+  },
+  {
+    "clause": "4.5.2",
+    "title": "Benchmark LCC analysis",
+    "description": "<p>Typically, an initial (budget) cost analysis should be based on the functional unit (e.g. cost per bed) or total area of the asset (e.g. cost per square metres) or on the number of persons accommodated (e.g. in a school, prison or office).</p>\n<p>Caution is needed to ensure that previous projects used as the basis for rates (at asset or elemental level) are comparable with the proposed asset. It is necessary that the analysis also reflect changes in costs since the previous project was undertaken and any other local factors relevant to the new project.</p>\n<p>The benchmark-level estimate should be progressively refined but can be retained only as a basis for checking against the detailed life-cycle costing analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.5.3",
+    "title": "Detailed LCC analysis",
+    "description": "<p>Detailed life-cycle costing analysis shall be based on the proposed design detailing and a quantum of individual elements or components of the constructed asset. These are then summed up to produce a LCC estimate based on first principles. As the design evolves, the impact of specific options shall be tested to assess the impact on the overall cost (and other project performance requirements, such as time to complete the work). The level of analysis shall include the specific consideration of service life planning of the proposed design of composite items. More detailed service lives for particular assets shall be considered to evaluate and inform specification choice</p>\n<p>There are various national standards available on how to break down costs into a structured analysis (see Bibliography) and it is important to note that the comparison of typical costs from different sources should ensure that each data structure is clearly understood.</p>",
+    "": ""
+  },
+  {
+    "clause": "4.6",
+    "title": "Cost variables",
+    "description": "<p>For each cost, whether a cost benchmark or a detailed cost-analysis category, the associated time profile of when the cost occurs (or recurs) shall be determined. Time profiles of the costs may consist of only one occurrence, but any cost that is spread over time, or one that is repeated, may also generate a series of cost and time pairs. Costs may be fixed or variable over time. The basis of the timing of life-cycle costs or other cash flows shall be recorded in the form of a life-cycle-assumptions schedule.</p>\n<p>The costs should be expressed in real costs rather than the value in the future (e.g. the current cost of a boiler they are should be used, not nominal costs) due to the uncertainty of future values. However, nominal (future) values may be used, provided they are clearly differentiated in reporting.</p>\n<p>Computer models set up for sensitivity and risk analysis should ideally be totally in parametric form, i.e. each value should be related to a parameter which, when changed, causes all other costs derived from it to change. Alternatively, logical analysis and checking of variables may be performed with each change.</p>\n<p>The level of information about cost variables can be dependent on a number of factors, such as the difficulty of obtaining the range and detail of required input information upon which to base an LCC analysis or type of LCC evaluation methods and models used.</p>\n<p>Values for predicted, future life-cycle costs should be as accurate as possible. Particular emphasis should be given to the most significant cost variables and where robust benchmark data sets are limited. Values can be derived from:</p>",
+    "": ""
+  },
+  {
+    "clause": "4.6.a",
+    "title": "a direct estimation from known costs and components;",
+    "description": "Values for predicted, future life-cycle costs should be as accurate as possible. Particular emphasis should be given to the most significant cost variables and where robust benchmark data sets are limited. Values can be derived from: ",
+    "": ""
+  },
+  {
+    "clause": "4.6.b",
+    "title": "historical data analysis from typical applications (e.g. bills of quantities);",
+    "description": "Values for predicted, future life-cycle costs should be as accurate as possible. Particular emphasis should be given to the most significant cost variables and where robust benchmark data sets are limited. Values can be derived from: ",
+    "": ""
+  },
+  {
+    "clause": "4.6.c",
+    "title": "models based on expected performance, averages, etc.;",
+    "description": "Values for predicted, future life-cycle costs should be as accurate as possible. Particular emphasis should be given to the most significant cost variables and where robust benchmark data sets are limited. Values can be derived from: ",
+    "": ""
+  },
+  {
+    "clause": "4.6.d",
+    "title": "best guesses of future trends in technology, market and application.",
+    "description": "Values for predicted, future life-cycle costs should be as accurate as possible. Particular emphasis should be given to the most significant cost variables and where robust benchmark data sets are limited. Values can be derived from: ",
+    "": ""
+  },
+  {
+    "clause": "4.7",
+    "title": "Calculating cost variables and the form of future costs analysis",
+    "description": "Costs in an LCC analysis shall be clearly indicated in real or nominal, and present or discounted, terms and should be used consistently. Ideally, real and discounted costs should be used.",
+    "": ""
+  },
+  {
+    "clause": "4.8",
+    "title": "Discounting costs to present values",
+    "description": "Where an option has an acquisition cost and future costs or where options have differing acquisition and future costs discounting, is the mechanism used to bring those costs to a common base date. Details on discounting are given in 7.3 and 7.4.",
+    "": ""
+  },
+  {
+    "clause": "4.9",
+    "title": "Approval and validation",
+    "description": "Funders and/or clients can require that the LCC assumptions and decisions be reviewed or audited to confirm that they provide an adequate and acceptable basis for the LCC estimate.",
+    "": ""
+  },
+  {
+    "clause": "4.10",
+    "title": "Reporting LCC analysis",
+    "description": "<p>Reporting of the LCC analysis shall make clear the scope of the analysis, the information on which it is based and the level of reliance that can be placed on the information.</p>\n<p>Two techniques that can be useful in indicating the range of uncertainty and risk associated with specific LCC analyses are the Monte Carlo method and sensitivity analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "5",
+    "title": "Setting the scope for LCC analysis",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "5.1",
+    "title": "Relevance and importance of setting parameters for the use of life-cycle costing",
+    "description": "LCC analysis shall explicitly define the scope, form, level and period of analysis together with an anticipated level of uncertainty and risks relating to the LCC analysis and reporting. The parameters of the LCC analysis depend on the purpose and use of the intended results. The validity and relevance of the analysis can depend on the parameters selected. In particular, people with broad expertise in facilities management, maintenance and repair should provide input to the appraisal.\nAn LCC analysis can be undertaken to understand the implications of an investment in a constructed asset. Often, it is used to compare and evaluate alternatives that can have different implications.\nDoing nothing should be included in the analysis, especially in the case of refurbishment. All alternatives should satisfy the client’s requirements brief; comparing substandard options should be avoided. If the initial comparison results are unacceptable, this can indicate that the original brief should be revised.\nIn particular, alternatives may have different external or intangible costs, such as restricting access to the building or disrupting occupant activities. These might not be costs borne by the client (e.g. disruption and associated loss of retail income to tenants in a shopping centre during building maintenance) and so can be overlooked.\nThe repercussions or consequences of selecting an alternative should also be considered, for example:",
+    "": ""
+  },
+  {
+    "clause": "5.1.a",
+    "title": "changing the thermal resistance properties of the envelope by selecting different materials can result in changes in heating and cooling costs;",
+    "description": "The repercussions or consequences of selecting an alternative should also be considered, for example:",
+    "": ""
+  },
+  {
+    "clause": "5.1.b",
+    "title": "changing from a paint to a lightweight stain can require a different application regime and re-coating at different frequencies;",
+    "description": "The repercussions or consequences of selecting an alternative should also be considered, for example:",
+    "": ""
+  },
+  {
+    "clause": "5.1.c",
+    "title": "providing a better initial specification can result in reduced disruption to the use of transport infrastructure assets during maintenance;",
+    "description": "The repercussions or consequences of selecting an alternative should also be considered, for example:",
+    "": ""
+  },
+  {
+    "clause": "5.1.d",
+    "title": "providing a specification that can adapt to changing demands (e.g. for road or school use) can provide a longer life cycle.",
+    "description": "The repercussions or consequences of selecting an alternative should also be considered, for example:",
+    "": ""
+  },
+  {
+    "clause": "5.2",
+    "title": "Service life, life cycle and design life",
+    "description": "<p>The design life of the constructed asset is a key performance requirement and should be defined in the client&rsquo;s brief. The estimated service life of the asset should be at least as long as the design life.</p>\n<p>Service life replacement dates shall be included in life-cycle costing. The life cycle should take account of the period during which the asset is intended to be used for its function or business purpose. This period can dictate the period of analysis of the LCC and can dictate the design life for major assets and components.</p>",
+    "": ""
+  },
+  {
+    "clause": "5.3",
+    "title": "Period of analysis",
+    "description": "<p>The period of analysis should be based on the client&rsquo;s requirements, which may be over the life cycle of the asset.</p>\n<p>It can be necessary for the LCC analysis to consider costs occurring outside the period of analysis as they can significantly impact the client&rsquo;s costs of ownership.</p>\n<p>The results of the LCC analysis may be reviewed over several periods of analysis if a shorter period than the life cycle is selected. There can also be a requirement to assess the risk inherent in delaying maintenance works beyond the end of the period of analysis.</p>\n<p>Obsolescence should be taken into account when setting the period of analysis, as it can cause the unplanned end-of-service life or a change of use. A sensitivity analysis can reveal how precise the calculation is and how it affects the calculation if the input were different.</p>\n<p>Other factors can also be taken into account, such as the following:</p>",
+    "": ""
+  },
+  {
+    "clause": "5.3.a",
+    "title": "The period of foreseeable need or occupation of the constructed asset (the entire life cycle);this is the preferred period of analysis. If the analysis is over a shorter period, this should be explicitly indicated in reporting.",
+    "description": "Other factors can also be taken into account, such as the following:",
+    "": ""
+  },
+  {
+    "clause": "5.3.b",
+    "title": "A period determined by a contractual liability (e.g. for maintenance of the asset or for a mortgage financing the investment).",
+    "description": "Other factors can also be taken into account, such as the following:",
+    "": ""
+  },
+  {
+    "clause": "5.3.c",
+    "title": "A standard investment-analysis period applied within an organization.",
+    "description": "Other factors can also be taken into account, such as the following:",
+    "": ""
+  },
+  {
+    "clause": "5.4",
+    "title": "Cost variables",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "5.4.1",
+    "title": "Acquisition costs",
+    "description": "<p>LCC analysis may be used to demonstrate whether or not higher acquisition costs are justified by lower in-use costs and/or enhanced performance.</p>\n<p>Sunk costs should not be included in an LCC analysis except where there is an opportunity cost in using an existing asset or land in the ownership of the client. In this situation, the opportunity cost may be included in the LCC analysis, but it should be noted.</p>\n<p>Acquisition costs may form a substantial part of the total LCC for new construction and/or assets with a short life cycle. Acquisition costs may include:</p>",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.a",
+    "title": "site costs (potentially including site improvement, enabling works and infrastructure provision, although these may be the subject of separate projects or may be sunk costs);",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.b",
+    "title": "temporary works/decanting costs;",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.c",
+    "title": "design/engineering costs;",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.d",
+    "title": "regulatory/planning costs;",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.e",
+    "title": "construction and earthworks;",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.f",
+    "title": "commissioning costs/fees;",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.1.g",
+    "title": "business use of in-house resources and administration.",
+    "description": "Acquisition costs may include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2",
+    "title": "Operation, maintenance and replacement costs",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1",
+    "title": "Operation, maintenance and replacement issues",
+    "description": "<p>The prime objectives of estimating the operation, maintenance and replacement costs should be</p>\n<p>&mdash; to ensure that the service life is optimized to meet the specified design life, and<br>&mdash; to understand the implications of alternatives under consideration.</p>\n<p>The issues described below can require iterative consideration following changes or developments to the design or to the client&rsquo;s requirements. LCC analysis can require reconsideration or full revision at different stages of the life cycle.</p>\n<p>Operation and maintenance is an integral part of any LCC analysis. A wide range of operation and maintenance types, activities and frequencies can have different costs and effects on the ongoing performance and future replacement cycles of a constructed asset. The results of the LCC analysis (with consideration of other performance requirements in the client brief) can determine an acceptable operation, maintenance and replacement plan for the constructed asset. Issues that should be considered include:</p>",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.a",
+    "title": "the performance over time of each element in the anticipated building location;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.b",
+    "title": "the identification of probable dates of failure and whether they conform to the client brief or regulations;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.c",
+    "title": "the work required and associated costs to retain and/or restore the element to acceptable performance at various stages through its life (by maintenance or replacement);",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.d",
+    "title": "the costs associated with loss of the amenity due to unavailability or failure;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.e",
+    "title": "the costs associated with degraded performance;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.f",
+    "title": "the reduced service life (of the building or element as appropriate) resulting from any maintenance regime;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.g",
+    "title": "the costs that a particular operation and maintenance plan incur at the design stage (e.g. the costs of building in access for cleaning or replacement regimes);",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.h",
+    "title": "the maintenance and associated management costs that tend to occur/recur on regular, short-term cycles;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.i",
+    "title": "replacement costs that can occur on (a) relatively longer cycle(s) and can be analysed separately or as part of the capital costs;",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.1.j",
+    "title": "energy and other consumable/utilities costs associated with mechanical and electrical plant and machinery.",
+    "description": "Issues that should be considered include:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.2",
+    "title": "Maintenance activities",
+    "description": "Maintenance activities can be grouped into various categories for cost/budget analysis, but all should be taken into account. The categories may include maintenance that is: ",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.2.a",
+    "title": "preventive in intention (including condition-based or predictive and scheduled);",
+    "description": "The categories may include maintenance that is: ",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.2.b",
+    "title": "corrective in intention (including allowances for emergency/unforeseen events or reactive corrections to failures);",
+    "description": "The categories may include maintenance that is: ",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.2.c",
+    "title": "deferred (a decision about timing and urgency, which can have cost consequences).",
+    "description": "The categories may include maintenance that is: ",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.3",
+    "title": "Maintenance management activities",
+    "description": "If the LCC analysis includes maintenance management, the costs may encompass all activities necessary to arrange, prioritize, resource or check maintenance, such as:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.3.a",
+    "title": "cyclical inspection (including condition surveys, specific inspections, condition monitoring);",
+    "description": "If the LCC analysis includes maintenance management, the costs may encompass all activities necessary to arrange, prioritize, resource or check maintenance, such as:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.3.b",
+    "title": "maintenance planning (including scheduling, resourcing, tendering);",
+    "description": "If the LCC analysis includes maintenance management, the costs may encompass all activities necessary to arrange, prioritize, resource or check maintenance, such as:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.3.c",
+    "title": "design and management of major replacements.",
+    "description": "If the LCC analysis includes maintenance management, the costs may encompass all activities necessary to arrange, prioritize, resource or check maintenance, such as:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.4",
+    "title": "Cleaning and minor repairs",
+    "description": "Cleaning can be considered within the context of maintenance or can fall into the management category. Similarly, minor repairs (such as lamp replacement) can be considered as maintenance or dealt with as management activities. The LCC report should clearly indicate where cleaning and minor repairs have been considered, or that they are excluded, by agreement, from the analysis.",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5",
+    "title": "Indirect costs of maintenance",
+    "description": "If any other costs or savings are included for consideration as part of the appraisal process, they should be identified in the LCC analysis.\nThe LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.a",
+    "title": "down time (loss of function for a period);",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.b",
+    "title": "disruption of business activity (e.g. disruption to retail or to transport);",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.c",
+    "title": "non-availability of a building/structure (and any associated costs for alternative accommodation);",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.d",
+    "title": "cost effects of aesthetic condition (e.g. loss of income resulting from difficulty in letting a building);",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.e",
+    "title": "maintenance strategy (e.g. timing of cycles for cyclical maintenance of finishes or the presence/absence of in situ professional maintenance personnel);",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.2.5.f",
+    "title": "external costs/savings data (e.g. to tenants of the building).",
+    "description": "The LCC analysis should match the requirements of the client’s brief. The client may require that some or all of the following indirect costs be taken into account:",
+    "": ""
+  },
+  {
+    "clause": "5.4.3",
+    "title": "Costs at disposal",
+    "description": "LCC analysis should include assumptions about performance requirements that can affect disposal costs. It can be necessary to give specific consideration to environmental requirements, which can involve the use of nominal costs.",
+    "": ""
+  },
+  {
+    "clause": "5.4.4",
+    "title": "End-of-life residual valuations",
+    "description": "Residual value should be evaluated by determining what similar, comparably-aged assets in similar locations are currently selling for in commercial markets. Alternatively, book estimates of the resale value of used assets can be available from industry or government sources. The values of similar, comparably-aged assets can also be assessed. If neither of these mechanisms can be utilized, a straight-line depreciation based on the capital value and depreciation over the service life or design life of the asset can provide a more accurate value. Positive residual values should be considered in whole-life costing; but it should be noted that they can be substantial and that the decision to consider end-of-life costs can generate a reasonable demand to also consider residual values. The condition of the asset at the end of the period of analysis can impact the residual or disposal value and can reflect the maintenance policies and expenditure during the life cycle.",
+    "": ""
+  },
+  {
+    "clause": "5.4.5",
+    "title": "Discount rate",
+    "description": "<p>Occasionally, escalation rates may be used as a form of sensitivity analysis where there are grounds to anticipate that the standard rate of inflation does not apply in the case of a specific scenario. Typically, real rates should be used; these exclude the impact of future inflation. Nominal rates may be used by agreement, if that is what is required by the client or justified by the situation.</p>\n<p>Within the public sector, a discount rate can be determined by the central government (sometimes termed the social discount rate) as a test requirement for their investments, based on an assessment of the long-term opportunity cost to the public sector of selecting one investment rather than another.</p>\n<p>The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:</p>",
+    "": ""
+  },
+  {
+    "clause": "5.4.5.a",
+    "title": "the interest cost of a loan for the investment;",
+    "description": "The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:",
+    "": ""
+  },
+  {
+    "clause": "5.4.5.b",
+    "title": "the interest lost on reduction of cash on deposit;",
+    "description": "The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:",
+    "": ""
+  },
+  {
+    "clause": "5.4.5.c",
+    "title": " the returns lost on investment elsewhere (e.g. in bonds or equities);",
+    "description": "The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:",
+    "": ""
+  },
+  {
+    "clause": "5.4.5.d",
+    "title": "the actual return achieved on capital investment in the business;",
+    "description": "The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:",
+    "": ""
+  },
+  {
+    "clause": "5.4.5.e",
+    "title": "the required rate of return of an investor in a new business.",
+    "description": "The discount rate in the private sector should represent the opportunity cost of investing the capital, which can be:",
+    "": ""
+  },
+  {
+    "clause": "5.4.6",
+    "title": "Inflation",
+    "description": "If real costs are used in the LCC analysis, assumptions about the general rate of inflation should not be required. However, if nominal costs are used in the LCC analysis, assumptions can be made about discount rates (and underlying inflation rates), but they should be explicit and the sensitivity should be checked.",
+    "": ""
+  },
+  {
+    "clause": "5.4.7",
+    "title": "Taxes and subsidies",
+    "description": "Taxes and subsidies can affect the relative price and the decision-making process. LCC analysis should be adjusted for any incidence of tax arising from the different alternatives being considered. The existence of tax subsidies associated with the investment should be included.",
+    "": ""
+  },
+  {
+    "clause": "5.4.8",
+    "title": "Changes in costs over time",
+    "description": "Possible disproportionate changes in costs relative to inflation should be considered when setting the scope of the analysis.",
+    "": ""
+  },
+  {
+    "clause": "5.4.9",
+    "title": "Energy and utilities costs",
+    "description": "Where an analysis is made of energy costs, present-day supply costs should be used unless it is foreseeable that the relative costs can change between alternative energy sources. Where an investment appraisal is assessing energy-efficient technology, energy savings should be treated as a future income stream (or negative cost) for comparison purposes.",
+    "": ""
+  },
+  {
+    "clause": "6",
+    "title": "WLC variables used in some investment appraisals",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "6.1",
+    "title": "General",
+    "description": "<p>When undertaking investment appraisals, many variables in addition to LCC variables can impact on the value-for-money assessment and should be taken into account.</p>\n<p>For certain forms of construction procurement, these additional variables form an integral part of the investment evaluation and appraisal process and can be referred to as whole-life cost (WLC) variables.</p>\n<p>Typically, the difference between WLC and LCC analysis is that the variables for WLC can include a wider range of externalities or non-construction costs, such as finance costs, business costs and income streams.</p>\n<p>A number of different analysis techniques to measure and compare the return on investment may also be used in WLC.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.2",
+    "title": "Externalities",
+    "description": "<p>Life-cycle costing can help to ensure an optimized approach to asset selection, maintenance and use. However, judgements made on the basis of investment returns can be based purely on market efficiency and can fail to recognize the wider implications economic decisions have on society. Market prices for construction might not value the social, environmental or business costs or benefits of production and consumption.</p>\n<p>WLC analyses that consider the occurrence of externalities can highlight possible future risks and rewards that are not otherwise identified. Externalities that are considered should be clearly identified in the analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.3",
+    "title": "Costs related to environmental impacts",
+    "description": "<p>Environmental legislation can introduce costs (or savings via rebates) to life-cycle costing depending on the potential environmental impacts that might be attributed to the different environmental aspects, of the asset, such as location, design, construction, use and end-of-life treatment, including disposal.</p>\n<p>Where these costs are external to the constructed asset, they may form part of the externalities included in a WLC analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.4",
+    "title": "Social costs and benefits",
+    "description": "<p>Certain costs and benefits associated with an investment can have an impact on society in general, but should not be included in the LCC analysis (i.e. they are externalities) unless requested by the client. In this case, the limits on what is included in the LCC analysis should be defined.</p>\n<p>The monetization of non-economic costs/benefits should be avoided and externalities should be clearly identified in any analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.5",
+    "title": "Contribution of the construction works to sustainability and sustainable development",
+    "description": "<p>The objective of service life planning should generally be to allow decision makers to include technical, environmental, economic and social aspects, all within a long-term context, in their decision making. LCC analysis is a technique that should form part of an overall aim to balance the objectives of sustainable construction.</p>\n<p>However, the balancing should be explicit and not included as a conceptual part of any of the elements. Consequently, LCC and WLC analysis should include only actual costs related to the constructed asset or those influencing its economy.</p>\n<p>CO2 &ldquo;costs&rdquo; should be included only if there is an actual payment (e.g. through taxes). Otherwise, such items can be doubly counted when integrating cost assessments with other quantifications of aspects of sustainability.</p>\n<p>A life-cycle assessment (LCA) can be used to measure the impact of environmental externalities and, therefore, be used to aid WLC decisions that include a measure of the external cost of investment.</p>\n<p>The integration of service life planning into the procurement and management of constructed assets may involve assessment of the cost implications of adopting sustainable building policies and/or strategies. The assessment can measure the savings in environmental impacts per unit of cost. LCC may also be used when assessing the cost of compliance with sustainable construction legislation.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.6",
+    "title": "Intangibles — Impact on business reputation, functional efficiency, etc.",
+    "description": "<p>Where an economic assessment of an intangible has been made, it may be included in a WLC analysis.</p>\n<p>Intangibles arise as a result of improvements in a constructed asset that can be difficult to quantify.<br />These improvements can affect the user&rsquo;s comfort, amenity and efficiency, which can lead to increased satisfaction and efficiency, with associated financial implications (e.g. improvement in morale leading to reductions in absence through stress).</p>\n<p>Intangibles can be difficult to measure in economic terms. Where a value has been attributed, such intangibles should be clearly identified as monetized intangibles.</p>",
+    "": ""
+  },
+  {
+    "clause": "6.7",
+    "title": "Future income streams",
+    "description": "<p>Future income streams may be included in a WLC analysis but should not, generally, be present in an LCC analysis.</p>\n<p>Future income streams can form a subsidiary part of an LCC analysis in the form of negative costs (e.g. to represent income from sales of refreshments or tolls from bridges or roads).</p>",
+    "": ""
+  },
+  {
+    "clause": "6.8",
+    "title": "Financing costs",
+    "description": "<p>The cost of financing the investment may be considered in WLC. These costs may be reflected in the discount rate, but frequently a non-discounted cash flow analysis is subject to a separate financial appraisal that includes both timing and cost of financing maximum borrowing at different dates. This can also require a &ldquo;smoothing&rdquo; of expenditure profiles, which can involve sub-optimal decisions in terms of LCC. This can make the investment case stronger, purely as a result of different financial implications for expenditures at different dates.</p>\n<p>There should, generally, be a detailed risk analysis as part of the financial appraisal. The exact issues considered should reflect individual contractual agreements with financers.</p>",
+    "": ""
+  },
+  {
+    "clause": "7",
+    "title": "Decision variables — Basis of calculating costs",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "7.1",
+    "title": "Real costs",
+    "description": "Real costs should, generally, be used in LCC analysis to ensure accuracy regardless of the point in time at which the costs are incurred.",
+    "": ""
+  },
+  {
+    "clause": "7.2",
+    "title": "Nominal costs",
+    "description": "<p>Real costs might not be appropriate for preparing financial budgets where actual monetary sums are needed to ensure that funding is available when required. Nominal costs should be derived from projected economic, technological and efficiency factors. The nominal cost should be calculated by multiplying the real cost by the inflation/deflation factor, <em>q</em><sub>i,d</sub>, which should be determined using Formula (1):</p>\n<img width=\"\"15%\"\"  class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/formulas/formula_1.png\"\"/>\n<p>where<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>a</em> is the expected percentage increase in prices per annum;<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>n</em> is the number of years between the base date and the occurrence of the cost.</p>",
+    "": ""
+  },
+  {
+    "clause": "7.3",
+    "title": "Discounted costs",
+    "description": "<p>Discounted costs should be calculated by taking costs that occur in future years and reducing them by a factor derived from the discount rate. Different discount rates may apply depending on whether nominal costs or real costs are being discounted. If nominal costs are used, the nominal discount rate includes an inflation/deflation factor. If real costs are used, the real discount rate does not include an inflation/deflation factor.</p>\n<p>A discount factor, <em>q</em><sub>d</sub>, should be calculated from the discount rate, <em>d</em>, using Formula (2):</p>\n<img width=\"\"15%\"\" class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/formulas/formula_2.png\"\"/>\n<p>where<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>d</em> is the expected real discount rate per annum;<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>n</em> is the number of years between the base date and the occurrence of the cost.</p>\n<p>A real cost should be converted to a discounted cost using the factor <em>q<sub>i,d</sub> as calculated in Formula (2).</p>\n<p>A nominal cost should be converted to a discounted cost using the factor <em>q</em><sub>d,nc</sub> calculated in Formula (3):</p>\n<img width=\"\"15%\"\"  class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/formulas/formula_3.png\"\"/>\n<p>where<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>d</em> is the expected real discount rate per annum;<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>a</em> is the expected increase in general prices per annum;<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>n</em> is the number of years between the base date and the occurrence of the cost.</p>",
+    "": ""
+  },
+  {
+    "clause": "7.4",
+    "title": "Present value",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "7.4.1",
+    "title": "General",
+    "description": "The present value should be calculated by discounting future cash flows to the base date and should be used for comparing alternatives over the same period of analysis. Present value calculations should be used to calculate the present monetary sum that should be allocated for future expenditure on an asset.",
+    "": ""
+  },
+  {
+    "clause": "7.4.2",
+    "title": "Net present value (NPV) or net present cost (NPC)",
+    "description": "<p>The net present value (NPV) may be described as the sum of the discounted benefit of an alternative less the sum of the discounted costs.</p>\n<p>A stream of future costs and benefits should be converted to a net present value <em>X</em><sub>NPV</sub> using Formula (4):</p>\n<img width=\"\"15%\"\"  class=\"\"mx-auto d-block\"\" src=\"\"https://imssystems.tech/static/images/compliance_tools/iso15686-5/formulas/formula_4.png\"\"/>\n<p>where\n<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>C</em> is the cost in year, <em>n</em>;\n<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>q</em> is the discount factor;\n<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>d</em> is the expected real discount rate per annum;\n<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>n</em> is the number of years between the base date and the occurrence of the cost;\n<br />&nbsp;&nbsp;&nbsp;&nbsp;<em>p</em> is the period of analysis.</p>\n<p>Where costs only are taken into account, the NPV may be called the net present cost (NPC).</p>\n<p>The NPV should be a single figure that takes account of all relevant future incomes and expenditure over the period of analysis.</p>",
+    "": ""
+  },
+  {
+    "clause": "8",
+    "title": "Uncertainty and risks",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "8.1",
+    "title": "General",
+    "description": "As LCC analysis requires assumptions about future behaviour, iterative risk analysis can be used to progressively reduce uncertainty, but a residual risk always remains. Therefore, LCC analysis should include consideration of uncertainty and risk.",
+    "": ""
+  },
+  {
+    "clause": "8.2",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "8.2.1",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "The level of uncertainty and risk associated with LCC analysis can depend on such issues as the quality of the data available and the robustness of the scoping, pricing assumptions and methods of calculation. Where any study on risk or uncertainty has taken place, clearly delineate the scope and definition of this study.",
+    "": ""
+  },
+  {
+    "clause": "8.2.2",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "<p>In order to address cost uncertainty and reduce risks, the key issues and barriers to the widely used LCC should be understood. Issues that should be considered in LCC analysis include the following:<br />&mdash; confusion over costs to be included/excluded (e.g. scope of LCC and/or elements of WLC);<br />&mdash; variety of LCC measures and models (e.g. NPV, PDV, IRR, net savings);<br />&mdash; transparency and robustness of the underlying assumptions and methods of calculation;<br />&mdash; lack of information about detailed design at the beginning of the project;<br />&mdash; introduction of a new technology/products and prediction of the cycle of obsolescence;<br />&mdash; interface issues between capital costs and running costs through to end-of-life/disposal;<br />&mdash; lack of contractual incentives to do life-cycle costing on build-and-construct-only contracts;<br />&mdash; shortage of expert life-cycle-costing practitioners and professional education programmes.</p>",
+    "": ""
+  },
+  {
+    "clause": "8.2.3",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "<p>Mistaken judgements that can increase the uncertainty of the LCC analysis include: <br />&mdash; the use of optimistic estimates (in order to justify the project);<br />&mdash; the use of unattainable service lives;<br />&mdash; impractical maintenance programmes and replacement scheduling.</p>",
+    "": ""
+  },
+  {
+    "clause": "8.2.4",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "<p>Judgements about future activities/occurrences that are outside the control of the person undertaking the LCC analysis but which can be considered within the scope of the analysis include:<br />&mdash; a commitment to achieving maintenance levels (e.g. inability to manage maintenance);<br />&mdash; future users&rsquo; requirements (e.g. flexible space utilization and functional suitability);<br />&mdash; changing user behaviour (e.g. intensity of use, vandalism).</p>",
+    "": ""
+  },
+  {
+    "clause": "8.2.5",
+    "title": "Identification of the causes of uncertainty and risks",
+    "description": "<p>Other issues that can also cause uncertainty in the results of LCC analysis over long periods include:<br />&mdash; predicted inflation rates;<br />&mdash; overhead/profit and on-cost allowances;<br />&mdash; labour and material costs;<br />&mdash; changes in legislation (particularly with regard to health and safety and energy performance/carbon<br />emission targets);<br />&mdash; the impact of climatic changes.</p>",
+    "": ""
+  },
+  {
+    "clause": "8.3",
+    "title": "Monte Carlo analysis and confidence modelling",
+    "description": "Where a range of possible costs is calculated, it can be beneficial to model the uncertainty attached to the cost or time variables using statistical techniques, such as the Monte Carlo analysis. This should allow the identification of a distribution of possible costs and a range of more and less probable figures for use in calculations.",
+    "": ""
+  },
+  {
+    "clause": "8.4",
+    "title": "Sensitivity analysis and modelling the effects of changing key assumptions ",
+    "description": "<p>Sensitivity analyses can be undertaken to examine how variations across a (plausible) range of uncertainties can affect the relative merits of the alternative being considered. These ranges should be probable, within the limits of what is anticipated and fit within the client&rsquo;s brief. These analyses can help to identify which input data have the most impact on the LCC result and how robust the final decision is.</p>\n<p>Examples of key assumptions that can have the biggest effects on the uncertainties include:<br />a) discount rates;<br />b) the period of analysis;<br />c) incomplete or unreliable service life or maintenance, repair and replacement cycles or cost data based on assumptions.</p>\n<p>Sensitivity analysis can be an important guide to assessing what additional information it is worthwhile collecting and what are the most significant assumptions that it is necessary to make. It can also be used to consider how flexible or variable requirements can be during the period of analysis or the life cycle.</p>\n<p>Escalation rates can also be used to assess the impact of differential changes.</p>\n<p>Iterating the sensitivity-analysis calculation with a range of values for the variable data can indicate the vulnerability of the LCC to variable data.</p>\n<p>If the sensitivity analysis indicates that alternative variables have little effect on recommendations, the decision should be unaffected. If, however, the recommended case is varied by different discount rates/service lives or costs, etc. being applied, it may indicate that further analysis is required or that the decision is based upon factors other than LCC.</p>",
+    "": ""
+  },
+  {
+    "clause": "9",
+    "title": "Reporting",
+    "description": "",
+    "": ""
+  },
+  {
+    "clause": "9.1",
+    "title": "LCC analysis — Presenting the results and supporting information",
+    "description": "<p>The results of an LCC analysis shall be documented in a report so that users can clearly understand both the outcomes and the implications, including clearly defining the purpose, scope, key assumptions, limitations, constraints, uncertainties, risks and effects of any sensitivity analysis.</p>\n<p>The format and extent of analysis should be agreed in advance, including:<br />&mdash; the decision and cost variables being analysed (including a statement of the agreed scope and any exclusions);<br />&mdash; whether sensitivity analysis should be undertaken and if so to what confidence levels;<br />&mdash; the data and analysis structure;<br />&mdash; the method of accounting for the time value of money;<br />&mdash; the period of analysis;<br />&mdash; any other specific client requirement, as applicable.</p>\n<p>The report shall include:</p>",
+    "": ""
+  },
+  {
+    "clause": "9.1.a",
+    "title": "an executive summary;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.b",
+    "title": "the purpose and objectives;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.c",
+    "title": "the scope (including what costs have been considered/excluded);",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.d",
+    "title": "the reference sources of information that informed the life-cycle costing;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.e",
+    "title": "any assumptions made, any constraints and risks identified;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.f",
+    "title": "the methodology used;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.g",
+    "title": "the alternatives considered in the analysis;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.h",
+    "title": "a thorough discussion of the interpretation of the results, including risk assumptions and exclusions;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.i",
+    "title": "a replacement and maintenance plan or profile, if included in the client’s requirements and supported by the level of analysis;",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.1.j",
+    "title": "a presentation of the conclusions related to the objectives of the study and recommendations for any further work.",
+    "description": "The report shall include:",
+    "": ""
+  },
+  {
+    "clause": "9.2",
+    "title": "Reporting costs",
+    "description": "<p>Depending on the level of analysis undertaken, costs should be broken down into separate headings for consideration.</p>\n<p>Capital/acquisition costs should be considered separately from costs that occur during the subsequent phases of the life cycle. It can be beneficial to consider separately, for example, maintenance and replacement costs or costs associated with different parts of the asset. These costs may be paid by different organizations or parties or may be analysed separately for benchmarking and comparison purposes.</p>\n<p>Typically, analysis at the early stages of the project may be at a coarse level (e.g. estimated costs per square metre or per head of occupation). A more detailed breakdown of different heads of cost should be provided at a later stage. Equally, as design evolves, it can be necessary to check alternatives at a strategic level or at a detailed level.</p>",
+    "": ""
+  },
+  {
+    "clause": "9.3",
+    "title": "Approvals and audit trail",
+    "description": "<p>For LCC analysis, records should be retained in accordance with the guidance in ISO 15686-3. These records should include:<br />&mdash; cost calculations;<br />&mdash; evidence of service life;<br />&mdash; sources of cost data and any validation undertaken;<br />&mdash; discussions on the scope of analysis;<br />&mdash; retained copies of software packages/LCC models.</p>\n<p>There can be potential liabilities associated with providing assessments of life-cycle costing and/or service life planning. Record-keeping (whether paper or electronic) should include issues such as professional indemnity insurance retention, handover of relevant portions to other parties at later stages, and insurance cover.</p>",
+    "": ""
+  }
+]

@@ -1,0 +1,32 @@
+.btn {
+  & + .btn {
+    margin-left: 4px;
+  }
+}
+.btn-group + .btn-group {
+  margin-left: 4px;
+}
+
+.upload-btn {
+  .btn {
+    background: none !important;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    background-color: #26293c !important;
+    border: 1px solid #2b3553 !important;
+    border-radius: 2px !important;
+    padding: 5px 15px !important;
+  }
+  .btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .btn:active {
+    transform: none !important;
+    background: none !important;
+    background-color: #26293c !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 400 !important;
+    box-shadow: none !important;
+  }
+}

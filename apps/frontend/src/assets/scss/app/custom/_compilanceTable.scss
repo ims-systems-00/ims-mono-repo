@@ -1,0 +1,21 @@
+.iso-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* width: 100%; */
+  width: auto;
+  max-width: "1900px";
+  overflow-x: scroll;
+}
+
+.iso-table td,
+.iso-table th {
+  border: 1px solid #2b3553;
+  padding: 8px;
+}
+
+.iso-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}

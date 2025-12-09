@@ -1,0 +1,3 @@
+- **classification** and **purpose** reomaval from `repository` to `documenttree`
+- `document` **purpose** enum value `Policy` change to `Policies`
+- attribute rename in document review model , **document** change to **node**

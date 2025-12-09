@@ -1,0 +1,10 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Audit report"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:reciever}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${sender} has shared the ${audit.title}
+          ${audit.type.toLowerCase()} audit report via iMS Systems.`}); %>
+          <%- include('../shared/useremails/message_section/index',{message:"You can now download the attached report."}); %>
+            <%- include('../shared/useremails/closing_section/index'); %>
+              <%- include('../shared/useremails/container/main_container_end'); %>
+                <%- include('../shared/useremails/end'); %>

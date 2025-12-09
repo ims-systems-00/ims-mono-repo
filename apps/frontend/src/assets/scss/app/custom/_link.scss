@@ -1,0 +1,9 @@
+.module-link {
+  transition: all 0.3s ease-out;
+  color: $dark-gray;
+  &:hover {
+    font-weight: bold;
+    color: $info !important;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,2204 @@
+{
+  "data": [
+    {
+      "Year": 2019,
+      "SIC": "01",
+      "Category": "Products of agriculture, hunting and related services",
+      "GHG (kgCO2e per £)": 2.189209888182153,
+      "CO2 (kgCO2 per £)": 0.4626524002292629,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "02",
+      "Category": "Products of forestry, logging and related services",
+      "GHG (kgCO2e per £)": 0.2815614453655403,
+      "CO2 (kgCO2 per £)": 0.1642861762344046,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "03",
+      "Category": "Fish and other fishing products; aquaculture products; support services to fishing",
+      "GHG (kgCO2e per £)": 0.6591112248263021,
+      "CO2 (kgCO2 per £)": 0.5001173699103234,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "05",
+      "Category": "Coal and lignite",
+      "GHG (kgCO2e per £)": 1.88338421758217,
+      "CO2 (kgCO2 per £)": 0.6574715363314257,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "06",
+      "Category": "Crude petroleum and natural gas",
+      "GHG (kgCO2e per £)": 0.868096940611619,
+      "CO2 (kgCO2 per £)": 0.6970985724330254,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "08",
+      "Category": "Other mining and quarrying products",
+      "GHG (kgCO2e per £)": 0.6919165576609501,
+      "CO2 (kgCO2 per £)": 0.4909689991475449,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "09",
+      "Category": "Mining support services",
+      "GHG (kgCO2e per £)": 0.409431235319193,
+      "CO2 (kgCO2 per £)": 0.2478264752361415,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.1",
+      "Category": "Preserved meat and meat products",
+      "GHG (kgCO2e per £)": 0.7663919583395336,
+      "CO2 (kgCO2 per £)": 0.2995677726495802,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.4",
+      "Category": "Vegetable and animal oils and fats",
+      "GHG (kgCO2e per £)": 0.9826861335865242,
+      "CO2 (kgCO2 per £)": 0.4285967510165782,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.5",
+      "Category": "Dairy products",
+      "GHG (kgCO2e per £)": 0.8740634230553116,
+      "CO2 (kgCO2 per £)": 0.357652206997031,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.6",
+      "Category": "Grain mill products, starches and starch products",
+      "GHG (kgCO2e per £)": 0.8240248742449259,
+      "CO2 (kgCO2 per £)": 0.4582811255661959,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.7",
+      "Category": "Bakery and farinaceous products",
+      "GHG (kgCO2e per £)": 0.5815365176310715,
+      "CO2 (kgCO2 per £)": 0.3072707866842083,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.8",
+      "Category": "Other food products",
+      "GHG (kgCO2e per £)": 0.6963007695522294,
+      "CO2 (kgCO2 per £)": 0.3036364131836985,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 10.9,
+      "Category": "Prepared animal feeds",
+      "GHG (kgCO2e per £)": 0.7472803048707557,
+      "CO2 (kgCO2 per £)": 0.3212679710714764,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 11.07,
+      "Category": "Soft drinks",
+      "GHG (kgCO2e per £)": 0.4945414850409481,
+      "CO2 (kgCO2 per £)": 0.2619970904125296,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 12,
+      "Category": "Tobacco products",
+      "GHG (kgCO2e per £)": 0.704994520922322,
+      "CO2 (kgCO2 per £)": 0.3249680156878199,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 13,
+      "Category": "Textiles",
+      "GHG (kgCO2e per £)": 0.8687256565742677,
+      "CO2 (kgCO2 per £)": 0.6197756592283339,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 14,
+      "Category": "Wearing apparel",
+      "GHG (kgCO2e per £)": 0.7819607211664105,
+      "CO2 (kgCO2 per £)": 0.568157555048071,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 15,
+      "Category": "Leather and related products",
+      "GHG (kgCO2e per £)": 0.7390862475853126,
+      "CO2 (kgCO2 per £)": 0.4760503095949181,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 16,
+      "Category": "Wood and of products of wood and cork, except furniture; articles of straw and plaiting materials",
+      "GHG (kgCO2e per £)": 0.553146048469638,
+      "CO2 (kgCO2 per £)": 0.4420845162726208,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 17,
+      "Category": "Paper and paper products",
+      "GHG (kgCO2e per £)": 0.6980368005068954,
+      "CO2 (kgCO2 per £)": 0.5339097943434257,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 18,
+      "Category": "Printing and recording services",
+      "GHG (kgCO2e per £)": 0.4183183828450771,
+      "CO2 (kgCO2 per £)": 0.3128262444847363,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 19,
+      "Category": "Coke and refined petroleum products",
+      "GHG (kgCO2e per £)": 1.907921617148602,
+      "CO2 (kgCO2 per £)": 1.127780395189469,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 20.3,
+      "Category": "Paints, varnishes and similar coatings, printing ink and mastics",
+      "GHG (kgCO2e per £)": 1.150676458199387,
+      "CO2 (kgCO2 per £)": 0.7589943874964874,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 20.4,
+      "Category": "Soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations",
+      "GHG (kgCO2e per £)": 0.5682249130103034,
+      "CO2 (kgCO2 per £)": 0.3871001429740757,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 20.5,
+      "Category": "Other chemical products",
+      "GHG (kgCO2e per £)": 0.8180935278203894,
+      "CO2 (kgCO2 per £)": 0.5768581256367986,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 21,
+      "Category": "Basic pharmaceutical products and pharmaceutical preparations",
+      "GHG (kgCO2e per £)": 0.5138627752820023,
+      "CO2 (kgCO2 per £)": 0.3430581101283053,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 22,
+      "Category": "Rubber and plastic products",
+      "GHG (kgCO2e per £)": 0.5885068302228272,
+      "CO2 (kgCO2 per £)": 0.4254982513588424,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 25.4,
+      "Category": "Weapons and ammunition",
+      "GHG (kgCO2e per £)": 0.5438168677602967,
+      "CO2 (kgCO2 per £)": 0.4407875336534883,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 26,
+      "Category": "Computer, electronic and optical products",
+      "GHG (kgCO2e per £)": 0.4677414184056366,
+      "CO2 (kgCO2 per £)": 0.3796020691014031,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 27,
+      "Category": "Electrical equipment",
+      "GHG (kgCO2e per £)": 0.5342420181903623,
+      "CO2 (kgCO2 per £)": 0.4352175248404772,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 28,
+      "Category": "Machinery and equipment",
+      "GHG (kgCO2e per £)": 0.4478157291907568,
+      "CO2 (kgCO2 per £)": 0.3606524025405539,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 29,
+      "Category": "Motor vehicles, trailers and semi-trailers",
+      "GHG (kgCO2e per £)": 0.3664596754125425,
+      "CO2 (kgCO2 per £)": 0.2925485791321035,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 30.1,
+      "Category": "Ships and boats",
+      "GHG (kgCO2e per £)": 0.2921634216931076,
+      "CO2 (kgCO2 per £)": 0.2432257853347799,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 30.3,
+      "Category": "Air and spacecraft and related machinery",
+      "GHG (kgCO2e per £)": 0.4142596135723514,
+      "CO2 (kgCO2 per £)": 0.3411580984315383,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 31,
+      "Category": "Furniture",
+      "GHG (kgCO2e per £)": 0.5633551139946862,
+      "CO2 (kgCO2 per £)": 0.4602250902175109,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 32,
+      "Category": "Other manufactured goods",
+      "GHG (kgCO2e per £)": 0.7246636936981552,
+      "CO2 (kgCO2 per £)": 0.5701139940894807,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 33.15,
+      "Category": "Repair and maintenance of ships and boats",
+      "GHG (kgCO2e per £)": 0.3590224593996755,
+      "CO2 (kgCO2 per £)": 0.2958717963447211,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 33.16,
+      "Category": "Repair and maintenance of aircraft and spacecraft",
+      "GHG (kgCO2e per £)": 0.4315653596132217,
+      "CO2 (kgCO2 per £)": 0.3551322127945631,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 35.1,
+      "Category": "Electricity, transmission and distribution",
+      "GHG (kgCO2e per £)": 1.774137046438488,
+      "CO2 (kgCO2 per £)": 1.535944483682065,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 36,
+      "Category": "Natural water; water treatment and supply services",
+      "GHG (kgCO2e per £)": 0.2148886229731425,
+      "CO2 (kgCO2 per £)": 0.1824186412660115,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 37,
+      "Category": "Sewerage services; sewage sludge",
+      "GHG (kgCO2e per £)": 0.3876659804290644,
+      "CO2 (kgCO2 per £)": 0.08306991738352418,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 38,
+      "Category": "Waste collection, treatment and disposal services; materials recovery services",
+      "GHG (kgCO2e per £)": 1.426996325648604,
+      "CO2 (kgCO2 per £)": 0.2943535322090443,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 39,
+      "Category": "Remediation services and other waste management services",
+      "GHG (kgCO2e per £)": 3.425386405885612,
+      "CO2 (kgCO2 per £)": 0.5118386212007786,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 41.2,
+      "Category": "Buildings and building construction works",
+      "GHG (kgCO2e per £)": 0.2401073273838295,
+      "CO2 (kgCO2 per £)": 0.2004210608086973,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 42.99,
+      "Category": "Specialised construction works",
+      "GHG (kgCO2e per £)": 0.2384372809643059,
+      "CO2 (kgCO2 per £)": 0.2030033468079801,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 45,
+      "Category": "Wholesale and retail trade and repair services of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.1551888026325446,
+      "CO2 (kgCO2 per £)": 0.1249639348801549,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 46,
+      "Category": "Wholesale trade services, except of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.3769215339493685,
+      "CO2 (kgCO2 per £)": 0.2641853950810966,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 47,
+      "Category": "Retail trade services, except of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.1971568602900969,
+      "CO2 (kgCO2 per £)": 0.1536416635461428,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 50,
+      "Category": "Water transport services",
+      "GHG (kgCO2e per £)": 1.671574315409284,
+      "CO2 (kgCO2 per £)": 1.612354163979156,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 51,
+      "Category": "Air transport services",
+      "GHG (kgCO2e per £)": 1.669149186989891,
+      "CO2 (kgCO2 per £)": 1.549253032908555,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 52,
+      "Category": "Warehousing and support services for transportation",
+      "GHG (kgCO2e per £)": 0.1805212903648002,
+      "CO2 (kgCO2 per £)": 0.1379196091373973,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 53,
+      "Category": "Postal and courier services",
+      "GHG (kgCO2e per £)": 0.178418724077968,
+      "CO2 (kgCO2 per £)": 0.1482843926327174,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 55,
+      "Category": "Accommodation services",
+      "GHG (kgCO2e per £)": 0.2473362999574961,
+      "CO2 (kgCO2 per £)": 0.1466417855421651,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 56,
+      "Category": "Food and beverage serving services",
+      "GHG (kgCO2e per £)": 0.2414431359061819,
+      "CO2 (kgCO2 per £)": 0.1551309749731535,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 58,
+      "Category": "Publishing services",
+      "GHG (kgCO2e per £)": 0.09051761642540587,
+      "CO2 (kgCO2 per £)": 0.0695123214397896,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 59,
+      "Category": "Motion picture, video and TV programme production services, sound recording & music publishing",
+      "GHG (kgCO2e per £)": 0.09459468004642574,
+      "CO2 (kgCO2 per £)": 0.0728626899144158,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 60,
+      "Category": "Programming and broadcasting services",
+      "GHG (kgCO2e per £)": 0.08281087859471437,
+      "CO2 (kgCO2 per £)": 0.06330409813008007,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 61,
+      "Category": "Telecommunications services",
+      "GHG (kgCO2e per £)": 0.109585663277998,
+      "CO2 (kgCO2 per £)": 0.08687361151365133,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 62,
+      "Category": "Computer programming, consultancy and related services",
+      "GHG (kgCO2e per £)": 0.1003989276671332,
+      "CO2 (kgCO2 per £)": 0.07739698288425885,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 63,
+      "Category": "Information services",
+      "GHG (kgCO2e per £)": 0.164438646655428,
+      "CO2 (kgCO2 per £)": 0.1305763380475692,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 64,
+      "Category": "Financial services, except insurance and pension funding",
+      "GHG (kgCO2e per £)": 0.06963668462362446,
+      "CO2 (kgCO2 per £)": 0.05483346346977275,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 66,
+      "Category": "Services auxiliary to financial services and insurance services",
+      "GHG (kgCO2e per £)": 0.05888923103360267,
+      "CO2 (kgCO2 per £)": 0.04558130848002327,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 68.12,
+      "Category": "Real estate services, excluding on a fee or contract basis and imputed rent",
+      "GHG (kgCO2e per £)": 0.08710505623608256,
+      "CO2 (kgCO2 per £)": 0.06484540786541862,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 68.3,
+      "Category": "Real estate services on a fee or contract basis",
+      "GHG (kgCO2e per £)": 0.07676215458438296,
+      "CO2 (kgCO2 per £)": 0.06277244972531579,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 69.1,
+      "Category": "Legal services",
+      "GHG (kgCO2e per £)": 0.04255476120102786,
+      "CO2 (kgCO2 per £)": 0.03214652835385678,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 69.2,
+      "Category": "Accounting, bookkeeping and auditing services",
+      "GHG (kgCO2e per £)": 0.1453211656478136,
+      "CO2 (kgCO2 per £)": 0.1134238332189685,
+      "Grade": "D+",
+      "Source": " DEFRA, UK and England's carbon footprint to 2019 ",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 70,
+      "Category": "Services of head offices; management consulting services",
+      "GHG (kgCO2e per £)": 0.1039245802056593,
+      "CO2 (kgCO2 per £)": 0.08185882802860847,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 71,
+      "Category": "Architectural and engineering services",
+      "GHG (kgCO2e per £)": 0.1571573168388173,
+      "CO2 (kgCO2 per £)": 0.1198360909061051,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 72,
+      "Category": "Scientific research and development services",
+      "GHG (kgCO2e per £)": 0.1570745703490079,
+      "CO2 (kgCO2 per £)": 0.1224880620332489,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 73,
+      "Category": "Advertising and market research services",
+      "GHG (kgCO2e per £)": 0.1038170170921577,
+      "CO2 (kgCO2 per £)": 0.08085358072313231,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 74,
+      "Category": "Other professional, scientific and technical services",
+      "GHG (kgCO2e per £)": 0.1489590323024995,
+      "CO2 (kgCO2 per £)": 0.1108007223700471,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 75,
+      "Category": "Veterinary services",
+      "GHG (kgCO2e per £)": 0.06559754605626875,
+      "CO2 (kgCO2 per £)": 0.05101177720610531,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 77,
+      "Category": "Rental and leasing services",
+      "GHG (kgCO2e per £)": 0.1153818793333666,
+      "CO2 (kgCO2 per £)": 0.0900509455822957,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 78,
+      "Category": "Employment services",
+      "GHG (kgCO2e per £)": 0.1327159381904304,
+      "CO2 (kgCO2 per £)": 0.1039047221071847,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 79,
+      "Category": "Travel agency, tour operator and other reservation services and related services",
+      "GHG (kgCO2e per £)": 0.1168035396017467,
+      "CO2 (kgCO2 per £)": 0.0929332324783934,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 80,
+      "Category": "Security and investigation services",
+      "GHG (kgCO2e per £)": 0.1029302209350058,
+      "CO2 (kgCO2 per £)": 0.08186073336826624,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 81,
+      "Category": "Services to buildings and landscape",
+      "GHG (kgCO2e per £)": 0.1421000272437947,
+      "CO2 (kgCO2 per £)": 0.1132390718062686,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 82,
+      "Category": "Office administrative, office support and other business support services",
+      "GHG (kgCO2e per £)": 0.1291205716381632,
+      "CO2 (kgCO2 per £)": 0.1002441013616951,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 84,
+      "Category": "Public administration and defence services; compulsory social security services",
+      "GHG (kgCO2e per £)": 0.1204873299116303,
+      "CO2 (kgCO2 per £)": 0.09371000257448661,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 85,
+      "Category": "Education services",
+      "GHG (kgCO2e per £)": 0.06696920009045101,
+      "CO2 (kgCO2 per £)": 0.05269758568222831,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 86,
+      "Category": "Human health services",
+      "GHG (kgCO2e per £)": 0.1506982267160272,
+      "CO2 (kgCO2 per £)": 0.106053533848715,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 87,
+      "Category": "Residential care services",
+      "GHG (kgCO2e per £)": 0.1309348270079687,
+      "CO2 (kgCO2 per £)": 0.09406974617472658,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 88,
+      "Category": "Social work services without accommodation",
+      "GHG (kgCO2e per £)": 0.107720268052571,
+      "CO2 (kgCO2 per £)": 0.08008476794761912,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 90,
+      "Category": "Creative, arts and entertainment services",
+      "GHG (kgCO2e per £)": 0.09446458942665364,
+      "CO2 (kgCO2 per £)": 0.0712579394765155,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 91,
+      "Category": "Libraries, archives, museums and other cultural services",
+      "GHG (kgCO2e per £)": 0.1228313032403279,
+      "CO2 (kgCO2 per £)": 0.09321660551306915,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 92,
+      "Category": "Gambling and betting services",
+      "GHG (kgCO2e per £)": 0.09932631081565416,
+      "CO2 (kgCO2 per £)": 0.07116470300624296,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 93,
+      "Category": "Sports services and amusement and recreation services",
+      "GHG (kgCO2e per £)": 0.1552450354630216,
+      "CO2 (kgCO2 per £)": 0.1144799017248729,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 94,
+      "Category": "Services furnished by membership organisations",
+      "GHG (kgCO2e per £)": 0.0961249219902618,
+      "CO2 (kgCO2 per £)": 0.0734504462736853,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 95,
+      "Category": "Repair services of computers and personal and household goods",
+      "GHG (kgCO2e per £)": 0.09510986500052147,
+      "CO2 (kgCO2 per £)": 0.07022685105848717,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 96,
+      "Category": "Other personal services",
+      "GHG (kgCO2e per £)": 0.06992630661604028,
+      "CO2 (kgCO2 per £)": 0.0551905487737134,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": 97,
+      "Category": "Services of households as employers of domestic personnel",
+      "GHG (kgCO2e per £)": 0.05442130258068968,
+      "CO2 (kgCO2 per £)": 0.04246612935902907,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "10.2 -3",
+      "Category": "Processed and preserved fish, crustaceans, molluscs, fruit and vegetables",
+      "GHG (kgCO2e per £)": 0.6803568389217275,
+      "CO2 (kgCO2 per £)": 0.3633984764633961,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "11.01-6",
+      "Category": "Alcoholic beverages",
+      "GHG (kgCO2e per £)": 0.7447166584447436,
+      "CO2 (kgCO2 per £)": 0.3504549390851995,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "20A",
+      "Category": "Industrial gases, inorganics and fertilisers (all inorganic chemicals)",
+      "GHG (kgCO2e per £)": 1.307212982525217,
+      "CO2 (kgCO2 per £)": 0.9259122351034083,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "20B",
+      "Category": "Petrochemicals",
+      "GHG (kgCO2e per £)": 1.134201516418441,
+      "CO2 (kgCO2 per £)": 0.9404407580007257,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "20C",
+      "Category": "Dyestuffs, agro-chemicals",
+      "GHG (kgCO2e per £)": 1.004824874198781,
+      "CO2 (kgCO2 per £)": 0.7421709572460137,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "23.5-6",
+      "Category": "Cement, lime, plaster and articles of concrete, cement and plaster",
+      "GHG (kgCO2e per £)": 1.46535319450817,
+      "CO2 (kgCO2 per £)": 1.387629434741245,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "23OTHER",
+      "Category": "Glass, refractory, clay, other porcelain and ceramic, stone and abrasive products",
+      "GHG (kgCO2e per £)": 1.395143379895835,
+      "CO2 (kgCO2 per £)": 1.184792269871723,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "24.1-3",
+      "Category": "Basic iron and steel",
+      "GHG (kgCO2e per £)": 1.659113501519725,
+      "CO2 (kgCO2 per £)": 1.453080977049989,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "24.4-5",
+      "Category": "Other basic metals and casting",
+      "GHG (kgCO2e per £)": 1.154541808666527,
+      "CO2 (kgCO2 per £)": 0.8444868801760977,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "25OTHER",
+      "Category": "Fabricated metal products, excl. machinery and equipment and weapons & ammunition",
+      "GHG (kgCO2e per £)": 0.5151293818969107,
+      "CO2 (kgCO2 per £)": 0.4248417171239605,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "30OTHER",
+      "Category": "Other transport equipment",
+      "GHG (kgCO2e per £)": 0.3029507343072845,
+      "CO2 (kgCO2 per £)": 0.250918299766741,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "33OTHER",
+      "Category": "Rest of repair; Installation",
+      "GHG (kgCO2e per £)": 0.1899860501754422,
+      "CO2 (kgCO2 per £)": 0.1491077640176956,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "35.2-3",
+      "Category": "Gas; distribution of gaseous fuels through mains; steam and air conditioning supply",
+      "GHG (kgCO2e per £)": 1.403379758563112,
+      "CO2 (kgCO2 per £)": 1.094553296825289,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "42.1-2",
+      "Category": "Constructions and construction works for civil engineering",
+      "GHG (kgCO2e per £)": 0.306087694398206,
+      "CO2 (kgCO2 per £)": 0.267899896996422,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "49.1-2",
+      "Category": "Rail transport services",
+      "GHG (kgCO2e per £)": 0.3247493927446202,
+      "CO2 (kgCO2 per £)": 0.2828832570484339,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "49.3-5",
+      "Category": "Land transport services",
+      "GHG (kgCO2e per £)": 0.5183988654430859,
+      "CO2 (kgCO2 per £)": 0.4465966230670456,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "65.1-2",
+      "Category": "Insurance, reinsurance and pension funding services",
+      "GHG (kgCO2e per £)": 0.06804509327132108,
+      "CO2 (kgCO2 per £)": 0.05332386635375238,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2019,
+      "SIC": "68.2IMP",
+      "Category": "Owner-Occupiers' Housing Services",
+      "GHG (kgCO2e per £)": 0.0272181521642967,
+      "CO2 (kgCO2 per £)": 0.02237844772563311,
+      "Grade": "D+",
+      "Source": "DEFRA, UK and England's carbon footprint to 2019",
+      "Source Notes": ""
+    },
+    {
+      "Year": 2020,
+      "SIC": "01",
+      "Category": "Products of agriculture, hunting and related services",
+      "GHG (kgCO2e per £)": 1.973735157486901,
+      "CO2 (kgCO2 per £)": 0.4592291307492687,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "02",
+      "Category": "Products of forestry, logging and related services",
+      "GHG (kgCO2e per £)": 0.2788073405519152,
+      "CO2 (kgCO2 per £)": 0.1388071572505117,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "03",
+      "Category": "Fish and other fishing products; aquaculture products; support services to fishing",
+      "GHG (kgCO2e per £)": 0.5234972287758949,
+      "CO2 (kgCO2 per £)": 0.3899543344266369,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "05",
+      "Category": "Coal and lignite",
+      "GHG (kgCO2e per £)": 1.11679654698619,
+      "CO2 (kgCO2 per £)": 0.3493517205111091,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "06",
+      "Category": "Crude petroleum and natural gas",
+      "GHG (kgCO2e per £)": 0.6598531678911883,
+      "CO2 (kgCO2 per £)": 0.5105405290858489,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "08",
+      "Category": "Other mining and quarrying products",
+      "GHG (kgCO2e per £)": 0.5342635179809951,
+      "CO2 (kgCO2 per £)": 0.4073297627045566,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "09",
+      "Category": "Mining support services",
+      "GHG (kgCO2e per £)": 0.34484060195484,
+      "CO2 (kgCO2 per £)": 0.2361661686191244,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.1",
+      "Category": "Preserved meat and meat products",
+      "GHG (kgCO2e per £)": 0.7722347410347845,
+      "CO2 (kgCO2 per £)": 0.3162645828330203,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.4",
+      "Category": "Vegetable and animal oils and fats",
+      "GHG (kgCO2e per £)": 0.975940635144735,
+      "CO2 (kgCO2 per £)": 0.4371687191328296,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.5",
+      "Category": "Dairy products",
+      "GHG (kgCO2e per £)": 0.9622119924642184,
+      "CO2 (kgCO2 per £)": 0.3944670406158852,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.6",
+      "Category": "Grain mill products, starches and starch products",
+      "GHG (kgCO2e per £)": 0.755283369418883,
+      "CO2 (kgCO2 per £)": 0.4407958527787169,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.7",
+      "Category": "Bakery and farinaceous products",
+      "GHG (kgCO2e per £)": 0.4505911843584035,
+      "CO2 (kgCO2 per £)": 0.2513016848178426,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.8",
+      "Category": "Other food products",
+      "GHG (kgCO2e per £)": 0.6606259935217188,
+      "CO2 (kgCO2 per £)": 0.2951346865094266,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 10.9,
+      "Category": "Prepared animal feeds",
+      "GHG (kgCO2e per £)": 0.9115072921131213,
+      "CO2 (kgCO2 per £)": 0.3912794376398401,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 11.07,
+      "Category": "Soft drinks",
+      "GHG (kgCO2e per £)": 0.3320604892583968,
+      "CO2 (kgCO2 per £)": 0.1881113284887145,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 12,
+      "Category": "Tobacco products",
+      "GHG (kgCO2e per £)": 0.2026890723412039,
+      "CO2 (kgCO2 per £)": 0.09577088985939472,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 13,
+      "Category": "Textiles",
+      "GHG (kgCO2e per £)": 0.7708516836194358,
+      "CO2 (kgCO2 per £)": 0.5564570140691336,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 14,
+      "Category": "Wearing apparel",
+      "GHG (kgCO2e per £)": 0.7912446781811184,
+      "CO2 (kgCO2 per £)": 0.5820248633988747,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 15,
+      "Category": "Leather and related products",
+      "GHG (kgCO2e per £)": 0.734434783345102,
+      "CO2 (kgCO2 per £)": 0.4810463046333982,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 16,
+      "Category": "Wood and of products of wood and cork, except furniture; articles of straw and plaiting materials",
+      "GHG (kgCO2e per £)": 0.4746450699843138,
+      "CO2 (kgCO2 per £)": 0.3935099213195597,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 17,
+      "Category": "Paper and paper products",
+      "GHG (kgCO2e per £)": 0.7068769627952158,
+      "CO2 (kgCO2 per £)": 0.5305019510552456,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 18,
+      "Category": "Printing and recording services",
+      "GHG (kgCO2e per £)": 0.3817339611330717,
+      "CO2 (kgCO2 per £)": 0.2871501993049524,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 19,
+      "Category": "Coke and refined petroleum products",
+      "GHG (kgCO2e per £)": 1.929513124328427,
+      "CO2 (kgCO2 per £)": 1.140223975784507,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 20.3,
+      "Category": "Paints, varnishes and similar coatings, printing ink and mastics",
+      "GHG (kgCO2e per £)": 1.330508762948823,
+      "CO2 (kgCO2 per £)": 0.8726552558293756,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 20.4,
+      "Category": "Soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations",
+      "GHG (kgCO2e per £)": 0.7188726058186148,
+      "CO2 (kgCO2 per £)": 0.4841505034014181,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 21,
+      "Category": "Basic pharmaceutical products and pharmaceutical preparations",
+      "GHG (kgCO2e per £)": 0.6209951815696573,
+      "CO2 (kgCO2 per £)": 0.4155470673340264,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 22,
+      "Category": "Rubber and plastic products",
+      "GHG (kgCO2e per £)": 0.5762178896402204,
+      "CO2 (kgCO2 per £)": 0.4353508528853419,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 25.4,
+      "Category": "Weapons and ammunition",
+      "GHG (kgCO2e per £)": 0.3917634377614426,
+      "CO2 (kgCO2 per £)": 0.3182098824769178,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 26,
+      "Category": "Computer, electronic and optical products",
+      "GHG (kgCO2e per £)": 0.3817493876581131,
+      "CO2 (kgCO2 per £)": 0.3096950208145329,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 27,
+      "Category": "Electrical equipment",
+      "GHG (kgCO2e per £)": 0.4952364033392342,
+      "CO2 (kgCO2 per £)": 0.4011624023089316,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 28,
+      "Category": "Machinery and equipment",
+      "GHG (kgCO2e per £)": 0.335616678176436,
+      "CO2 (kgCO2 per £)": 0.2738357067986849,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 29,
+      "Category": "Motor vehicles, trailers and semi-trailers",
+      "GHG (kgCO2e per £)": 0.3585144747046808,
+      "CO2 (kgCO2 per £)": 0.2857803678604837,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 30.1,
+      "Category": "Ships and boats",
+      "GHG (kgCO2e per £)": 0.1324048866352083,
+      "CO2 (kgCO2 per £)": 0.1108103773709913,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 30.3,
+      "Category": "Air and spacecraft and related machinery",
+      "GHG (kgCO2e per £)": 0.3592074509035357,
+      "CO2 (kgCO2 per £)": 0.2943100786213129,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 31,
+      "Category": "Furniture",
+      "GHG (kgCO2e per £)": 0.3763683767468496,
+      "CO2 (kgCO2 per £)": 0.3099679358562462,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 32,
+      "Category": "Other manufactured goods",
+      "GHG (kgCO2e per £)": 0.6723824941498113,
+      "CO2 (kgCO2 per £)": 0.5312149615057955,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 33.15,
+      "Category": "Repair and maintenance of ships and boats",
+      "GHG (kgCO2e per £)": 0.2180683900266437,
+      "CO2 (kgCO2 per £)": 0.1794512439854152,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 33.16,
+      "Category": "Repair and maintenance of aircraft and spacecraft",
+      "GHG (kgCO2e per £)": 0.4293106273246419,
+      "CO2 (kgCO2 per £)": 0.3506760009642816,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 35.1,
+      "Category": "Electricity, transmission and distribution",
+      "GHG (kgCO2e per £)": 1.881537182171034,
+      "CO2 (kgCO2 per £)": 1.682164447596828,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 36,
+      "Category": "Natural water; water treatment and supply services",
+      "GHG (kgCO2e per £)": 0.2455437385220309,
+      "CO2 (kgCO2 per £)": 0.2131281559997026,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 37,
+      "Category": "Sewerage services; sewage sludge",
+      "GHG (kgCO2e per £)": 0.361124966754091,
+      "CO2 (kgCO2 per £)": 0.07076749053413688,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 38,
+      "Category": "Waste collection, treatment and disposal services; materials recovery services",
+      "GHG (kgCO2e per £)": 1.256652869639089,
+      "CO2 (kgCO2 per £)": 0.2925299855429638,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 39,
+      "Category": "Remediation services and other waste management services",
+      "GHG (kgCO2e per £)": 3.45745109936806,
+      "CO2 (kgCO2 per £)": 0.5014640599107252,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 41.2,
+      "Category": "Buildings and building construction works",
+      "GHG (kgCO2e per £)": 0.3050063626424347,
+      "CO2 (kgCO2 per £)": 0.2535262792326509,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 42.99,
+      "Category": "Specialised construction works",
+      "GHG (kgCO2e per £)": 0.3102678662853501,
+      "CO2 (kgCO2 per £)": 0.2606333294764797,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 45,
+      "Category": "Wholesale and retail trade and repair services of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.2103462969972689,
+      "CO2 (kgCO2 per £)": 0.1676438207936386,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 46,
+      "Category": "Wholesale trade services, except of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.02031003151073686,
+      "CO2 (kgCO2 per £)": 0.01429540086501802,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 47,
+      "Category": "Retail trade services, except of motor vehicles and motorcycles",
+      "GHG (kgCO2e per £)": 0.1740428730645656,
+      "CO2 (kgCO2 per £)": 0.1349963645676952,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 50,
+      "Category": "Water transport services",
+      "GHG (kgCO2e per £)": 2.35460654309134,
+      "CO2 (kgCO2 per £)": 2.275603296863459,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 51,
+      "Category": "Air transport services",
+      "GHG (kgCO2e per £)": 1.522159356018597,
+      "CO2 (kgCO2 per £)": 1.397647488670168,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 52,
+      "Category": "Warehousing and support services for transportation",
+      "GHG (kgCO2e per £)": 0.2437679545398266,
+      "CO2 (kgCO2 per £)": 0.1931203602221352,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 53,
+      "Category": "Postal and courier services",
+      "GHG (kgCO2e per £)": 0.2493798128903121,
+      "CO2 (kgCO2 per £)": 0.2034037903133543,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 55,
+      "Category": "Accommodation services",
+      "GHG (kgCO2e per £)": 0.3244460270337697,
+      "CO2 (kgCO2 per £)": 0.196932458906137,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 56,
+      "Category": "Food and beverage serving services",
+      "GHG (kgCO2e per £)": 0.2888616751860822,
+      "CO2 (kgCO2 per £)": 0.1888043912087715,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 58,
+      "Category": "Publishing services",
+      "GHG (kgCO2e per £)": 0.08021945722785123,
+      "CO2 (kgCO2 per £)": 0.06063001651143388,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 59,
+      "Category": "Motion picture, video and TV programme production services, sound recording & music publishing",
+      "GHG (kgCO2e per £)": 0.1101389562964399,
+      "CO2 (kgCO2 per £)": 0.08341322014419404,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 60,
+      "Category": "Programming and broadcasting services",
+      "GHG (kgCO2e per £)": 0.1191958164822391,
+      "CO2 (kgCO2 per £)": 0.08944315995904775,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 61,
+      "Category": "Telecommunications services",
+      "GHG (kgCO2e per £)": 0.1052070319102933,
+      "CO2 (kgCO2 per £)": 0.08345812460879548,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 62,
+      "Category": "Computer programming, consultancy and related services",
+      "GHG (kgCO2e per £)": 0.131446597044077,
+      "CO2 (kgCO2 per £)": 0.1004136390515138,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 63,
+      "Category": "Information services",
+      "GHG (kgCO2e per £)": 0.1693416987569392,
+      "CO2 (kgCO2 per £)": 0.1325731486268883,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 64,
+      "Category": "Financial services, except insurance and pension funding",
+      "GHG (kgCO2e per £)": 0.1103075939416239,
+      "CO2 (kgCO2 per £)": 0.0864174938028368,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 66,
+      "Category": "Services auxiliary to financial services and insurance services",
+      "GHG (kgCO2e per £)": 0.1004552623620299,
+      "CO2 (kgCO2 per £)": 0.0771503432442517,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 68.12,
+      "Category": "Real estate services, excluding on a fee or contract basis and imputed rent",
+      "GHG (kgCO2e per £)": 0.1113515958311013,
+      "CO2 (kgCO2 per £)": 0.08328585673193521,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 68.3,
+      "Category": "Real estate services on a fee or contract basis",
+      "GHG (kgCO2e per £)": 0.08491433784430828,
+      "CO2 (kgCO2 per £)": 0.06739642842534986,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 69.1,
+      "Category": "Legal services",
+      "GHG (kgCO2e per £)": 0.05787762197631151,
+      "CO2 (kgCO2 per £)": 0.04384936618329666,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 69.2,
+      "Category": "Accounting, bookkeeping and auditing services",
+      "GHG (kgCO2e per £)": 0.1282470989874503,
+      "CO2 (kgCO2 per £)": 0.09774859366806506,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 70,
+      "Category": "Services of head offices; management consulting services",
+      "GHG (kgCO2e per £)": 0.09368118375986205,
+      "CO2 (kgCO2 per £)": 0.07288937586046781,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 71,
+      "Category": "Architectural and engineering services",
+      "GHG (kgCO2e per £)": 0.1560575201743172,
+      "CO2 (kgCO2 per £)": 0.1162236910903834,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 72,
+      "Category": "Scientific research and development services",
+      "GHG (kgCO2e per £)": 0.1856276499836886,
+      "CO2 (kgCO2 per £)": 0.1435385303296763,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 73,
+      "Category": "Advertising and market research services",
+      "GHG (kgCO2e per £)": 0.1101924211553026,
+      "CO2 (kgCO2 per £)": 0.08383320739031215,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 74,
+      "Category": "Other professional, scientific and technical services",
+      "GHG (kgCO2e per £)": 0.1914258769844671,
+      "CO2 (kgCO2 per £)": 0.1402001635897499,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 75,
+      "Category": "Veterinary services",
+      "GHG (kgCO2e per £)": 0.08692953516743758,
+      "CO2 (kgCO2 per £)": 0.06739143564602632,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 77,
+      "Category": "Rental and leasing services",
+      "GHG (kgCO2e per £)": 0.1347779459981187,
+      "CO2 (kgCO2 per £)": 0.1036493364500424,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 78,
+      "Category": "Employment services",
+      "GHG (kgCO2e per £)": 0.1176282196328419,
+      "CO2 (kgCO2 per £)": 0.09038624233623033,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 79,
+      "Category": "Travel agency, tour operator and other reservation services and related services",
+      "GHG (kgCO2e per £)": 0.1404639970190862,
+      "CO2 (kgCO2 per £)": 0.1123551394092362,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 80,
+      "Category": "Security and investigation services",
+      "GHG (kgCO2e per £)": 0.09540827894799696,
+      "CO2 (kgCO2 per £)": 0.07518512930562796,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 81,
+      "Category": "Services to buildings and landscape",
+      "GHG (kgCO2e per £)": 0.1712664478524781,
+      "CO2 (kgCO2 per £)": 0.1323148048842457,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 82,
+      "Category": "Office administrative, office support and other business support services",
+      "GHG (kgCO2e per £)": 0.1180504360352973,
+      "CO2 (kgCO2 per £)": 0.09092053941541035,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 84,
+      "Category": "Public administration and defence services; compulsory social security services",
+      "GHG (kgCO2e per £)": 0.1703405261372164,
+      "CO2 (kgCO2 per £)": 0.1322167136007317,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 85,
+      "Category": "Education services",
+      "GHG (kgCO2e per £)": 0.1025796667832646,
+      "CO2 (kgCO2 per £)": 0.07957291943881771,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 86,
+      "Category": "Human health services",
+      "GHG (kgCO2e per £)": 0.291931686200182,
+      "CO2 (kgCO2 per £)": 0.2010364455861634,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 87,
+      "Category": "Residential care services",
+      "GHG (kgCO2e per £)": 0.1651443705893055,
+      "CO2 (kgCO2 per £)": 0.1177038626244835,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 88,
+      "Category": "Social work services without accommodation",
+      "GHG (kgCO2e per £)": 0.1292609280264395,
+      "CO2 (kgCO2 per £)": 0.09484231945091534,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 90,
+      "Category": "Creative, arts and entertainment services",
+      "GHG (kgCO2e per £)": 0.2018836157509922,
+      "CO2 (kgCO2 per £)": 0.1498268469157971,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 91,
+      "Category": "Libraries, archives, museums and other cultural services",
+      "GHG (kgCO2e per £)": 0.1638049098676421,
+      "CO2 (kgCO2 per £)": 0.1247755132651766,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 92,
+      "Category": "Gambling and betting services",
+      "GHG (kgCO2e per £)": 0.0949726518511916,
+      "CO2 (kgCO2 per £)": 0.06729568685861394,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 93,
+      "Category": "Sports services and amusement and recreation services",
+      "GHG (kgCO2e per £)": 0.2228036083016632,
+      "CO2 (kgCO2 per £)": 0.1645760212435602,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 94,
+      "Category": "Services furnished by membership organisations",
+      "GHG (kgCO2e per £)": 0.1210358880635142,
+      "CO2 (kgCO2 per £)": 0.0893003744402779,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 95,
+      "Category": "Repair services of computers and personal and household goods",
+      "GHG (kgCO2e per £)": 0.109537934139032,
+      "CO2 (kgCO2 per £)": 0.07979834358775517,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 96,
+      "Category": "Other personal services",
+      "GHG (kgCO2e per £)": 0.07671279195712184,
+      "CO2 (kgCO2 per £)": 0.0611136814594654,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": 97,
+      "Category": "Services of households as employers of domestic personnel",
+      "GHG (kgCO2e per £)": 0.008881172694732112,
+      "CO2 (kgCO2 per £)": 0.006768341078155927,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "10.2 -3",
+      "Category": "Processed and preserved fish, crustaceans, molluscs, fruit and vegetables",
+      "GHG (kgCO2e per £)": 0.7205425350428076,
+      "CO2 (kgCO2 per £)": 0.3895703835128879,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "11.01-6",
+      "Category": "Alcoholic beverages",
+      "GHG (kgCO2e per £)": 0.7071565823937609,
+      "CO2 (kgCO2 per £)": 0.3427142796752571,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "20A",
+      "Category": "Industrial gases, inorganics and fertilisers (all inorganic chemicals)",
+      "GHG (kgCO2e per £)": 1.357492512614982,
+      "CO2 (kgCO2 per £)": 0.9481385896244339,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "20B",
+      "Category": "Petrochemicals",
+      "GHG (kgCO2e per £)": 0.8202113547751525,
+      "CO2 (kgCO2 per £)": 0.5841068736961792,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "20C",
+      "Category": "Dyestuffs, agro-chemicals",
+      "GHG (kgCO2e per £)": 1.07642184282876,
+      "CO2 (kgCO2 per £)": 0.8272334172295285,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "23.5-6",
+      "Category": "Cement, lime, plaster and articles of concrete, cement and plaster",
+      "GHG (kgCO2e per £)": 1.088232931909098,
+      "CO2 (kgCO2 per £)": 1.0212552395359,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "23OTHER",
+      "Category": "Glass, refractory, clay, other porcelain and ceramic, stone and abrasive products",
+      "GHG (kgCO2e per £)": 1.202877205736401,
+      "CO2 (kgCO2 per £)": 1.026977180335349,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "24.1-3",
+      "Category": "Basic iron and steel",
+      "GHG (kgCO2e per £)": 1.409849740055845,
+      "CO2 (kgCO2 per £)": 1.114196302783969,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "24.4-5",
+      "Category": "Other basic metals and casting",
+      "GHG (kgCO2e per £)": 0.9969742870835365,
+      "CO2 (kgCO2 per £)": 0.7213145060163022,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "25OTHER",
+      "Category": "Fabricated metal products, excl. machinery and equipment and weapons & ammunition",
+      "GHG (kgCO2e per £)": 0.4590416955150335,
+      "CO2 (kgCO2 per £)": 0.3805605651272145,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "30OTHER",
+      "Category": "Other transport equipment",
+      "GHG (kgCO2e per £)": 0.1896917059859729,
+      "CO2 (kgCO2 per £)": 0.1558333007882265,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "33OTHER",
+      "Category": "Rest of repair; Installation",
+      "GHG (kgCO2e per £)": 0.1869688268748554,
+      "CO2 (kgCO2 per £)": 0.1460460565295469,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "35.2-3",
+      "Category": "Gas; distribution of gaseous fuels through mains; steam and air conditioning supply",
+      "GHG (kgCO2e per £)": 1.542617380896305,
+      "CO2 (kgCO2 per £)": 1.285740627251641,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "42.1-2",
+      "Category": "Constructions and construction works for civil engineering",
+      "GHG (kgCO2e per £)": 0.3880224632557044,
+      "CO2 (kgCO2 per £)": 0.3349498943646957,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "49.1-2",
+      "Category": "Rail transport services",
+      "GHG (kgCO2e per £)": 0.7460436686163452,
+      "CO2 (kgCO2 per £)": 0.6451567535438995,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "49.3-5",
+      "Category": "Land transport services",
+      "GHG (kgCO2e per £)": 0.6031570354409785,
+      "CO2 (kgCO2 per £)": 0.5105674006380245,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "65.1-2",
+      "Category": "Insurance, reinsurance and pension funding services",
+      "GHG (kgCO2e per £)": 0.07567129449009836,
+      "CO2 (kgCO2 per £)": 0.05870541299955753,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "68.2IMP",
+      "Category": "Owner-Occupiers' Housing Services",
+      "GHG (kgCO2e per £)": 0.03962136812599446,
+      "CO2 (kgCO2 per £)": 0.0329432537168458,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    },
+    {
+      "Year": 2020,
+      "SIC": "",
+      "Category": "Other chemical products",
+      "GHG (kgCO2e per £)": 1.381053912736994,
+      "CO2 (kgCO2 per £)": 0.9028203750064497,
+      "Grade": "C",
+      "Source": "DEFRA, UK and England's carbon footprint to 2020",
+      "Source Notes": "2020 is the latest data available (July 2023)"
+    }
+  ]
+}

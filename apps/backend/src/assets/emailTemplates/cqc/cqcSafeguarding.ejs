@@ -1,0 +1,11 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"CQC report"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.reciever}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${locals.sender} has referred A Safeguarding alert via
+          iMS Systems reference SG-${locals.ID}.`})%>
+          <%- include('../shared/useremails/message_section/index',{message:`Please view the PDF and any attachments as a
+            safeguarding referral. The information shared with you is very confidential.`})%>
+            <%- include('../shared/useremails/closing_section/index'); %>
+              <%- include('../shared/useremails/container/main_container_end'); %>
+                <%- include('../shared/useremails/end'); %>

@@ -1,0 +1,30 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Signature requested"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`${locals.sender.name} has requested you to
+          view and sign ${locals.documentName} via iMS Systems.`}); %>
+          <%- include('../shared/useremails/message_section/index',{message:`To proceed please click on the link
+            below.`}); %>
+            <%- include('../shared/useremails/button/index',{linkText:"Proceed to sign",link:locals.signatureLink}); %>
+              <%- include('../shared/useremails/message_section/index',{message:`If the link is not working or access
+                has expired, please contact the originator on the following email.`}); %>
+                <%- include('../shared/useremails/message_section/index',{message:"Email: "+locals.sender.email }); %>
+                  <%- include('../shared/useremails/message_section/start')%>
+                    <p style=" font-family: 'Poppins' , sans-serif; font-size: 14px;font-weight: 500;line-height:
+                  normal;letter-spacing: normal;color: #de2c55;margin: 5px 0 0 0;">
+                  This is a secure link sent for your purposes only and will expire after 7 days.
+                  </p>
+                  <p style=" font-family: 'Poppins' , sans-serif; font-size: 14px;font-weight: 500;line-height:
+                  normal;letter-spacing: normal;color: #de2c55;margin: 5px 0 0 0;">
+                    Please do not forward or share this email as this is confidential.
+                  </p>
+                  <%- include('../shared/useremails/message_section/end')%>
+                    <% if(locals.customMessage){ %>
+                      <%- include('../shared/useremails/message_section/index',{message:`Message from
+                        ${locals.sender?.name}`}); %>
+                        <%- include('../shared/useremails/message_section/index',{message:locals.customMessage}); %>
+                          <% } %>
+                            <%- include('../shared/useremails/closing_section/index'); %>
+                              <%- include('../shared/useremails/container/main_container_end'); %>
+                                <%- include('../shared/useremails/end'); %>

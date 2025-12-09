@@ -1,0 +1,439 @@
+openapi: 3.0.0
+info:
+  title: IMS Project API
+  version: 1.0.0
+  description: API documentation for IMS Project
+
+tags:
+  - name: IMS Project WorkPackage
+    description: APIs for managing IMS Project WorkPackages
+
+paths:
+  /ims-projects/{projectId}/workPackages/:
+    post:
+      summary: Create IMS Project Work Package
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectWorkPackageInput"
+      responses:
+        '200':
+          description: IMS Project Work Package created successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package created successfully.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+
+    get:
+      summary: List IMS Project Work Packages
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of IMS Project Work Packages
+          content:
+            application/json:
+              example:
+                message: iMS Project work package retrived.
+                pagination:
+                  totalPages: 1
+                  totalResults: 3
+                  currentPage: 1
+                  size: 10
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                imsProjectWorkPackages:
+                  - _id: "66436954e9a56bc3024773d6"
+                    title: Sample Task
+                    description: This is a sample task description.
+                    startDate: "2024-04-18T00:00:00.000Z"
+                    endDate: "2026-10-22T08:00:00.000Z"
+                    progressPercentage: 25
+                    type: task
+                    createdBy: "65c4a6c6d1fee6d4b00a5c88"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    status: Todo
+                    priority: High
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-05-14T13:38:28.238Z"
+                    updatedAt: "2024-05-14T13:38:35.168Z"
+                    __v: 0
+                  - _id: "66205d3deaa5382e92398775"
+                    title: Sample Task
+                    description: This is a sample task description.
+                    startDate: "2024-04-18T00:00:00.000Z"
+                    endDate: "2026-10-22T08:00:00.000Z"
+                    progressPercentage: 25
+                    type: task
+                    createdBy: "65c4a6c6d1fee6d4b00a5c88"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    status: In Progress
+                    priority: High
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-04-17T23:37:33.013Z"
+                    updatedAt: "2024-04-17T23:43:37.271Z"
+                    __v: 0
+                  - _id: "66205d24eaa5382e9239871e"
+                    title: Task 1
+                    description: Description of Task 1
+                    startDate: "2024-08-22T08:00:00.000Z"
+                    endDate: "2024-08-22T08:00:00.000Z"
+                    progressPercentage: 25
+                    type: task
+                    createdBy: "65c4a6c6d1fee6d4b00a5c88"
+                    imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                    status: Todo
+                    priority: Normal
+                    deleteMarker:
+                      status: false
+                      deletedAt: null
+                      dateScheduled: null
+                    organization: "65c4a6ffd1fee6d4b00a5f2e"
+                    createdAt: "2024-04-17T23:37:08.179Z"
+                    updatedAt: "2024-04-17T23:37:08.179Z"
+                    __v: 0
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}:
+    get:
+      summary: Get IMS Project Work Package by ID
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package retrieved successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package retrived.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+    put:
+      summary: Update IMS Project Work Package
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ImsProjectWorkPackageInput"
+      responses:
+        '200':
+          description: IMS Project Work Package updated successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package info updated.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/hard:
+    delete:
+      summary: Remove IMS Project Work Package
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package removed.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/soft:
+    delete:
+      summary: Remove IMS Project Work Package
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package removed successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package moved to trash.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+
+  /ims-projects/{projectId}/workPackages/{workPackageId}/restore:
+    put:
+      summary: Restore IMS Project Work Package
+      tags: [IMS Project WorkPackage]
+      security:
+        - apiKey: []
+      parameters:
+        - in: path
+          name: projectId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: workPackageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: IMS Project Work Package restored successfully
+          content:
+            application/json:
+              example:
+                message: iMS Project work package restored.
+                imsProjectWorkPackage:
+                  title: Task 1
+                  description: Description of Task 1
+                  startDate: "2024-08-22T08:00:00.000Z"
+                  endDate: "2024-08-29T08:00:00.000Z"
+                  progressPercentage: 25
+                  type: task
+                  createdBy:
+                    _id: "65c4a6c6d1fee6d4b00a5c88"
+                    name: Bishwojit Malo
+                    email: malo@imssystems.tech
+                    profileImageSrc: "https://assets.imssystems.tech/images/system/avatar-placeholder.jpg"
+                    accessPolicies: []
+                  imsProjectId: "661d713a4c8170fc1d8f7ac8"
+                  status: Todo
+                  priority: Normal
+                  _id: "66436954e9a56bc3024773d6"
+                  deleteMarker:
+                    status: false
+                    deletedAt: null
+                    dateScheduled: null
+                  organization: "65c4a6ffd1fee6d4b00a5f2e"
+                  createdAt: "2024-05-14T13:38:28.238Z"
+                  updatedAt: "2024-05-14T13:38:28.238Z"
+                  __v: 0
+                statusCode: 200
+
+components:
+  schemas:
+    ImsProjectWorkPackageInput:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        progressPercentage:
+          type: integer
+        type:
+          type: string
+        priority:
+          type: string
+        status:
+          type: string
+      required:
+        - title
+        - startDate
+        - endDate

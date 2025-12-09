@@ -1,0 +1,10 @@
+<%- include('../shared/useremails/start'); %>
+  <%- include('../shared/useremails/container/main_container_start'); %>
+    <%- include('../shared/useremails/heading_section/index',{heading:"Scheduled Maintenance"}); %>
+      <%- include('../shared/useremails/greeting_section/index',{name:locals.recipient.name}); %>
+        <%- include('../shared/useremails/message_section/index',{message:`iMS will go offline on Saturday, April 16th
+          at 12pm BST to perform scheduled maintenance and it will last up to 1 hour. You may exprience downtime on your
+          account. Sorry for the inconvenience.`})%>
+          <%- include('../shared/useremails/closing_section/index'); %>
+            <%- include('../shared/useremails/container/main_container_end'); %>
+              <%- include('../shared/useremails/end'); %>

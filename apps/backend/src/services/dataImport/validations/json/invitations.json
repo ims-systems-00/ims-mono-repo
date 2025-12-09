@@ -1,0 +1,1 @@
+{"invitations::organization":"Joi.any().label(\"Organization\")"}

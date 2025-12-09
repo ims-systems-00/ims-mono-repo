@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+  # Database services
+  mongo_db:
+    container_name: system007_db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+    ports:
+      - "2718:27017"
+
+  redis:
+    container_name: ims_redis_container
+    image: redis:latest
+    restart: always
+    command: ["--maxmemory", "500mb"]
+
+  # Node API services
+  api:
+    container_name: ims_api_dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: always
+    env_file:
+      - .env.stage
+    depends_on:
+      - mongo_db
+      - redis
+
+  # Headless Chromium Browser
+  headless_chrome:
+    image: zenika/alpine-chrome:with-node
+    container_name: headless_chrome
+    ports:
+      - "9222:9222"
+    command:
+      [
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+        "--remote-debugging-port=9222",
+      ]
+
+  # LibreOffice
+  libreoffice:
+    image: lscr.io/linuxserver/libreoffice:latest
+    container_name: libreoffice
+    ports:
+      - "8080:8080" # Example port for LibreOffice
+    command:
+      [
+        "--headless",
+        "--accept=text/plain; charset=utf-8",
+        "--convert-to",
+        "pdf",
+        "/data/inputfile.docx",
+      ]
+
+volumes:
+  mongo_db: {}

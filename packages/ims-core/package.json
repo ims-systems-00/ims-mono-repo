@@ -1,0 +1,32 @@
+{
+  "name": "@ims-systems-00/ims-core",
+  "version": "1.1.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/**/*.js --timeout 20000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "chart.js": "^3.8.0",
+    "chartjs-node-canvas": "^4.1.6",
+    "moment": "^2.29.3",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.13.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/ims-systems-00/ims-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ims-systems-00/ims-core/issues"
+  },
+  "homepage": "https://github.com/ims-systems-00/ims-core#readme"
+}

@@ -1,0 +1,1 @@
+{"documentrepositories::organization":"Joi.any().label(\"Organization\")"}
