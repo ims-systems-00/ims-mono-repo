@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:local": "env-cmd -f ./.env.local nodemon -L --delay 100ms server.js",
-    "start:production": "nodemon server.js",
+    "start:production": "node server.js",
     "start:dev": "env-cmd -f ./.env.dev nodemon server.js",
     "sync:compliance-tools:local": "env-cmd -f ./.env.local node ./scripts/syncComplianceTools.js",
     "sync:compliance-tools:dev": "env-cmd -f ./.env.dev node ./scripts/syncComplianceTools.js",

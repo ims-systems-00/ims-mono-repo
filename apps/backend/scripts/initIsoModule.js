@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-useless-catch */
 const fs = require("fs").promises;
 const pathModule = require("path");
 const { IMS_SERVICES } = require("@ims-systems-00/ims-core/lib/constants");
