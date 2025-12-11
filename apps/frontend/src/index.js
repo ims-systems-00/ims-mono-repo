@@ -10,7 +10,6 @@ import AdminLayout from "@/layouts/Admin/Admin";
 import Maintanance from "@/layouts/Misc/Maintanance";
 import Misc from "@/layouts/Misc/Misc";
 import Public from "@/layouts/Public/Public";
-
 import "react-notifications-component/dist/theme.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { ToastContainer } from "react-toastify";

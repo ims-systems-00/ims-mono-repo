@@ -58,7 +58,7 @@ export default defineConfig({
       {
         find: /^~(.+)/,
         replacement: path.resolve(__dirname, "node_modules/$1"),
-      }
+      },
     ],
   },
   optimizeDeps: {
@@ -68,6 +68,6 @@ export default defineConfig({
         ".js": "jsx",
       },
     },
-    exclude: ["pdfjs-dist"],
+    exclude: ['pdfjs-dist']
   },
 });

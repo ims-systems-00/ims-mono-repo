@@ -18,7 +18,6 @@ const {
 const { APIError } = require("../../helpers/errors/apiError");
 const { mainChannel } = require("../../eventsV2/topic");
 const { SERVER_EVENTS_BUS } = require("../../eventsV2/topicsName");
-const { logger } = require("@ims-systems-00/ims-core/lib/logger");
 class DocumentTreeService extends Manager {
   constructor(connection) {
     super(connection);
@@ -79,7 +78,6 @@ class DocumentTreeService extends Manager {
       "created.by": data.modified.by,
     });
     node = await node.save();
-    await this.documentCache.clearAll();
     return this.getNode({ _id: node._id });
   }
 
@@ -129,7 +127,7 @@ class DocumentTreeService extends Manager {
     for (const rootNode of sourceNodes) {
       await copyFolderNode(rootNode?._id);
     }
-    await this.documentCache.clearAll();
+
     return {
       message: "Repository copied successfully.",
       sourceRepoId,
@@ -249,7 +247,6 @@ class DocumentTreeService extends Manager {
       //   createdBy: data.modified?.by,
       // });
     }
-    await this.documentCache.clearAll();
     return node;
   }
   async createFileNode(data) {
@@ -380,20 +377,9 @@ class DocumentTreeService extends Manager {
       moduleType: moduleTypes.incidents,
       user: data.createdBy,
     });
-    await this.documentCache.clearAll();
     return nodes;
   }
   async listNodeItemsByOrg(query, options) {
-    const cacheKey = this.documentCache.createCacheKey({
-      orgId: this.connection?.user?.organizationId,
-      query,
-      options,
-    });
-    const cachedData = await this.documentCache.get(cacheKey);
-    if (cachedData){
-      logger.info("Cache hit for listNodeItemsByOrg");
-      return cachedData;
-    }
     let pagination = await this.DocumentTrees.paginateByOrg(
       this.connection?.user?.organizationId,
       query,
@@ -403,22 +389,9 @@ class DocumentTreeService extends Manager {
     nodes = await Promise.all(
       nodes.map((node) => this.DocumentTrees.populateNode(node))
     );
-    const result = { nodes, pagination: this.imsPaginationFormated(pagination) };
-    await this.documentCache.set(cacheKey, result);
-    logger.info("Cache set for listNodeItemsByOrg");
-    return result;
+    return { nodes, pagination: this.imsPaginationFormated(pagination) };
   }
   async listNodesByOrg(queries, options) {
-    const cacheKey = this.documentCache.createCacheKey({
-      orgId: this.connection?.user?.organizationId,
-      query: queries,
-      options: options,
-    });
-    const cachedData = await this.documentCache.get(cacheKey);
-    if (cachedData){
-      logger.info("Cache hit for listNodesByOrg");
-      return cachedData;
-    }
     let aggregateQuery = this.DocumentTrees.aggregate();
     aggregateQuery
       .lookup({
@@ -486,10 +459,7 @@ class DocumentTreeService extends Manager {
       options
     );
     let nodes = pagination.docs;
-    const result = { nodes, pagination: this.imsPaginationFormated(pagination) };
-    await this.documentCache.set(cacheKey, result);
-    logger.info("Cache set for listNodesByOrg");
-    return result;
+    return { nodes, pagination: this.imsPaginationFormated(pagination) };
   }
   async generateNodePath(id) {
     let match = {};
@@ -577,7 +547,6 @@ class DocumentTreeService extends Manager {
       },
       { new: true }
     );
-    await this.documentCache.clearAll();
     return this.getNode({ _id: id });
   }
   async getNode(query) {
@@ -613,7 +582,6 @@ class DocumentTreeService extends Manager {
         repository: node.repository?._id || node.repository,
         parentNode: node.parentNode || node.parentNode?._id,
       });
-      await this.documentCache.clearAll();
       return node;
     }
   }
@@ -640,7 +608,6 @@ class DocumentTreeService extends Manager {
         repository: node.repository?._id || node.repository,
         parentNode: node.parentNode || node.parentNode?._id,
       });
-      await this.documentCache.clearAll();
       return node;
     }
   }
@@ -651,7 +618,6 @@ class DocumentTreeService extends Manager {
         accessControl: this.connection,
         nodeIds: [id],
       });
-      await this.documentCache.clearAll();
       return node;
     }
   }
@@ -685,7 +651,6 @@ class DocumentTreeService extends Manager {
         },
         { new: true }
       );
-      await this.documentCache.clearAll();
       return this.getNode({ _id: id });
     }
   }
@@ -712,7 +677,6 @@ class DocumentTreeService extends Manager {
         },
         { new: true }
       );
-      await this.documentCache.clearAll();
       return this.getNode({ _id: id });
     }
   }
@@ -761,7 +725,6 @@ class DocumentTreeService extends Manager {
       //   accessControl: this.connection,
       //   document: revisedNode,
       // });
-      await this.documentCache.clearAll();
       return revisedNode;
     }
   }
@@ -809,7 +772,6 @@ class DocumentTreeService extends Manager {
       //   sender: data.sender,
       // });
     }
-    await this.documentCache.clearAll();
     return node;
   }
   async countNodes(query) {

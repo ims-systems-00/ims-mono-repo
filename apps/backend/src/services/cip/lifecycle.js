@@ -43,6 +43,7 @@ class Lifecycle extends CipCRUDOperations {
     //   accessControl: this.connection,
     //   cip,
     // });
+    await this.cipCache.clearAll();
     return cip;
   }
 }

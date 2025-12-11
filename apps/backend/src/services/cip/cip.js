@@ -10,6 +10,7 @@ const { basicRoleScopedFilter } = require("../../queries");
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
 const { mainChannel } = require("../../eventsV2/topic");
 const { SERVER_EVENTS_BUS } = require("../../eventsV2/topicsName");
+const { logger } = require("@ims-systems-00/ims-core/lib/logger");
 
 class CipCRUDOperations extends Manager {
   constructor(connection) {
@@ -70,6 +71,7 @@ class CipCRUDOperations extends Manager {
     //   accessControl: this.connection,
     //   cip,
     // });
+    await this.cipCache.clearAll();
     return cip;
   }
   async updateCip(id, data) {
@@ -130,15 +132,38 @@ class CipCRUDOperations extends Manager {
       //   attachments: data.attachments,
       // });
     }
+    await this.cipCache.clearAll();
     return cip;
   }
   async listCips(query, options) {
+    const cacheKey = this.cipCache.createCacheKey({
+      userId: this.connection?.user?._id,
+      query,
+      options,
+    });
+    const cachedData = await this.cipCache.get(cacheKey);
+    if (cachedData) {
+      logger.info("cache hit for listCips", {cacheKey});
+      return cachedData;
+    }
     let pagination = await this.Cips.paginate(query, options);
     let cips = pagination.docs;
     cips = await Promise.all(cips.map((cip) => this.Cips.populateCip(cip)));
+    await this.cipCache.set(cacheKey, { cips, pagination });
+    logger.info("cache set for listCips", {cacheKey});
     return { cips, pagination: this.imsPaginationFormated(pagination) };
   }
   async listCipsByOrg(query, options) {
+    const cacheKey = this.cipCache.createCacheKey({
+      orgId: this.connection?.user?.organizationId,
+      query,
+      options,
+    });
+    const cachedData = await this.cipCache.get(cacheKey);
+    if (cachedData) {
+      logger.info("cache hit for listCipsByOrg", {cacheKey});
+      return cachedData;
+    }
     let pagination = await this.Cips.paginateByOrg(
       this.connection?.user?.organizationId,
       { ...query, ...basicRoleScopedFilter(this.connection) },
@@ -146,7 +171,10 @@ class CipCRUDOperations extends Manager {
     );
     let cips = pagination.docs;
     cips = await Promise.all(cips.map((cip) => this.Cips.populateCip(cip)));
-    return { cips, pagination: this.imsPaginationFormated(pagination) };
+    const result = { cips, pagination: this.imsPaginationFormated(pagination) };
+    await this.cipCache.set(cacheKey, result);
+    logger.info("cache set for listCipsByOrg", {cacheKey});
+    return result;
   }
   async getCip(query) {
     let cip = await this.Cips.findOne(query);
@@ -161,6 +189,7 @@ class CipCRUDOperations extends Manager {
   async deleteCip(id) {
     let cip = await this.getCip({ _id: id });
     await this.Cips.deleteOne({ _id: id });
+    await this.cipCache.clearAll();
     return cip;
   }
   async deleteAttachment(id, data) {
@@ -172,6 +201,7 @@ class CipCRUDOperations extends Manager {
       },
       { new: true }
     );
+    await this.cipCache.clearAll();
     return this.Cips.populateCip(cip);
   }
   async checkoutStatusUpdate(id, status) {
@@ -186,6 +216,7 @@ class CipCRUDOperations extends Manager {
     //     accessControl: this.connection,
     //     cip: prevCip,
     //   });
+    await this.cipCache.clearAll();
     return prevCip;
   }
 }

@@ -49,20 +49,9 @@ class DocumentRepositoryService extends Manager {
       users: repository.sharedWith,
     });
     // this.trigger.sendNotification("newRepositoryOwnerEvent", repository);
-    await this.documentCache.clearAll();
     return repository;
   }
   async getRepositories(query, options) {
-    const cacheKey = this.documentCache.createCacheKey({
-      userId: this.connection?.user?._id,
-      query,
-      options,
-    });
-    const cachedData = await this.documentCache.get(cacheKey);
-    if (cachedData) {
-      logger.info("Cache hit for getRepositories");
-      return cachedData;
-    }
     let repositories = [];
     const pagination = await this.DocumentRepositories.paginate(query, options);
     repositories = pagination.docs;
@@ -71,25 +60,12 @@ class DocumentRepositoryService extends Manager {
         this.DocumentRepositories.populateRepository(repository)
       )
     );
-    const result = {
+    return {
       repositories,
       pagination: this.imsPaginationFormated(pagination),
     };
-    await this.documentCache.set(cacheKey, result);
-    logger.info("Cache set for getRepositories");
-    return result;
   }
   async getRepositoriesByOrg(query, options) {
-    const cacheKey = this.documentCache.createCacheKey({
-      orgId: this.connection?.user?.organizationId,
-      query,
-      options,
-    });
-    const cachedData = await this.documentCache.get(cacheKey);
-    if (cachedData) {
-      logger.info("Cache hit for getRepositoriesByOrg");
-      return cachedData;
-    }
     let repositories = [];
     const pagination = await this.DocumentRepositories.paginateByOrg(
       this.connection?.user?.organizationId,
@@ -102,13 +78,10 @@ class DocumentRepositoryService extends Manager {
         this.DocumentRepositories.populateRepository(repository)
       )
     );
-    const result = {
+    return {
       repositories,
       pagination: this.imsPaginationFormated(pagination),
     };
-    await this.documentCache.set(cacheKey, result);
-    logger.info("Cache set for getRepositoriesByOrg");
-    return result;
   }
   async updateRepository(id, data) {
     let repository = await this.getRepository({ _id: id });
@@ -185,7 +158,6 @@ class DocumentRepositoryService extends Manager {
       //   "newRepositoryOwnerEvent",
       //   updatedRepository
       // );
-      await this.documentCache.clearAll();
       return updatedRepository;
     }
   }
@@ -214,7 +186,6 @@ class DocumentRepositoryService extends Manager {
       let repository = await this.getRepository({ _id: id });
       if (repository) {
         await this.DocumentRepositories.softDelete({ _id: id });
-        await this.documentCache.clearAll();
         return repository;
       }
     }
@@ -228,7 +199,6 @@ class DocumentRepositoryService extends Manager {
           id,
         });
       }
-      await this.documentCache.clearAll();
       return repository;
     }
   }
@@ -236,7 +206,6 @@ class DocumentRepositoryService extends Manager {
     let repository = await this.getRepository({ _id: id });
     if (repository) {
       await this.DocumentRepositories.restore({ _id: id });
-      await this.documentCache.clearAll();
       return repository;
     }
   }

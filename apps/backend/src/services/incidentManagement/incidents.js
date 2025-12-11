@@ -14,6 +14,7 @@ const {
   IMS_POLICIES,
   ROLES,
 } = require("@ims-systems-00/ims-core/lib/constants");
+const { logger } = require("@ims-systems-00/ims-core/lib/logger");
 const membershipPopulation = [
   {
     path: "invitedUserId",
@@ -77,6 +78,7 @@ class IncidentCRUDOperations extends Manager {
     //   accessControl: this.connection,
     //   incident,
     // });
+    await this.incidentCache.clearAll();
     return incident;
   }
 
@@ -171,6 +173,7 @@ class IncidentCRUDOperations extends Manager {
       }
 
       this.Incidents.updateCalenderEvent(incident);
+      await this.incidentCache.clearAll();
       return incident;
     } catch (error) {
       console.error("Error updating incident:", error);
@@ -179,14 +182,39 @@ class IncidentCRUDOperations extends Manager {
   }
 
   async listIncidents(query, options) {
+    const cacheKey = this.incidentCache.createCacheKey({
+      userId: this.connection?.user?._id,
+      query,
+      options,
+    });
+    const cachedData = await this.incidentCache.get(cacheKey);
+    if (cachedData) {
+      logger.info("cache hit for listIncidentsByOrg", {cacheKey});
+      return cachedData;
+    }
     let pagination = await this.Incidents.paginate(query, options);
     let incidents = pagination.docs;
     incidents = await Promise.all(
       incidents.map((incident) => this.Incidents.populateIncident(incident))
     );
-    return { incidents, pagination: this.imsPaginationFormated(pagination) };
+    const result = { incidents, pagination: this.imsPaginationFormated(pagination) };
+    
+    await this.incidentCache.set(cacheKey, result);
+    logger.info("cache set for listIncidentsByOrg", {cacheKey});
+    return result;
   }
   async listIncidentsByOrg(query, options) {
+    const cacheKey = this.incidentCache.createCacheKey({
+      orgId: this.connection?.user?.organizationId,
+      query,
+      options,
+    });
+    const cachedData = await this.incidentCache.get(cacheKey);
+    if (cachedData) {
+      logger.info("cache hit for listIncidentsByOrg", {cacheKey});
+      return cachedData;
+    }
+
     let pagination = await this.Incidents.paginateByOrg(
       this.connection?.user?.organizationId,
       { ...query, ...basicRoleScopedFilter(this.connection) },
@@ -196,7 +224,10 @@ class IncidentCRUDOperations extends Manager {
     incidents = await Promise.all(
       incidents.map((incident) => this.Incidents.populateIncident(incident))
     );
-    return { incidents, pagination: this.imsPaginationFormated(pagination) };
+    const result = { incidents, pagination: this.imsPaginationFormated(pagination) };
+    await this.incidentCache.set(cacheKey, result);
+    logger.info("cache set for listIncidentsByOrg", {cacheKey});
+    return result;
   }
   async getIncident(query) {
     let incident = await this.Incidents.findOneByOrg(
@@ -214,6 +245,7 @@ class IncidentCRUDOperations extends Manager {
   async deleteIncident(id) {
     let incident = await this.getIncident({ _id: id });
     await this.Incidents.deleteOne({ _id: id });
+    await this.incidentCache.clearAll();
     return incident;
   }
   async deleteAttachment(id, data) {
@@ -225,6 +257,7 @@ class IncidentCRUDOperations extends Manager {
       },
       { new: true }
     );
+    await this.incidentCache.clearAll();
     return this.Incidents.populateIncident(incident);
   }
 }

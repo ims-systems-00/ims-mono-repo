@@ -50,7 +50,7 @@ class Lifecycle extends TaskCRUDOperations {
       //   task,
       // });
     }
-
+    await this.taskCache.clearAll();
     return task;
   }
 
@@ -128,6 +128,7 @@ class Lifecycle extends TaskCRUDOperations {
       //   task,
       // });
     }
+    await this.taskCache.clearAll();
     return task;
   }
 }

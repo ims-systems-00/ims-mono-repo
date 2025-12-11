@@ -3,6 +3,7 @@ const { trimQuery } = require("../validations/utils");
 const { IamPolicy } = require("../services/iamPolicy");
 const cipService = require("../services/cip");
 const { StatusCodes } = require("http-status-codes");
+const { logger } = require("@ims-systems-00/ims-core/lib/logger");
 // route '/:organizationId/:group
 exports.createCip = async (req, res, next) => {
   let cipCrudOps = new cipService.CipCRUDOperations(req.accessControl);
@@ -33,6 +34,7 @@ exports.getCips = async (req, res, next) => {
     // let iamPolicy = new IamPolicy(req.accessControl);
     // if (!iamPolicy.validateGlobalAccess(groupPolicy))
     //   query = { ...query, group: session.current.group };
+    logger.info("querystring", { query, options});
     const results = await cipCrudOps.listCipsByOrg(query, options);
     res.status(200).json({
       message: "OFIs retrived.",
