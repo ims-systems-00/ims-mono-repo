@@ -1,7 +1,7 @@
 import logo from "@/assets/img/ims-systems-full-logo-white.png";
 import Footer from "@/components/Footer/Footer";
 import AdminNavbar from "@/components/Navbars/Admin/AdminNavbar";
-import ProtectedRoute from "@/components/Protected/ProtectedRout";
+import SystemAdminProtectedRoute from "@/components/Protected/SystemAdminProtectedRoute";
 import { TourProvider } from "@/components/Tour";
 import { OmniplexJourneyProvider } from "@/components/omniplexGuide/index";
 import AlertContextProvider from "@/contexts/AlertContext";
@@ -81,12 +81,13 @@ const SystemAdmin = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
+      if (routes)
+        if (prop.collapse) {
+          return getRoutes(prop.views);
+        }
       if (prop.layout === "/systemadmin") {
         return (
-          <ProtectedRoute
+          <SystemAdminProtectedRoute
             exact
             path={prop.layout + prop.path}
             component={prop.component}

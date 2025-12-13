@@ -56,8 +56,6 @@ const OrganisationForm = ({
         countryPhonecode: org.countryPhonecode || "",
         logometadata: org.logometadata || null,
 
-        contactEmail: org.contactEmail || "",
-
         companyNumber: org.companyNumber || "",
         typeOfBusiness: org.typeOfBusiness || "",
 
@@ -185,18 +183,6 @@ const OrganisationForm = ({
       {isUpdateMode && (
         <>
           <div className="my-3 font-weight-bold">Primary Contact Person</div>
-          <Row>
-            <Col md={drawerView ? "12" : "4"} xs="12">
-              <ImsInputText
-                label="Personal Email"
-                name="contactEmail"
-                value={data.contactEmail}
-                onChange={handleChange}
-                error={errors.contactEmail}
-                isHorizontal={false}
-              />
-            </Col>
-          </Row>
 
           <div className="my-3 font-weight-bold">Business Details</div>
           <Row>
@@ -423,7 +409,7 @@ const OrganisationForm = ({
       <ImsButtonGroup>
         <Button
           onClick={(e) => {
-            handleSubmit(e, onSubmit(dataModel.data));
+            handleSubmit(e, () => onSubmit(dataModel.data), false);
           }}
           disabled={validate() ? true : isBusy}
           className="btn-fill"

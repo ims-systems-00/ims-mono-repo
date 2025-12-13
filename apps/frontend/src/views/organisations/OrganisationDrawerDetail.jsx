@@ -2,13 +2,13 @@ import React from "react";
 import Loading from "@/components/Loader/Loading";
 import NavigationTabs from "@/components/NavigationTabs";
 import DetailsDrawerHeader from "@/views/shared/DetailComponents/DetailsDrawerHeader";
-import DetailsWrapper from "@/views/shared/DetailComponents/DetailsWrapper";
 import { Attachments } from "@/views/shared/Attachments/Index";
 import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   UncontrolledDropdown,
+  Table, // Added Table import
 } from "@ims-systems-00/ims-ui-kit";
 
 import USER_ACTIONS from "./actions";
@@ -54,11 +54,7 @@ const OrganisationDrawerDetail = ({ organisation }) => {
   };
 
   if (!organisation) return <Loading />;
-  console.log("ORGANISATION IMPORTANT NAME: ", organisation.name);
-  console.log("ORGANISATION IMPORTANT INDUSTRY: ", organisation.industry);
-  console.log("ORGANISATION IMPORTANT NAME: ", organisation.sizeOfOrg);
-  console.log("ORGANISATION IMPORTANT NAME: ", organisation.officeEmail);
-  console.log("ORGANISATION IMPORTANT NAME: ", organisation.contactNumber);
+
   return (
     <React.Fragment>
       <DetailsDrawerHeader data={organisation} />
@@ -73,41 +69,45 @@ const OrganisationDrawerDetail = ({ organisation }) => {
               icon: <i className="ims-icons-20 icon-icon-list-24 me-1"></i>,
               component: (
                 <div className="px-2 pt-3">
+                  {/* Overview Section */}
                   <div className="border rounded-3 p-3 mb-3">
                     <OrganisationOverview organisation={organisation} />
                   </div>
 
-                  {}
+                  {/* Contact & Address Section - Converted to Table */}
                   <div className="border rounded-3 p-3 mb-3">
-                    <DetailsWrapper
-                      label={"Office Email:"}
-                      iconClass={"tim-icons icon-email-85"}
-                      value={organisation.officeEmail}
-                      labelClass={"pr-2"}
-                    />
-                    <DetailsWrapper
-                      label={"Contact Number:"}
-                      iconClass={"tim-icons icon-mobile"}
-                      value={organisation.contactNumber}
-                      labelClass={"pr-2"}
-                    />
-                    <DetailsWrapper
-                      label={"Address:"}
-                      iconClass={"tim-icons icon-square-pin"}
-                      value={getAddressString(organisation)}
-                      labelClass={"pr-2"}
-                    />
+                    <p className="mb-3 px-1 fs-6">Contact Information</p>
+                    <Table borderless responsive className="table-sm mb-0">
+                      <tbody>
+                        <tr>
+                          <td className="text-dark" style={{ width: "35%" }}>
+                            Office Email
+                          </td>
+                          <td>
+                            <p>{organisation.officeEmail || "N/A"}</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="text-dark">Contact Number</td>
+                          <td>{organisation.contactNumber || "N/A"}</td>
+                        </tr>
+                        <tr>
+                          <td className="text-dark">Address</td>
+                          <td>{getAddressString(organisation) || "N/A"}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
                   </div>
 
-                  {}
+                  {/* Attachments Section */}
                   {organisation.attachments?.length > 0 && (
                     <div className="border rounded-3 p-3">
-                      <DetailsWrapper
-                        label={"Attachments:"}
-                        iconClass={"tim-icons icon-attach-87"}
-                        value={null}
-                        labelClass={"pr-2"}
-                      />
+                      <h6
+                        className="mb-3 px-1 text-muted text-uppercase fs-6"
+                        style={{ letterSpacing: "0.5px" }}
+                      >
+                        Attachments
+                      </h6>
                       <Attachments s3Information={organisation.attachments} />
                     </div>
                   )}
@@ -138,7 +138,7 @@ const OrganisationDrawerDetail = ({ organisation }) => {
                         return (
                           <div
                             key={u._id}
-                            className="d-flex align-items-center p-3 border rounded-3  user-card-hover"
+                            className="d-flex align-items-center p-3 border rounded-3 user-card-hover"
                             style={{
                               transition: "all 0.2s ease",
                               border: "1px solid #f0f0f0",
@@ -158,15 +158,12 @@ const OrganisationDrawerDetail = ({ organisation }) => {
 
                             <div className="flex-grow-1">
                               <p
-                                className="mb-0 text-dark font-weight-bold fs-5 "
+                                className="mb-0 text-dark font-weight-bold"
                                 style={{ fontSize: "0.95rem" }}
                               >
                                 {u.name}
                               </p>
-                              <small
-                                className=""
-                                style={{ fontSize: "0.85rem" }}
-                              >
+                              <small style={{ fontSize: "0.85rem" }}>
                                 {u.email}
                               </small>
                             </div>
@@ -211,18 +208,20 @@ const OrganisationDrawerDetail = ({ organisation }) => {
                     <Loading />
                   ) : incidentResolution ? (
                     <div className="border rounded-3 p-3">
-                      <DetailsWrapper
-                        label="Current Resolution Policy:"
-                        iconClass={"tim-icons icon-paper"}
-                        value={incidentResolution.policy || "N/A"}
-                        labelClass={"pr-2"}
-                      />
-                      <DetailsWrapper
-                        label="Default Response Time:"
-                        iconClass={"tim-icons icon-time-alarm"}
-                        value={incidentResolution.responseTime || "N/A"}
-                        labelClass={"pr-2"}
-                      />
+                      <Table borderless responsive className="table-sm mb-0">
+                        <tbody>
+                          <tr>
+                            <td className="text-dark" style={{ width: "40%" }}>
+                              Resolution Policy
+                            </td>
+                            <td>{incidentResolution.policy || "N/A"}</td>
+                          </tr>
+                          <tr>
+                            <td className="text-dark">Default Response Time</td>
+                            <td>{incidentResolution.responseTime || "N/A"}</td>
+                          </tr>
+                        </tbody>
+                      </Table>
                     </div>
                   ) : (
                     <p className="text-secondary text-center mt-3">
@@ -243,18 +242,20 @@ const OrganisationDrawerDetail = ({ organisation }) => {
                     <Loading />
                   ) : systemDates ? (
                     <div className="border rounded-3 p-3">
-                      <DetailsWrapper
-                        label="Start Date:"
-                        iconClass={"tim-icons icon-calendar-60"}
-                        value={systemDates.startDate || "Not set"}
-                        labelClass={"pr-2"}
-                      />
-                      <DetailsWrapper
-                        label="End Date:"
-                        iconClass={"tim-icons icon-calendar-60"}
-                        value={systemDates.endDate || "Not set"}
-                        labelClass={"pr-2"}
-                      />
+                      <Table borderless responsive className="table-sm mb-0">
+                        <tbody>
+                          <tr>
+                            <td className="text-dark" style={{ width: "40%" }}>
+                              Start Date
+                            </td>
+                            <td>{systemDates.startDate || "Not set"}</td>
+                          </tr>
+                          <tr>
+                            <td className="text-dark">End Date</td>
+                            <td>{systemDates.endDate || "Not set"}</td>
+                          </tr>
+                        </tbody>
+                      </Table>
                     </div>
                   ) : (
                     <p className="text-secondary text-center mt-3">

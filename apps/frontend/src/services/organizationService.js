@@ -19,13 +19,13 @@ export function createOrganisation(org) {
     contactNumber: org.contactNumber,
     vatNumber: org.vatNumber,
     sizeOfOrg: org.sizeOfOrg,
-    industry: org.industry,
+    industry: org.industry?.value,
     addressCity: org.addressCity,
     addressStreet: org.addressStreet,
     addressBuilding: org.addressBuilding,
     addressPostCode: org.addressPostCode,
     addressStateProvince: org.addressStateProvince,
-    countryName: org.countryName,
+    countryName: org.countryName?.value,
     countryAbbr: org.countryAbbr,
     countryCurrency: org.countryCurrency,
     countryPhonecode: 44,
@@ -63,6 +63,8 @@ export function getBillingSession(id) {
   return http.get(`${apiEndPoint}/${id}/billing-session`);
 }
 export function updateOrganisation(orgId, org) {
+  console.log("ORG COUNTRY", org);
+
   return http.put(`${apiEndPoint}/${orgId}`, {
     name: org.name,
     addressCity: org.addressCity,

@@ -2,9 +2,6 @@ import React from "react";
 import { Table } from "@ims-systems-00/ims-ui-kit";
 
 const OrganisationOverview = ({ organisation }) => {
-  if (organisation) {
-    console.log("MY ORG:", organisation);
-  }
   return (
     <Table borderless responsive className="table-sm">
       {organisation && (

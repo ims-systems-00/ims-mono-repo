@@ -165,11 +165,7 @@ const OrganisationTable = () => {
                 addressBuilding: data.addressBuilding,
                 addressPostCode: data.addressPostCode,
                 addressStateProvince: data.addressStateProvince,
-                countryName:
-                  data.countryName?.value ??
-                  (typeof data.countryName === "string"
-                    ? data.countryName
-                    : ""),
+                countryName: data.countryName,
                 countryAbbr: data.countryAbbr,
                 countryCurrency: data.countryCurrency,
                 countryPhonecode: Number(data.countryPhonecode),
@@ -177,7 +173,7 @@ const OrganisationTable = () => {
                 vatNumber: data.vatNumber,
                 contactNumber: data.contactNumber || "",
                 sizeOfOrg: Number(data.sizeOfOrg),
-                industry: data.industry?.value,
+                industry: data.industry,
                 referralSource: data.referralSource,
               };
               await createOrg(payload);
@@ -200,7 +196,7 @@ const OrganisationTable = () => {
                   addressBuilding: data.addressBuilding,
                   addressPostCode: data.addressPostCode,
                   addressStateProvince: data.addressStateProvince,
-                  countryName:
+                  country:
                     data.countryName?.value ??
                     (typeof data.countryName === "string"
                       ? data.countryName
@@ -212,7 +208,6 @@ const OrganisationTable = () => {
                   vatNumber: data.vatNumber,
                   contactName: data.contactName,
                   contactPosition: data.contactPosition,
-                  contactEmail: data.contactEmail,
 
                   companyNumber: Number(data.companyNumber),
                   typeOfBusiness: data.typeOfBusiness,

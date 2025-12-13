@@ -118,6 +118,9 @@ const useAccess = () => {
       tokenPair?.accessTokenData?.user.role === ROLES.HEAD_OF_SERVICE
     );
   }
+  function authSystemAdminAccess() {
+    return tokenPair?.accessTokenData?.user.email.endsWith("imssystems.tech");
+  }
   function authInternalUser() {
     return (
       tokenPair?.accessTokenData?.user.role === ROLES.SUPER_ADMIN ||
@@ -181,6 +184,7 @@ const useAccess = () => {
     authCarboCalcLicense,
     authGo2eroLicense,
     authProjectiMSLicense,
+    authSystemAdminAccess,
   };
 };
 export default useAccess;
