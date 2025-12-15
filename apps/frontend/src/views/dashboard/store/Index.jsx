@@ -5,26 +5,23 @@ import OrganizationalDashboard from "./orgnaisationDashboard/OrganizationalDashb
 import BusinessFunctionDashBoard from "./businessFunctionDashboard/BusinessFunctionDashBoard";
 import { DashboardContextProvider } from "./store";
 import OldOrganisationalDashboard from "./orgnaisationDashboard/OldOrgDashboard";
-import { DrawerContextProvider } from "@ims-systems-00/ims-ui-kit";
 
 const Dashboard = () => {
   let { authUser, authGlobalAccess } = useAccess();
   return (
     <DashboardContextProvider>
-      <DrawerContextProvider>
-        {authUser({
-          service: IMS_SERVICES.DASHBOARD,
-          action: ACTIONS.READ,
-          effect: EFFECTS.ALLOW,
-        }) && authGlobalAccess() ? (
-          <React.Fragment>
-            <OrganizationalDashboard />
-            {/* <OldOrganisationalDashboard /> */}
-          </React.Fragment>
-        ) : (
-          <BusinessFunctionDashBoard />
-        )}
-      </DrawerContextProvider>
+      {authUser({
+        service: IMS_SERVICES.DASHBOARD,
+        action: ACTIONS.READ,
+        effect: EFFECTS.ALLOW,
+      }) && authGlobalAccess() ? (
+        <React.Fragment>
+          <OrganizationalDashboard />
+          {/* <OldOrganisationalDashboard /> */}
+        </React.Fragment>
+      ) : (
+        <BusinessFunctionDashBoard />
+      )}
     </DashboardContextProvider>
   );
 };

@@ -9,7 +9,7 @@ import CreateGroup from "./GroupForm";
 import GroupTable from "./GroupTable";
 import LOADERS from "./LoadingActions";
 import Box from "@/components/Box/Index";
-import { DrawerContextProvider, DrawerRight } from "@ims-systems-00/ims-ui-kit";
+import { DrawerRight } from "@ims-systems-00/ims-ui-kit";
 
 const Groups = (props) => {
   let [groups, setGroups] = useState([]);
@@ -22,11 +22,9 @@ const Groups = (props) => {
   ]);
   let { authGlobalAccess } = useAccess();
 
-  let { query, getQuery, updatePagination, ...queryHandlers } =
-    useQuery({
-      filter: getFilters().find((item) => item.default),
-    });
-    
+  let { query, getQuery, updatePagination, ...queryHandlers } = useQuery({
+    filter: getFilters().find((item) => item.default),
+  });
 
   const addToTable = (group) =>
     setGroups((prevGroups) => [group, ...prevGroups]);
@@ -59,33 +57,31 @@ const Groups = (props) => {
   }
 
   return (
-    <DrawerContextProvider>
-      <div className="content">
-        <Box>
-          <GroupTable
-            dataTable={groups}
-            processing={processing}
-            setGroups={setGroups}
-            dispatch={dispatch}
-            fetchData={fetchData}
-            filters={getFilters()}
-            queryHandlers={queryHandlers}
-          />
-        </Box>
+    <div className="content">
+      <Box>
+        <GroupTable
+          dataTable={groups}
+          processing={processing}
+          setGroups={setGroups}
+          dispatch={dispatch}
+          fetchData={fetchData}
+          filters={getFilters()}
+          queryHandlers={queryHandlers}
+        />
+      </Box>
 
-        <DrawerRight drawerId="create-group-drawer" size={50}>
-          <div className="p-3">
-            <h4 className="mb-4">Create a function</h4>
-            <CreateGroup
-              {...props}
-              dispatch={dispatch}
-              processing={processing}
-              addToTable={addToTable}
-            />
-          </div>
-        </DrawerRight>
-      </div>
-    </DrawerContextProvider>
+      <DrawerRight drawerId="create-group-drawer" size={50}>
+        <div className="p-3">
+          <h4 className="mb-4">Create a function</h4>
+          <CreateGroup
+            {...props}
+            dispatch={dispatch}
+            processing={processing}
+            addToTable={addToTable}
+          />
+        </div>
+      </DrawerRight>
+    </div>
   );
 };
 

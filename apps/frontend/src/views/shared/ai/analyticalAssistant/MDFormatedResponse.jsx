@@ -1,5 +1,5 @@
 import useClipboard from "@/hooks/useClipboard";
-import { Button, DrawerContextProvider } from "@ims-systems-00/ims-ui-kit";
+import { Button } from "@ims-systems-00/ims-ui-kit";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
