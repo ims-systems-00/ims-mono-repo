@@ -5,7 +5,7 @@ import PremisesForm from "./PremisesForm";
 import PremisesTable from "./PremisesTable";
 import { imsLogger } from "@/services/loggerService";
 import Box from "@/components/Box/Index";
-import { DrawerContextProvider, DrawerRight } from "@ims-systems-00/ims-ui-kit";
+import { DrawerRight } from "@ims-systems-00/ims-ui-kit";
 import NotificationContext from "@/contexts/notificationContext";
 import useAlerts from "@/hooks/useAlerts";
 import { deletePremise } from "@/services/iamGroupPremisesServices";
@@ -66,34 +66,32 @@ const Premises = (props) => {
   }, [query]);
 
   return (
-    <DrawerContextProvider>
-      <div className="content">
-        <Box>
-          <PremisesTable
-            dataTable={premises}
-            processing={processing}
-            setProcessing={setProcessing}
-            setPremises={setPremises}
-            pathname={props.match.url}
-            queryHandlers={queryHandlers}
-            updateDataTable={updateDataTable}
-            handleDelete={handleDelete}
-          />
-        </Box>
+    <div className="content">
+      <Box>
+        <PremisesTable
+          dataTable={premises}
+          processing={processing}
+          setProcessing={setProcessing}
+          setPremises={setPremises}
+          pathname={props.match.url}
+          queryHandlers={queryHandlers}
+          updateDataTable={updateDataTable}
+          handleDelete={handleDelete}
+        />
+      </Box>
 
-        <DrawerRight drawerId="create-premise-drawer" size={50}>
-          <div className="p-3">
-            <h4 className="mb-4">Create a premise</h4>
-            <PremisesForm
-              {...props}
-              setProcessing={setProcessing}
-              processing={processing}
-              addToTable={addToTable}
-            />
-          </div>
-        </DrawerRight>
-      </div>
-    </DrawerContextProvider>
+      <DrawerRight drawerId="create-premise-drawer" size={50}>
+        <div className="p-3">
+          <h4 className="mb-4">Create a premise</h4>
+          <PremisesForm
+            {...props}
+            setProcessing={setProcessing}
+            processing={processing}
+            addToTable={addToTable}
+          />
+        </div>
+      </DrawerRight>
+    </div>
   );
 };
 

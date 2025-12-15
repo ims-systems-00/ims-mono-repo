@@ -3,7 +3,6 @@ import {
   Button,
   ButtonGroup,
   Collapse,
-  DrawerContextProvider,
   Nav,
   NavItem,
   Navbar,
@@ -134,14 +133,12 @@ const AdminNavbar = (props) => {
                 <i className="fa-solid fa-circle-play" />
               </Link>
             </NavItem> */}
-            <DrawerContextProvider>
-              <NavItem>
-                <Notifications />
-              </NavItem>
-              <NavItem>
-                <KBEmbeded />
-              </NavItem>
-            </DrawerContextProvider>
+            <NavItem>
+              <Notifications />
+            </NavItem>
+            <NavItem>
+              <KBEmbeded />
+            </NavItem>
             {membershipData?.organization?.isCustomer && (
               <NavItem>
                 <ButtonGroup className="mx-1">
