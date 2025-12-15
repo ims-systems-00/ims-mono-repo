@@ -11,11 +11,25 @@ const CipFormContainer = () => {
       <ContinualImprovementPlanForm
         visitingCip={visitingCip}
         onSubmit={async (data) => {
-          await updateCip(data);
+          const mutationData = {
+            owner: data.owner.value,
+            title: data.title,
+            cost: data.cost,
+            attachments: data.attachments,
+            opportunityForImprovement: data.opportunityForImprovement,
+          };
+          await updateCip(mutationData);
           viewContextData.switchView && viewContextData.switchView();
         }}
         onImplement={async (data) => {
-          await implementCip(data);
+          const mutationData = {
+            owner: data.owner.value,
+            title: data.title,
+            cost: data.cost,
+            attachments: data.attachments,
+            opportunityForImprovement: data.opportunityForImprovement,
+          };
+          await implementCip(mutationData);
           viewContextData.switchView && viewContextData.switchView();
         }}
       />

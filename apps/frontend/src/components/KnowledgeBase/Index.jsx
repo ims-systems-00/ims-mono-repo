@@ -1,6 +1,5 @@
 import {
   Button,
-  DrawerContextProvider,
   DrawerOpener,
   DrawerRight,
   useDrawer,
@@ -33,7 +32,7 @@ const KB = () => {
 };
 const KBEmbeded = ({}) => {
   return (
-    <DrawerContextProvider>
+    <>
       <DrawerOpener drawerId="kb-drawer">
         <Button color="primary" className="border-0 btn-icon" outline size="sm">
           <p className="font-size-subtitle-1">
@@ -44,7 +43,7 @@ const KBEmbeded = ({}) => {
       <DrawerRight drawerId="kb-drawer" noLayout size={50}>
         <KB />
       </DrawerRight>
-    </DrawerContextProvider>
+    </>
   );
 };
 

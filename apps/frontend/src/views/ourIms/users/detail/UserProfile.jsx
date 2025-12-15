@@ -75,7 +75,7 @@ const UserProfile = (props) => {
     return tokenPair?.accessTokenData?.user?._id === user?._id;
   }
   return (
-    <DrawerContextProvider>
+    <>
       <div className="content">
         {processing[USER_ACTIONS.LOAD_USER].status ? (
           <Loading />
@@ -411,7 +411,7 @@ const UserProfile = (props) => {
         name="profile"
         setFile={setFile}
       />
-    </DrawerContextProvider>
+    </>
   );
 };
 

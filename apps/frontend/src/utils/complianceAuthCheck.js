@@ -52,6 +52,11 @@ export default function authCompliance() {
       action: ACTIONS.READ,
       effect: EFFECTS.ALLOW,
     },
+    {
+      service: IMS_SERVICES.BUILDING_SAFETY_ACT,
+      action: ACTIONS.READ,
+      effect: EFFECTS.ALLOW,
+    },
   ];
   return compliances;
 }

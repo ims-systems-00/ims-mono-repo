@@ -66,9 +66,7 @@ const CipForm = ({
 
   let { users, lazyLoadUsers } = useUsers();
   const { groups } = useContext(SuperGlobalContext);
-  const viewContextData = useContext(ViewContext);
 
-  let history = useHistory();
   const {
     dataModel,
     isBusy,

@@ -8,6 +8,7 @@ const { APIError } = require("../../helpers/errors/apiError");
 const { StatusCodes, ReasonPhrases } = require("http-status-codes");
 const { mainChannel } = require("../../eventsV2/topic");
 const { SERVER_EVENTS_BUS } = require("../../eventsV2/topicsName");
+const { logger } = require("@ims-systems-00/ims-core/lib/logger");
 class TaskCRUDOperations extends Manager {
   constructor(connection) {
     super(connection);
@@ -99,6 +100,7 @@ class TaskCRUDOperations extends Manager {
     // });
 
     this.Tasks.createCalenderEvent(task);
+    await this.taskCache.clearAll();
     return task;
   }
 
@@ -211,19 +213,43 @@ class TaskCRUDOperations extends Manager {
     });
 
     this.Tasks.updateCalenderEvent(task);
+    await this.taskCache.clearAll();
     return task;
   }
 
   async listTasks(query, options) {
+    const cacheKey = this.taskCache.createCacheKey({
+      userId: this.connection?.user?._id,
+      query,
+      options,
+    });
+    const cachedData = await this.taskCache.get(cacheKey);
+    if (cachedData) {
+      logger.info("Cache hit for listTasks");
+      return cachedData;
+    }
     let pagination = await this.Tasks.paginate(query, options);
     let tasks = pagination.docs;
     tasks = await Promise.all(
       tasks.map((task) => this.Tasks.populateTask(task))
     );
-    return { tasks, pagination: this.imsPaginationFormated(pagination) };
+    const result = { tasks, pagination: this.imsPaginationFormated(pagination) };
+    await this.taskCache.set(cacheKey, result);
+    logger.info("Cache set for listTasks");
+    return result;
   }
 
   async listTasksByOrg(query, options) {
+    const cacheKey = this.taskCache.createCacheKey({
+      orgId: this.connection?.user?.organizationId,
+      query,
+      options
+    })
+    const cachedData = await this.taskCache.get(cacheKey);
+    if (cachedData){
+      logger.info("Cache hit for listTasksByOrg");
+      return cachedData;
+    }
     let pagination = await this.Tasks.paginateByOrg(
       this.connection?.user?.organizationId,
       query,
@@ -233,12 +259,16 @@ class TaskCRUDOperations extends Manager {
     tasks = await Promise.all(
       tasks.map((task) => this.Tasks.populateTask(task))
     );
-    return { tasks, pagination: this.imsPaginationFormated(pagination) };
+    const result = { tasks, pagination: this.imsPaginationFormated(pagination) };
+    await this.taskCache.set(cacheKey, result);
+    logger.info("Cache set for listTasksByOrg");
+    return result;
   }
 
   async deleteTask(id) {
     let task = await this.getTask({ _id: id });
     await this.Tasks.deleteOne({ _id: id });
+    await this.taskCache.clearAll();
     return task;
   }
 
@@ -251,6 +281,7 @@ class TaskCRUDOperations extends Manager {
       },
       { new: true }
     );
+    await this.taskCache.clearAll();
     return this.Tasks.populateTask(task);
   }
 }

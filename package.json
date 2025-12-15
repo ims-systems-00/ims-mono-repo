@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently --kill-others \"pnpm --filter @ims/frontend start:development\" \"pnpm --filter @ims/backend start:dev\"",
-    "build": "pnpm --filter @ims/frontend build:production && pnpm --filter @ims/backend start:production"
+    "build": "pnpm --filter @ims/frontend build:production"
   },
   "keywords": [],
   "author": "",

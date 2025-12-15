@@ -61,6 +61,7 @@ class Lifecycle extends IncidentCRUDOperations {
     //   accessControl: this.connection,
     //   incident,
     // });
+    await this.incidentCache.clearAll();
     return incident;
   }
   async escalateIncident(id, data) {
@@ -107,6 +108,7 @@ class Lifecycle extends IncidentCRUDOperations {
     //   accessControl: this.connection,
     //   incident,
     // });
+    await this.incidentCache.clearAll();
     return incident;
   }
 }

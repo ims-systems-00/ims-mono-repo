@@ -9,7 +9,6 @@ const Trigger = require("../../services/triggers");
 const { imsPaginationFormated } = require("../utility");
 const nodeDeleteQueue = require("./queue/nodeDelete.queue");
 const repoDeleteQueue = require("./queue/repoDelete.queue");
-const CacheControl = require("../../cache/cacheControll");
 
 class Manager {
   constructor(connection) {
@@ -19,11 +18,6 @@ class Manager {
     this.DocumentSignatures = models.documentsignatures(connection);
     this.ImsPorjects = models.imsProjects(connection);
     this.trigger = new Trigger(connection);
-    this.documentCache = new CacheControl({
-      cacheClient: 'redis',
-      prefix: 'documentTree',
-      expireInSeconds: 600
-    })
     this.imsPaginationFormated = imsPaginationFormated;
     this.addInternalSignaturesQueue = addInternalSignaturesQueue;
     this.addExternalSignaturesQueue = addExternalSignaturesQueue;
