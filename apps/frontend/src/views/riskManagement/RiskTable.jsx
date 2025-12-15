@@ -70,9 +70,9 @@ const ReactTables = ({ ...props }) => {
             row.original.score.total.current <= 10
               ? "text-success"
               : row.original.score.total.current > 10 &&
-                row.original.score.total.current <= 15
-              ? "text-warning"
-              : "text-danger"
+                  row.original.score.total.current <= 15
+                ? "text-warning"
+                : "text-danger"
           }
         >
           {row.original.score.total.current}
@@ -109,7 +109,6 @@ const ReactTables = ({ ...props }) => {
       accessorKey: "owner",
       header: () => <p>Risk Owner</p>,
       cell: ({ row }) => <span>{row?.original?.owner?.name}</span>,
-
     },
     {
       id: "actions",

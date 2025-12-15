@@ -182,8 +182,6 @@ const OrganisationForm = ({
 
       {isUpdateMode && (
         <>
-          <div className="my-3 font-weight-bold">Primary Contact Person</div>
-
           <div className="my-3 font-weight-bold">Business Details</div>
           <Row>
             <Col md={drawerView ? "12" : "6"} xs="12">
@@ -409,7 +407,11 @@ const OrganisationForm = ({
       <ImsButtonGroup>
         <Button
           onClick={(e) => {
-            handleSubmit(e, () => onSubmit(dataModel.data), false);
+            handleSubmit(
+              e,
+              () => onSubmit(dataModel.data),
+              isUpdateMode ? false : true
+            );
           }}
           disabled={validate() ? true : isBusy}
           className="btn-fill"

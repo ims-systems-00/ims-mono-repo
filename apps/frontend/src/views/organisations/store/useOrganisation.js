@@ -50,7 +50,7 @@ export default function useOrganisation(config = {}) {
 
       const { data } = await getOrganizations({ query: queryStr });
       setOrganisations(data.organizations || []);
-
+      OrgQueryTools.updatePagination(data.pagination);
       dispatch({ [USER_ACTIONS.LOAD_ORGANISATIONS]: { status: false } });
     } catch (ex) {
       imsLogger("LOAD_ORGANISATIONS", ex);
@@ -81,6 +81,11 @@ export default function useOrganisation(config = {}) {
       });
     }
   };
+  React.useEffect(() => {
+    (async function () {
+      await fetchOrganisations(OrgQueryTools.getQuery());
+    })();
+  }, [OrgQueryTools.query]);
 
   React.useEffect(() => {
     fetchOrganisation();
