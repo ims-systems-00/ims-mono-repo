@@ -1,0 +1,15 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    container_name: ims-backend
+    env_file: 
+      - apps/backend/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/backend:/usr/src/app/apps/backend
+      - ./packages:/usr/src/app/packages
+      - /usr/src/app/apps/backend/node_modules
+      - /usr/src/app/packages/ims-core/node_modules
