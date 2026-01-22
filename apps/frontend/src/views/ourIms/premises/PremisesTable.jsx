@@ -19,8 +19,6 @@ const PremisesTable = ({
   let { activateView, Modal, isOpen } = useModal({ onUpdate: updateDataTable });
   dataTable = dataTable ? dataTable : defaultdata;
 
- 
-
   const columnsForPrimises = [
     {
       accessorKey: "name",
@@ -68,14 +66,16 @@ const PremisesTable = ({
 
           <div className="col-md-6 text-end">
             <DrawerOpener drawerId="create-premise-drawer">
-              <Button
-                color="primary"
-                size="md"
-                className="shadow-sm--hover ms-3"
-              >
-                <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0" />
-                Create premise
-              </Button>
+              <TourStep stepId="business-premises-button">
+                <Button
+                  color="primary"
+                  size="md"
+                  className="shadow-sm--hover ms-3"
+                >
+                  <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0" />
+                  Create premise
+                </Button>
+              </TourStep>
             </DrawerOpener>
           </div>
         </div>

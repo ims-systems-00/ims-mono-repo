@@ -1,18 +1,18 @@
 import { ACTIONS, EVENTS, STATUS } from "react-joyride";
 import { useHistory } from "react-router-dom";
 import { useDrawer } from "@ims-systems-00/ims-ui-kit";
-import { set } from "lodash";
-export function useBusinessPremisesCourse() {
+
+export function usePeopleCourse() {
   const history = useHistory();
   const { openDrawer, closeDrawer } = useDrawer();
 
   const course = {
-    name: "Business Premises",
-    description: "Learn how to add business premises",
+    name: "Inventory – People",
+    description: "A quick walkthrough to create and manage repositories.",
     steps: [
       {
-        target: `[data-tour-step="our-ims-sidebar"]`,
-        content: "Click on Our iMS and select Business Premises",
+        target: `[data-tour-step="inventory-sidebar"]`,
+        content: "Click on Inventory and select People.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -20,8 +20,8 @@ export function useBusinessPremisesCourse() {
         hideCloseButton: true,
       },
       {
-        target: `[data-tour-step="business-premises-button"]`,
-        content: "Click on “Create premise” to add a new premise",
+        target: `[data-tour-step="create-people-button"]`,
+        content: "Click “add” to add new people.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -29,16 +29,16 @@ export function useBusinessPremisesCourse() {
         hideCloseButton: true,
       },
       {
-        target: `[data-tour-step="business-premises-form"]`,
-        content: "Fill in Building name, address, postal code and cost.",
-        placement: "left",
-        disableBeacon: true,
-        spotlightClicks: true,
-      },
-      {
-        target: `[data-tour-step="business-premises-action-details"]`,
+        target: `[data-tour-step="create-people-form"]`,
         content:
-          "View the details of the added premises by clicking “action - details”",
+          "Fill in the name, role, responsibility, and skill of the new person being added.",
+        placement: "right",
+        disableBeacon: true,
+      },
+      {
+        target: `[data-tour-step="people-row-actions"]`,
+        content:
+          "View the details of the added people by clicking “action - details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -46,8 +46,6 @@ export function useBusinessPremisesCourse() {
     ],
     callback: function (data) {
       const { type, status, index, setCurrentStep, action } = data;
-      console.log("THE JOYRIDE CALLBACK DATA: ", data);
-
       if (type === EVENTS.STEP_AFTER && action !== ACTIONS.PREV) {
         setCurrentStep((prev) => prev + 1);
       }
@@ -55,7 +53,7 @@ export function useBusinessPremisesCourse() {
         setCurrentStep((prev) => prev - 1);
       }
       if (index === 0) {
-        history.push("/admin/businesspremise");
+        history.push("/admin/inventory/people");
       }
       if (
         index === 1 &&
@@ -63,14 +61,14 @@ export function useBusinessPremisesCourse() {
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
-        openDrawer("create-premise-drawer");
+        openDrawer("create-people-asset-form");
         setTimeout(() => {
           setCurrentStep(2);
           data.resumeTour();
         }, 500);
       }
       if (index === 3) {
-        closeDrawer("create-premise-drawer");
+        closeDrawer("create-people-asset-form");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {
         data.pauseTour();

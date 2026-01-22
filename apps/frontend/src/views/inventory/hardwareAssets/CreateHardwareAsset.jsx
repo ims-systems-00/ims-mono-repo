@@ -1,15 +1,17 @@
 import { Button, DrawerOpener } from "@ims-systems-00/ims-ui-kit";
 import React from "react";
-
+import { TourStep } from "../../../components/Tour";
 const CreateHardwareAsset = () => {
   return (
     <React.Fragment>
-      <DrawerOpener drawerId="create-hardware-asset">
-        <Button color="primary" size="md" className="shadow-sm--hover">
-          <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0"></i>
-          {"  "} Add
-        </Button>
-      </DrawerOpener>
+      <TourStep data-tour-step="create-hardware-button">
+        <DrawerOpener drawerId="create-hardware-asset">
+          <Button color="primary" size="md" className="shadow-sm--hover">
+            <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0"></i>
+            {"  "} Add
+          </Button>
+        </DrawerOpener>
+      </TourStep>
     </React.Fragment>
   );
 };

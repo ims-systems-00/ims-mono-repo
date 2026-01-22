@@ -24,6 +24,7 @@ import LOADERS from "./LoadingActions";
 import useError from "@/hooks/error";
 import OrganizationalOverview from "../licenseManagement/OrganizaionalOverview";
 import Loading from "@/components/Loader/Loading";
+import { TourStep } from "../../../components/Tour";
 
 const GroupForm = ({
   group,
@@ -125,110 +126,118 @@ const GroupForm = ({
   function handleCancelClick() {
     viewContextData.switchView && viewContextData.switchView();
   }
-  const { dataModel, handleChange, handleSubmit, validate } =
-    useForm(dataSet, schema);
+  const { dataModel, handleChange, handleSubmit, validate } = useForm(
+    dataSet,
+    schema
+  );
 
   let { data, errors } = dataModel;
   return (
     <>
-      {processing[LOADERS.CREATE_GROUP].status === true ? (
-        <Loading />
-      ) : (
-        <OrganizationalOverview users={false} tools={false} />
-      )}
-      <Form action="/" className="form-horizontal">
-        <ImsInputSelect
-          label="Access type"
-          name="type"
-          mandatory={true}
-          value={data.type}
-          isDisabled={group ? true : false}
-          className="react-select default"
-          classNamePrefix="react-select"
-          onChange={handleChange}
-          options={Object.values(GROUP_TYPE).map((item) => ({
-            value: item,
-            label: item,
-          }))}
-        />
-        {data.type && data.type.value && (
-          <>
-            {data.type &&
-              [GROUP_TYPE.INTERNAL_BU, GROUP_TYPE.EXTERNAL_U].includes(
-                data.type.value
-              ) && (
-                <BusinessFunctionGroup
-                  dataModel={dataModel}
-                  handleChange={handleChange}
-                />
-              )}
-            {data.type &&
-              [GROUP_TYPE.INTERNAL_CU, GROUP_TYPE.EXTERNAL_CU].includes(
-                data.type.value
-              ) && (
-                <ComplianceBodyGroup
-                  dataModel={dataModel}
-                  handleChange={handleChange}
-                />
-              )}
-            <ImsInputText
-              type="textarea"
-              cols="80"
-              rows="2"
-              label="Responsibility"
-              name="responsibility"
-              value={data.responsibility}
-              onChange={handleChange}
-              error={errors.responsibility}
-              placeholder="Responsibility"
-            />
-            <ImsButtonGroup>
-              {group ? (
-                <>
+      <TourStep stepId="create-business-unit-form">
+        {processing[LOADERS.CREATE_GROUP].status === true ? (
+          <Loading />
+        ) : (
+          <OrganizationalOverview users={false} tools={false} />
+        )}
+        <Form action="/" className="form-horizontal">
+          <ImsInputSelect
+            label="Access type"
+            name="type"
+            mandatory={true}
+            value={data.type}
+            isDisabled={group ? true : false}
+            className="react-select default"
+            classNamePrefix="react-select"
+            onChange={handleChange}
+            options={Object.values(GROUP_TYPE).map((item) => ({
+              value: item,
+              label: item,
+            }))}
+          />
+          {data.type && data.type.value && (
+            <>
+              {data.type &&
+                [GROUP_TYPE.INTERNAL_BU, GROUP_TYPE.EXTERNAL_U].includes(
+                  data.type.value
+                ) && (
+                  <BusinessFunctionGroup
+                    dataModel={dataModel}
+                    handleChange={handleChange}
+                  />
+                )}
+              {data.type &&
+                [GROUP_TYPE.INTERNAL_CU, GROUP_TYPE.EXTERNAL_CU].includes(
+                  data.type.value
+                ) && (
+                  <ComplianceBodyGroup
+                    dataModel={dataModel}
+                    handleChange={handleChange}
+                  />
+                )}
+              <ImsInputText
+                type="textarea"
+                cols="80"
+                rows="2"
+                label="Responsibility"
+                name="responsibility"
+                value={data.responsibility}
+                onChange={handleChange}
+                error={errors.responsibility}
+                placeholder="Responsibility"
+              />
+              <ImsButtonGroup>
+                {group ? (
+                  <>
+                    <Button
+                      name="cancel"
+                      className="btn-fill"
+                      color="danger"
+                      type="button"
+                      onClick={handleCancelClick}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      name="update"
+                      disabled={
+                        validate()
+                          ? true
+                          : processing[LOADERS.AMEND_GROUP].status
+                      }
+                      className="btn-fill"
+                      color="info"
+                      type="button"
+                      onClick={(e) => handleSubmit(e, _updateUnit, false)}
+                    >
+                      {processing[LOADERS.AMEND_GROUP].status
+                        ? "Processing..."
+                        : "Update"}
+                    </Button>
+                  </>
+                ) : (
                   <Button
-                    name="cancel"
-                    className="btn-fill"
-                    color="danger"
-                    type="button"
-                    onClick={handleCancelClick}
-                  >
-                    Cancel
-                  </Button>
-                  <Button
-                    name="update"
+                    name="create"
                     disabled={
-                      validate() ? true : processing[LOADERS.AMEND_GROUP].status
+                      validate()
+                        ? true
+                        : processing[LOADERS.CREATE_GROUP].status
                     }
                     className="btn-fill"
-                    color="info"
+                    color="primary"
                     type="button"
-                    onClick={(e) => handleSubmit(e, _updateUnit, false)}
+                    onClick={(e) => handleSubmit(e, _createUnit)}
                   >
-                    {processing[LOADERS.AMEND_GROUP].status
+                    {processing[LOADERS.CREATE_GROUP].status
                       ? "Processing..."
-                      : "Update"}
+                      : "Create"}
                   </Button>
-                </>
-              ) : (
-                <Button
-                  name="create"
-                  disabled={
-                    validate() ? true : processing[LOADERS.CREATE_GROUP].status
-                  }
-                  className="btn-fill"
-                  color="primary"
-                  type="button"
-                  onClick={(e) => handleSubmit(e, _createUnit)}
-                >
-                  {processing[LOADERS.CREATE_GROUP].status
-                    ? "Processing..."
-                    : "Create"}
-                </Button>
-              )}
-            </ImsButtonGroup>
-          </>
-        )}
-      </Form>
+                )}
+              </ImsButtonGroup>
+            </>
+          )}
+        </Form>
+      </TourStep>
     </>
   );
 };

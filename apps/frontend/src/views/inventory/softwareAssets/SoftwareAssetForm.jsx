@@ -24,6 +24,7 @@ import { useSoftwareAssets } from "./store";
 import useDebounce from "@/hooks/useDebounce";
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../../components/Tour";
 
 // default dataSet for form fields
 
@@ -89,17 +90,20 @@ const SoftwareAssetForm = ({ drawerView, software, processing, onSubmit }) => {
   return (
     <Form action="/" className="form-horizontal">
       <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Software name"
-            mandatory={true}
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-            placeholder="Software name"
-          />
-        </Col>
+        <TourStep data-tour-step="create-software-asset-form">
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Software name"
+              mandatory={true}
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+              error={errors.name}
+              placeholder="Software name"
+            />
+          </Col>
+        </TourStep>
+
         <Col md={drawerView ? "12" : "6"}>
           <ImsInputSelect
             label={authGlobalAccess() ? "Business unit" : "Business unit"}
@@ -138,24 +142,26 @@ const SoftwareAssetForm = ({ drawerView, software, processing, onSubmit }) => {
             classNamePrefix="react-select"
           />
         </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Number of licences"
-            name="numberOfLicenses"
-            value={data.numberOfLicenses}
-            onChange={handleChange}
-            error={errors.numberOfLicenses}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Number of installs"
-            name="numberOfInstalls"
-            value={data.numberOfInstalls}
-            onChange={handleChange}
-            error={errors.numberOfInstalls}
-          />
-        </Col>
+        <TourStep data-tour-step="create-software-asset-licenses">
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Number of licences"
+              name="numberOfLicenses"
+              value={data.numberOfLicenses}
+              onChange={handleChange}
+              error={errors.numberOfLicenses}
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Number of installs"
+              name="numberOfInstalls"
+              value={data.numberOfInstalls}
+              onChange={handleChange}
+              error={errors.numberOfInstalls}
+            />
+          </Col>
+        </TourStep>
         <Col md={drawerView ? "12" : "6"}>
           <ImsInputTextWithIcon
             label="Cost"

@@ -37,7 +37,7 @@ import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import useDebounce from "@/hooks/useDebounce";
 import riskTypes from "./riskTypes";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
-
+import { TourStep } from "../../components/Tour";
 // default dataSet for the form fields ...
 
 const RiskForm = ({
@@ -190,78 +190,80 @@ const RiskForm = ({
     <Form action="/" method="get">
       {alert}
       <Row>
-        <Col md={drawerView ? "12" : "6"} xs="12">
-          <ImsInputText
-            label="Risk title"
-            name="title"
-            mandatory={true}
-            value={data.title}
-            disabled={
-              visitingRisk?.source?.moduleType === "audits" ? true : false
-            }
-            onChange={handleChange}
-            error={errors.title}
-            isHorizontal={false}
-            placeholder="Risk title"
-          />
-        </Col>
-        <Col xl={drawerView ? "12" : "6"} xs="12">
-          <ImsInputSelect
-            name="type"
-            value={data.type}
-            mandatory={true}
-            vertical={true}
-            onChange={handleChange}
-            onInputChange={setSearchString}
-            options={riskTypes.map((type) => ({
-              value: type.value,
-              label: type.label,
-            }))}
-            label={"Type"}
-            className="react-select default"
-            classNamePrefix="react-select"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"} xs="12">
-          <ImsInputSelect
-            label="Business unit"
-            name="group"
-            isHorizontal={false}
-            value={data.group}
-            isDisabled={visitingRisk ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups?.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
-          />
-        </Col>
-        <Col xl={drawerView ? "12" : "6"} xs="12">
-          <ImsInputSelect
-            name="tagsAndCategories"
-            value={data.tagsAndCategories}
-            vertical={true}
-            onChange={handleChange}
-            onInputChange={setSearchString}
-            options={[
-              {
-                value: null,
-                label: "Not selected",
-              },
-              ,
-              ...tagsAndCategories.map((tag) => ({
-                value: tag._id,
-                label: tag.name,
-              })),
-            ]}
-            label={"Category"}
-            sideBtn={<AddCategory />}
-            className="react-select default"
-            classNamePrefix="react-select"
-          />
-        </Col>
+        <TourStep data-tour-step="create-risk-form">
+          <Col md={drawerView ? "12" : "6"} xs="12">
+            <ImsInputText
+              label="Risk title"
+              name="title"
+              mandatory={true}
+              value={data.title}
+              disabled={
+                visitingRisk?.source?.moduleType === "audits" ? true : false
+              }
+              onChange={handleChange}
+              error={errors.title}
+              isHorizontal={false}
+              placeholder="Risk title"
+            />
+          </Col>
+          <Col xl={drawerView ? "12" : "6"} xs="12">
+            <ImsInputSelect
+              name="type"
+              value={data.type}
+              mandatory={true}
+              vertical={true}
+              onChange={handleChange}
+              onInputChange={setSearchString}
+              options={riskTypes.map((type) => ({
+                value: type.value,
+                label: type.label,
+              }))}
+              label={"Type"}
+              className="react-select default"
+              classNamePrefix="react-select"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"} xs="12">
+            <ImsInputSelect
+              label="Business unit"
+              name="group"
+              isHorizontal={false}
+              value={data.group}
+              isDisabled={visitingRisk ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups?.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
+          <Col xl={drawerView ? "12" : "6"} xs="12">
+            <ImsInputSelect
+              name="tagsAndCategories"
+              value={data.tagsAndCategories}
+              vertical={true}
+              onChange={handleChange}
+              onInputChange={setSearchString}
+              options={[
+                {
+                  value: null,
+                  label: "Not selected",
+                },
+                ,
+                ...tagsAndCategories.map((tag) => ({
+                  value: tag._id,
+                  label: tag.name,
+                })),
+              ]}
+              label={"Category"}
+              sideBtn={<AddCategory />}
+              className="react-select default"
+              classNamePrefix="react-select"
+            />
+          </Col>
+        </TourStep>
       </Row>
       <Row>
         <Col md={drawerView ? "12" : "6"} xs="12">
@@ -281,6 +283,7 @@ const RiskForm = ({
               .map((user) => ({ value: user._id, label: user.name }))}
           />
         </Col>
+
         <Col md={drawerView ? "12" : "6"} xs="12">
           {data.type !== "Organisational" && (
             <ImsInputSelect
@@ -437,10 +440,10 @@ const RiskForm = ({
               {isBusy
                 ? "Processing"
                 : data.mitigationStatus
-                ? "Mitigated"
-                : data.acceptanceStatus
-                ? "Accepted"
-                : "Update risk"}
+                  ? "Mitigated"
+                  : data.acceptanceStatus
+                    ? "Accepted"
+                    : "Update risk"}
             </Button>
           </>
         ) : (

@@ -31,6 +31,7 @@ export default function useOrganisation(config = {}) {
   const [organisations, setOrganisations] = React.useState([]);
   const [organisation, setOrganisation] = React.useState(null);
   const [users, setUsers] = React.useState([]);
+  const [licenses, setLicenses] = React.useState([]);
   const [incidentResolution, setIncidentResolutionState] = React.useState(null);
   const [systemDates, setSystemDatesState] = React.useState(null);
   const [reportSubscribers, setReportSubscribers] = React.useState([]);
@@ -131,6 +132,25 @@ export default function useOrganisation(config = {}) {
     }
   };
 
+  const fetchOrganisationLicenses = async () => {
+    if (!id) return;
+
+    try {
+      dispatch({ [USER_ACTIONS.LOAD_LICENSES]: { status: true } });
+
+      const { data } = await getLicenses(id);
+      console.log("\n\n\n\n LICENSES: \n\n\n\n", data.licenses);
+
+      setLicenses(data.licenses || []);
+      dispatch({ [USER_ACTIONS.LOAD_LICENSES]: { status: false } });
+    } catch (ex) {
+      imsLogger("LOAD_LICENSES", ex);
+      dispatch({
+        [USER_ACTIONS.LOAD_LICENSES]: { status: false, error: true },
+      });
+    }
+  };
+
   const fetchOrganisationUsers = async () => {
     if (!id) return;
 
@@ -138,8 +158,8 @@ export default function useOrganisation(config = {}) {
       dispatch({ [USER_ACTIONS.LOAD_USERS]: { status: true } });
 
       const { data } = await getUsersByOrganization(id);
-      setUsers(data.users || []);
 
+      setUsers(data.users || []);
       dispatch({ [USER_ACTIONS.LOAD_USERS]: { status: false } });
     } catch (ex) {
       imsLogger("LOAD_USERS", ex);
@@ -300,10 +320,12 @@ export default function useOrganisation(config = {}) {
     organisations,
     organisation,
     users,
+    licenses,
     processing,
 
     fetchOrganisations,
     fetchOrganisation,
+    fetchOrganisationLicenses,
     fetchOrganisationUsers,
 
     createOrg,

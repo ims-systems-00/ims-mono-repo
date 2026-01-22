@@ -17,7 +17,9 @@ function NavigationTabs({ navigations = [], ...rest }) {
     <React.Fragment>
       <Navbar
         expand="md"
-        className={"navigation-tabs bg-white border-bottom pb-md-0 overflow-x-auto"}
+        className={
+          "navigation-tabs bg-white border-bottom pb-md-0 overflow-x-auto"
+        }
         {...rest}
       >
         <NavbarToggler className={"ms-auto"} onClick={toggle} />
@@ -25,19 +27,19 @@ function NavigationTabs({ navigations = [], ...rest }) {
           <Nav className="me-auto" pills navbar>
             {navigations.map((navigation) => {
               return (
-                <NavItem
-                  key={navigation.id}
-                  active={activeTab === navigation.id}
-                  onClick={() => setActiveTab(navigation.id)}
-                >
-                  <TourStep stepId={navigation.id}>
+                <TourStep data-tour-step={navigation.id}>
+                  <NavItem
+                    key={navigation.id}
+                    active={activeTab === navigation.id}
+                    onClick={() => setActiveTab(navigation.id)}
+                  >
                     <Link to={"#"}>
                       <NavLink className=" d-flex align-items-center justify-content-center gap-1 text-nowrap">
                         {navigation.icon} {navigation.text}
                       </NavLink>
                     </Link>
-                  </TourStep>
-                </NavItem>
+                  </NavItem>
+                </TourStep>
               );
             })}
           </Nav>

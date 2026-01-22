@@ -14,6 +14,7 @@ const routes = [
     authorisedRoles: [ROLES.SUPER, ROLES.HOS, ROLES.BASIC, ROLES.AUDITOR],
     name: "Our iMS",
     icon: "ims-icons-20 icon-icon-info-24",
+    screenIdentifier: "our-ims-sidebar",
     accessPolicy: {
       service: IMS_SERVICES.OUR_IMS,
       action: ACTIONS.READ,

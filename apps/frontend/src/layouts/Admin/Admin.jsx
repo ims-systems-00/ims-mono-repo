@@ -26,7 +26,7 @@ import {
   menuClasses,
   sidebarClasses,
 } from "react-pro-sidebar";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import allRoutes from "../../routes";
 
 const themeColos = {

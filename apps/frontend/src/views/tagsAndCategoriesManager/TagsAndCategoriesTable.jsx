@@ -13,6 +13,7 @@ import ContentWrapper from "@/components/ContentWrapper/ContentWrapper";
 import { Pagination } from "@/components/Pagination/pagination";
 import { RowActions } from "./row-actions";
 import SearchInput from "@/components/SearchInput/search-input";
+import { TourStep } from "../../components/Tour";
 
 const defaultdata = [["No data found"]];
 
@@ -76,7 +77,9 @@ const TagsAndCategoriesTable = ({ ...props }) => {
           </div>
 
           <div className="col-md-6 text-end">
-            <CreateTagsAndCategories />
+            <TourStep data-tour-step="create-information-button">
+              <CreateTagsAndCategories />
+            </TourStep>
           </div>
         </div>
         {processing[USER_ACTIONS.LIST_TAG_AND_CATEGORY].status ? (

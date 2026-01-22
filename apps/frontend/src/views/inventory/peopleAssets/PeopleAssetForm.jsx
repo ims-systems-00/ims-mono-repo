@@ -19,6 +19,8 @@ import USER_ACTIONS from "./actions";
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import useDebounce from "@/hooks/useDebounce";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../../components/Tour";
+
 const PeopleAssetForm = ({ people, processing, drawerView, onSubmit }) => {
   let { groups } = useContext(SuperGlobalContext);
   let viewContextData = useContext(ViewContext);
@@ -72,78 +74,80 @@ const PeopleAssetForm = ({ people, processing, drawerView, onSubmit }) => {
 
   return (
     <Form action="/" className="form-horizontal" onSubmit={handleSubmit}>
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Staff name"
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-            placeholder="Staff name"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            value={data.group}
-            isDisabled={people ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
-          />
-        </Col>
-      </Row>
-      <ImsInputText
-        label="Role"
-        name="role"
-        value={data.role}
-        onChange={handleChange}
-        error={errors.role}
-        placeholder="Role"
-      />
-      <ImsInputText
-        label="Responsibility"
-        name="responsibility"
-        value={data.responsibility}
-        onChange={handleChange}
-        error={errors.responsibility}
-        placeholder="Responsibility"
-      />
-      <ImsInputText
-        label="Skill"
-        name="skill"
-        value={data.skill}
-        onChange={handleChange}
-        error={errors.skill}
-        placeholder="Skill"
-      />
-      <ImsInputSelect
-        name="tagsAndCategories"
-        value={data.tagsAndCategories}
-        vertical={true}
-        onChange={handleChange}
-        onInputChange={setSearchString}
-        options={[
-          {
-            value: null,
-            label: "Not selected",
-          },
-          ...tagsAndCategories.map((tag) => ({
-            value: tag._id,
-            label: tag.name,
-          })),
-        ]}
-        label={"Category"}
-        sideBtn={<AddCategory />}
-        className="react-select default"
-        classNamePrefix="react-select"
-      />
+      <TourStep stepId="create-people-form">
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Staff name"
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+              error={errors.name}
+              placeholder="Staff name"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              value={data.group}
+              isDisabled={people ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
+        </Row>
+        <ImsInputText
+          label="Role"
+          name="role"
+          value={data.role}
+          onChange={handleChange}
+          error={errors.role}
+          placeholder="Role"
+        />
+        <ImsInputText
+          label="Responsibility"
+          name="responsibility"
+          value={data.responsibility}
+          onChange={handleChange}
+          error={errors.responsibility}
+          placeholder="Responsibility"
+        />
+        <ImsInputText
+          label="Skill"
+          name="skill"
+          value={data.skill}
+          onChange={handleChange}
+          error={errors.skill}
+          placeholder="Skill"
+        />
+        <ImsInputSelect
+          name="tagsAndCategories"
+          value={data.tagsAndCategories}
+          vertical={true}
+          onChange={handleChange}
+          onInputChange={setSearchString}
+          options={[
+            {
+              value: null,
+              label: "Not selected",
+            },
+            ...tagsAndCategories.map((tag) => ({
+              value: tag._id,
+              label: tag.name,
+            })),
+          ]}
+          label={"Category"}
+          sideBtn={<AddCategory />}
+          className="react-select default"
+          classNamePrefix="react-select"
+        />
+      </TourStep>
       <ImsButtonGroup>
         {people ? (
           <>

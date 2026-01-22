@@ -35,6 +35,7 @@ import { filterUsersByGroup } from "@/utils/filters";
 import { useApplication } from "@/stores/applicationStore";
 import { ROLES } from "@/rolesAndPermissions";
 import { ImsInputDropZone } from "@/views/shared/ImsFormElements/Index";
+import { TourStep } from "../../components/Tour";
 
 const AuditForm = ({
   type,
@@ -136,145 +137,149 @@ const AuditForm = ({
 
   return (
     <Form action="/" className="form-horizontal" method="get">
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Title"
-            name="title"
-            value={data.title}
-            onChange={handleChange}
-            error={errors.title}
-            placeholder="Title"
-            mandatory
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            value={data.group}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={[
-              {
-                value: null,
-                label: "Not selected",
-              },
-              ,
-              ...groups.map((group) => ({
-                value: group._id,
-                label: group.name,
-              })),
-            ]}
-          />
-        </Col>
-      </Row>
-      <ImsInputSelect
-        label="Compliance body"
-        name="complianceBody"
-        value={data.complianceBody}
-        className="react-select default"
-        classNamePrefix="react-select"
-        onChange={handleChange}
-        options={[
-          {
-            value: null,
-            label: "Not selected",
-          },
-          ,
-          ...complianceBody.map((group) => ({
-            value: group._id,
-            label: group.name,
-          })),
-        ]}
-      />
-      <ImsInputText
-        label="Focus area"
-        placeholder="Focus area"
-        type="textarea"
-        rows="6"
-        name="focusArea"
-        mandatory={true}
-        value={data.focusArea}
-        onChange={handleChange}
-        error={errors.focusArea}
-      />
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label="Auditor"
-            name="auditor"
-            value={data.auditor}
-            isDisabled={audit ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            mandatory
-            options={users
-              .filter((user) =>
-                [
-                  ROLES.INTERNAL_AUDITOR,
-                  ROLES.EXTERNAL_AUDITOR,
-                  ROLES.SUPER_ADMIN,
-                  ROLES.HEAD_OF_SERVICE,
-                ].includes(
-                  user.membership.find(
-                    (m) =>
-                      m.organization ===
-                      tokenPair.accessTokenData.user.organizationId
-                  )?.role
-                )
-              )
-              .filter((user) =>
-                filterUsersByGroup(
-                  user.membership,
-                  dataModel.data.complianceBody.value
-                )
-              )
-              .map((user) => ({ value: user._id, label: user.name }))}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputDate
-            label="Select date"
-            name="startDate"
-            mandatory
-            value={data.startDate}
-            onChange={handleChange}
-            error={errors.startDate}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputTime
-            label="Select time"
-            name="time"
-            inputCol="10"
-            mandatory
-            value={data.time}
-            onChange={handleChange}
-            error={errors.time}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label="Interval"
-            name="interval"
-            mandatory
-            value={data.interval}
-            isDisabled={audit ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={["Quarterly", "Half yearly", "Yearly"].map((item) => ({
-              value: item,
-              label: item,
-            }))}
-          />
-        </Col>
-      </Row>
+      <TourStep data-tour-step="audit-form">
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Title"
+              name="title"
+              value={data.title}
+              onChange={handleChange}
+              error={errors.title}
+              placeholder="Title"
+              mandatory
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              value={data.group}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={[
+                {
+                  value: null,
+                  label: "Not selected",
+                },
+                ,
+                ...groups.map((group) => ({
+                  value: group._id,
+                  label: group.name,
+                })),
+              ]}
+            />
+          </Col>
+        </Row>
+        <ImsInputSelect
+          label="Compliance body"
+          name="complianceBody"
+          value={data.complianceBody}
+          className="react-select default"
+          classNamePrefix="react-select"
+          onChange={handleChange}
+          options={[
+            {
+              value: null,
+              label: "Not selected",
+            },
+            ,
+            ...complianceBody.map((group) => ({
+              value: group._id,
+              label: group.name,
+            })),
+          ]}
+        />
+        <ImsInputText
+          label="Focus area"
+          placeholder="Focus area"
+          type="textarea"
+          rows="6"
+          name="focusArea"
+          mandatory={true}
+          value={data.focusArea}
+          onChange={handleChange}
+          error={errors.focusArea}
+        />
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <TourStep data-tour-step="select-auditor">
+              <ImsInputSelect
+                label="Auditor"
+                name="auditor"
+                value={data.auditor}
+                isDisabled={audit ? true : false}
+                className="react-select default"
+                classNamePrefix="react-select"
+                onChange={handleChange}
+                mandatory
+                options={users
+                  .filter((user) =>
+                    [
+                      ROLES.INTERNAL_AUDITOR,
+                      ROLES.EXTERNAL_AUDITOR,
+                      ROLES.SUPER_ADMIN,
+                      ROLES.HEAD_OF_SERVICE,
+                    ].includes(
+                      user.membership.find(
+                        (m) =>
+                          m.organization ===
+                          tokenPair.accessTokenData.user.organizationId
+                      )?.role
+                    )
+                  )
+                  .filter((user) =>
+                    filterUsersByGroup(
+                      user.membership,
+                      dataModel.data.complianceBody.value
+                    )
+                  )
+                  .map((user) => ({ value: user._id, label: user.name }))}
+              />
+            </TourStep>
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputDate
+              label="Select date"
+              name="startDate"
+              mandatory
+              value={data.startDate}
+              onChange={handleChange}
+              error={errors.startDate}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputTime
+              label="Select time"
+              name="time"
+              inputCol="10"
+              mandatory
+              value={data.time}
+              onChange={handleChange}
+              error={errors.time}
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label="Interval"
+              name="interval"
+              mandatory
+              value={data.interval}
+              isDisabled={audit ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={["Quarterly", "Half yearly", "Yearly"].map((item) => ({
+                value: item,
+                label: item,
+              }))}
+            />
+          </Col>
+        </Row>
+      </TourStep>
       <ImsInputDropZone
         label="Attachments"
         clearAll={!data.attachments.length}

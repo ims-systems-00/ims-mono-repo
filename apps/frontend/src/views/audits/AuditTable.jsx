@@ -22,6 +22,7 @@ import { Pagination } from "@/components/Pagination/pagination";
 import SearchInput from "@/components/SearchInput/search-input";
 import AuditFilter from "./AuditFilter";
 import CreateAudit from "./CreateAudit";
+import { TourStep } from "../../components/Tour";
 const defaultdata = [["No data found"]];
 
 const ReactTables = ({ ...props }) => {
@@ -134,35 +135,37 @@ const ReactTables = ({ ...props }) => {
           <Loading height={600} />
         ) : (
           <>
-            <div>
-              <DataTable
-                data={dataTable}
-                columns={columnsForAudits || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitAudit(original);
-                  openDrawer("audit-detail");
-                }}
-                columnVisibility={{}}
-              />
-            </div>
+            <TourStep data-tour-step="audit-table">
+              <div>
+                <DataTable
+                  data={dataTable}
+                  columns={columnsForAudits || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitAudit(original);
+                    openDrawer("audit-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </div>
 
-            <Pagination
-              containerClassName="pull-right my-2"
-              totalResults={
-                AuditQueryTools?.toolState?.pagination?.totalResults
-              }
-              currentPage={
-                AuditQueryTools?.toolState?.pagination?.currentPage || 1
-              }
-              onPageChange={(page) => {
-                AuditQueryTools?.handlePagination({ page });
-              }}
-              size={AuditQueryTools?.toolState?.pagination?.size || 10}
-            />
+              <Pagination
+                containerClassName="pull-right my-2"
+                totalResults={
+                  AuditQueryTools?.toolState?.pagination?.totalResults
+                }
+                currentPage={
+                  AuditQueryTools?.toolState?.pagination?.currentPage || 1
+                }
+                onPageChange={(page) => {
+                  AuditQueryTools?.handlePagination({ page });
+                }}
+                size={AuditQueryTools?.toolState?.pagination?.size || 10}
+              />
+            </TourStep>
           </>
         )}
 

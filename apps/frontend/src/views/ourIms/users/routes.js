@@ -10,6 +10,7 @@ const routes = [
     component: Users,
     icon: "ims-icons-20 icon-icon-user-24",
     layout: "/admin",
+    screenIdentifier: "our-ims-users",
     accessPolicy: {
       service: IMS_SERVICES.USERS,
       action: ACTIONS.CREATE,

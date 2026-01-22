@@ -18,6 +18,7 @@ const routes = [
     name: "Inventory",
     icon: "ims-icons-20 icon-icon-cube-24",
     state: "inventoryCollapse",
+    screenIdentifier: "inventory-sidebar",
     views: [
       ...hardwareInventoryRoutes,
       ...softwareInventoryRoutes,

@@ -13,7 +13,7 @@ const CreateUser = () => {
       }}
     >
       <DrawerOpener drawerId="create-user">
-        <TourStep key="create-user" stepId="create-user">
+        <TourStep key="create-user" data-tour-step="create-user-button">
           <Button color="primary" size="md" className="shadow-sm--hover">
             <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0"></i>
             {"  "} Add user

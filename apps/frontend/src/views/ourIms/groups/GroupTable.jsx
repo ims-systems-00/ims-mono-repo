@@ -98,7 +98,7 @@ const GroupTable = ({
             action: ACTIONS.CREATE,
             effect: EFFECTS.ALLOW,
           }) && (
-            <TourStep key="create-group" stepId="create-group">
+            <TourStep key="create-group" stepId="create-business-unit-button">
               <DrawerOpener drawerId="create-group-drawer">
                 <Button color="primary">
                   <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0" />

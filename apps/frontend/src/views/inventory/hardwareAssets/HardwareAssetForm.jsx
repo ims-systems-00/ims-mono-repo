@@ -24,6 +24,7 @@ import {
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import USER_ACTIONS from "./actions";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../../components/Tour";
 
 const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
   let { tagsAndCategories, searchTags } = useTagsAndCategories();
@@ -97,126 +98,133 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
   return (
     <Form action="/" className="form-horizontal" onSubmit={handleSubmit}>
       <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Asset name"
-            name="name"
-            mandatory={true}
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-            placeholder="Asset name"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
+        <TourStep data-tour-step="create-hardware-form">
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Asset name"
+              name="name"
+              mandatory={true}
+              value={data.name}
+              onChange={handleChange}
+              error={errors.name}
+              placeholder="Asset name"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              value={data.group}
+              isDisabled={hardware ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
+
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Asset tag"
+              mandatory={true}
+              name="tag"
+              value={data.tag}
+              onChange={handleChange}
+              error={errors.tag}
+              placeholder="Asset tag"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            {" "}
+            <ImsInputSelect
+              label="Owner"
+              mandatory={true}
+              name="owner"
+              icon="icon-app"
+              className="react-select default"
+              classNamePrefix="react-select"
+              error={errors.owner}
+              value={data.owner}
+              onChange={handleChange}
+              options={users
+                .filter((user) =>
+                  filterUsersByGroup(
+                    user.membership,
+                    dataModel.data.group.value
+                  )
+                )
+                .map((user) => ({ value: user._id, label: user.name }))}
+            />
+          </Col>
+
           <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            value={data.group}
-            isDisabled={hardware ? true : false}
+            name="tagsAndCategories"
+            value={data.tagsAndCategories}
+            vertical={true}
+            onChange={handleChange}
+            onInputChange={setSearchString}
+            options={[
+              {
+                value: null,
+                label: "Not selected",
+              },
+              ...tagsAndCategories.map((tag) => ({
+                value: tag._id,
+                label: tag.name,
+              })),
+            ]}
+            label={"Category"}
+            sideBtn={<AddCategory />}
             className="react-select default"
             classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
           />
-        </Col>
 
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Asset tag"
-            mandatory={true}
-            name="tag"
-            value={data.tag}
-            onChange={handleChange}
-            error={errors.tag}
-            placeholder="Asset tag"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          {" "}
-          <ImsInputSelect
-            label="Owner"
-            mandatory={true}
-            name="owner"
-            icon="icon-app"
-            className="react-select default"
-            classNamePrefix="react-select"
-            error={errors.owner}
-            value={data.owner}
-            onChange={handleChange}
-            options={users
-              .filter((user) =>
-                filterUsersByGroup(user.membership, dataModel.data.group.value)
-              )
-              .map((user) => ({ value: user._id, label: user.name }))}
-          />
-        </Col>
+          <TourStep data-tour-step="create-hardware-dates">
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputDate
+                label="Assigned date"
+                name="assignedDate"
+                value={data.assignedDate}
+                onChange={handleChange}
+                error={errors.assignedDate}
+              />
+            </Col>
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputDate
+                label="Destruction date"
+                name="destructionDate"
+                value={data.destructionDate}
+                onChange={handleChange}
+                error={errors.destructionDate}
+              />
+            </Col>
 
-        <ImsInputSelect
-          name="tagsAndCategories"
-          value={data.tagsAndCategories}
-          vertical={true}
-          onChange={handleChange}
-          onInputChange={setSearchString}
-          options={[
-            {
-              value: null,
-              label: "Not selected",
-            },
-            ...tagsAndCategories.map((tag) => ({
-              value: tag._id,
-              label: tag.name,
-            })),
-          ]}
-          label={"Category"}
-          sideBtn={<AddCategory />}
-          className="react-select default"
-          classNamePrefix="react-select"
-        />
-
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputDate
-            label="Assigned date"
-            name="assignedDate"
-            value={data.assignedDate}
-            onChange={handleChange}
-            error={errors.assignedDate}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputDate
-            label="Destruction date"
-            name="destructionDate"
-            value={data.destructionDate}
-            onChange={handleChange}
-            error={errors.destructionDate}
-          />
-        </Col>
-
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputDate
-            label="Returned date"
-            name="returnDate"
-            value={data.returnDate}
-            onChange={handleChange}
-            error={errors.returnDate}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputTextWithIcon
-            label="Cost"
-            type="number"
-            placeholder="Cost"
-            icon="fas fa-pound-sign"
-            name="cost"
-            value={data.cost}
-            onChange={handleChange}
-            error={errors.cost}
-          />
-        </Col>
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputDate
+                label="Returned date"
+                name="returnDate"
+                value={data.returnDate}
+                onChange={handleChange}
+                error={errors.returnDate}
+              />
+            </Col>
+          </TourStep>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputTextWithIcon
+              label="Cost"
+              type="number"
+              placeholder="Cost"
+              icon="fas fa-pound-sign"
+              name="cost"
+              value={data.cost}
+              onChange={handleChange}
+              error={errors.cost}
+            />
+          </Col>
+        </TourStep>
       </Row>
       <ImsButtonGroup>
         {hardware ? (

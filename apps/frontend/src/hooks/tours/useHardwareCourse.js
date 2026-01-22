@@ -1,18 +1,19 @@
 import { ACTIONS, EVENTS, STATUS } from "react-joyride";
 import { useHistory } from "react-router-dom";
 import { useDrawer } from "@ims-systems-00/ims-ui-kit";
-import { set } from "lodash";
-export function useBusinessPremisesCourse() {
+import { set } from "date-fns";
+
+export function useHardwareCourse() {
   const history = useHistory();
   const { openDrawer, closeDrawer } = useDrawer();
 
   const course = {
-    name: "Business Premises",
-    description: "Learn how to add business premises",
+    name: "Inventory – Hardware",
+    description: "A quick walkthrough to create and manage repositories.",
     steps: [
       {
-        target: `[data-tour-step="our-ims-sidebar"]`,
-        content: "Click on Our iMS and select Business Premises",
+        target: `[data-tour-step="inventory-sidebar"]`,
+        content: "Click on Inventory and select Hardware.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -20,8 +21,8 @@ export function useBusinessPremisesCourse() {
         hideCloseButton: true,
       },
       {
-        target: `[data-tour-step="business-premises-button"]`,
-        content: "Click on “Create premise” to add a new premise",
+        target: `[data-tour-step="create-hardware-button"]`,
+        content: "Click on “Add” to add a new hardware.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -29,16 +30,23 @@ export function useBusinessPremisesCourse() {
         hideCloseButton: true,
       },
       {
-        target: `[data-tour-step="business-premises-form"]`,
-        content: "Fill in Building name, address, postal code and cost.",
-        placement: "left",
+        target: `[data-tour-step="create-hardware-form"]`,
+        content: "Fill in “asset name”, “asset type” and select “owner”.",
+        placement: "right",
         disableBeacon: true,
-        spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="business-premises-action-details"]`,
+        target: `[data-tour-step="create-hardware-dates"]`,
         content:
-          "View the details of the added premises by clicking “action - details”",
+          "Assigned date, Destruction date and Return date give you important dates of this asset.",
+        disableBeacon: true,
+        placement: "bottom",
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="create-hardware-action"]`,
+        content:
+          "View the details of this asset by clicking “action - details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -46,8 +54,6 @@ export function useBusinessPremisesCourse() {
     ],
     callback: function (data) {
       const { type, status, index, setCurrentStep, action } = data;
-      console.log("THE JOYRIDE CALLBACK DATA: ", data);
-
       if (type === EVENTS.STEP_AFTER && action !== ACTIONS.PREV) {
         setCurrentStep((prev) => prev + 1);
       }
@@ -55,7 +61,7 @@ export function useBusinessPremisesCourse() {
         setCurrentStep((prev) => prev - 1);
       }
       if (index === 0) {
-        history.push("/admin/businesspremise");
+        history.push("/admin/inventory/hardware");
       }
       if (
         index === 1 &&
@@ -63,14 +69,14 @@ export function useBusinessPremisesCourse() {
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
-        openDrawer("create-premise-drawer");
+        openDrawer("create-hardware-asset");
         setTimeout(() => {
           setCurrentStep(2);
           data.resumeTour();
         }, 500);
       }
-      if (index === 3) {
-        closeDrawer("create-premise-drawer");
+      if (index === 4) {
+        closeDrawer("create-hardware-asset");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {
         data.pauseTour();

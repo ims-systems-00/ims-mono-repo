@@ -16,6 +16,7 @@ const routes = [
     },
     authorisedLicense: { license: LICENSES.AUDIT, type: LICENSES.TYPE.PARTNER },
     name: "Audits",
+    screenIdentifier: "audits-sidebar",
     icon: "ims-icons-20 icon-icon-clipboardtext-24",
     state: "auditCollapse",
     views: [

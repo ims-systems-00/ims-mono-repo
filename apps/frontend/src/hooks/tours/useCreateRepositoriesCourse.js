@@ -1,8 +1,10 @@
 import { ACTIONS, EVENTS, STATUS } from "react-joyride";
 import { useHistory } from "react-router-dom";
+import { useDrawer } from "@ims-systems-00/ims-ui-kit";
 
 export function useCreateRepositoriesCourse() {
   const history = useHistory();
+  const { openDrawer, closeDrawer } = useDrawer();
 
   const course = {
     name: "Create Repositories",
@@ -53,14 +55,17 @@ export function useCreateRepositoriesCourse() {
         setCurrentStep((prev) => prev - 1);
       }
 
-     
-
       if (action === ACTIONS.SKIP) {
         data.pauseTour();
         setCurrentStep(0);
       }
       if (status === STATUS.FINISHED) {
         data.pauseTour();
+        setCurrentStep(0);
+      }
+      if (status === STATUS.FINISHED) {
+        data.pauseTour();
+        history.push("/admin/guidelines");
         setCurrentStep(0);
       }
     },

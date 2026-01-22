@@ -27,6 +27,7 @@ import { handleUpload, linkGenerator } from "@/utils/formatLinkGenerator";
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import useDebounce from "@/hooks/useDebounce";
 import AddCategory from "../tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../components/Tour";
 
 const IncidentForm = ({
   visitingIncident: incident,
@@ -144,19 +145,22 @@ const IncidentForm = ({
             }))}
           />
         </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Title"
-            name="title"
-            value={data.title}
-            mandatory={true}
-            disabled={incident?.source?.moduleType === "audits" ? true : false}
-            onChange={handleChange}
-            error={errors.title}
-            placeholder="Title"
-          />
-        </Col>
-        {/* <Col md={drawerView ? "12" : "6"}>
+        <TourStep data-tour-step="create-incident-form">
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Title"
+              name="title"
+              value={data.title}
+              mandatory={true}
+              disabled={
+                incident?.source?.moduleType === "audits" ? true : false
+              }
+              onChange={handleChange}
+              error={errors.title}
+              placeholder="Title"
+            />
+          </Col>
+          {/* <Col md={drawerView ? "12" : "6"}>
           <ImsInputCheck
             checked={data.supplierIncident}
             label="Is Supplier Incident"
@@ -166,74 +170,80 @@ const IncidentForm = ({
             error={errors.supplierIncident}
           />
         </Col> */}
-        {dataModel.data.supplierIncident && (
+          {dataModel.data.supplierIncident && (
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputSelect
+                label={"Supplier name"}
+                name="supplier"
+                value={data.supplier}
+                isDisabled={incident ? true : false}
+                className="react-select default"
+                classNamePrefix="react-select"
+                onChange={handleChange}
+                options={suppliers.map((supplier) => ({
+                  value: supplier._id,
+                  label: supplier.name,
+                }))}
+              />
+            </Col>
+          )}
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Method of notification"
+              name="methodOfNotification"
+              value={data.methodOfNotification}
+              onChange={handleChange}
+              error={errors.methodOfNotification}
+              placeholder="Method of notification"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Affected service"
+              name="affectedService"
+              value={data.affectedService}
+              onChange={handleChange}
+              error={errors.affectedService}
+              placeholder="Affected service"
+            />
+          </Col>
           <Col md={drawerView ? "12" : "6"}>
             <ImsInputSelect
-              label={"Supplier name"}
-              name="supplier"
-              value={data.supplier}
-              isDisabled={incident ? true : false}
+              label="Priority"
+              name="priority"
+              mandatory={true}
+              value={data.priority}
               className="react-select default"
               classNamePrefix="react-select"
               onChange={handleChange}
-              options={suppliers.map((supplier) => ({
-                value: supplier._id,
-                label: supplier.name,
+              options={["P1", "P2", "P3", "P4"].map((item) => ({
+                value: item,
+                label: item,
               }))}
             />
           </Col>
-        )}
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Method of notification"
-            name="methodOfNotification"
-            value={data.methodOfNotification}
-            onChange={handleChange}
-            error={errors.methodOfNotification}
-            placeholder="Method of notification"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Affected service"
-            name="affectedService"
-            value={data.affectedService}
-            onChange={handleChange}
-            error={errors.affectedService}
-            placeholder="Affected service"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label="Priority"
-            name="priority"
-            mandatory={true}
-            value={data.priority}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={["P1", "P2", "P3", "P4"].map((item) => ({
-              value: item,
-              label: item,
-            }))}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label="Incident owner"
-            name="owner"
-            value={data.owner}
-            mandatory={true}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={users
-              .filter((user) =>
-                filterUsersByGroup(user.membership, dataModel.data.group.value)
-              )
-              .map((user) => ({ value: user._id, label: user.name }))}
-          />
-        </Col>
+        </TourStep>
+        <TourStep data-tour-step="create-incident-owner">
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label="Incident owner"
+              name="owner"
+              value={data.owner}
+              mandatory={true}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={users
+                .filter((user) =>
+                  filterUsersByGroup(
+                    user.membership,
+                    dataModel.data.group.value
+                  )
+                )
+                .map((user) => ({ value: user._id, label: user.name }))}
+            />
+          </Col>
+        </TourStep>
         <Col xl={drawerView ? "12" : "6"} xs="12">
           <ImsInputSelect
             name="tagsAndCategories"
@@ -330,8 +340,8 @@ const IncidentForm = ({
               {isBusy
                 ? "Processing"
                 : data.resolveStatus
-                ? "Resolve"
-                : "Update incident"}
+                  ? "Resolve"
+                  : "Update incident"}
             </Button>
           </>
         ) : (
