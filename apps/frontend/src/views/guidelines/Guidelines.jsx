@@ -6,7 +6,6 @@ import { Col, Row } from "@ims-systems-00/ims-ui-kit";
 const Guidelines = () => {
   const { startTour } = useTour();
   const courses = useCourses();
-
   return (
     <div className="content">
       <Row>

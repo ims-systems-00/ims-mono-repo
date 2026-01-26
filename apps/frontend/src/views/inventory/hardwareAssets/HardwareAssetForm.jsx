@@ -76,7 +76,7 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
 
   const { dataModel, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    schema
+    schema,
   );
 
   function handleCancelClick() {
@@ -98,7 +98,7 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
   return (
     <Form action="/" className="form-horizontal" onSubmit={handleSubmit}>
       <Row>
-        <TourStep data-tour-step="create-hardware-form">
+        <TourStep stepId="create-hardware-form">
           <Col md={drawerView ? "12" : "6"}>
             <ImsInputText
               label="Asset name"
@@ -153,8 +153,8 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
                 .filter((user) =>
                   filterUsersByGroup(
                     user.membership,
-                    dataModel.data.group.value
-                  )
+                    dataModel.data.group.value,
+                  ),
                 )
                 .map((user) => ({ value: user._id, label: user.name }))}
             />
@@ -182,7 +182,7 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
             classNamePrefix="react-select"
           />
 
-          <TourStep data-tour-step="create-hardware-dates">
+          <TourStep stepId="create-hardware-dates">
             <Col md={drawerView ? "12" : "6"}>
               <ImsInputDate
                 label="Assigned date"
@@ -258,22 +258,24 @@ const HardwareAssetForm = ({ drawerView, hardware, processing, onSubmit }) => {
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
-            disabled={
-              validate()
-                ? true
-                : processing[USER_ACTIONS.CREATE_HARDWARE].status
-            }
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {processing[USER_ACTIONS.CREATE_HARDWARE].status
-              ? "Processing..."
-              : "Create"}
-          </Button>
+          <TourStep stepId="create-hardware-form-button">
+            <Button
+              name="create"
+              onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
+              disabled={
+                validate()
+                  ? true
+                  : processing[USER_ACTIONS.CREATE_HARDWARE].status
+              }
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {processing[USER_ACTIONS.CREATE_HARDWARE].status
+                ? "Processing..."
+                : "Create"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

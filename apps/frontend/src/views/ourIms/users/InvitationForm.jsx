@@ -40,7 +40,7 @@ const InvitaionForm = ({ user, onSubmit = () => {} }) => {
 
   return (
     <Form action="/" className="form-horizontal">
-      <TourStep key="create-user" data-tour-step="create-user-form">
+      <TourStep stepId="create-user-form">
         <ImsInputText
           label="Email"
           disabled={user ? true : false}
@@ -73,16 +73,18 @@ const InvitaionForm = ({ user, onSubmit = () => {} }) => {
         />
       </TourStep>
       <ImsButtonGroup>
-        <Button
-          name="create"
-          disabled={validate() ? true : isBusy}
-          className="btn-fill"
-          color="primary"
-          type="button"
-          onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
-        >
-          {isBusy ? "Processing" : "Confirm"}
-        </Button>
+        <TourStep stepId="create-user-confirm">
+          <Button
+            name="create"
+            disabled={validate() ? true : isBusy}
+            className="btn-fill"
+            color="primary"
+            type="button"
+            onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
+          >
+            {isBusy ? "Processing" : "Confirm"}
+          </Button>
+        </TourStep>
       </ImsButtonGroup>
     </Form>
   );

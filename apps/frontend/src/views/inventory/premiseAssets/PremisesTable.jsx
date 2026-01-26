@@ -14,6 +14,7 @@ import { RowActions } from "./row-actions";
 import SearchInput from "@/components/SearchInput/search-input";
 import PremiseFilter from "./PremiseFilter";
 import CreatePremiseAsset from "./CreatePremiseAsset";
+import { TourStep } from "../../../components/Tour";
 
 const defaultdata = [["No data found"]];
 
@@ -94,19 +95,21 @@ const ReactTables = ({ ...props }) => {
         ) : (
           <>
             <div>
-              <DataTable
-                data={premisesAssets}
-                columns={columnsForPrimises || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitPremise(original);
-                  openDrawer("premise-asset-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="create-premise-table">
+                <DataTable
+                  data={premisesAssets}
+                  columns={columnsForPrimises || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitPremise(original);
+                    openDrawer("premise-asset-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

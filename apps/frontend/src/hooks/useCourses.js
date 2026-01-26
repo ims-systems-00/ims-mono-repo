@@ -15,18 +15,18 @@ import { useInformationCourse } from "./tours/useInformationCourse";
 const useCourses = () => {
   return {
     businessUnitCourse: useBusinessUnitCourse(),
-    businessPremisesCourse: useBusinessPremisesCourse(),
     userManagementCourse: useUserManagementCourse(),
+    businessPremisesCourse: useBusinessPremisesCourse(),
     createRepositoriesCourse: useCreateRepositoriesCourse(),
-    externalCourse: useExternalCourse(),
-    internalCourse: useInternalCourse(),
-    incidentsCourse: useIncidentsCourse(),
     hardwareCourse: useHardwareCourse(),
     softwareCourse: useSoftwareCourse(),
     peopleCourse: usePeopleCourse(),
-    risksCourse: useRisksCourse(),
     premisesCourse: usePremisesCourse(),
     informationCourse: useInformationCourse(),
+    risksCourse: useRisksCourse(),
+    incidentsCourse: useIncidentsCourse(),
+    externalCourse: useExternalCourse(),
+    internalCourse: useInternalCourse(),
   };
 };
 

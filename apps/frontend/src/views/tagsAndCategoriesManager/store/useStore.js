@@ -13,7 +13,7 @@ export default function useStore(config) {
   const { processing, dispatch: _dispatch } = useProcessingControl(
     Object.keys(USER_ACTIONS).map((action) => {
       return { action: USER_ACTIONS[action] };
-    })
+    }),
   );
   const [tagsAndCategories, setTagsAndCategories] = useState([]);
   const [visitingTagAndCategory, setVisitingTagAndCategory] = useState(null);
@@ -70,7 +70,7 @@ export default function useStore(config) {
       },
     });
     setTagsAndCategories((prevTags) =>
-      prevTags.map((tag) => (tag._id === updatedData._id ? updatedData : tag))
+      prevTags.map((tag) => (tag._id === updatedData._id ? updatedData : tag)),
     );
     _dispatch({
       [USER_ACTIONS.UPDATE_TAG_AND_CATEGORY]: {
@@ -124,7 +124,7 @@ export default function useStore(config) {
         },
       });
       let { data } = await tagsApi.getTagsAndCategory(
-        visitingTagAndCategory?._id || id
+        visitingTagAndCategory?._id || id,
       );
       visitTagsCategory(data.tagAndCategory);
       _dispatch({
@@ -198,7 +198,7 @@ export default function useStore(config) {
       });
       const { data } = await tagsApi.updateTagsAndCategories(
         visitingTagAndCategory?._id,
-        payload
+        payload,
       );
       visitTagsCategory(data.tagAndCategory);
       notify("Tag updated successfully.", "success");
@@ -217,6 +217,7 @@ export default function useStore(config) {
           status: false,
           error: true,
           id: null,
+          queryHandlers,
         },
       });
     }
@@ -234,7 +235,7 @@ export default function useStore(config) {
       });
       let { data } = await tagsApi.deleteTagsAndCategory(tagId);
       setTagsAndCategories((prevTags) =>
-        prevTags.filter((tag) => tag._id !== data.tagAndCategory._id)
+        prevTags.filter((tag) => tag._id !== data.tagAndCategory._id),
       );
       notify("Tag deleted successfully", "success");
       successAlert("Tag deleted successfully");
@@ -256,7 +257,7 @@ export default function useStore(config) {
       imsLogger("LeavesTable", ex);
       notify(
         "Leave request delete failed.Unknown server error occurred",
-        "danger"
+        "danger",
       );
     }
   };

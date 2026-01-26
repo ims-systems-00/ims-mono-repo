@@ -8,11 +8,21 @@ export function usePeopleCourse() {
 
   const course = {
     name: "Inventory – People",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Add, amend and manage your People Assets.",
     steps: [
       {
         target: `[data-tour-step="inventory-sidebar"]`,
-        content: "Click on Inventory and select People.",
+        content: "Click on “Inventory” in the sidebar.",
+        placement: "right",
+        spotlightClicks: true,
+        disableBeacon: true,
+        disableOverlayClose: true,
+        hideCloseButton: true,
+      },
+      {
+        target: `[data-tour-step="inventory-people"]`,
+        content:
+          "Click on “People” to view existing People assets or add new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -21,24 +31,28 @@ export function usePeopleCourse() {
       },
       {
         target: `[data-tour-step="create-people-button"]`,
-        content: "Click “add” to add new people.",
+        content: "Click on “Add” to add a new People Asset.",
         placement: "right",
-        spotlightClicks: true,
         disableBeacon: true,
-        disableOverlayClose: true,
-        hideCloseButton: true,
       },
       {
         target: `[data-tour-step="create-people-form"]`,
-        content:
-          "Fill in the name, role, responsibility, and skill of the new person being added.",
-        placement: "right",
+        content: "Fill in the relevant details here.",
         disableBeacon: true,
+        placement: "bottom",
+        spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="people-row-actions"]`,
+        target: `[data-tour-step="people-create"]`,
+        content: "Click on “Create” to add the Asset to the system.",
+        disableBeacon: true,
+        placement: "bottom",
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="people-table"]`,
         content:
-          "View the details of the added people by clicking “action - details”.",
+          " View the details of any People Asset by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -52,22 +66,25 @@ export function usePeopleCourse() {
       if (type === EVENTS.STEP_AFTER && action === ACTIONS.PREV) {
         setCurrentStep((prev) => prev - 1);
       }
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/inventory/people");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Inventory" }),
+        );
       }
       if (
-        index === 1 &&
+        index === 2 &&
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
         openDrawer("create-people-asset-form");
         setTimeout(() => {
-          setCurrentStep(2);
+          setCurrentStep(3);
           data.resumeTour();
         }, 500);
       }
-      if (index === 3) {
+      if (index === 5) {
         closeDrawer("create-people-asset-form");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {

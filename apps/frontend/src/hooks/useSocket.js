@@ -10,7 +10,7 @@ const useSocket = () => {
     if (socketConnection?.isSet()) {
       imsLogger(
         "Socket connection status:",
-        socketConnection?.getSocket()?.connected
+        socketConnection?.getSocket()?.connected,
       );
     }
     socketConnection?.init();

@@ -77,7 +77,7 @@ const TagsAndCategoriesTable = ({ ...props }) => {
           </div>
 
           <div className="col-md-6 text-end">
-            <TourStep data-tour-step="create-information-button">
+            <TourStep stepId="create-information-button">
               <CreateTagsAndCategories />
             </TourStep>
           </div>

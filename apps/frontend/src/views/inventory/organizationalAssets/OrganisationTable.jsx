@@ -11,6 +11,10 @@ import Box from "@/components/Box/Index";
 import ContentWrapper from "@/components/ContentWrapper/ContentWrapper";
 import { RowActions } from "./row-actions";
 import { Pagination } from "@/components/Pagination/pagination";
+import CreateOrganizationAsset from "./CreateOrganizationAsset";
+import SearchInput from "../../../components/SearchInput/search-input";
+import { TourStep } from "../../../components/Tour";
+import OrganisationFilter from "./OrganisationFilter";
 
 const defaultdata = [["No data found"]];
 
@@ -70,24 +74,41 @@ const ReactTables = ({ ...props }) => {
     <ContentWrapper>
       <Box>
         <h4 className="mb-3">Information</h4>
+        <div className="row align-items-center mb-3">
+          <div className="col-md-6">
+            <div className="row g-2 align-items-center">
+              <div className="col-md-8">
+                <SearchInput queryHandlers={OrganizationQueryTools} />
+              </div>
+              <div className="col-md-4">
+                <OrganisationFilter />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 text-end">
+            <CreateOrganizationAsset />
+          </div>
+        </div>
         {processing[USER_ACTIONS.LOAD_ORGANIZATIONS].status ? (
           <Loading height={600} />
         ) : (
           <>
             <div>
-              <DataTable
-                data={organizationsAssets}
-                columns={columnsForInformation || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitOrganization(original);
-                  toggle("organization-asset-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="create-information-table">
+                <DataTable
+                  data={organizationsAssets}
+                  columns={columnsForInformation || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitOrganization(original);
+                    toggle("organization-asset-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

@@ -34,46 +34,43 @@ const TagsAndCategoryForm = ({
   let notify = React.useContext(NotificationContext);
   const { dataModel, handleChange, handleSubmit, validate, isBusy } = useForm(
     dataSet,
-    schema
+    schema,
   );
 
   let { data, errors } = dataModel;
   return (
     <Form action="/" className="form-horizontal" method="get">
-      <TourStep data-tour-step="create-information-form">
-        <ImsInputText
-          label="Name"
-          name="name"
-          placeholder="Name"
-          value={data.name}
-          onChange={handleChange}
-          error={errors.name}
-        />
-        <ImsInputText
-          label="Description"
-          name="description"
-          type="textarea"
-          value={data.description}
-          onChange={handleChange}
-          error={errors.description}
-          placeholder="Description"
-        />
-      </TourStep>
-      <TourStep data-tour-step="applicable-modules">
-        <ImsInputSelect
-          label={"Applicable modules"}
-          name="applicableModules"
-          isMulti
-          value={data.applicableModules}
-          className="react-select default"
-          classNamePrefix="react-select"
-          onChange={handleChange}
-          options={tagsModules.map((tag) => ({
-            value: tag.value,
-            label: tag.label,
-          }))}
-        />
-      </TourStep>
+      <ImsInputText
+        label="Name"
+        name="name"
+        placeholder="Name"
+        value={data.name}
+        onChange={handleChange}
+        error={errors.name}
+      />
+      <ImsInputText
+        label="Description"
+        name="description"
+        type="textarea"
+        value={data.description}
+        onChange={handleChange}
+        error={errors.description}
+        placeholder="Description"
+      />
+      <ImsInputSelect
+        label={"Applicable modules"}
+        name="applicableModules"
+        isMulti
+        value={data.applicableModules}
+        className="react-select default"
+        classNamePrefix="react-select"
+        onChange={handleChange}
+        options={tagsModules.map((tag) => ({
+          value: tag.value,
+          label: tag.label,
+        }))}
+      />
+
       {!visitingTagAndCategory ? (
         <Button
           onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}

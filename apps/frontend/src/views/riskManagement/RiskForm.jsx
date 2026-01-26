@@ -190,7 +190,7 @@ const RiskForm = ({
     <Form action="/" method="get">
       {alert}
       <Row>
-        <TourStep data-tour-step="create-risk-form">
+        <TourStep stepId="create-risk-form">
           <Col md={drawerView ? "12" : "6"} xs="12">
             <ImsInputText
               label="Risk title"
@@ -278,7 +278,7 @@ const RiskForm = ({
             isHorizontal={false}
             options={users
               .filter((user) =>
-                filterUsersByGroup(user.membership, dataModel.data.group.value)
+                filterUsersByGroup(user.membership, dataModel.data.group.value),
               )
               .map((user) => ({ value: user._id, label: user.name }))}
           />
@@ -447,23 +447,25 @@ const RiskForm = ({
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) => {
-              handleSubmit(e, () => onSubmit(dataModel.data));
-              // if (fromDrawer) {
-              //   props.closeDrawer();
-              // } else {
-              //   viewContextData.switchView && viewContextData.switchView();
-              // }
-            }}
-            disabled={validate() ? true : isBusy}
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {isBusy ? "Processing" : "Raise risk"}
-          </Button>
+          <TourStep stepId="raise-risk-button">
+            <Button
+              name="create"
+              onClick={(e) => {
+                handleSubmit(e, () => onSubmit(dataModel.data));
+                // if (fromDrawer) {
+                //   props.closeDrawer();
+                // } else {
+                //   viewContextData.switchView && viewContextData.switchView();
+                // }
+              }}
+              disabled={validate() ? true : isBusy}
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {isBusy ? "Processing" : "Raise risk"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

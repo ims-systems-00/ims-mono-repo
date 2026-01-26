@@ -1,9 +1,5 @@
 import Loading from "@/components/Loader/Loading";
-import {
-  DrawerRight,
-  useDrawer,
-  DataTable,
-} from "@ims-systems-00/ims-ui-kit";
+import { DrawerRight, useDrawer, DataTable } from "@ims-systems-00/ims-ui-kit";
 import React from "react";
 import SearchableCompliance from "@/views/compliance/searchableList/components/Index";
 import SearchableDocument from "@/views/documentManagement/searchableList/components/Index";
@@ -27,6 +23,7 @@ import { RowActions } from "./row-actions";
 import { Pagination } from "@/components/Pagination/pagination";
 import SearchInput from "@/components/SearchInput/search-input";
 import ContentWrapper from "@/components/ContentWrapper/ContentWrapper";
+import { TourStep } from "../../components/Tour";
 const defaultdata = [["No data found"]];
 
 const IncidentsTable = () => {
@@ -73,10 +70,10 @@ const IncidentsTable = () => {
             row?.original?.priority === "P4"
               ? "text-success"
               : row?.original?.priority === "P3"
-              ? "text-info"
-              : row?.original?.priority === "P3"
-              ? "text-warning"
-              : "text-danger"
+                ? "text-info"
+                : row?.original?.priority === "P3"
+                  ? "text-warning"
+                  : "text-danger"
           }
         >
           {row?.original?.priority}
@@ -147,19 +144,21 @@ const IncidentsTable = () => {
         ) : (
           <>
             <div>
-              <DataTable
-                data={dataTable}
-                columns={columnsForIncidents || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitIncident(original);
-                  openDrawer("incident-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="create-incident-table">
+                <DataTable
+                  data={dataTable}
+                  columns={columnsForIncidents || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitIncident(original);
+                    openDrawer("incident-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

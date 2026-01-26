@@ -2,6 +2,7 @@ import { Col, Row, Button } from "@ims-systems-00/ims-ui-kit";
 import { useHistory } from "react-router-dom";
 import RepositoryActions from "./RepositoryActions";
 import useRepository from "./store/useRepository";
+import { TourStep } from "../../../components/Tour";
 const RepositoryHeader = ({}) => {
   let { repository, totalFiles } = useRepository();
   let history = useHistory();
@@ -27,7 +28,9 @@ const RepositoryHeader = ({}) => {
             <b>{totalFiles} </b>
             files total
           </span>{" "}
-          <RepositoryActions />
+          <TourStep stepId="repository-actions">
+            <RepositoryActions />
+          </TourStep>
         </span>
         <span className="pull-right"></span>
         {/* <p className="font-weight-300">

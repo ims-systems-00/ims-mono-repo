@@ -40,12 +40,12 @@ export function TourProvider({ children }) {
   function getStep(stepId) {
     return steps.find((step) => step.target === `[data-tour-step="${stepId}"]`);
   }
-
   const handleCallback = (data) => {
     const { status } = data;
     if (callback) {
       callback({
         ...data,
+        currentStep,
         setCurrentStep: setCurrentStep,
         pauseTour: () => setRun(false),
         resumeTour: () => setRun(true),

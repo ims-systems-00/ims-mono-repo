@@ -7,37 +7,51 @@ export function useUserManagementCourse() {
   const { openDrawer, closeDrawer } = useDrawer();
 
   const course = {
-    name: "Our iMS – Users",
-    description: "A quick walkthrough to create and manage repositories.",
+    name: "Our iMS – Users ",
+    description: "Add, track and manage your Users. ",
     steps: [
       {
         target: `[data-tour-step="our-ims-sidebar"]`,
-        content: "Click on Our iMS and select Users to view existing users.",
-        // placement: "right",
-        spotlightClicks: true,
+        content: "Click on “Our iMS” in the sidebar.",
+        placement: "right",
         disableBeacon: true,
+        spotlightClicks: true,
         disableOverlayClose: true,
         hideCloseButton: true,
+        hideSkipButton: true,
+      },
+      {
+        target: `[data-tour-step="our-ims-users"]`,
+        content: "Click on “Users” to view existing Users or add new ones.",
+        placement: "right",
+        disableBeacon: true,
+        spotlightClicks: true,
       },
       {
         target: `[data-tour-step="create-user-button"]`,
-        content: "Click on “add user” to add a new user.",
-        // placement: "auto",
-        spotlightClicks: true,
-        disableBeacon: true,
-        disableOverlayClose: true,
-        hideCloseButton: true,
-      },
-      {
-        target: `[data-tour-step="create-user-form"]`,
-        content: "Fill in the email and role of the new user",
+        content: "Click on “Add user” to add a new User.",
         disableBeacon: true,
         // placement: "left",
         spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="users-table-action"]`,
-        content: "View the details of the users by clicking “action - details”",
+        target: `[data-tour-step="create-user-form"]`,
+        content: "Fill in the email and role of the new User.",
+        // placement: "top",
+        disableBeacon: true,
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="create-user-confirm"]`,
+        content: "Click on “Confirm” to send the User an invite to the system.",
+        // placement: "top",
+        disableBeacon: true,
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="users-table"]`,
+        content:
+          "View the details of any User by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         // placement: "top",
         disableBeacon: true,
         spotlightClicks: true,
@@ -52,25 +66,25 @@ export function useUserManagementCourse() {
         setCurrentStep((prev) => prev - 1);
       }
 
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/users");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Our iMS" }),
+        );
       }
       if (
-        index === 1 &&
+        index === 2 &&
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
-        // data.pauseTour();
+        data.pauseTour();
         openDrawer("create-user");
-        // setTimeout(() => {
-        //   setCurrentStep(2);
-        //   data.resumeTour();
-        // }, 1000);
+        for (let i = 0; i < 1000000000; i++);
+        data.resumeTour();
       }
-      if (index === 3) {
+      if (index === 5) {
         closeDrawer("create-user");
       }
-
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {
         data.pauseTour();
         setCurrentStep(0);

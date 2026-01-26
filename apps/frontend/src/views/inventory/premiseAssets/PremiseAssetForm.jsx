@@ -77,7 +77,7 @@ const PremiseAssetForm = ({ premise, processing, onSubmit, drawerView }) => {
     <>
       <Form action="/" className="form-horizontal" onSubmit={handleSubmit}>
         <Row>
-          <TourStep data-tour-step="create-premise-form">
+          <TourStep stepId="create-premise-form">
             <Col md={drawerView ? "12" : "6"}>
               <ImsInputText
                 label="Building name"
@@ -204,6 +204,7 @@ const PremiseAssetForm = ({ premise, processing, onSubmit, drawerView }) => {
               </Button>
             </>
           ) : (
+            <TourStep stepId="create-premise-form-button">
             <Button
               name="create"
               onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
@@ -220,6 +221,7 @@ const PremiseAssetForm = ({ premise, processing, onSubmit, drawerView }) => {
                 ? "Processing..."
                 : "Create"}
             </Button>
+            </TourStep>
           )}
         </ImsButtonGroup>
       </Form>

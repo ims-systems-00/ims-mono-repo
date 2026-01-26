@@ -14,6 +14,7 @@ import ContentWrapper from "@/components/ContentWrapper/ContentWrapper";
 import { RowActions } from "./row-actions";
 import { Pagination } from "@/components/Pagination/pagination";
 import SearchInput from "@/components/SearchInput/search-input";
+import { TourStep } from "../../../components/Tour";
 
 const defaultdata = [["No data found"]];
 
@@ -94,19 +95,21 @@ const ReactTables = ({ ...props }) => {
         ) : (
           <>
             <div>
-              <DataTable
-                data={peopleAssets}
-                columns={columnsForPeople || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitPeople(original);
-                  openDrawer("people-asset-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="people-table">
+                <DataTable
+                  data={peopleAssets}
+                  columns={columnsForPeople || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitPeople(original);
+                    openDrawer("people-asset-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

@@ -29,7 +29,7 @@ export const RowActions = ({ row }) => {
     useDualStateController();
   return (
     <React.Fragment>
-      <TourStep data-tour-step="audit-action">
+      <TourStep stepId="audit-action">
         <DTRowActionsDropdown>
           <DTRowActionsToggle size="sm">
             <ActionDotIcon color="black" size={20}></ActionDotIcon>
@@ -39,7 +39,7 @@ export const RowActions = ({ row }) => {
               onClick={(e) => {
                 e.stopPropagation();
                 history.push(
-                  `/admin/audits/${typeAudit}/${row?.original?._id}`
+                  `/admin/audits/${typeAudit}/${row?.original?._id}`,
                 );
               }}
             >

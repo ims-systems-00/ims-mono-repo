@@ -8,11 +8,21 @@ export function useInternalCourse() {
 
   const course = {
     name: "Audit – Internal",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Schedule, amend and manage your Internal Audits.",
     steps: [
       {
         target: `[data-tour-step="audits-sidebar"]`,
-        content: "Click Audits and select Internal.",
+        content: "Click on “Audits” in the sidebar.",
+        placement: "right",
+        spotlightClicks: true,
+        disableBeacon: true,
+        disableOverlayClose: true,
+        hideCloseButton: true,
+      },
+      {
+        target: `[data-tour-step="internal-audit"]`,
+        content:
+          "Click on “Internal” to view existing Internal Audits or schedule new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -21,7 +31,7 @@ export function useInternalCourse() {
       },
       {
         target: `[data-tour-step="schedule-button"]`,
-        content: "Click “Schedule” to schedule an internal audit.",
+        content: "Click “Schedule” to schedule a new Internal Audit.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -30,31 +40,30 @@ export function useInternalCourse() {
       },
       {
         target: `[data-tour-step="audit-form"]`,
-        content:
-          "Fill in Audit, focus area. Select a date and time and time interval for the audit.",
+        content: "Fill in the relevant details here.",
         placement: "right",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="select-auditor"]`,
+        target: `[data-tour-step="interval-choice"]`,
         content:
-          "The “auditor” allows you to choose a person to perform this audit.",
+          "Depending on your “Interval” choice, this will determine the number of Audits that will be automatically scheduled for the year ahead – “Quarterly” (Four), “Half yearly” (Two) or “Yearly” (One).",
         disableBeacon: true,
-        placement: "bottom",
+        placement: "left",
         spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="audit-table"]`,
-        content:
-          "Several more audits are automatically created based on the time interval for the audit.",
+        target: `[data-tour-step="audit-confirm-button"]`,
+        content: "Click on “Confirm” to add the Audit(s) to the system.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
       },
 
       {
-        target: `[data-tour-step="audit-action"]`,
-        content: "Click “action” to view the details of the internal audit.",
+        target: `[data-tour-step="audit-table"]`,
+        content:
+          "View the details of any Audit by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -68,22 +77,26 @@ export function useInternalCourse() {
       if (type === EVENTS.STEP_AFTER && action === ACTIONS.PREV) {
         setCurrentStep((prev) => prev - 1);
       }
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/audits/internal");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Audits" }),
+        );
       }
+
       if (
-        index === 1 &&
+        index === 2 &&
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
         openDrawer("create-audit");
         setTimeout(() => {
-          setCurrentStep(2);
+          setCurrentStep(3);
           data.resumeTour();
         }, 500);
       }
-      if (index === 4) {
+      if (index === 6) {
         closeDrawer("create-audit");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {

@@ -27,7 +27,7 @@ export const RowActions = ({ row }) => {
   const history = useHistory();
   const { processing, handleSoftwareDelete } = useSoftwareAssets();
   return (
-    <TourStep data-tour-step="create-software-asset-action">
+    <TourStep stepId="create-software-asset-action">
       <React.Fragment>
         <DTRowActionsDropdown>
           <DTRowActionsToggle size="sm">

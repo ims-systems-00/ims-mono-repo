@@ -2,12 +2,12 @@ import useAccess from "@/hooks/useAccess";
 import { Button, DrawerOpener } from "@ims-systems-00/ims-ui-kit";
 import React from "react";
 import { ACTIONS, EFFECTS, IMS_SERVICES } from "@/rolesAndPermissions";
-import { TourStep } from "components/Tour";
+import { TourStep } from "../../../components/Tour";
 
 const CreateOrganizationAsset = () => {
   const { authUser } = useAccess();
   return (
-    <TourStep data-tour-step="create-information-button">
+    <TourStep stepId="create-information-button">
       <React.Fragment>
         {authUser({
           service: IMS_SERVICES.INVENTORY,

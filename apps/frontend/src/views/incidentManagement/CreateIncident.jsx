@@ -7,7 +7,7 @@ import { TourStep } from "../../components/Tour";
 const CreateIncident = () => {
   return (
     <React.Fragment>
-      <TourStep data-tour-step="create-incident-button">
+      <TourStep stepId="create-incident-button">
         <Can
           policy={{
             service: IMS_SERVICES.INCIDENT_MANAGEMENT,

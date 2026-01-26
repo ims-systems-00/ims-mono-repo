@@ -129,23 +129,23 @@ const IncidentForm = ({
 
   return (
     <Form action="/" className="form-horizontal" method="get">
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            value={data.group}
-            isDisabled={incident ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
-          />
-        </Col>
-        <TourStep data-tour-step="create-incident-form">
+      <TourStep stepId="create-incident-form">
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              value={data.group}
+              isDisabled={incident ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
           <Col md={drawerView ? "12" : "6"}>
             <ImsInputText
               label="Title"
@@ -222,108 +222,108 @@ const IncidentForm = ({
               }))}
             />
           </Col>
-        </TourStep>
-        <TourStep data-tour-step="create-incident-owner">
-          <Col md={drawerView ? "12" : "6"}>
+          <TourStep stepId="create-incident-owner">
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputSelect
+                label="Incident owner"
+                name="owner"
+                value={data.owner}
+                mandatory={true}
+                className="react-select default"
+                classNamePrefix="react-select"
+                onChange={handleChange}
+                options={users
+                  .filter((user) =>
+                    filterUsersByGroup(
+                      user.membership,
+                      dataModel.data.group.value,
+                    ),
+                  )
+                  .map((user) => ({ value: user._id, label: user.name }))}
+              />
+            </Col>
+          </TourStep>
+          <Col xl={drawerView ? "12" : "6"} xs="12">
             <ImsInputSelect
-              label="Incident owner"
-              name="owner"
-              value={data.owner}
-              mandatory={true}
+              name="tagsAndCategories"
+              value={data.tagsAndCategories}
+              vertical={true}
+              onChange={handleChange}
+              onInputChange={setSearchString}
+              options={[
+                {
+                  value: null,
+                  label: "Not selected",
+                },
+                ...tagsAndCategories.map((tag) => ({
+                  value: tag._id,
+                  label: tag.name,
+                })),
+              ]}
+              label={"Category"}
+              sideBtn={<AddCategory />}
               className="react-select default"
               classNamePrefix="react-select"
-              onChange={handleChange}
-              options={users
-                .filter((user) =>
-                  filterUsersByGroup(
-                    user.membership,
-                    dataModel.data.group.value
-                  )
-                )
-                .map((user) => ({ value: user._id, label: user.name }))}
             />
           </Col>
-        </TourStep>
-        <Col xl={drawerView ? "12" : "6"} xs="12">
-          <ImsInputSelect
-            name="tagsAndCategories"
-            value={data.tagsAndCategories}
-            vertical={true}
-            onChange={handleChange}
-            onInputChange={setSearchString}
-            options={[
-              {
-                value: null,
-                label: "Not selected",
-              },
-              ...tagsAndCategories.map((tag) => ({
-                value: tag._id,
-                label: tag.name,
-              })),
-            ]}
-            label={"Category"}
-            sideBtn={<AddCategory />}
-            className="react-select default"
-            classNamePrefix="react-select"
-          />
-        </Col>
-        {!incident && (
-          <Col md="12">
-            <ImsInputCheck
-              checked={data.privacy}
-              label="is organisational"
-              name="privacy"
-              value={data.privacy}
-              onChange={handleChange}
-              error={errors.privacy}
-            />
-          </Col>
-        )}
-        <Col md="12">
-          <ImsTextEditor
-            label="Description"
-            name="description"
-            mandatory={true}
-            placeholder={"Add a description."}
-            value={data.description}
-            mediaLinkGeneratorFn={linkGenerator}
-            onEachFileSelection={handleUpload}
-            onChange={handleChange}
-          />
-        </Col>{" "}
-      </Row>
-      <ImsInputDropZone
-        label="Attachments"
-        clearAll={!data.attachments.length}
-        name="incidents"
-        onLoad={(files) => handleFileChange(files, "attachments")}
-      />
-
-      {incident && (
-        <Row>
-          {dataModel.data.resolveStatus && (
+          {!incident && (
             <Col md="12">
-              <ImsTextEditor
-                label="Resolution"
-                name="resolution"
-                placeholder={"Add a resolution."}
-                value={data.resolution}
-                mediaLinkGeneratorFn={linkGenerator}
-                onEachFileSelection={handleUpload}
+              <ImsInputCheck
+                checked={data.privacy}
+                label="is organisational"
+                name="privacy"
+                value={data.privacy}
                 onChange={handleChange}
+                error={errors.privacy}
               />
             </Col>
           )}
-          <ImsInputCheck
-            checked={data.resolveStatus}
-            label="Resolved"
-            name="resolveStatus"
-            value={data.resolveStatus}
-            onChange={handleChange}
-            error={errors.resolveStatus}
-          />
+          <Col md="12">
+            <ImsTextEditor
+              label="Description"
+              name="description"
+              mandatory={true}
+              placeholder={"Add a description."}
+              value={data.description}
+              mediaLinkGeneratorFn={linkGenerator}
+              onEachFileSelection={handleUpload}
+              onChange={handleChange}
+            />
+          </Col>{" "}
         </Row>
-      )}
+        <ImsInputDropZone
+          label="Attachments"
+          clearAll={!data.attachments.length}
+          name="incidents"
+          onLoad={(files) => handleFileChange(files, "attachments")}
+        />
+
+        {incident && (
+          <Row>
+            {dataModel.data.resolveStatus && (
+              <Col md="12">
+                <ImsTextEditor
+                  label="Resolution"
+                  name="resolution"
+                  placeholder={"Add a resolution."}
+                  value={data.resolution}
+                  mediaLinkGeneratorFn={linkGenerator}
+                  onEachFileSelection={handleUpload}
+                  onChange={handleChange}
+                />
+              </Col>
+            )}
+            <ImsInputCheck
+              checked={data.resolveStatus}
+              label="Resolved"
+              name="resolveStatus"
+              value={data.resolveStatus}
+              onChange={handleChange}
+              error={errors.resolveStatus}
+            />
+          </Row>
+        )}
+      </TourStep>
       <ImsButtonGroup>
         {incident ? (
           <>
@@ -345,18 +345,20 @@ const IncidentForm = ({
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) => {
-              handleSubmit(e, () => onSubmit(dataModel.data));
-            }}
-            disabled={validate() ? true : isBusy}
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {isBusy ? "Processing" : "Raise incident"}
-          </Button>
+          <TourStep stepId="raise-incident-form-button">
+            <Button
+              name="create"
+              onClick={(e) => {
+                handleSubmit(e, () => onSubmit(dataModel.data));
+              }}
+              disabled={validate() ? true : isBusy}
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {isBusy ? "Processing" : "Raise incident"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

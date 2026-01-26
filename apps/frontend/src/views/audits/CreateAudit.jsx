@@ -4,7 +4,7 @@ import { ACTIONS, IMS_SERVICES } from "@/rolesAndPermissions";
 import { TourStep } from "../../components/Tour";
 const CreateAudit = () => {
   return (
-    <TourStep data-tour-step="schedule-button">
+    <TourStep stepId="schedule-button">
       <Can
         policy={{
           service: IMS_SERVICES.AUDIT,

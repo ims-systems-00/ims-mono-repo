@@ -7,12 +7,21 @@ import {
   NavbarToggler,
 } from "@ims-systems-00/ims-ui-kit";
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import { TourStep } from "./Tour";
-function NavigationTabs({ navigations = [], ...rest }) {
+function NavigationTabs({ navigations = [], defaultActiveId, ...rest }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [activeTab, setActiveTab] = React.useState(navigations[0]?.id);
+  const [activeTab, setActiveTab] = React.useState(
+    defaultActiveId || navigations[0]?.id,
+  );
   const toggle = () => setIsOpen(!isOpen);
+
+  React.useEffect(() => {
+    if (defaultActiveId) {
+      setActiveTab(defaultActiveId);
+    }
+  }, [defaultActiveId]);
   return (
     <React.Fragment>
       <Navbar
@@ -27,19 +36,19 @@ function NavigationTabs({ navigations = [], ...rest }) {
           <Nav className="me-auto" pills navbar>
             {navigations.map((navigation) => {
               return (
-                <TourStep data-tour-step={navigation.id}>
-                  <NavItem
-                    key={navigation.id}
-                    active={activeTab === navigation.id}
-                    onClick={() => setActiveTab(navigation.id)}
-                  >
+                <NavItem
+                  key={uuidv4()}
+                  active={activeTab === navigation.id}
+                  onClick={() => setActiveTab(navigation.id)}
+                >
+                  <TourStep key={uuidv4()} stepId={navigation.id}>
                     <Link to={"#"}>
                       <NavLink className=" d-flex align-items-center justify-content-center gap-1 text-nowrap">
                         {navigation.icon} {navigation.text}
                       </NavLink>
                     </Link>
-                  </NavItem>
-                </TourStep>
+                  </TourStep>
+                </NavItem>
               );
             })}
           </Nav>

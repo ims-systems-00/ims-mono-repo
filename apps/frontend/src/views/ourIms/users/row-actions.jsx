@@ -27,7 +27,7 @@ export const RowActions = ({ row }) => {
 
   return (
     <React.Fragment>
-      <TourStep key="users-table" data-tour-step="users-table-action">
+      <TourStep stepId="users-table-action">
         <DTRowActionsDropdown>
           <DTRowActionsToggle size="sm">
             <ActionDotIcon color="black" size={20}></ActionDotIcon>

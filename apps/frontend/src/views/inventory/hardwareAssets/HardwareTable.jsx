@@ -15,6 +15,7 @@ import Box from "@/components/Box/Index";
 import { RowActions } from "./row-actions";
 import { Pagination } from "@/components/Pagination/pagination";
 import SearchInput from "@/components/SearchInput/search-input";
+import { TourStep } from "../../../components/Tour";
 const defaultdata = [["No data found"]];
 
 const ReactTables = ({}) => {
@@ -110,19 +111,21 @@ const ReactTables = ({}) => {
         ) : (
           <>
             <div>
-              <DataTable
-                data={hardwareAssets}
-                columns={columnsForHardware || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitHardware(original);
-                  openDrawer("hardware-asset-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="create-hardware-table">
+                <DataTable
+                  data={hardwareAssets}
+                  columns={columnsForHardware || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitHardware(original);
+                    openDrawer("hardware-asset-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

@@ -8,11 +8,12 @@ export function useIncidentsCourse() {
 
   const course = {
     name: "Incidents",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Raise, amend and manage your Incidents.",
     steps: [
       {
         target: `[data-tour-step="incident-management"]`,
-        content: "Click on Incidents.",
+        content:
+          "Click on “Incidents” in the sidebar to view existing Incidents or raise new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -21,8 +22,8 @@ export function useIncidentsCourse() {
       },
       {
         target: `[data-tour-step="create-incident-button"]`,
-        content: "Click “Raise” to report a new incident.",
-        placement: "right",
+        content: "Click “Raise” to raise a new Incident.",
+        // placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
         disableOverlayClose: true,
@@ -30,25 +31,23 @@ export function useIncidentsCourse() {
       },
       {
         target: `[data-tour-step="create-incident-form"]`,
-        content:
-          "Fill in Title, method of notification, affected service and priority.",
-        placement: "right",
+        content: "Fill in the relevant details here.",
+        placement: "left",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="create-incident-owner"]`,
-        content:
-          "“incident owner” allows you to assign an incident to a person.",
+        target: `[data-tour-step="raise-incident-form-button"]`,
+        content: "Click on “Raise incident” to add the Incident to the system.",
         disableBeacon: true,
-        placement: "bottom",
+        // placement: "bottom",
         spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="create-incident-action"]`,
+        target: `[data-tour-step="create-incident-table"]`,
         content:
-          "To view the details of the new incident, as well as nudge and escalate the incident, click “action”.",
+          "View the details of any Incident by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
-        placement: "left",
+        // placement: "left",
         spotlightClicks: true,
       },
     ],
@@ -70,10 +69,8 @@ export function useIncidentsCourse() {
       ) {
         data.pauseTour();
         openDrawer("create-incident");
-        setTimeout(() => {
-          setCurrentStep(2);
-          data.resumeTour();
-        }, 500);
+        for (let i = 0; i < 1000000000; i++);
+        data.resumeTour();
       }
       if (index === 4) {
         closeDrawer("create-incident");

@@ -19,6 +19,7 @@ import { ApplicationContextProvider } from "@/stores/applicationStore";
 import { appInitialisers } from "./loaders";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { DrawerContextProvider } from "@ims-systems-00/ims-ui-kit";
+import { TourProvider } from "./components/Tour";
 appInitialisers();
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
@@ -35,42 +36,44 @@ const queryClient = new QueryClient({
 root.render(
   <>
     {process.env.REACT_APP_MODE === "UP" ? (
-      <BrowserRouter>
-        <DrawerContextProvider>
-          <QueryClientProvider client={queryClient}>
-            <ApplicationContextProvider>
-              <ImsFullScreenLoading />
-              <ToastContainer />
-              <Switch>
-                <Route
-                  path="/auth"
-                  render={(props) => <AuthLayout {...props} />}
-                />
-                <Route
-                  path="/partner"
-                  render={(props) => <PartnerLayout {...props} />}
-                />
-                <Route
-                  path="/admin"
-                  render={(props) => <AdminLayout {...props} />}
-                />
-                <Route
-                  path="/systemadmin"
-                  render={(props) => <SystemAdminLayout {...props} />}
-                />
-                <Route path="/misc" render={(props) => <Misc {...props} />} />
-                <Route
-                  path="/public"
-                  render={(props) => <Public {...props} />}
-                />
-                <Redirect from="/" to="/admin/dashboard" />
-              </Switch>
-            </ApplicationContextProvider>
-          </QueryClientProvider>
-        </DrawerContextProvider>
-      </BrowserRouter>
+      <TourProvider>
+        <BrowserRouter>
+          <DrawerContextProvider>
+            <QueryClientProvider client={queryClient}>
+              <ApplicationContextProvider>
+                <ImsFullScreenLoading />
+                <ToastContainer />
+                <Switch>
+                  <Route
+                    path="/auth"
+                    render={(props) => <AuthLayout {...props} />}
+                  />
+                  <Route
+                    path="/partner"
+                    render={(props) => <PartnerLayout {...props} />}
+                  />
+                  <Route
+                    path="/admin"
+                    render={(props) => <AdminLayout {...props} />}
+                  />
+                  <Route
+                    path="/systemadmin"
+                    render={(props) => <SystemAdminLayout {...props} />}
+                  />
+                  <Route path="/misc" render={(props) => <Misc {...props} />} />
+                  <Route
+                    path="/public"
+                    render={(props) => <Public {...props} />}
+                  />
+                  <Redirect from="/" to="/admin/dashboard" />
+                </Switch>
+              </ApplicationContextProvider>
+            </QueryClientProvider>
+          </DrawerContextProvider>
+        </BrowserRouter>
+      </TourProvider>
     ) : (
       <Maintanance />
     )}
-  </>
+  </>,
 );

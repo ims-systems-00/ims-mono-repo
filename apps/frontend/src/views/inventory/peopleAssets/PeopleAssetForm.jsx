@@ -60,7 +60,7 @@ const PeopleAssetForm = ({ people, processing, drawerView, onSubmit }) => {
 
   const { dataModel, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    schema
+    schema,
   );
 
   function handleCancelClick() {
@@ -170,7 +170,7 @@ const PeopleAssetForm = ({ people, processing, drawerView, onSubmit }) => {
                   () => {
                     onSubmit(dataModel.data);
                   },
-                  false
+                  false,
                 )
               }
               disabled={
@@ -188,24 +188,28 @@ const PeopleAssetForm = ({ people, processing, drawerView, onSubmit }) => {
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) =>
-              handleSubmit(e, () => {
-                onSubmit(dataModel.data);
-              })
-            }
-            disabled={
-              validate() ? true : processing[USER_ACTIONS.CREATE_PEOPLE].status
-            }
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {processing[USER_ACTIONS.CREATE_PEOPLE].status
-              ? "Processing..."
-              : "Create"}
-          </Button>
+          <TourStep stepId="people-create">
+            <Button
+              name="create"
+              onClick={(e) =>
+                handleSubmit(e, () => {
+                  onSubmit(dataModel.data);
+                })
+              }
+              disabled={
+                validate()
+                  ? true
+                  : processing[USER_ACTIONS.CREATE_PEOPLE].status
+              }
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {processing[USER_ACTIONS.CREATE_PEOPLE].status
+                ? "Processing..."
+                : "Create"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

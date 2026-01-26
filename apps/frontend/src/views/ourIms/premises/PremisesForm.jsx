@@ -85,7 +85,7 @@ const PremisesForm = ({
   }
   const { dataModel, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    schema
+    schema,
   );
   let { data, errors } = dataModel;
 
@@ -93,7 +93,7 @@ const PremisesForm = ({
     <div>
       <Form action="/" className="form-horizontal" method="get">
         {alert}
-        <TourStep data-tour-step="business-premises-form">
+        <TourStep stepId="business-premises-form">
           <Row>
             <Col md="6">
               {premise && authSuperUser() ? (
@@ -194,16 +194,18 @@ const PremisesForm = ({
               </Button>
             </>
           ) : (
-            <Button
-              name="create"
-              onClick={(e) => handleSubmit(e, doSubmit)}
-              disabled={validate() ? true : processing.action === "create"}
-              className="btn-fill"
-              color="primary"
-              type="button"
-            >
-              {processing.action === "create" ? "Processing..." : "Create"}
-            </Button>
+            <TourStep stepId="business-premises-create">
+              <Button
+                name="create"
+                onClick={(e) => handleSubmit(e, doSubmit)}
+                disabled={validate() ? true : processing.action === "create"}
+                className="btn-fill"
+                color="primary"
+                type="button"
+              >
+                {processing.action === "create" ? "Processing..." : "Create"}
+              </Button>
+            </TourStep>
           )}
         </ImsButtonGroup>
       </Form>

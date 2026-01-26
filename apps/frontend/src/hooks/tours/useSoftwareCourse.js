@@ -8,12 +8,22 @@ export function useSoftwareCourse() {
 
   const course = {
     name: "Inventory – Software",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Add, amend and manage your Software Assets.",
     steps: [
       {
         target: `[data-tour-step="inventory-sidebar"]`,
-        content: "Click on Inventory and select Software.",
+        content: "Click on “Inventory” in the sidebar.",
         placement: "right",
+        spotlightClicks: true,
+        disableBeacon: true,
+        disableOverlayClose: true,
+        hideCloseButton: true,
+      },
+      {
+        target: `[data-tour-step="inventory-software"]`,
+        content:
+          "Click on “Software” to view existing Software assets or add new ones.",
+        // placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
         disableOverlayClose: true,
@@ -21,33 +31,29 @@ export function useSoftwareCourse() {
       },
       {
         target: `[data-tour-step="create-software-asset-button"]`,
-        content: "Click on “Add” to add a new software.",
-        placement: "right",
-        spotlightClicks: true,
+        content: "Click on “Add” to add a new Software Asset.",
+        // placement: "right",
         disableBeacon: true,
-        disableOverlayClose: true,
-        hideCloseButton: true,
       },
       {
         target: `[data-tour-step="create-software-asset-form"]`,
-        content: "Fill in “software name”.",
-        placement: "right",
+        content: "Fill in the relevant details here.",
+        placement: "left",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="create-software-asset-licenses"]`,
-        content:
-          "“Number of licenses” and “Number of installs” tell how many permissions you bought and how many times the software is physically on a device.",
+        target: `[data-tour-step="create-software-form-button"]`,
+        content: "Click on “Create” to add the Asset to the system.",
         disableBeacon: true,
-        placement: "bottom",
+        // placement: "bottom",
         spotlightClicks: true,
       },
       {
-        target: `[data-tour-step="create-software-asset-action"]`,
+        target: `[data-tour-step="create-software-table"]`,
         content:
-          "View the details of this software by clicking “action - details”.",
+          "View the details of any Software Asset by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
-        placement: "bottom",
+        // placement: "bottom",
         spotlightClicks: true,
       },
     ],
@@ -59,22 +65,25 @@ export function useSoftwareCourse() {
       if (type === EVENTS.STEP_AFTER && action === ACTIONS.PREV) {
         setCurrentStep((prev) => prev - 1);
       }
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/inventory/software");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Inventory" }),
+        );
       }
       if (
-        index === 1 &&
+        index === 2 &&
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
         openDrawer("create-software-asset-form");
         setTimeout(() => {
-          setCurrentStep(2);
+          setCurrentStep(3);
           data.resumeTour();
         }, 500);
       }
-      if (index === 4) {
+      if (index === 5) {
         closeDrawer("create-software-asset-form");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {

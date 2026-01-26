@@ -8,11 +8,12 @@ export function useRisksCourse() {
 
   const course = {
     name: "Risks",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Raise, amend and manage your Risks.",
     steps: [
       {
         target: `[data-tour-step="risk-management"]`,
-        content: "Click on Risks",
+        content:
+          "Click on “Risks” in the sidebar to view existing Risks or raise new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -21,7 +22,7 @@ export function useRisksCourse() {
       },
       {
         target: `[data-tour-step="create-risk-button"]`,
-        content: "Click “Raise” to report a new risk.",
+        content: "Click “Raise” to raise a new Risk.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -30,15 +31,21 @@ export function useRisksCourse() {
       },
       {
         target: `[data-tour-step="create-risk-form"]`,
-        content:
-          "Provide information for risk title, type, risk owner, likelihood and consequence.",
-        placement: "right",
+        content: "Fill in the relevant details here.",
+        placement: "left",
+        disableBeacon: true,
+      },
+
+      {
+        target: `[data-tour-step="raise-risk-button"]`,
+        content: "Click on “Raise risk” to add the Risk to the system.",
+        placement: "top",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="create-risk-action"]`,
+        target: `[data-tour-step="create-risk-table"]`,
         content:
-          "View the details of the newly-raised risk by clicking “action - details”.",
+          "View the details of any Risk by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -60,14 +67,15 @@ export function useRisksCourse() {
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
-        // data.pauseTour();
+        data.pauseTour();
         openDrawer("create-risk");
+        for (let i = 0; i < 1000000000; i++);
+        data.resumeTour();
         // setTimeout(() => {
         //   setCurrentStep(2);
-        //   data.resumeTour();
         // }, 500);
       }
-      if (index === 3) {
+      if (index === 4) {
         closeDrawer("create-risk");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {

@@ -45,13 +45,13 @@ const UserTable = ({ ...props }) => {
         email: data.email,
         jobTitle: data.membership?.find(
           (m) =>
-            m.organization === tokenPair?.accessTokenData?.user?.organizationId
+            m.organization === tokenPair?.accessTokenData?.user?.organizationId,
         )?.jobTitle,
         status: data.systemAccess?.status,
         data: data,
         userType: data.membership.find(
           (m) =>
-            m.organization === tokenPair?.accessTokenData?.user?.organizationId
+            m.organization === tokenPair?.accessTokenData?.user?.organizationId,
         )?.role,
         lastLoggedIn: data.loggedIn?.on ?? "Never logged in",
       };
@@ -102,7 +102,7 @@ const UserTable = ({ ...props }) => {
 
   return (
     <ContentWrapper>
-      <TourStep key="users-table" stepId="users-table">
+      <TourStep stepId="users-table">
         <Box>
           {alert}
           <div className="row align-items-center mb-3">
@@ -169,7 +169,7 @@ const UserTable = ({ ...props }) => {
             <DeleteProcess
               onDelete={(user) =>
                 setUsers((prevUsers) =>
-                  prevUsers.filter((u) => u?._id !== user?._id)
+                  prevUsers.filter((u) => u?._id !== user?._id),
                 )
               }
             />

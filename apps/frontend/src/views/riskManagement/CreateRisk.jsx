@@ -6,7 +6,7 @@ import { TourStep } from "../../components/Tour";
 const CreateRisk = () => {
   return (
     <React.Fragment>
-      <TourStep data-tour-step="create-risk-button">
+      <TourStep stepId="create-risk-button">
         <Can
           policy={{
             service: IMS_SERVICES.RISK_MANAGEMENT,

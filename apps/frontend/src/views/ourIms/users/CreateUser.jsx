@@ -12,14 +12,14 @@ const CreateUser = () => {
         action: ACTIONS.CREATE,
       }}
     >
-      <DrawerOpener drawerId="create-user">
-        <TourStep key="create-user" data-tour-step="create-user-button">
+      <TourStep key="create-user-step" stepId="create-user-button">
+        <DrawerOpener drawerId="create-user">
           <Button color="primary" size="md" className="shadow-sm--hover">
             <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0"></i>
             {"  "} Add user
           </Button>
-        </TourStep>
-      </DrawerOpener>
+        </DrawerOpener>
+      </TourStep>
     </Can>
   );
 };

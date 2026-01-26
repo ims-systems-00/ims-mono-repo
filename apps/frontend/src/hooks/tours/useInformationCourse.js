@@ -8,11 +8,11 @@ export function useInformationCourse() {
 
   const course = {
     name: "Inventory – Information",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Add, amend and manage your Information Assets.",
     steps: [
       {
         target: `[data-tour-step="inventory-sidebar"]`,
-        content: "Click on Inventory and select Information.",
+        content: "Click on “Inventory” in the sidebar.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -20,8 +20,9 @@ export function useInformationCourse() {
         hideCloseButton: true,
       },
       {
-        target: `[data-tour-step="informationCategories"]`,
-        content: "Click on Information Categories",
+        target: `[data-tour-step="inventory-organization"]`,
+        content:
+          "Click on “Information” to view existing Information assets or add new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -30,7 +31,7 @@ export function useInformationCourse() {
       },
       {
         target: `[data-tour-step="create-information-button"]`,
-        content: "Click “create” to create a new information category.",
+        content: "Click on “Add” to add a new Information Asset.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -39,14 +40,21 @@ export function useInformationCourse() {
       },
       {
         target: `[data-tour-step="create-information-form"]`,
-        content: "Fill in the name and description of the new information.",
+        content: "Fill in the relevant details here.",
         placement: "right",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="applicable-modules"]`,
+        target: `[data-tour-step="create-information-form-button"]`,
+        content: "Click on “Create” to add the Asset to the system.",
+        disableBeacon: true,
+        placement: "bottom",
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="create-information-table"]`,
         content:
-          "“Applicable modules” provide a list of modules in iMS systems that this information may be related to.",
+          "View the details of any Information Asset by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -60,8 +68,11 @@ export function useInformationCourse() {
       if (type === EVENTS.STEP_AFTER && action === ACTIONS.PREV) {
         setCurrentStep((prev) => prev - 1);
       }
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/inventory/information");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Inventory" }),
+        );
       }
       if (
         index === 2 &&
@@ -69,14 +80,14 @@ export function useInformationCourse() {
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
-        openDrawer("create-tag");
+        openDrawer("create-organization-asset-form");
         setTimeout(() => {
           setCurrentStep(3);
           data.resumeTour();
         }, 500);
       }
       if (index === 5) {
-        closeDrawer("create-tag");
+        closeDrawer("create-organization-asset-form");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {
         data.pauseTour();

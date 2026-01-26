@@ -35,7 +35,7 @@ export const RowActions = ({ row }) => {
     useDualStateController();
   return (
     <React.Fragment>
-      <TourStep data-tour-step="create-incident-action">
+      <TourStep stepId="create-incident-action">
         <DTRowActionsDropdown>
           <DTRowActionsToggle size="sm">
             <ActionDotIcon color="black" size={20}></ActionDotIcon>

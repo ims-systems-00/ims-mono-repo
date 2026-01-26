@@ -4,7 +4,7 @@ import { TourStep } from "../../../components/Tour";
 const CreateHardwareAsset = () => {
   return (
     <React.Fragment>
-      <TourStep data-tour-step="create-hardware-button">
+      <TourStep stepId="create-hardware-button">
         <DrawerOpener drawerId="create-hardware-asset">
           <Button color="primary" size="md" className="shadow-sm--hover">
             <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0"></i>

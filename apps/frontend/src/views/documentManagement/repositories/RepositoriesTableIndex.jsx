@@ -5,14 +5,16 @@ import RepositoryOverviewIndex from "./Analytics/RepositoryOverviewIndex";
 import DeletedRepositoriesTable from "./DeletedRepositoriesTable";
 import RepositoriesTable from "./RepositoriesTable";
 import { RepositoriesContextProvider } from "./store";
+import { useState } from "react";
 
 const RepositoriesTableIndex = (props) => {
   let { authUser } = useAccess();
+  const [activeTab, setActiveTab] = useState("overview");
   return (
     <RepositoriesContextProvider {...props}>
       <TaskContextProvider>
         <NavigationTabs
-          activeTab="repositories"
+          defaultActiveId={activeTab}
           navigations={[
             {
               id: "overview",

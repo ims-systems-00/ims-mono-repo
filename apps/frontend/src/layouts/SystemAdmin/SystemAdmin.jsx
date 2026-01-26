@@ -2,7 +2,6 @@ import logo from "@/assets/img/ims-systems-full-logo-white.png";
 import Footer from "@/components/Footer/Footer";
 import AdminNavbar from "@/components/Navbars/Admin/AdminNavbar";
 import SystemAdminProtectedRoute from "@/components/Protected/SystemAdminProtectedRoute";
-import { TourProvider } from "@/components/Tour";
 import { OmniplexJourneyProvider } from "@/components/omniplexGuide/index";
 import AlertContextProvider from "@/contexts/AlertContext";
 import SuperGlobalAdminProvider from "@/contexts/SuperGlobalContext";
@@ -110,14 +109,14 @@ const SystemAdmin = (props) => {
         if (
           prop.licenseRequirements?.additionalModule &&
           !authAdditionalModulesLicense(
-            prop.licenseRequirements?.additionalModule
+            prop.licenseRequirements?.additionalModule,
           )
         )
           return false;
         if (
           prop.licenseRequirements?.complianceTool &&
           !authComplianceToolkitLicense(
-            prop.licenseRequirements?.complianceTool
+            prop.licenseRequirements?.complianceTool,
           )
         )
           return false;
@@ -127,7 +126,7 @@ const SystemAdmin = (props) => {
       if (
         prop.licenseRequirements?.additionalModule &&
         !authAdditionalModulesLicense(
-          prop.licenseRequirements?.additionalModule
+          prop.licenseRequirements?.additionalModule,
         )
       )
         return false;
@@ -151,7 +150,7 @@ const SystemAdmin = (props) => {
       } else {
         if (
           window.location.pathname.indexOf(
-            routes[i].layout + routes[i].path
+            routes[i].layout + routes[i].path,
           ) !== -1
         ) {
           return routes[i];
@@ -172,189 +171,187 @@ const SystemAdmin = (props) => {
   };
 
   return (
-    <TourProvider>
-      <OmniplexJourneyProvider>
-        <SuperGlobalAdminProvider>
-          <AlertContextProvider>
-            <ReactNotifications />
-            <NotificationContext.Provider value={notify}>
-              <div className="main-layout">
-                <Sidebar
-                  collapsed={sidebarCollapsed}
-                  toggled={sidebarToggled}
-                  customBreakPoint="764px"
-                  onBackdropClick={() => setSidebarToggled(false)}
-                  rootStyles={{
-                    overflow: "hidden",
-                    position: "sticky",
-                    top: 0,
-                    height: "100vh",
-                    [`.${sidebarClasses.container}`]: {
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
+    <OmniplexJourneyProvider>
+      <SuperGlobalAdminProvider>
+        <AlertContextProvider>
+          <ReactNotifications />
+          <NotificationContext.Provider value={notify}>
+            <div className="main-layout">
+              <Sidebar
+                collapsed={sidebarCollapsed}
+                toggled={sidebarToggled}
+                customBreakPoint="764px"
+                onBackdropClick={() => setSidebarToggled(false)}
+                rootStyles={{
+                  overflow: "hidden",
+                  position: "sticky",
+                  top: 0,
+                  height: "100vh",
+                  [`.${sidebarClasses.container}`]: {
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    backgroundColor: themeColos.primaryColor,
+                    position: "relative",
+                    overflowY: "auto",
+                    scrollbarWidth: "none",
+                    "-ms-overflow-style": "none",
+                  },
+                  [`&.${sidebarClasses.broken}`]: {
+                    zIndex: 1051,
+                  },
+                  [`.ps-submenu-expand-icon`]: {
+                    display: sidebarCollapsed ? "none" : "block",
+                  },
+                }}
+              >
+                <Menu rootStyles={menuStyles}>
+                  <MenuItem
+                    rootStyles={{
+                      position: "sticky",
+                      top: 0,
+                      zIndex: 10,
                       backgroundColor: themeColos.primaryColor,
-                      position: "relative",
-                      overflowY: "auto",
-                      scrollbarWidth: "none",
-                      "-ms-overflow-style": "none",
-                    },
-                    [`&.${sidebarClasses.broken}`]: {
-                      zIndex: 1051,
-                    },
-                    [`.ps-submenu-expand-icon`]: {
-                      display: sidebarCollapsed ? "none" : "block",
-                    },
-                  }}
-                >
-                  <Menu rootStyles={menuStyles}>
-                    <MenuItem
-                      rootStyles={{
-                        position: "sticky",
-                        top: 0,
-                        zIndex: 10,
-                        backgroundColor: themeColos.primaryColor,
-                      }}
-                    >
-                      <div className="d-flex align-items-center">
-                        <img
-                          className={classNames("w-75 my-2 ms-2", {
-                            "d-none": sidebarCollapsed,
-                          })}
-                          alt="brand-name"
-                          src={logo}
-                        />
-                      </div>
-                    </MenuItem>
-                    {getAuthorisedRouts(allRoutes).map((menuitem) =>
-                      menuitem.collapse ? (
+                    }}
+                  >
+                    <div className="d-flex align-items-center">
+                      <img
+                        className={classNames("w-75 my-2 ms-2", {
+                          "d-none": sidebarCollapsed,
+                        })}
+                        alt="brand-name"
+                        src={logo}
+                      />
+                    </div>
+                  </MenuItem>
+                  {getAuthorisedRouts(allRoutes).map((menuitem) =>
+                    menuitem.collapse ? (
+                      <TourStep
+                        key={menuitem.name}
+                        stepId={menuitem?.screenIdentifier || uuidv4()}
+                      >
+                        <SubMenu
+                          label={menuitem.name}
+                          onClick={handleSubmenuClick}
+                          active={menuitem?.views
+                            .map((view) => view.layout + view.path)
+                            .includes(location.pathname)}
+                          icon={<i className={`${menuitem.icon}`} />}
+                          rootStyles={{
+                            ["." + menuClasses.subMenuContent]: {
+                              backgroundColor: "transparent !important",
+                            },
+                          }}
+                        >
+                          {menuitem?.views?.map(
+                            (view) =>
+                              !view.invisible && (
+                                <TourStep
+                                  key={view.name}
+                                  stepId={view?.screenIdentifier || uuidv4()}
+                                >
+                                  <MenuItem
+                                    key={view.name}
+                                    active={
+                                      location.pathname ===
+                                      view.layout + view.path
+                                    }
+                                    className={"pl-3"}
+                                    icon={<i className={`${view.icon}`} />}
+                                    onClick={() =>
+                                      history.push(view.layout + view.path)
+                                    }
+                                  >
+                                    {view.name}
+                                  </MenuItem>
+                                </TourStep>
+                              ),
+                          )}
+                        </SubMenu>
+                      </TourStep>
+                    ) : (
+                      !menuitem.invisible && (
                         <TourStep
                           key={menuitem.name}
                           stepId={menuitem?.screenIdentifier || uuidv4()}
                         >
-                          <SubMenu
-                            label={menuitem.name}
-                            onClick={handleSubmenuClick}
-                            active={menuitem?.views
-                              .map((view) => view.layout + view.path)
-                              .includes(location.pathname)}
+                          <MenuItem
+                            active={
+                              location.pathname ===
+                              menuitem.layout + menuitem.path
+                            }
+                            key={menuitem.path}
+                            className="p-0"
                             icon={<i className={`${menuitem.icon}`} />}
-                            rootStyles={{
-                              ["." + menuClasses.subMenuContent]: {
-                                backgroundColor: "transparent !important",
-                              },
-                            }}
+                            onClick={() =>
+                              history.push(menuitem.layout + menuitem.path)
+                            }
                           >
-                            {menuitem?.views?.map(
-                              (view) =>
-                                !view.invisible && (
-                                  <TourStep
-                                    key={view.name}
-                                    stepId={view?.screenIdentifier || uuidv4()}
-                                  >
-                                    <MenuItem
-                                      key={view.name}
-                                      active={
-                                        location.pathname ===
-                                        view.layout + view.path
-                                      }
-                                      className={"pl-3"}
-                                      icon={<i className={`${view.icon}`} />}
-                                      onClick={() =>
-                                        history.push(view.layout + view.path)
-                                      }
-                                    >
-                                      {view.name}
-                                    </MenuItem>
-                                  </TourStep>
-                                )
-                            )}
-                          </SubMenu>
+                            {menuitem.name}
+                          </MenuItem>
                         </TourStep>
-                      ) : (
-                        !menuitem.invisible && (
-                          <TourStep
-                            key={menuitem.name}
-                            stepId={menuitem?.screenIdentifier || uuidv4()}
-                          >
-                            <MenuItem
-                              active={
-                                location.pathname ===
-                                menuitem.layout + menuitem.path
-                              }
-                              key={menuitem.path}
-                              className="p-0"
-                              icon={<i className={`${menuitem.icon}`} />}
-                              onClick={() =>
-                                history.push(menuitem.layout + menuitem.path)
-                              }
-                            >
-                              {menuitem.name}
-                            </MenuItem>
-                          </TourStep>
-                        )
                       )
-                    )}
-                    {authCarboCalcLicense() && (
-                      <TourStep stepId="carbon-calculator">
-                        <MenuItem
-                          className="p-0"
-                          icon={
-                            <i className={`ims-icons-20 icon-icon-cloud-20`} />
-                          }
-                          onClick={() =>
-                            window.open(
-                              process.env.REACT_APP_CARBO_CARLC_CLIENT_URL,
-                              "_blank"
-                            )
-                          }
-                        >
-                          Carbon calculator
-                        </MenuItem>
-                      </TourStep>
-                    )}
-                    {authProjectiMSLicense() && (
-                      <TourStep stepId="project-ims">
-                        <MenuItem
-                          className="p-0"
-                          icon={
-                            <i
-                              className={`ims-icons-20 icon-icon-appwindow-20`}
-                            />
-                          }
-                          onClick={() =>
-                            window.open(
-                              process.env.REACT_APP_PROJECTS_CLIENT_URL,
-                              "_blank"
-                            )
-                          }
-                        >
-                          Project iMS
-                        </MenuItem>
-                      </TourStep>
-                    )}
-                  </Menu>
-                </Sidebar>
-                <div className="main-container">
-                  <AdminNavbar
-                    {...props}
-                    onSibebarToggle={() => setSidebarToggled((t) => !t)}
-                    sidebarCollapsed={sidebarCollapsed}
-                    onSidebarCollapse={collapseSidebar}
-                    route={getActiveRoute(routes)}
-                  />
-                  <Switch>
-                    {getRoutes(allRoutes)}
-                    <Redirect from="*" to="/systemadmin/organisation" />
-                  </Switch>
-                  <Footer fluid default />
-                </div>
+                    ),
+                  )}
+                  {authCarboCalcLicense() && (
+                    <TourStep stepId="carbon-calculator">
+                      <MenuItem
+                        className="p-0"
+                        icon={
+                          <i className={`ims-icons-20 icon-icon-cloud-20`} />
+                        }
+                        onClick={() =>
+                          window.open(
+                            process.env.REACT_APP_CARBO_CARLC_CLIENT_URL,
+                            "_blank",
+                          )
+                        }
+                      >
+                        Carbon calculator
+                      </MenuItem>
+                    </TourStep>
+                  )}
+                  {authProjectiMSLicense() && (
+                    <TourStep stepId="project-ims">
+                      <MenuItem
+                        className="p-0"
+                        icon={
+                          <i
+                            className={`ims-icons-20 icon-icon-appwindow-20`}
+                          />
+                        }
+                        onClick={() =>
+                          window.open(
+                            process.env.REACT_APP_PROJECTS_CLIENT_URL,
+                            "_blank",
+                          )
+                        }
+                      >
+                        Project iMS
+                      </MenuItem>
+                    </TourStep>
+                  )}
+                </Menu>
+              </Sidebar>
+              <div className="main-container">
+                <AdminNavbar
+                  {...props}
+                  onSibebarToggle={() => setSidebarToggled((t) => !t)}
+                  sidebarCollapsed={sidebarCollapsed}
+                  onSidebarCollapse={collapseSidebar}
+                  route={getActiveRoute(routes)}
+                />
+                <Switch>
+                  {getRoutes(allRoutes)}
+                  <Redirect from="*" to="/systemadmin/organisation" />
+                </Switch>
+                <Footer fluid default />
               </div>
-            </NotificationContext.Provider>
-          </AlertContextProvider>
-        </SuperGlobalAdminProvider>
-      </OmniplexJourneyProvider>
-    </TourProvider>
+            </div>
+          </NotificationContext.Provider>
+        </AlertContextProvider>
+      </SuperGlobalAdminProvider>
+    </OmniplexJourneyProvider>
   );
 };
 

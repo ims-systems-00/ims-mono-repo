@@ -135,7 +135,7 @@ const ReactTables = ({ ...props }) => {
           <Loading height={600} />
         ) : (
           <>
-            <TourStep data-tour-step="audit-table">
+            <TourStep stepId="audit-table">
               <div>
                 <DataTable
                   data={dataTable}

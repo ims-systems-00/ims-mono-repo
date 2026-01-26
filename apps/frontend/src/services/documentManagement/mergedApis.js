@@ -5,7 +5,7 @@ const apiEndPoint = `/api/${process.env.REACT_APP_API_VERSION}/document-reposito
 // apis related to repository started here
 export function getRepositoriesOverview() {
   return http.get(
-    `/api/${process.env.REACT_APP_API_VERSION}/document-management/overview`
+    `/api/${process.env.REACT_APP_API_VERSION}/document-management/overview`,
   );
 }
 export function getRepositories({ query }) {
@@ -22,7 +22,7 @@ export function createRepository(repository) {
     owners:
       repository.privacy.value === "Only me" ||
       repository.privacy.value === "Custom"
-        ? getCurrentSessionData().user._id
+        ? [getCurrentSessionData().user._id]
         : repository?.owners?.map((owner) => owner?.value),
     reviewInterval: repository.reviewInterval.value,
     privacy: repository.privacy.value,
@@ -93,7 +93,7 @@ export function addFileVersion(file, repositoryId) {
           ? file.authorisation.map((autoriser) => autoriser.value)
           : [],
       },
-    }
+    },
   );
 }
 
@@ -111,7 +111,7 @@ export function getNodePath(repositoryId, nodeId) {
 
 export function getPreservedReviewers(repositoryId, nodeId) {
   return http.get(
-    `${apiEndPoint}/${repositoryId}/nodes/${nodeId}/preserved-reviewers`
+    `${apiEndPoint}/${repositoryId}/nodes/${nodeId}/preserved-reviewers`,
   );
 }
 
@@ -140,7 +140,7 @@ export function changeRepository(repositoryId, nodeId, movedRepoId) {
     {
       repository: movedRepoId,
       parentNode: null,
-    }
+    },
   );
 }
 
@@ -186,7 +186,7 @@ export function addAuthoriser(repositoryId, nodeId, data) {
     `${apiEndPoint}/${repositoryId}/nodes/${nodeId}/authorisation`,
     {
       user: data.user,
-    }
+    },
   );
 }
 
@@ -196,13 +196,13 @@ export function handleAuthorisation(repositoryId, nodeId, data) {
     {
       status: data.status,
       message: data.message,
-    }
+    },
   );
 }
 
 export function hardDeleteDocumentTree(repositoryId, nodeId, authId) {
   return http.delete(
-    `${apiEndPoint}/${repositoryId}/nodes/${nodeId}/authorisation/${authId}`
+    `${apiEndPoint}/${repositoryId}/nodes/${nodeId}/authorisation/${authId}`,
   );
 }
 
@@ -217,7 +217,7 @@ export function addInternalSignature(repositoryId, nodeId, data) {
       users: data.users,
       signatureLocations: data.signatureLocations,
       message: data.message,
-    }
+    },
   );
 }
 
@@ -228,7 +228,7 @@ export function addExternalSignature(repositoryId, nodeId, data) {
       emails: data.emails,
       signatureLocations: data.signatureLocations,
       message: data.message,
-    }
+    },
   );
 }
 
@@ -237,7 +237,7 @@ export function getSignaturesOnNode(repositoryId, nodeId) {
 }
 export function getSignatures({ query = "" }) {
   return http.get(
-    `/api/${process.env.REACT_APP_API_VERSION}/document-signatures?${query}`
+    `/api/${process.env.REACT_APP_API_VERSION}/document-signatures?${query}`,
   );
 }
 export function removeSignatures(repositoryId, nodeId, data) {
@@ -256,7 +256,7 @@ export function handleSignature(repositoryId, nodeId, data) {
       organisation: data.organisation,
       jobTitle: data.jobTitle,
       font: data.font,
-    }
+    },
   );
 }
 
@@ -317,7 +317,7 @@ export function resendExternalSignatureRequest(signee) {
     `/api/${process.env.REACT_APP_API_VERSION}/document-signatures/resend/external`,
     {
       signatureIds: signee,
-    }
+    },
   );
 }
 export function resendInternalSignatureRequest(signee) {
@@ -325,7 +325,7 @@ export function resendInternalSignatureRequest(signee) {
     `/api/${process.env.REACT_APP_API_VERSION}/document-signatures/resend/internal`,
     {
       signatureIds: signee,
-    }
+    },
   );
 }
 

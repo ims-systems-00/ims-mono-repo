@@ -137,7 +137,7 @@ const AuditForm = ({
 
   return (
     <Form action="/" className="form-horizontal" method="get">
-      <TourStep data-tour-step="audit-form">
+      <TourStep stepId="audit-form">
         <Row>
           <Col md={drawerView ? "12" : "6"}>
             <ImsInputText
@@ -204,7 +204,7 @@ const AuditForm = ({
         />
         <Row>
           <Col md={drawerView ? "12" : "6"}>
-            <TourStep data-tour-step="select-auditor">
+            <TourStep stepId="select-auditor">
               <ImsInputSelect
                 label="Auditor"
                 name="auditor"
@@ -225,15 +225,15 @@ const AuditForm = ({
                       user.membership.find(
                         (m) =>
                           m.organization ===
-                          tokenPair.accessTokenData.user.organizationId
-                      )?.role
-                    )
+                          tokenPair.accessTokenData.user.organizationId,
+                      )?.role,
+                    ),
                   )
                   .filter((user) =>
                     filterUsersByGroup(
                       user.membership,
-                      dataModel.data.complianceBody.value
-                    )
+                      dataModel.data.complianceBody.value,
+                    ),
                   )
                   .map((user) => ({ value: user._id, label: user.name }))}
               />
@@ -263,20 +263,22 @@ const AuditForm = ({
             />
           </Col>
           <Col md={drawerView ? "12" : "6"}>
-            <ImsInputSelect
-              label="Interval"
-              name="interval"
-              mandatory
-              value={data.interval}
-              isDisabled={audit ? true : false}
-              className="react-select default"
-              classNamePrefix="react-select"
-              onChange={handleChange}
-              options={["Quarterly", "Half yearly", "Yearly"].map((item) => ({
-                value: item,
-                label: item,
-              }))}
-            />
+            <TourStep stepId="interval-choice">
+              <ImsInputSelect
+                label="Interval"
+                name="interval"
+                mandatory
+                value={data.interval}
+                isDisabled={audit ? true : false}
+                className="react-select default"
+                classNamePrefix="react-select"
+                onChange={handleChange}
+                options={["Quarterly", "Half yearly", "Yearly"].map((item) => ({
+                  value: item,
+                  label: item,
+                }))}
+              />
+            </TourStep>
           </Col>
         </Row>
       </TourStep>
@@ -375,18 +377,20 @@ const AuditForm = ({
       )}
       <ImsButtonGroup>
         {!audit ? (
-          <Button
-            name="create"
-            onClick={(e) => {
-              handleSubmit(e, () => onSubmit(dataModel.data));
-            }}
-            disabled={validate() ? true : isBusy}
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {isBusy ? "Processing" : "Confirm"}
-          </Button>
+          <TourStep stepId="audit-confirm-button">
+            <Button
+              name="create"
+              onClick={(e) => {
+                handleSubmit(e, () => onSubmit(dataModel.data));
+              }}
+              disabled={validate() ? true : isBusy}
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {isBusy ? "Processing" : "Confirm"}
+            </Button>
+          </TourStep>
         ) : (
           <>
             <Button

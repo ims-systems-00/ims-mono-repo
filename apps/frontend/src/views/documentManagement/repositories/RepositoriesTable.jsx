@@ -34,6 +34,7 @@ const RepositoriesTable = ({ props }) => {
   let { alert } = useAlert();
 
   dataTable = dataTable ? dataTable : defaultdata;
+  const firstRepositoryId = dataTable && dataTable[0]?._id;
 
   const columns = React.useMemo(() => {
     return [
@@ -73,7 +74,7 @@ const RepositoriesTable = ({ props }) => {
         cell: ({ row }) => {
           return getReviewInterval(
             row.original?.createdAt,
-            row.original?.reviewInterval
+            row.original?.reviewInterval,
           );
         },
       },
@@ -126,7 +127,7 @@ const RepositoriesTable = ({ props }) => {
         {isFetchingTable() ? (
           <Loading height={600} />
         ) : (
-          <TourStep stepId="repository-table">
+          <TourStep stepId="repository-table" data-id={firstRepositoryId}>
             <div>
               <DataTable
                 data={Array.isArray(dataTable) ? dataTable : []}
@@ -137,7 +138,7 @@ const RepositoriesTable = ({ props }) => {
                   const repository = row?.original;
                   if (repository) {
                     history.push(
-                      `/admin/document-repositories/${repository._id}`
+                      `/admin/document-repositories/${repository._id}`,
                     );
                   }
                 }}

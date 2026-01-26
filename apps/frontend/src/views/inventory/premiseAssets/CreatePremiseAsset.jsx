@@ -8,7 +8,7 @@ const CreatePremiseAsset = () => {
 
   return (
     <React.Fragment>
-      <TourStep data-tour-step="create-premise-button">
+      <TourStep stepId="create-premise-button">
         {authUser({
           service: IMS_SERVICES.INVENTORY,
           action: ACTIONS.CREATE,

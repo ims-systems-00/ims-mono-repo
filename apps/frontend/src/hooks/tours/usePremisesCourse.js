@@ -8,11 +8,21 @@ export function usePremisesCourse() {
 
   const course = {
     name: "Inventory – Premises",
-    description: "A quick walkthrough to create and manage repositories.",
+    description: "Add, amend and manage your Premise Assets. ",
     steps: [
       {
         target: `[data-tour-step="inventory-sidebar"]`,
-        content: "Click on Inventory and select Premises.",
+        content: "Click on “Inventory” in the sidebar.",
+        placement: "right",
+        spotlightClicks: true,
+        disableBeacon: true,
+        disableOverlayClose: true,
+        hideCloseButton: true,
+      },
+      {
+        target: `[data-tour-step="inventory-premise"]`,
+        content:
+          "Click on “Premises” to view existing Premise assets or add new ones.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -21,7 +31,7 @@ export function usePremisesCourse() {
       },
       {
         target: `[data-tour-step="create-premise-button"]`,
-        content: "Click “add” to add new premises.",
+        content: "Click on “Add” to add a new Premise Asset.",
         placement: "right",
         spotlightClicks: true,
         disableBeacon: true,
@@ -30,14 +40,21 @@ export function usePremisesCourse() {
       },
       {
         target: `[data-tour-step="create-premise-form"]`,
-        content: "Fill in Building name, address, postal code and cost.",
-        placement: "right",
+        content: "Fill in the relevant details here.",
+        placement: "left",
         disableBeacon: true,
       },
       {
-        target: `[data-tour-step="create-premise-action"]`,
+        target: `[data-tour-step="create-premise-form-button"]`,
+        content: "Click on “Create” to add the Asset to the system.",
+        disableBeacon: true,
+        placement: "bottom",
+        spotlightClicks: true,
+      },
+      {
+        target: `[data-tour-step="create-premise-table"]`,
         content:
-          "View the details of the added premises by clicking “action - details”",
+          "View the details of any Premise Asset by clicking on the entry in the table, or on the “Actions” button and then on “Details”.",
         disableBeacon: true,
         placement: "bottom",
         spotlightClicks: true,
@@ -51,22 +68,25 @@ export function usePremisesCourse() {
       if (type === EVENTS.STEP_AFTER && action === ACTIONS.PREV) {
         setCurrentStep((prev) => prev - 1);
       }
-      if (index === 0) {
+      if (index === 1) {
         history.push("/admin/inventory/premise");
+        window.dispatchEvent(
+          new CustomEvent("EXPAND_SIDEBAR_MENU", { detail: "Inventory" }),
+        );
       }
       if (
-        index === 1 &&
+        index === 2 &&
         action !== ACTIONS.PREV &&
         type === EVENTS.STEP_AFTER
       ) {
         data.pauseTour();
         openDrawer("create-premise-asset-form");
         setTimeout(() => {
-          setCurrentStep(2);
+          setCurrentStep(3);
           data.resumeTour();
         }, 500);
       }
-      if (index === 3) {
+      if (index === 5) {
         closeDrawer("create-premise-asset-form");
       }
       if (action === ACTIONS.SKIP || status === STATUS.FINISHED) {

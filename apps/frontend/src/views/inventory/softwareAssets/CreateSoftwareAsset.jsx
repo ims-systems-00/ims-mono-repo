@@ -8,7 +8,7 @@ const CreateSoftwareAsset = () => {
   let { authUser } = useAccess();
 
   return (
-    <TourStep data-tour-step="create-software-asset-button">
+    <TourStep stepId="create-software-asset-button">
       <React.Fragment>
         {authUser({
           service: IMS_SERVICES.INVENTORY,
