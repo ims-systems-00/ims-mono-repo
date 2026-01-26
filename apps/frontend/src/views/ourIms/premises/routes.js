@@ -13,6 +13,7 @@ const routes = [
     component: Premises,
     icon: "ims-icons-20 icon-icon-storefront-24",
     layout: "/admin",
+    screenIdentifier: "business-premises-sidebar",
     accessPolicy: {
       service: IMS_SERVICES.IAM_PREMISES,
       action: ACTIONS.READ,

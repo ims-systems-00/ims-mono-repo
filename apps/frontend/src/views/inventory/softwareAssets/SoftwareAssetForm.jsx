@@ -24,6 +24,7 @@ import { useSoftwareAssets } from "./store";
 import useDebounce from "@/hooks/useDebounce";
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../../components/Tour";
 
 // default dataSet for form fields
 
@@ -88,93 +89,98 @@ const SoftwareAssetForm = ({ drawerView, software, processing, onSubmit }) => {
 
   return (
     <Form action="/" className="form-horizontal">
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Software name"
-            mandatory={true}
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-            placeholder="Software name"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            isDisabled={software ? true : false}
-            value={data.group}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            name="tagsAndCategories"
-            value={data.tagsAndCategories}
-            vertical={true}
-            onChange={handleChange}
-            onInputChange={setSearchString}
-            options={[
-              {
-                value: null,
-                label: "Not selected",
-              },
-              ...tagsAndCategories.map((tag) => ({
-                value: tag._id,
-                label: tag.name,
-              })),
-            ]}
-            label={"Category"}
-            sideBtn={<AddCategory />}
-            className="react-select default"
-            classNamePrefix="react-select"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Number of licences"
-            name="numberOfLicenses"
-            value={data.numberOfLicenses}
-            onChange={handleChange}
-            error={errors.numberOfLicenses}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Number of installs"
-            name="numberOfInstalls"
-            value={data.numberOfInstalls}
-            onChange={handleChange}
-            error={errors.numberOfInstalls}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputTextWithIcon
-            label="Cost"
-            type="number"
-            placeholder="Cost"
-            icon="fas fa-pound-sign"
-            name="cost"
-            value={data.cost}
-            onChange={handleChange}
-            error={errors.cost}
-          />
-        </Col>
-      </Row>
-      <ImsInputDropZone
-        label="Documents"
-        clearAll={!data.docs.length}
-        name="inventory_software_attachments"
-        onLoad={(files) => handleFileChange(files, "docs")}
-      />
+      <TourStep stepId="create-software-asset-form">
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Software name"
+              mandatory={true}
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+              error={errors.name}
+              placeholder="Software name"
+            />
+          </Col>
+
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              isDisabled={software ? true : false}
+              value={data.group}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              name="tagsAndCategories"
+              value={data.tagsAndCategories}
+              vertical={true}
+              onChange={handleChange}
+              onInputChange={setSearchString}
+              options={[
+                {
+                  value: null,
+                  label: "Not selected",
+                },
+                ...tagsAndCategories.map((tag) => ({
+                  value: tag._id,
+                  label: tag.name,
+                })),
+              ]}
+              label={"Category"}
+              sideBtn={<AddCategory />}
+              className="react-select default"
+              classNamePrefix="react-select"
+            />
+          </Col>
+          <TourStep stepId="create-software-asset-licenses">
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputText
+                label="Number of licences"
+                name="numberOfLicenses"
+                value={data.numberOfLicenses}
+                onChange={handleChange}
+                error={errors.numberOfLicenses}
+              />
+            </Col>
+            <Col md={drawerView ? "12" : "6"}>
+              <ImsInputText
+                label="Number of installs"
+                name="numberOfInstalls"
+                value={data.numberOfInstalls}
+                onChange={handleChange}
+                error={errors.numberOfInstalls}
+              />
+            </Col>
+          </TourStep>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputTextWithIcon
+              label="Cost"
+              type="number"
+              placeholder="Cost"
+              icon="fas fa-pound-sign"
+              name="cost"
+              value={data.cost}
+              onChange={handleChange}
+              error={errors.cost}
+            />
+          </Col>
+        </Row>
+        <ImsInputDropZone
+          label="Documents"
+          clearAll={!data.docs.length}
+          name="inventory_software_attachments"
+          onLoad={(files) => handleFileChange(files, "docs")}
+        />
+      </TourStep>
       <ImsButtonGroup>
         {software ? (
           <>
@@ -197,7 +203,7 @@ const SoftwareAssetForm = ({ drawerView, software, processing, onSubmit }) => {
                   () => {
                     onSubmit(dataModel.data);
                   },
-                  false
+                  false,
                 )
               }
               disabled={
@@ -215,26 +221,28 @@ const SoftwareAssetForm = ({ drawerView, software, processing, onSubmit }) => {
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) =>
-              handleSubmit(e, () => {
-                onSubmit(dataModel.data);
-              })
-            }
-            disabled={
-              validate()
-                ? true
-                : processing[USER_ACTIONS.CREATE_SOFTWARE].status
-            }
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {processing[USER_ACTIONS.CREATE_SOFTWARE].status
-              ? "Processing..."
-              : "Create"}
-          </Button>
+          <TourStep stepId="create-software-form-button">
+            <Button
+              name="create"
+              onClick={(e) =>
+                handleSubmit(e, () => {
+                  onSubmit(dataModel.data);
+                })
+              }
+              disabled={
+                validate()
+                  ? true
+                  : processing[USER_ACTIONS.CREATE_SOFTWARE].status
+              }
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {processing[USER_ACTIONS.CREATE_SOFTWARE].status
+                ? "Processing..."
+                : "Create"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

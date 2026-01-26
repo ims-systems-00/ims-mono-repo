@@ -1,3 +1,4 @@
+import { useState } from "react";
 import OrganisationTable from "./OrganisationTable";
 import { OrganizationAssetsContextProvider } from "./store";
 import { TagsAndCategoriesContextProvider } from "@/views/tagsAndCategoriesManager/store";
@@ -6,6 +7,7 @@ import NavigationTabs from "@/components/NavigationTabs";
 import Index from "@/views/tagsAndCategoriesManager/Index";
 
 const OrganizationAssets = (props) => {
+  const [activeTab, setActiveTab] = useState("allInformation");
   return (
     <>
       <OrganizationAssetsContextProvider {...props}>
@@ -13,7 +15,7 @@ const OrganizationAssets = (props) => {
           applicableModules={"informationassets"}
         >
           <NavigationTabs
-            activeTab="allInformation"
+            activeTab={activeTab}
             navigations={[
               {
                 id: "allInformation",

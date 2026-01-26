@@ -19,8 +19,6 @@ const PremisesTable = ({
   let { activateView, Modal, isOpen } = useModal({ onUpdate: updateDataTable });
   dataTable = dataTable ? dataTable : defaultdata;
 
- 
-
   const columnsForPrimises = [
     {
       accessorKey: "name",
@@ -55,19 +53,19 @@ const PremisesTable = ({
   return (
     <>
       {alert}
-      <TourStep stepId="business-premises-table">
-        <h4 className="mb-3">Primises</h4>
-        <div className="row align-items-center mb-3">
-          <div className="col-md-6">
-            <div className="row g-2 align-items-center">
-              <div className="col-md-8">
-                <SearchInput queryHandlers={queryHandlers} />
-              </div>
+      <h4 className="mb-3">Primises</h4>
+      <div className="row align-items-center mb-3">
+        <div className="col-md-6">
+          <div className="row g-2 align-items-center">
+            <div className="col-md-8">
+              <SearchInput queryHandlers={queryHandlers} />
             </div>
           </div>
+        </div>
 
-          <div className="col-md-6 text-end">
-            <DrawerOpener drawerId="create-premise-drawer">
+        <div className="col-md-6 text-end">
+          <DrawerOpener drawerId="create-premise-drawer">
+            <TourStep stepId="business-premises-button">
               <Button
                 color="primary"
                 size="md"
@@ -76,15 +74,17 @@ const PremisesTable = ({
                 <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0" />
                 Create premise
               </Button>
-            </DrawerOpener>
-          </div>
+            </TourStep>
+          </DrawerOpener>
         </div>
+      </div>
 
-        {processing.action === "load-premises" ? (
-          <Loading height={600} />
-        ) : (
-          <>
-            <div>
+      {processing.action === "load-premises" ? (
+        <Loading height={600} />
+      ) : (
+        <>
+          <div>
+            <TourStep stepId="business-premises-table">
               <DataTable
                 data={dataTable}
                 columns={columnsForPrimises || []}
@@ -97,22 +97,20 @@ const PremisesTable = ({
                 }}
                 columnVisibility={{}}
               />
-            </div>
+            </TourStep>
+          </div>
 
-            <Pagination
-              containerClassName="pull-right my-2"
-              totalResults={queryHandlers?.toolState?.pagination?.totalResults}
-              currentPage={
-                queryHandlers?.toolState?.pagination?.currentPage || 1
-              }
-              onPageChange={(page) => {
-                queryHandlers?.handlePagination({ page });
-              }}
-              size={queryHandlers?.toolState?.pagination?.size || 10}
-            />
-          </>
-        )}
-      </TourStep>
+          <Pagination
+            containerClassName="pull-right my-2"
+            totalResults={queryHandlers?.toolState?.pagination?.totalResults}
+            currentPage={queryHandlers?.toolState?.pagination?.currentPage || 1}
+            onPageChange={(page) => {
+              queryHandlers?.handlePagination({ page });
+            }}
+            size={queryHandlers?.toolState?.pagination?.size || 10}
+          />
+        </>
+      )}
 
       <Modal title="Premise">
         <PremisesDetail isModalOpen={isOpen} />

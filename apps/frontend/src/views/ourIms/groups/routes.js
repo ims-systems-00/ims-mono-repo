@@ -13,6 +13,7 @@ const routes = [
     component: Groups,
     layout: "/admin",
     icon: "ims-icons-20 icon-icon-buildings-24",
+    screenIdentifier: "business-unit-sidebar",
     accessPolicy: {
       service: IMS_SERVICES.IAM_GROUPS,
       action: ACTIONS.READ,

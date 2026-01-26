@@ -11,7 +11,9 @@ import {
   ImsButtonGroup,
   ImsInputDropZone,
 } from "@/views/shared/ImsFormElements/Index";
-
+import currencyOptions from "./options/currencyOptions";
+import abbreviationOptions from "./options/abbreviationOpions";
+import phoneCodeOptions from "./options/phoneCodeOptions";
 const industryOptions = industries.map((i) => {
   return { value: i, label: i };
 });
@@ -19,13 +21,6 @@ const industryOptions = industries.map((i) => {
 const countryOptions = countries.map((c) => {
   return { value: c.countryName, label: c.countryName };
 });
-
-const currencyOptions = [
-  { value: "GBP", label: "GBP" },
-  { value: "USD", label: "USD" },
-  { value: "EUR", label: "EUR" },
-  { value: "BDT", label: "BDT" },
-];
 
 const OrganisationForm = ({
   visitingOrganisation,
@@ -51,9 +46,9 @@ const OrganisationForm = ({
         addressPostCode: org.addressPostCode || "",
         addressStateProvince: org.addressStateProvince || "",
         countryName: formatSelect(org.countryName),
-        countryAbbr: org.countryAbbr || "",
-        countryCurrency: org.countryCurrency || "",
-        countryPhonecode: org.countryPhonecode || "",
+        countryAbbr: formatSelect(org.countryAbbr) || "",
+        countryCurrency: formatSelect(org.countryCurrency) || "",
+        countryPhonecode: formatSelect(org.countryPhonecode) || "",
         logometadata: org.logometadata || null,
 
         companyNumber: org.companyNumber || "",
@@ -80,9 +75,9 @@ const OrganisationForm = ({
         addressPostCode: "",
         addressStateProvince: "",
         countryName: { value: null, label: "Select Country" },
-        countryAbbr: "",
-        countryCurrency: "",
-        countryPhonecode: "",
+        countryAbbr: { value: null, label: "Select Abbreviation" },
+        countryCurrency: { value: null, label: "Select Currency" },
+        countryPhonecode: { value: null, label: "Select Phone Code" },
         logometadata: null,
       };
 
@@ -170,7 +165,6 @@ const OrganisationForm = ({
             <ImsInputText
               label="Referral Source (ObjectId)"
               name="referralSource"
-              mandatory={true}
               value={data.referralSource}
               onChange={handleChange}
               error={errors.referralSource}
@@ -359,35 +353,44 @@ const OrganisationForm = ({
 
       <Row>
         <Col md={drawerView ? "12" : "6"} xs="12">
-          <ImsInputText
+          <ImsInputSelect
             label="Country Abbreviation"
             name="countryAbbr"
             mandatory={true}
             value={data.countryAbbr}
             onChange={handleChange}
+            options={abbreviationOptions}
             error={errors.countryAbbr}
+            className="react-select default"
+            classNamePrefix="react-select"
             isHorizontal={false}
           />
         </Col>
         <Col md={drawerView ? "12" : "6"} xs="12">
-          <ImsInputText
+          <ImsInputSelect
             label="Currency"
             name="countryCurrency"
             mandatory={true}
             value={data.countryCurrency}
             onChange={handleChange}
+            options={currencyOptions}
             error={errors.countryCurrency}
+            className="react-select default"
+            classNamePrefix="react-select"
             isHorizontal={false}
           />
         </Col>
         <Col md={drawerView ? "12" : "6"} xs="12">
-          <ImsInputText
+          <ImsInputSelect
             label="Country phone code"
             name="countryPhonecode"
             mandatory={true}
             value={data.countryPhonecode}
             onChange={handleChange}
+            options={phoneCodeOptions}
             error={errors.countryPhonecode}
+            className="react-select default"
+            classNamePrefix="react-select"
             isHorizontal={false}
           />
         </Col>

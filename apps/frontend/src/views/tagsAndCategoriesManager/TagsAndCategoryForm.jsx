@@ -10,6 +10,7 @@ import {
 } from "@ims-systems-00/ims-ui-kit";
 import NotificationContext from "@/contexts/notificationContext";
 import tagsModules from "./applicableModules";
+import { TourStep } from "../../components/Tour";
 
 const TagsAndCategoryForm = ({
   visitingTagAndCategory,
@@ -33,7 +34,7 @@ const TagsAndCategoryForm = ({
   let notify = React.useContext(NotificationContext);
   const { dataModel, handleChange, handleSubmit, validate, isBusy } = useForm(
     dataSet,
-    schema
+    schema,
   );
 
   let { data, errors } = dataModel;
@@ -69,6 +70,7 @@ const TagsAndCategoryForm = ({
           label: tag.label,
         }))}
       />
+
       {!visitingTagAndCategory ? (
         <Button
           onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}

@@ -175,7 +175,7 @@ export default function useStore(initializers) {
       imsLogger(err, err.message);
       notify(
         err.message || "Server error occured. Please try again later.",
-        "danger"
+        "danger",
       );
     }
   }
@@ -189,17 +189,16 @@ export default function useStore(initializers) {
           id: deleteRepoId,
         },
       });
-      let { data } = await documentManagementApi.hardDeleteRepository(
-        deleteRepoId
-      );
+      let { data } =
+        await documentManagementApi.hardDeleteRepository(deleteRepoId);
       setDeletedRepositories((prevRepos) =>
-        prevRepos.filter((repo) => repo._id !== deleteRepoId)
+        prevRepos.filter((repo) => repo._id !== deleteRepoId),
       );
       popUpAlerts(
         `Repository ${data?.repository?.reference} deleted successfully.`,
         {
           icon: "",
-        }
+        },
       );
       notify("Repository deleted successfully", "success");
       dispatch({
@@ -230,18 +229,17 @@ export default function useStore(initializers) {
           id: restoreRepoId,
         },
       });
-      let { data } = await documentManagementApi.restoreRepository(
-        restoreRepoId
-      );
+      let { data } =
+        await documentManagementApi.restoreRepository(restoreRepoId);
       setDeletedRepositories((prevRepos) =>
-        prevRepos.filter((repo) => repo._id !== restoreRepoId)
+        prevRepos.filter((repo) => repo._id !== restoreRepoId),
       );
       setRepositories((prevRepos) => [data.repository, ...prevRepos]);
       popUpAlerts(
         `Repository ${data?.repository?.reference} restored successfully.`,
         {
           icon: "",
-        }
+        },
       );
       notify("Repository restored successfully", "success");
       dispatch({
@@ -273,18 +271,17 @@ export default function useStore(initializers) {
           id: deleteRepoId,
         },
       });
-      const { data } = await documentManagementApi.softDeleteRepository(
-        deleteRepoId
-      );
+      const { data } =
+        await documentManagementApi.softDeleteRepository(deleteRepoId);
       setRepositories((prevRepos) =>
-        prevRepos.filter((repo) => repo._id !== deleteRepoId)
+        prevRepos.filter((repo) => repo._id !== deleteRepoId),
       );
       setDeletedRepositories((prevRepos) => [data.repository, ...prevRepos]);
       popUpAlerts(
         `Repository ${data?.repository?.reference} moved to recycle bin successfully.`,
         {
           icon: "",
-        }
+        },
       );
       notify("Repository moved to bin successfully", "success");
       dispatch({

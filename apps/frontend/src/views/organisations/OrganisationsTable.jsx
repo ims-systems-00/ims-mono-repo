@@ -36,12 +36,12 @@ const OrganisationTable = () => {
     {
       accessorKey: "name",
       header: () => <p>Name</p>,
-      size: 250,
+      size: 300,
     },
     {
       accessorKey: "officeEmail",
       header: () => <p>Email</p>,
-      size: 250,
+      size: 300,
       cell: ({ row }) => row.original.officeEmail || "N/A",
     },
     {
@@ -53,14 +53,14 @@ const OrganisationTable = () => {
     {
       accessorKey: "industry",
       header: () => <p>Industry</p>,
-      size: 250,
+      size: 300,
       cell: ({ row }) =>
         row.original.industry?.label || row.original.industry || "N/A",
     },
     {
       accessorKey: "status",
       header: () => <p>Status</p>,
-      size: 200,
+      size: 175,
       cell: ({ row }) => {
         const status = row.original.status || "UNKNOWN";
         const isActive = status === "ACTIVE";
@@ -77,7 +77,7 @@ const OrganisationTable = () => {
     {
       accessorKey: "createdAt",
       header: () => <p>Created</p>,
-      size: 180,
+      size: 175,
       cell: ({ row }) =>
         row.original.createdAt
           ? new Date(row.original.createdAt).toLocaleDateString()
@@ -167,9 +167,9 @@ const OrganisationTable = () => {
                 addressPostCode: data.addressPostCode,
                 addressStateProvince: data.addressStateProvince,
                 countryName: data.countryName,
-                countryAbbr: data.countryAbbr,
-                countryCurrency: data.countryCurrency,
-                countryPhonecode: Number(data.countryPhonecode),
+                countryAbbr: data.countryAbbr.value,
+                countryCurrency: data.countryCurrency.value,
+                countryPhonecode: Number(data.countryPhonecode.value),
                 logometadata: data.logometadata || null,
                 vatNumber: data.vatNumber,
                 contactNumber: data.contactNumber || "",
@@ -202,9 +202,9 @@ const OrganisationTable = () => {
                     (typeof data.countryName === "string"
                       ? data.countryName
                       : ""),
-                  countryAbbr: data.countryAbbr,
-                  countryCurrency: data.countryCurrency,
-                  countryPhonecode: Number(data.countryPhonecode),
+                  countryAbbr: data.countryAbbr.value,
+                  countryCurrency: data.countryCurrency.value,
+                  countryPhonecode: Number(data.countryPhonecode.value),
                   logometadata: data.logometadata || null,
                   vatNumber: data.vatNumber,
                   contactName: data.contactName,

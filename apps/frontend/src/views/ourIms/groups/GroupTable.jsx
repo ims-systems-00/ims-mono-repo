@@ -40,8 +40,8 @@ const GroupTable = ({
     });
     setGroups((prevGroups) =>
       prevGroups.map((group) =>
-        group._id === updatedGroup._id ? updatedGroup : group
-      )
+        group._id === updatedGroup._id ? updatedGroup : group,
+      ),
     );
     dispatch({
       [LOADERS.DELETE_GROUP]: { status: false, error: false, id: null },
@@ -93,20 +93,20 @@ const GroupTable = ({
           </div>
         </div>
         <div className="col-md-6 text-end">
-          {authUser({
-            service: IMS_SERVICES.IAM_GROUPS,
-            action: ACTIONS.CREATE,
-            effect: EFFECTS.ALLOW,
-          }) && (
-            <TourStep key="create-group" stepId="create-group">
+          <TourStep key="create-group" stepId="create-business-unit-button">
+            {authUser({
+              service: IMS_SERVICES.IAM_GROUPS,
+              action: ACTIONS.CREATE,
+              effect: EFFECTS.ALLOW,
+            }) && (
               <DrawerOpener drawerId="create-group-drawer">
                 <Button color="primary">
                   <i className="ims-icons-20 icon-icon-notepencil-24 me-1 p-0" />
                   Create a function
                 </Button>
               </DrawerOpener>
-            </TourStep>
-          )}
+            )}
+          </TourStep>
         </div>
       </div>
       {processing[LOADERS.LOAD_GROUPS]?.status ? (

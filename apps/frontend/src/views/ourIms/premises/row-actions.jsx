@@ -15,6 +15,7 @@ import { ACTIONS, EFFECTS, IMS_SERVICES } from "@/rolesAndPermissions";
 import useAccess from "@/hooks/useAccess";
 import { useDualStateController } from "@ims-systems-00/ims-react-hooks";
 import defaultModalImage from "@/assets/img/modal-warning.svg";
+import TourStep from "../../../components/Tour/TourStep";
 
 export const RowActions = ({ row, onDetails, processing, handleDelete }) => {
   const { authUser, authSuperUser, entityAccessControl } = useAccess();
@@ -28,15 +29,16 @@ export const RowActions = ({ row, onDetails, processing, handleDelete }) => {
           <ActionDotIcon color="black" size={20}></ActionDotIcon>
         </DTRowActionsToggle>
         <DTRowActionsMenu>
-          <DTRowAction
-            onClick={(e) => {
-              e.stopPropagation();
-              onDetails(row?.original);
-            }}
-          >
-            Details
-          </DTRowAction>
-
+          <TourStep stepId="business-premises-action-details">
+            <DTRowAction
+              onClick={(e) => {
+                e.stopPropagation();
+                onDetails(row?.original);
+              }}
+            >
+              Details
+            </DTRowAction>
+          </TourStep>
           {authUser({
             service: IMS_SERVICES.IAM_PREMISES,
             action: ACTIONS.DELETE,

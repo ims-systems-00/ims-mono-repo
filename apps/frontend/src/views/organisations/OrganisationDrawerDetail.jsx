@@ -3,29 +3,19 @@ import Loading from "@/components/Loader/Loading";
 import NavigationTabs from "@/components/NavigationTabs";
 import DetailsDrawerHeader from "@/views/shared/DetailComponents/DetailsDrawerHeader";
 import { Attachments } from "@/views/shared/Attachments/Index";
-import {
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  UncontrolledDropdown,
-  Table, // Added Table import
-} from "@ims-systems-00/ims-ui-kit";
+import { Table } from "@ims-systems-00/ims-ui-kit";
 
 import USER_ACTIONS from "./actions";
 import useOrganisation from "./store/useOrganisation";
 import OrganisationOverview from "./OrganisationOverview";
+import LicenseOverview from "./LicenseOverview";
 
 const OrganisationDrawerDetail = ({ organisation }) => {
   const {
     users,
-    incidentResolution,
-    systemDates,
-    reportSubscribers,
-
+    licenses,
     fetchOrganisationUsers,
-    fetchIncidentResolution,
-    fetchSystemDates,
-    loadSubscribers,
+    fetchOrganisationLicenses,
 
     processing,
   } = useOrganisation({
@@ -35,12 +25,9 @@ const OrganisationDrawerDetail = ({ organisation }) => {
   React.useEffect(() => {
     if (organisation?._id) {
       fetchOrganisationUsers();
-      fetchIncidentResolution();
-      fetchSystemDates();
-      loadSubscribers();
+      fetchOrganisationLicenses();
     }
   }, [organisation?._id]);
-
   const getAddressString = (org) => {
     return [
       org.addressStreet,
@@ -69,12 +56,14 @@ const OrganisationDrawerDetail = ({ organisation }) => {
               icon: <i className="ims-icons-20 icon-icon-list-24 me-1"></i>,
               component: (
                 <div className="px-2 pt-3">
-                  {/* Overview Section */}
                   <div className="border rounded-3 p-3 mb-3">
                     <OrganisationOverview organisation={organisation} />
                   </div>
 
-                  {/* Contact & Address Section - Converted to Table */}
+                  <div className="border rounded-3 p-3 mb-3">
+                    <LicenseOverview licenses={licenses} />
+                  </div>
+
                   <div className="border rounded-3 p-3 mb-3">
                     <p className="mb-3 px-1 fs-6">Contact Information</p>
                     <Table borderless responsive className="table-sm mb-0">
@@ -99,7 +88,6 @@ const OrganisationDrawerDetail = ({ organisation }) => {
                     </Table>
                   </div>
 
-                  {/* Attachments Section */}
                   {organisation.attachments?.length > 0 && (
                     <div className="border rounded-3 p-3">
                       <h6
@@ -193,114 +181,6 @@ const OrganisationDrawerDetail = ({ organisation }) => {
                         No users found.
                       </p>
                     </div>
-                  )}
-                </div>
-              ),
-            },
-
-            {
-              id: "incidentResolution",
-              text: "Incident Resolution",
-              icon: <i className="ims-icons-20 icon-icon-flag-24 me-1"></i>,
-              component: (
-                <div className="px-2 pt-3">
-                  {processing[USER_ACTIONS.LOAD_INCIDENT]?.status ? (
-                    <Loading />
-                  ) : incidentResolution ? (
-                    <div className="border rounded-3 p-3">
-                      <Table borderless responsive className="table-sm mb-0">
-                        <tbody>
-                          <tr>
-                            <td className="text-dark" style={{ width: "40%" }}>
-                              Resolution Policy
-                            </td>
-                            <td>{incidentResolution.policy || "N/A"}</td>
-                          </tr>
-                          <tr>
-                            <td className="text-dark">Default Response Time</td>
-                            <td>{incidentResolution.responseTime || "N/A"}</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </div>
-                  ) : (
-                    <p className="text-secondary text-center mt-3">
-                      No incident resolution data available.
-                    </p>
-                  )}
-                </div>
-              ),
-            },
-
-            {
-              id: "systemDates",
-              text: "System Dates",
-              icon: <i className="ims-icons-20 icon-icon-clock-24 me-1"></i>,
-              component: (
-                <div className="px-2 pt-3">
-                  {processing[USER_ACTIONS.LOAD_DATES]?.status ? (
-                    <Loading />
-                  ) : systemDates ? (
-                    <div className="border rounded-3 p-3">
-                      <Table borderless responsive className="table-sm mb-0">
-                        <tbody>
-                          <tr>
-                            <td className="text-dark" style={{ width: "40%" }}>
-                              Start Date
-                            </td>
-                            <td>{systemDates.startDate || "Not set"}</td>
-                          </tr>
-                          <tr>
-                            <td className="text-dark">End Date</td>
-                            <td>{systemDates.endDate || "Not set"}</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </div>
-                  ) : (
-                    <p className="text-secondary text-center mt-3">
-                      No system dates found.
-                    </p>
-                  )}
-                </div>
-              ),
-            },
-
-            {
-              id: "subscribers",
-              text: "Subscribers",
-              icon: <i className="ims-icons-20 icon-icon-users-24 me-1"></i>,
-              component: (
-                <div className="px-2 pt-3">
-                  {processing[USER_ACTIONS.LOAD_SUBSCRIBERS]?.status ? (
-                    <Loading />
-                  ) : reportSubscribers.length > 0 ? (
-                    reportSubscribers.map((s) => (
-                      <div
-                        key={s._id}
-                        className="border rounded-3 p-2 mb-2 d-flex justify-content-between align-items-center"
-                      >
-                        <span className="text-dark">{s.email}</span>
-                        <UncontrolledDropdown size="sm" direction="right">
-                          <DropdownToggle
-                            outline
-                            className="border"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <i className="fa-solid fa-ellipsis-h" />
-                          </DropdownToggle>
-                          <DropdownMenu bottom>
-                            <DropdownItem disabled>
-                              Remove Subscriber
-                            </DropdownItem>
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="text-secondary text-center mt-3">
-                      No subscribers found.
-                    </p>
                   )}
                 </div>
               ),

@@ -11,9 +11,9 @@ const commonSchema = {
     .required()
     .label("Address State Province"),
   countryName: IVal.object().label("Country Name"),
-  countryAbbr: IVal.string().required().label("Country Abbreviation"),
-  countryCurrency: IVal.string().required().label("Country Currency"),
-  countryPhonecode: IVal.number().required().label("Country Phone Code"),
+  countryAbbr: IVal.object().required().label("Country Abbreviation"),
+  countryCurrency: IVal.object().required().label("Country Currency"),
+  countryPhonecode: IVal.object().required().label("Country Phone Code"),
   logometadata: IVal.label("Logo"),
   vatNumber: IVal.string().label("VAT Number"),
 };
@@ -26,7 +26,7 @@ const createSchema = {
     value: IVal.string().required().label("Industry"),
     label: IVal.label("Industry"),
   }),
-  referralSource: IVal.string().required().label("Referral Source"),
+  referralSource: IVal.string().label("Referral Source"),
 };
 
 const updateSchema = {

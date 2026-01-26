@@ -17,6 +17,7 @@ import { imsLogger } from "@/services/loggerService";
 import IVal from "@/validations/validator";
 import { ImsButtonGroup } from "@/views/shared/ImsFormElements/Index";
 import { ImsInputSelect, ImsInputText } from "@ims-systems-00/ims-ui-kit";
+import { TourStep } from "../../../components/Tour";
 
 const PremisesForm = ({
   premise,
@@ -84,7 +85,7 @@ const PremisesForm = ({
   }
   const { dataModel, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    schema
+    schema,
   );
   let { data, errors } = dataModel;
 
@@ -92,81 +93,83 @@ const PremisesForm = ({
     <div>
       <Form action="/" className="form-horizontal" method="get">
         {alert}
-        <Row>
-          <Col md="6">
-            {premise && authSuperUser() ? (
-              <ImsInputSelect
-                isMulti
-                placeholder="Business units using this premise"
-                label="Business units"
-                name="groups"
-                value={data.groups}
-                className="react-select default"
-                classNamePrefix="react-select"
+        <TourStep stepId="business-premises-form">
+          <Row>
+            <Col md="6">
+              {premise && authSuperUser() ? (
+                <ImsInputSelect
+                  isMulti
+                  placeholder="Business units using this premise"
+                  label="Business units"
+                  name="groups"
+                  value={data.groups}
+                  className="react-select default"
+                  classNamePrefix="react-select"
+                  onChange={handleChange}
+                  options={groups
+                    .filter((group) => group.type === GROUP_TYPE.INTERNAL_BU)
+                    .map((group) => ({
+                      value: group._id,
+                      label: group.name,
+                    }))}
+                  error={errors.groups}
+                />
+              ) : (
+                <ImsInputSelect
+                  isMulti
+                  placeholder="Business units using this premise"
+                  label="Business units"
+                  name="groups"
+                  value={data.groups}
+                  className="react-select default"
+                  classNamePrefix="react-select"
+                  onChange={handleChange}
+                  options={groups
+                    .filter((group) => group.type === GROUP_TYPE.INTERNAL_BU)
+                    .map((group) => ({
+                      value: group._id,
+                      label: group.name,
+                    }))}
+                  error={errors.groups}
+                />
+              )}
+            </Col>
+            <Col md="6">
+              {" "}
+              <ImsInputText
+                label="Name"
+                name="name"
+                mandatory={true}
+                value={data.name}
                 onChange={handleChange}
-                options={groups
-                  .filter((group) => group.type === GROUP_TYPE.INTERNAL_BU)
-                  .map((group) => ({
-                    value: group._id,
-                    label: group.name,
-                  }))}
-                error={errors.groups}
+                error={errors.name}
+                placeholder="Premise name"
               />
-            ) : (
-              <ImsInputSelect
-                isMulti
-                placeholder="Business units using this premise"
-                label="Business units"
-                name="groups"
-                value={data.groups}
-                className="react-select default"
-                classNamePrefix="react-select"
+            </Col>
+            <Col md="6">
+              <ImsInputText
+                label="Location"
+                name="location"
+                mandatory={true}
+                value={data.location}
                 onChange={handleChange}
-                options={groups
-                  .filter((group) => group.type === GROUP_TYPE.INTERNAL_BU)
-                  .map((group) => ({
-                    value: group._id,
-                    label: group.name,
-                  }))}
-                error={errors.groups}
+                error={errors.location}
+                placeholder="Location"
               />
-            )}
-          </Col>
-          <Col md="6">
-            {" "}
-            <ImsInputText
-              label="Name"
-              name="name"
-              mandatory={true}
-              value={data.name}
-              onChange={handleChange}
-              error={errors.name}
-              placeholder="Premise name"
-            />
-          </Col>
-          <Col md="6">
-            <ImsInputText
-              label="Location"
-              name="location"
-              mandatory={true}
-              value={data.location}
-              onChange={handleChange}
-              error={errors.location}
-              placeholder="Location"
-            />
-          </Col>
-          <Col md="6">
-            <ImsInputText
-              label="Address"
-              name="address"
-              mandatory={true}
-              value={data.address}
-              onChange={handleChange}
-              error={errors.address}
-              placeholder="Address"
-            />
-          </Col>
-        </Row>
+            </Col>
+            <Col md="6">
+              <ImsInputText
+                label="Address"
+                name="address"
+                mandatory={true}
+                value={data.address}
+                onChange={handleChange}
+                error={errors.address}
+                placeholder="Address"
+              />
+            </Col>
+          </Row>
+        </TourStep>
         <ImsButtonGroup>
           {premise ? (
             <>
@@ -191,16 +194,18 @@ const PremisesForm = ({
               </Button>
             </>
           ) : (
-            <Button
-              name="create"
-              onClick={(e) => handleSubmit(e, doSubmit)}
-              disabled={validate() ? true : processing.action === "create"}
-              className="btn-fill"
-              color="primary"
-              type="button"
-            >
-              {processing.action === "create" ? "Processing..." : "Create"}
-            </Button>
+            <TourStep stepId="business-premises-create">
+              <Button
+                name="create"
+                onClick={(e) => handleSubmit(e, doSubmit)}
+                disabled={validate() ? true : processing.action === "create"}
+                className="btn-fill"
+                color="primary"
+                type="button"
+              >
+                {processing.action === "create" ? "Processing..." : "Create"}
+              </Button>
+            </TourStep>
           )}
         </ImsButtonGroup>
       </Form>

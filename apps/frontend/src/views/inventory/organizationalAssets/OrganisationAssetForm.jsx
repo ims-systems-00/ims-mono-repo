@@ -23,6 +23,7 @@ import USER_ACTIONS from "./actions";
 import { useTagsAndCategories } from "@/views/tagsAndCategoriesManager/store";
 import useDebounce from "@/hooks/useDebounce";
 import AddCategory from "@/views/tagsAndCategoriesManager/AddCategory";
+import { TourStep } from "../../../components/Tour";
 const OrganizationAssetForm = ({
   organization,
   processing,
@@ -80,7 +81,7 @@ const OrganizationAssetForm = ({
   };
   const { dataModel, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    validationSchema
+    validationSchema,
   );
 
   // submission logic to sever goes here ...
@@ -106,134 +107,139 @@ const OrganizationAssetForm = ({
       className="form-horizontal"
       onSubmit={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
     >
-      <Row>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Title"
-            name="title"
-            mandatory
-            value={data.title}
-            onChange={handleChange}
-            error={errors.title}
-            placeholder="Title"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label={authGlobalAccess() ? "Business unit" : "Business unit"}
-            name="group"
-            value={data.group}
-            isDisabled={organization ? true : false}
-            className="react-select default"
-            classNamePrefix="react-select"
-            onChange={handleChange}
-            options={groups.map((group) => ({
-              value: group._id,
-              label: group.name,
-            }))}
-          />
-        </Col>
+      <TourStep stepId="create-information-form">
+        <Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Title"
+              name="title"
+              mandatory
+              value={data.title}
+              onChange={handleChange}
+              error={errors.title}
+              placeholder="Title"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label={authGlobalAccess() ? "Business unit" : "Business unit"}
+              name="group"
+              value={data.group}
+              isDisabled={organization ? true : false}
+              className="react-select default"
+              classNamePrefix="react-select"
+              onChange={handleChange}
+              options={groups.map((group) => ({
+                value: group._id,
+                label: group.name,
+              }))}
+            />
+          </Col>
 
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Information inventory"
-            name="informationInventory"
-            mandatory
-            value={data.informationInventory}
-            onChange={handleChange}
-            error={errors.informationInventory}
-            placeholder="e.g. Employee Records, Marketing Campaigns..."
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Format"
-            name="format"
-            mandatory
-            value={data.format}
-            onChange={handleChange}
-            error={errors.format}
-            placeholder="Format"
-          />
-        </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Information inventory"
+              name="informationInventory"
+              mandatory
+              value={data.informationInventory}
+              onChange={handleChange}
+              error={errors.informationInventory}
+              placeholder="e.g. Employee Records, Marketing Campaigns..."
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Format"
+              name="format"
+              mandatory
+              value={data.format}
+              onChange={handleChange}
+              error={errors.format}
+              placeholder="Format"
+            />
+          </Col>
 
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Storage location"
-            name="storageLocation"
-            mandatory
-            value={data.storageLocation}
-            onChange={handleChange}
-            error={errors.storageLocation}
-            placeholder="Storage location"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputText
-            label="Link"
-            name="link"
-            mandatory
-            value={data.link}
-            onChange={handleChange}
-            error={errors.link}
-            placeholder="Link"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            label="Owner"
-            name="owner"
-            mandatory={true}
-            icon="icon-app"
-            value={data.owner}
-            className="react-select default"
-            classNamePrefix="react-select"
-            error={errors.owner}
-            onChange={handleChange}
-            options={users
-              .filter((user) =>
-                filterUsersByGroup(user.membership, dataModel.data.group.value)
-              )
-              .map((user) => ({ value: user._id, label: user.name }))}
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputSelect
-            name="tagsAndCategories"
-            value={data.tagsAndCategories}
-            vertical={true}
-            onChange={handleChange}
-            onInputChange={setSearchString}
-            options={[
-              {
-                value: null,
-                label: "Not selected",
-              },
-              ...tagsAndCategories.map((tag) => ({
-                value: tag._id,
-                label: tag.name,
-              })),
-            ]}
-            label={"Category"}
-            sideBtn={<AddCategory />}
-            className="react-select default"
-            classNamePrefix="react-select"
-          />
-        </Col>
-        <Col md={drawerView ? "12" : "6"}>
-          <ImsInputTextWithIcon
-            label="Cost"
-            type="number"
-            mandatory
-            placeholder="Cost"
-            icon="fas fa-pound-sign"
-            name="cost"
-            value={data.cost}
-            onChange={handleChange}
-            error={errors.cost}
-          />
-        </Col>
-      </Row>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Storage location"
+              name="storageLocation"
+              mandatory
+              value={data.storageLocation}
+              onChange={handleChange}
+              error={errors.storageLocation}
+              placeholder="Storage location"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputText
+              label="Link"
+              name="link"
+              mandatory
+              value={data.link}
+              onChange={handleChange}
+              error={errors.link}
+              placeholder="Link"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              label="Owner"
+              name="owner"
+              mandatory={true}
+              icon="icon-app"
+              value={data.owner}
+              className="react-select default"
+              classNamePrefix="react-select"
+              error={errors.owner}
+              onChange={handleChange}
+              options={users
+                .filter((user) =>
+                  filterUsersByGroup(
+                    user.membership,
+                    dataModel.data.group.value,
+                  ),
+                )
+                .map((user) => ({ value: user._id, label: user.name }))}
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputSelect
+              name="tagsAndCategories"
+              value={data.tagsAndCategories}
+              vertical={true}
+              onChange={handleChange}
+              onInputChange={setSearchString}
+              options={[
+                {
+                  value: null,
+                  label: "Not selected",
+                },
+                ...tagsAndCategories.map((tag) => ({
+                  value: tag._id,
+                  label: tag.name,
+                })),
+              ]}
+              label={"Category"}
+              sideBtn={<AddCategory />}
+              className="react-select default"
+              classNamePrefix="react-select"
+            />
+          </Col>
+          <Col md={drawerView ? "12" : "6"}>
+            <ImsInputTextWithIcon
+              label="Cost"
+              type="number"
+              mandatory
+              placeholder="Cost"
+              icon="fas fa-pound-sign"
+              name="cost"
+              value={data.cost}
+              onChange={handleChange}
+              error={errors.cost}
+            />
+          </Col>
+        </Row>
+      </TourStep>
       <ImsButtonGroup>
         {organization ? (
           <>
@@ -256,7 +262,7 @@ const OrganizationAssetForm = ({
                   () => {
                     onSubmit(dataModel.data);
                   },
-                  false
+                  false,
                 )
               }
               disabled={
@@ -274,22 +280,24 @@ const OrganizationAssetForm = ({
             </Button>
           </>
         ) : (
-          <Button
-            name="create"
-            onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
-            disabled={
-              validate()
-                ? true
-                : processing[USER_ACTIONS.CREATE_ORGANIZATION].status
-            }
-            className="btn-fill"
-            color="primary"
-            type="button"
-          >
-            {processing[USER_ACTIONS.CREATE_ORGANIZATION].status
-              ? "Processing..."
-              : "Create"}
-          </Button>
+          <TourStep stepId={"create-information-form-button"}>
+            <Button
+              name="create"
+              onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
+              disabled={
+                validate()
+                  ? true
+                  : processing[USER_ACTIONS.CREATE_ORGANIZATION].status
+              }
+              className="btn-fill"
+              color="primary"
+              type="button"
+            >
+              {processing[USER_ACTIONS.CREATE_ORGANIZATION].status
+                ? "Processing..."
+                : "Create"}
+            </Button>
+          </TourStep>
         )}
       </ImsButtonGroup>
     </Form>

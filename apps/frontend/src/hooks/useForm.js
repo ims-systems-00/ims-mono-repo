@@ -26,7 +26,7 @@ const useForm = (initdataModel, schema) => {
     e,
     doSubmit = () => {},
     reset = true,
-    options = {}
+    options = {},
   ) => {
     e.preventDefault();
     const errors = validate();

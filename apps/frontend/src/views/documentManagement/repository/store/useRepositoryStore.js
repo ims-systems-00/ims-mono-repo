@@ -23,7 +23,7 @@ export default function useRepositoryStore(config) {
   const { processing, dispatch: _dispatch } = useProcessingControl(
     Object.keys(USER_ACTIONS).map((action) => {
       return { action: USER_ACTIONS[action] };
-    })
+    }),
   );
   let vistingNodeChildrenQueryUtils = useQuery({
     required: {
@@ -110,7 +110,7 @@ export default function useRepositoryStore(config) {
         config.repoId,
         {
           query,
-        }
+        },
       );
       if (data.pagination?.currentPage === 1)
         setVisitingNodeChildren(data.nodes || []);
@@ -178,7 +178,7 @@ export default function useRepositoryStore(config) {
         config.repoId,
         {
           query: `type=document&status=Pending&documentData[authorisation][user]=${currentUserData?._id}&documentData[authorisation][status]=Pending&deleteMarker[status]=false`,
-        }
+        },
       );
       if (
         data?.nodes?.length &&
@@ -186,8 +186,8 @@ export default function useRepositoryStore(config) {
           node?.documentData?.authorisation?.find(
             (auth) =>
               auth.user?._id === currentUserData?._id &&
-              auth?.status === "Pending"
-          )
+              auth?.status === "Pending",
+          ),
         )
       )
         setHasPendingAuthorisation(true);
@@ -207,7 +207,7 @@ export default function useRepositoryStore(config) {
   }
   function _removeFromVisitingNodeChildrenState(id) {
     setVisitingNodeChildren((prevchildren) =>
-      prevchildren.filter((node) => node?._id !== id)
+      prevchildren.filter((node) => node?._id !== id),
     );
   }
   function visitNode(id) {
@@ -299,7 +299,7 @@ export default function useRepositoryStore(config) {
       });
       let { data } = await documentManagmentApi.updateRepository(
         config.repoId,
-        payload
+        payload,
       );
       _loadRepository();
       notify("Repository information updated successfully", "success");
@@ -333,7 +333,7 @@ export default function useRepositoryStore(config) {
       });
       const { data } = await documentManagmentApi.softDeleteNode(
         config.repoId,
-        id
+        id,
       );
       _removeFromVisitingNodeChildrenState(id);
       _dispatch({
@@ -345,7 +345,7 @@ export default function useRepositoryStore(config) {
       });
       notify(
         data?.node?.name + " moved to recycle bin successfully.",
-        "success"
+        "success",
       );
     } catch (err) {
       imsLogger(err, err.response);
@@ -358,7 +358,7 @@ export default function useRepositoryStore(config) {
       });
       notify(
         err.response?.data?.message || "Server error, please try again later",
-        "danger"
+        "danger",
       );
     }
   }
@@ -403,7 +403,7 @@ export default function useRepositoryStore(config) {
       });
       const { data } = await documentManagmentApi.restoreNode(
         config.repoId,
-        id
+        id,
       );
       _removeFromVisitingNodeChildrenState(id);
       _dispatch({
@@ -425,7 +425,7 @@ export default function useRepositoryStore(config) {
       });
       notify(
         err.response?.data?.message || "Server error, please try again later",
-        "danger"
+        "danger",
       );
     }
   }
@@ -441,7 +441,7 @@ export default function useRepositoryStore(config) {
       let { data } = await documentManagmentApi.moveNode(
         config.repoId,
         id,
-        moveto
+        moveto,
       );
       _removeFromVisitingNodeChildrenState(id);
       notify(`${data.node?.name} moved`, "success");
@@ -476,7 +476,7 @@ export default function useRepositoryStore(config) {
       let { data } = await documentManagmentApi.shareDocument(
         config.repoId,
         id,
-        payload
+        payload,
       );
       notify(`${data.node?.name} shared via email`, "success");
       _dispatch({
@@ -490,7 +490,7 @@ export default function useRepositoryStore(config) {
       imsLogger(err, err.message);
       notify(
         err.message || "Server error occured, please try again later.",
-        "danger"
+        "danger",
       );
       _dispatch({
         [USER_ACTIONS.SHARE_DOCUMENT]: {
@@ -534,7 +534,7 @@ export default function useRepositoryStore(config) {
       const { data } = await documentManagmentApi.addFolder(
         payload,
         visitingNode?._id || null,
-        config.repoId
+        config.repoId,
       );
 
       refreshCurretNodeChildrenList();
@@ -550,7 +550,7 @@ export default function useRepositoryStore(config) {
       imsLogger(err, err.message);
       notify(
         err.message || "Server error occured, please try again later.",
-        "danger"
+        "danger",
       );
       _dispatch({
         [USER_ACTIONS.ADD_FOLDER]: {
@@ -573,7 +573,7 @@ export default function useRepositoryStore(config) {
       let { data } = await documentManagmentApi.addFile(
         payload,
         visitingNode?._id || null,
-        config.repoId
+        config.repoId,
       );
       if (payload.authorisation.length)
         notify("File sent for authorisation.", "success");
@@ -591,7 +591,7 @@ export default function useRepositoryStore(config) {
       imsLogger(err, err.message);
       notify(
         err.message || "Server error occured, please try again later.",
-        "danger"
+        "danger",
       );
       _dispatch({
         [USER_ACTIONS.ADD_FILE]: {
@@ -627,7 +627,7 @@ export default function useRepositoryStore(config) {
         notify(
           attachment?.Name +
             " already exists. Please upload a new version or remove the existing file.",
-          "danger"
+          "danger",
         );
       }
     }
@@ -645,7 +645,7 @@ export default function useRepositoryStore(config) {
       const { data } = await documentManagmentApi.updateFolderNodeMetaData(
         config.repoId,
         payload?.nodeId || null,
-        payload
+        payload,
       );
       refreshCurretNodeChildrenList();
       _dispatch({
@@ -660,7 +660,7 @@ export default function useRepositoryStore(config) {
       imsLogger(err, err.message);
       notify(
         err.message || "Server error occured, please try again later.",
-        "danger"
+        "danger",
       );
       _dispatch({
         [USER_ACTIONS.RENAME_NODE]: {

@@ -23,6 +23,7 @@ import { Pagination } from "@/components/Pagination/pagination";
 import CreateRisk from "./CreateRisk";
 import RiskFilter from "./RiskFilter";
 import SearchInput from "@/components/SearchInput/search-input";
+import { TourStep } from "../../components/Tour";
 const defaultdata = [["No data found"]];
 
 const ReactTables = ({ ...props }) => {
@@ -143,19 +144,21 @@ const ReactTables = ({ ...props }) => {
         ) : (
           <>
             <div>
-              <DataTable
-                data={dataTable}
-                columns={columnsForRisks || []}
-                disableMultiSelection={true}
-                disableColumnResize={false}
-                defaultSize={375}
-                minSize={80}
-                onRowClick={({ original }) => {
-                  visitRisk(original);
-                  openDrawer("risk-detail");
-                }}
-                columnVisibility={{}}
-              />
+              <TourStep stepId="create-risk-table">
+                <DataTable
+                  data={dataTable}
+                  columns={columnsForRisks || []}
+                  disableMultiSelection={true}
+                  disableColumnResize={false}
+                  defaultSize={375}
+                  minSize={80}
+                  onRowClick={({ original }) => {
+                    visitRisk(original);
+                    openDrawer("risk-detail");
+                  }}
+                  columnVisibility={{}}
+                />
+              </TourStep>
             </div>
 
             <Pagination

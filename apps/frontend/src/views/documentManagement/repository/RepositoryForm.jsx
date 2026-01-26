@@ -65,7 +65,7 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
           IVal.object().keys({
             value: IVal.string().required().label("Owner"),
             label: IVal.label("Owner"),
-          })
+          }),
         )
         .label("Owners"),
     }),
@@ -84,7 +84,7 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
   let { users, lazyLoadUsers } = useUsers();
   const { dataModel, isBusy, handleChange, handleSubmit, validate } = useForm(
     dataSet,
-    schema
+    schema,
   );
 
   React.useEffect(() => {
@@ -92,8 +92,8 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
   }, []);
   let { data, errors } = dataModel;
   return (
-    <TourStep stepId="repository-form">
-      <Form action="/" className="form-horizontal" method="get">
+    <Form action="/" className="form-horizontal" method="get">
+      <TourStep stepId="create-repository-name">
         <ImsInputText
           label="Name"
           name="name"
@@ -113,65 +113,71 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
           onChange={handleChange}
           error={errors.description}
         />
-        <Row>
+      </TourStep>
+
+      <Row>
+        <TourStep stepId="repository-form-privacy">
+          <Row>
+            <Col md={repository ? "12" : "6"}>
+              <ImsInputSelect
+                placeholder="Privacy"
+                label="Privacy"
+                name="privacy"
+                mandatory={true}
+                value={data.privacy}
+                className="react-select default"
+                classNamePrefix="react-select"
+                onChange={handleChange}
+                options={[
+                  "Organisational",
+                  "Business unit",
+                  "Only me",
+                  "Custom",
+                ].map((item) => ({
+                  value: item,
+                  label: item,
+                }))}
+              />
+            </Col>
+
+            {dataModel?.data?.privacy?.value === "Business unit" && (
+              <Col md={repository ? "12" : "6"}>
+                <ImsInputSelect
+                  label={"Business unit"}
+                  name="group"
+                  value={data.group}
+                  className="react-select default"
+                  classNamePrefix="react-select"
+                  onChange={handleChange}
+                  options={groups?.map((group) => ({
+                    value: group._id,
+                    label: group.name,
+                  }))}
+                />
+              </Col>
+            )}
+            {dataModel.data.privacy.value === "Custom" && (
+              <Col md={repository ? "12" : "6"}>
+                <ImsInputSelect
+                  isMulti
+                  label="Select audience"
+                  name="sharedWith"
+                  value={data.sharedWith}
+                  className="react-select default"
+                  classNamePrefix="react-select"
+                  onChange={handleChange}
+                  options={users.map((user) => ({
+                    value: user._id,
+                    label: user.name,
+                  }))}
+                />
+              </Col>
+            )}
+          </Row>
+        </TourStep>
+        {dataModel.data.privacy.value !== "Only me" && (
           <Col md={repository ? "12" : "6"}>
-            <ImsInputSelect
-              placeholder="Privacy"
-              label="Privacy"
-              name="privacy"
-              mandatory={true}
-              value={data.privacy}
-              className="react-select default"
-              classNamePrefix="react-select"
-              onChange={handleChange}
-              options={[
-                "Organisational",
-                "Business unit",
-                "Only me",
-                "Custom",
-              ].map((item) => ({
-                value: item,
-                label: item,
-              }))}
-            />
-          </Col>
-
-          {dataModel?.data?.privacy?.value === "Business unit" && (
-            <Col md={repository ? "12" : "6"}>
-              <ImsInputSelect
-                label={"Business unit"}
-                name="group"
-                value={data.group}
-                className="react-select default"
-                classNamePrefix="react-select"
-                onChange={handleChange}
-                options={groups?.map((group) => ({
-                  value: group._id,
-                  label: group.name,
-                }))}
-              />
-            </Col>
-          )}
-          {dataModel.data.privacy.value === "Custom" && (
-            <Col md={repository ? "12" : "6"}>
-              <ImsInputSelect
-                isMulti
-                label="Select audience"
-                name="sharedWith"
-                value={data.sharedWith}
-                className="react-select default"
-                classNamePrefix="react-select"
-                onChange={handleChange}
-                options={users.map((user) => ({
-                  value: user._id,
-                  label: user.name,
-                }))}
-              />
-            </Col>
-          )}
-
-          {dataModel.data.privacy.value !== "Only me" && (
-            <Col md={repository ? "12" : "6"}>
+            <TourStep stepId="repository-form-owners">
               <ImsInputSelect
                 label="Owner(s) (Max. 3 inclusive)"
                 name="owners"
@@ -182,16 +188,18 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
                 onChange={handleChange}
                 options={users
                   .filter((user) =>
-                    filterUsersByGroup(user.membership, data.group?.value)
+                    filterUsersByGroup(user.membership, data.group?.value),
                   )
                   .map((user) => ({
                     value: user._id,
                     label: user.name,
                   }))}
               />
-            </Col>
-          )}
-          <Col md={repository ? "12" : "6"}>
+            </TourStep>
+          </Col>
+        )}
+        <Col md={repository ? "12" : "6"}>
+          <TourStep stepId="repository-form-review-interval">
             <ImsInputSelect
               placeholder="Review interval"
               label="Review interval"
@@ -206,24 +214,25 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
                 label: item,
               }))}
             />
-          </Col>
-        </Row>
-        {repository ? (
+          </TourStep>
+        </Col>
+      </Row>
+      {repository ? (
+        <Button
+          name="update"
+          onClick={(e) => {
+            handleSubmit(e, () => onSubmit(dataModel.data), false);
+          }}
+          disabled={validate() ? true : isBusy}
+          className=""
+          color="primary"
+          type="button"
+        >
+          {isBusy ? "Processing" : "Update"}
+        </Button>
+      ) : (
+        <TourStep stepId="repository-form-button">
           <Button
-            name="update"
-            onClick={(e) => {
-              handleSubmit(e, () => onSubmit(dataModel.data), false);
-            }}
-            disabled={validate() ? true : isBusy}
-            className=""
-            color="primary"
-            type="button"
-          >
-            {isBusy ? "Processing" : "Update"}
-          </Button>
-        ) : (
-          <TourStep stepId="repository-form-button">
-            <Button
             name="create"
             onClick={(e) => handleSubmit(e, () => onSubmit(dataModel.data))}
             disabled={validate() ? true : isBusy}
@@ -233,10 +242,9 @@ const RepositoryForm = ({ repository, onSubmit = () => {} }) => {
           >
             {isBusy ? "Processing" : "Create repository"}
           </Button>
-          </TourStep>
-        )}
-      </Form>
-    </TourStep>
+        </TourStep>
+      )}
+    </Form>
   );
 };
 

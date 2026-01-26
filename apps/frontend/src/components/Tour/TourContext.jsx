@@ -1,6 +1,6 @@
 import Box from "@/components/Box/Index";
 import React, { useContext, useState } from "react";
-import  classNames from "classnames";
+import classNames from "classnames";
 import Joyride, { STATUS } from "react-joyride";
 
 export const TourContext = React.createContext({
@@ -40,12 +40,12 @@ export function TourProvider({ children }) {
   function getStep(stepId) {
     return steps.find((step) => step.target === `[data-tour-step="${stepId}"]`);
   }
-
   const handleCallback = (data) => {
     const { status } = data;
     if (callback) {
       callback({
         ...data,
+        currentStep,
         setCurrentStep: setCurrentStep,
         pauseTour: () => setRun(false),
         resumeTour: () => setRun(true),
@@ -115,45 +115,49 @@ function Tooltip({
   tooltipProps,
 }) {
   return (
-    <Box minWidth={360} maxWidth={400} {...tooltipProps}>
-      <div>
-        {step.title && <h5>{step.title}</h5>}
-        {step.content && (
-          <div className="text-justify pt-2 fs-6 fw-medium">{step.content}</div>
-        )}
-      </div>
-      <div className="mt-4">
-        <div
-          className={classNames("d-flex align-items-center", {
-            "justify-content-end": isLastStep,
-            "justify-content-between": !isLastStep,
-          })}
-        >
-          {!isLastStep && (
-            <button
-              className="border-0 text-capitalize fs-6 bg-transparent p-0 fw-bold"
-              {...skipProps}
-            >
-              skip
-            </button>
+    <div {...tooltipProps}>
+      <Box minWidth={360} maxWidth={400}>
+        <div>
+          {step.title && <h5>{step.title}</h5>}
+          {step.content && (
+            <div className="text-justify pt-2 fs-6 fw-medium">
+              {step.content}
+            </div>
           )}
-          <div>
-            {/* {index > 0 && (
+        </div>
+        <div className="mt-4">
+          <div
+            className={classNames("d-flex align-items-center", {
+              "justify-content-end": isLastStep,
+              "justify-content-between": !isLastStep,
+            })}
+          >
+            {!isLastStep && (
+              <button
+                className="border-0 text-capitalize fs-6 bg-transparent p-0 fw-bold"
+                {...skipProps}
+              >
+                skip
+              </button>
+            )}
+            <div>
+              {/* {index > 0 && (
               <Button {...backProps} size="sm">
                 back
               </Button>
             )} */}
 
-            <button
-              className="border-0 text-success text-capitalize fs-6 bg-transparent fw-bold"
-              {...primaryProps}
-            >
-              {isLastStep ? "Finish" : "next"}
-            </button>
+              <button
+                className="border-0 text-success text-capitalize fs-6 bg-transparent fw-bold"
+                {...primaryProps}
+              >
+                {isLastStep ? "Finish" : "next"}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </Box>
+      </Box>
+    </div>
   );
 }
 export default TourProvider;

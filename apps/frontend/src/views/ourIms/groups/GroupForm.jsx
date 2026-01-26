@@ -24,6 +24,8 @@ import LOADERS from "./LoadingActions";
 import useError from "@/hooks/error";
 import OrganizationalOverview from "../licenseManagement/OrganizaionalOverview";
 import Loading from "@/components/Loader/Loading";
+import { TourStep } from "../../../components/Tour";
+import { TourContext } from "../../../components/Tour/TourContext";
 
 const GroupForm = ({
   group,
@@ -34,6 +36,7 @@ const GroupForm = ({
 }) => {
   let notify = React.useContext(NotificationContext);
   const viewContextData = useContext(ViewContext);
+  const { run } = useContext(TourContext);
   let history = useHistory();
   const { handleError } = useError();
 
@@ -63,7 +66,7 @@ const GroupForm = ({
       is: IVal.object().keys({
         value: IVal.string().label("operatingLocation"),
         label: IVal.valid(GROUP_TYPE.INTERNAL_BU, GROUP_TYPE.EXTERNAL_U).label(
-          "operatingLocation"
+          "operatingLocation",
         ),
       }),
       then: IVal.string().required().label("Operating location"),
@@ -72,7 +75,7 @@ const GroupForm = ({
       is: IVal.object().keys({
         value: IVal.string().label("standards"),
         label: IVal.valid(GROUP_TYPE.EXTERNAL_CU, GROUP_TYPE.INTERNAL_CU).label(
-          "standards"
+          "standards",
         ),
       }),
       then: IVal.string().required().label("Standards"),
@@ -125,10 +128,30 @@ const GroupForm = ({
   function handleCancelClick() {
     viewContextData.switchView && viewContextData.switchView();
   }
-  const { dataModel, handleChange, handleSubmit, validate } =
-    useForm(dataSet, schema);
+  const { dataModel, handleChange, handleSubmit, validate } = useForm(
+    dataSet,
+    schema,
+  );
 
   let { data, errors } = dataModel;
+  let isTutorialMode = localStorage.getItem("isTutorialMode") === "true";
+
+  if (!run) {
+    localStorage.removeItem("isTutorialMode");
+  }
+  let tutorialDataModel = {
+    data: {
+      type: {
+        value: "Internal compliance function",
+        label: "Internal compliance function",
+      },
+      name: "",
+      operatingLocation: "",
+      responsibility: "",
+      standards: "",
+    },
+    errors: {},
+  };
   return (
     <>
       {processing[LOADERS.CREATE_GROUP].status === true ? (
@@ -137,25 +160,27 @@ const GroupForm = ({
         <OrganizationalOverview users={false} tools={false} />
       )}
       <Form action="/" className="form-horizontal">
-        <ImsInputSelect
-          label="Access type"
-          name="type"
-          mandatory={true}
-          value={data.type}
-          isDisabled={group ? true : false}
-          className="react-select default"
-          classNamePrefix="react-select"
-          onChange={handleChange}
-          options={Object.values(GROUP_TYPE).map((item) => ({
-            value: item,
-            label: item,
-          }))}
-        />
+        <TourStep stepId="business-unit-access-type">
+          <ImsInputSelect
+            label="Access type"
+            name="type"
+            mandatory={true}
+            value={data.type}
+            isDisabled={group ? true : false}
+            className="react-select default"
+            classNamePrefix="react-select"
+            onChange={handleChange}
+            options={Object.values(GROUP_TYPE).map((item) => ({
+              value: item,
+              label: item,
+            }))}
+          />
+        </TourStep>
         {data.type && data.type.value && (
           <>
             {data.type &&
               [GROUP_TYPE.INTERNAL_BU, GROUP_TYPE.EXTERNAL_U].includes(
-                data.type.value
+                data.type.value,
               ) && (
                 <BusinessFunctionGroup
                   dataModel={dataModel}
@@ -164,7 +189,7 @@ const GroupForm = ({
               )}
             {data.type &&
               [GROUP_TYPE.INTERNAL_CU, GROUP_TYPE.EXTERNAL_CU].includes(
-                data.type.value
+                data.type.value,
               ) && (
                 <ComplianceBodyGroup
                   dataModel={dataModel}
@@ -210,23 +235,112 @@ const GroupForm = ({
                   </Button>
                 </>
               ) : (
-                <Button
-                  name="create"
-                  disabled={
-                    validate() ? true : processing[LOADERS.CREATE_GROUP].status
-                  }
-                  className="btn-fill"
-                  color="primary"
-                  type="button"
-                  onClick={(e) => handleSubmit(e, _createUnit)}
-                >
-                  {processing[LOADERS.CREATE_GROUP].status
-                    ? "Processing..."
-                    : "Create"}
-                </Button>
+                <TourStep stepId="business-unit-create-button">
+                  <Button
+                    name="create"
+                    disabled={
+                      validate()
+                        ? true
+                        : processing[LOADERS.CREATE_GROUP].status
+                    }
+                    className="btn-fill"
+                    color="primary"
+                    type="button"
+                    onClick={(e) => handleSubmit(e, _createUnit)}
+                  >
+                    {processing[LOADERS.CREATE_GROUP].status
+                      ? "Processing..."
+                      : "Create"}
+                  </Button>
+                </TourStep>
               )}
             </ImsButtonGroup>
           </>
+        )}
+        {isTutorialMode && (
+          <TourStep stepId="business-unit-relevant-info">
+            <>
+              {true &&
+                [GROUP_TYPE.INTERNAL_BU, GROUP_TYPE.EXTERNAL_U].includes(
+                  "Internal compliance function",
+                ) && (
+                  <BusinessFunctionGroup
+                    dataModel={tutorialDataModel}
+                    handleChange={handleChange}
+                  />
+                )}
+              {true &&
+                [GROUP_TYPE.INTERNAL_CU, GROUP_TYPE.EXTERNAL_CU].includes(
+                  "Internal compliance function",
+                ) && (
+                  <ComplianceBodyGroup
+                    dataModel={tutorialDataModel}
+                    handleChange={handleChange}
+                  />
+                )}
+              <ImsInputText
+                type="textarea"
+                cols="80"
+                rows="2"
+                label="Responsibility"
+                name="responsibility"
+                value={data.responsibility}
+                onChange={handleChange}
+                error={errors.responsibility}
+                placeholder="Responsibility"
+              />
+              <ImsButtonGroup>
+                {group ? (
+                  <>
+                    <Button
+                      name="cancel"
+                      className="btn-fill"
+                      color="danger"
+                      type="button"
+                      onClick={handleCancelClick}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      name="update"
+                      disabled={
+                        validate()
+                          ? true
+                          : processing[LOADERS.AMEND_GROUP].status
+                      }
+                      className="btn-fill"
+                      color="info"
+                      type="button"
+                      onClick={(e) => handleSubmit(e, _updateUnit, false)}
+                    >
+                      {processing[LOADERS.AMEND_GROUP].status
+                        ? "Processing..."
+                        : "Update"}
+                    </Button>
+                  </>
+                ) : (
+                  <TourStep stepId="business-unit-create-button">
+                    <Button
+                      name="create"
+                      disabled={
+                        validate()
+                          ? true
+                          : processing[LOADERS.CREATE_GROUP].status
+                      }
+                      className="btn-fill"
+                      color="primary"
+                      type="button"
+                      onClick={(e) => handleSubmit(e, _createUnit)}
+                    >
+                      {processing[LOADERS.CREATE_GROUP].status
+                        ? "Processing..."
+                        : "Create"}
+                    </Button>
+                  </TourStep>
+                )}
+              </ImsButtonGroup>
+            </>
+          </TourStep>
         )}
       </Form>
     </>
